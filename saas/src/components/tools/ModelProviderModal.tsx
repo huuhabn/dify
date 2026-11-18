@@ -36,18 +36,38 @@ export function ModelProviderModal({
     setError(null);
 
     try {
+      const targetProvider = provider.name.includes('/')
+        ? provider.name
+        : provider.name === 'google' || provider.name === 'gemini'
+          ? 'langgenius/gemini/google'
+          : provider.name === 'openai'
+            ? 'langgenius/openai/openai'
+            : provider.name === 'anthropic'
+              ? 'langgenius/anthropic/anthropic'
+              : provider.name === 'deepseek'
+                ? 'langgenius/deepseek/deepseek'
+                : provider.name;
+
       const credentials: Record<string, string> = {
         api_key: apiKey.trim(),
       };
+
+      // Dify Google Gemini plugin requires google_api_key field
+      if (targetProvider.includes('google') || targetProvider.includes('gemini')) {
+        credentials.google_api_key = apiKey.trim();
+      }
+      if (targetProvider.includes('anthropic')) {
+        credentials.anthropic_api_key = apiKey.trim();
+      }
       if (baseUrl.trim()) {
         credentials.api_base = baseUrl.trim();
         credentials.openai_api_base = baseUrl.trim();
       }
 
       await ToolsService.saveModelProviderCredentials(
-        provider.name,
+        targetProvider,
         credentials,
-        `${provider.name}-credential`,
+        `${provider.name.split('/').pop()}-credential`,
       );
 
       setSaving(false);
@@ -113,7 +133,7 @@ export function ModelProviderModal({
                 required
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
-                placeholder="sk-..."
+                placeholder="sk-... or AIzaSy..."
                 className="mt-1 block w-full rounded-lg border border-gray-300 px-3.5 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none"
               />
               <p className="mt-1 text-2xs text-gray-400">
@@ -129,7 +149,7 @@ export function ModelProviderModal({
                 type="url"
                 value={baseUrl}
                 onChange={(e) => setBaseUrl(e.target.value)}
-                placeholder="https://api.openai.com/v1"
+                placeholder="https://generativelanguage.googleapis.com"
                 className="mt-1 block w-full rounded-lg border border-gray-300 px-3.5 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none"
               />
             </div>

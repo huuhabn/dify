@@ -32,14 +32,19 @@ export const DatasetsService = {
     return request<Dataset>(`/console/api/datasets/${id}`);
   },
 
-  async create(name: string, description?: string): Promise<Dataset> {
+  async create(
+    name: string,
+    description?: string,
+    indexingTechnique: 'high_quality' | 'economy' = 'economy',
+    permission: 'only_me' | 'all_team_members' = 'all_team_members',
+  ): Promise<Dataset> {
     return request<Dataset>('/console/api/datasets', {
       method: 'POST',
       body: {
         name,
-        description,
-        permission: 'all_team_members',
-        indexing_technique: 'high_quality',
+        description: description || '',
+        permission,
+        indexing_technique: indexingTechnique,
       },
     });
   },

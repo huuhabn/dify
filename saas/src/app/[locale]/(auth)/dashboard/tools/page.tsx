@@ -11,6 +11,7 @@ import {
 
 type ProviderItem = {
   name: string;
+  targetProvider?: string;
   label: string;
   icon: string;
   configured: boolean;
@@ -19,7 +20,16 @@ type ProviderItem = {
 
 const defaultProvidersList: ProviderItem[] = [
   {
+    name: 'google',
+    targetProvider: 'langgenius/gemini/google',
+    label: 'Google Gemini',
+    icon: '✨',
+    configured: false,
+    models: ['gemini-2.0-flash', 'gemini-1.5-pro', 'gemini-1.5-flash'],
+  },
+  {
     name: 'openai',
+    targetProvider: 'langgenius/openai/openai',
     label: 'OpenAI',
     icon: '🤖',
     configured: false,
@@ -27,20 +37,15 @@ const defaultProvidersList: ProviderItem[] = [
   },
   {
     name: 'anthropic',
+    targetProvider: 'langgenius/anthropic/anthropic',
     label: 'Anthropic',
     icon: '🧠',
     configured: false,
     models: ['claude-3-5-sonnet', 'claude-3-5-haiku'],
   },
   {
-    name: 'google',
-    label: 'Google Gemini',
-    icon: '✨',
-    configured: false,
-    models: ['gemini-1.5-pro', 'gemini-1.5-flash'],
-  },
-  {
     name: 'deepseek',
+    targetProvider: 'langgenius/deepseek/deepseek',
     label: 'DeepSeek',
     icon: '🐋',
     configured: false,
@@ -48,6 +53,7 @@ const defaultProvidersList: ProviderItem[] = [
   },
   {
     name: 'groq',
+    targetProvider: 'langgenius/groq/groq',
     label: 'Groq',
     icon: '⚡',
     configured: false,
@@ -55,6 +61,7 @@ const defaultProvidersList: ProviderItem[] = [
   },
   {
     name: 'ollama',
+    targetProvider: 'langgenius/ollama/ollama',
     label: 'Ollama (Local)',
     icon: '🦙',
     configured: false,
@@ -86,13 +93,19 @@ export default function ToolsPage() {
       if (modelRes.status === 'fulfilled' && modelRes.value?.data) {
         const configuredNames = new Set(
           modelRes.value.data
-            .filter((p) => p.status === 'active')
+            .filter(
+              (p) =>
+                p.status === 'active' ||
+                (p as { custom_configuration?: { status?: string } }).custom_configuration?.status === 'active',
+            )
             .map((p) => p.provider),
         );
         setProviders(
           defaultProvidersList.map((p) => ({
             ...p,
-            configured: configuredNames.has(p.name),
+            configured:
+              configuredNames.has(p.targetProvider || '') ||
+              configuredNames.has(p.name),
           })),
         );
       }
@@ -214,7 +227,12 @@ export default function ToolsPage() {
               <div className="mt-6 border-t border-gray-100 pt-4 flex justify-end">
                 <button
                   type="button"
-                  onClick={() => setSelectedProvider(prov)}
+                  onClick={() =>
+                    setSelectedProvider({
+                      ...prov,
+                      name: prov.targetProvider || prov.name,
+                    })
+                  }
                   className="rounded-lg bg-gray-50 border border-gray-200 px-3 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-100 cursor-pointer"
                 >
                   {prov.configured ? 'Edit Credentials' : 'Add API Key'}

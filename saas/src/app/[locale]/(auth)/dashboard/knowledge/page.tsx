@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from '@/libs/I18nNavigation';
 import { DatasetsService } from '@/services/datasets.service';
+import { CreateDatasetModal } from '@/components/knowledge/CreateDatasetModal';
 
 type DatasetItem = {
   id: string;
@@ -17,20 +18,23 @@ type DatasetItem = {
 export default function KnowledgePage() {
   const [datasets, setDatasets] = useState<DatasetItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+
+  const loadDatasets = async () => {
+    try {
+      setLoading(true);
+      const res = await DatasetsService.list(1, 50);
+      if (res?.data) {
+        setDatasets(res.data as unknown as DatasetItem[]);
+      }
+    } catch (err) {
+      console.error('Failed to load datasets', err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    async function loadDatasets() {
-      try {
-        const res = await DatasetsService.list(1, 30);
-        if (res?.data) {
-          setDatasets(res.data as unknown as DatasetItem[]);
-        }
-      } catch (err) {
-        console.error('Failed to load datasets', err);
-      } finally {
-        setLoading(false);
-      }
-    }
     loadDatasets();
   }, []);
 
@@ -48,6 +52,7 @@ export default function KnowledgePage() {
 
         <button
           type="button"
+          onClick={() => setIsCreateModalOpen(true)}
           className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-500"
         >
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -87,23 +92,34 @@ export default function KnowledgePage() {
               </tr>
             ) : datasets.length === 0 ? (
               <tr>
-                <td colSpan={5} className="px-6 py-8 text-center text-gray-400">
-                  No datasets configured yet.
+                <td colSpan={5} className="px-6 py-12 text-center text-gray-400">
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-gray-50 text-2xl mb-3">
+                    📚
+                  </div>
+                  <p className="text-sm font-medium text-gray-900">No knowledge bases yet</p>
+                  <p className="mt-1 text-xs text-gray-500">Create your first knowledge base to index documents for AI apps.</p>
+                  <button
+                    type="button"
+                    onClick={() => setIsCreateModalOpen(true)}
+                    className="mt-4 rounded-lg bg-blue-50 px-3.5 py-1.5 text-xs font-semibold text-blue-600 hover:bg-blue-100 cursor-pointer"
+                  >
+                    + Create Knowledge Base
+                  </button>
                 </td>
               </tr>
             ) : (
               datasets.map((item) => (
                 <tr key={item.id} className="hover:bg-gray-50/80 transition-colors">
                   <td className="px-6 py-4">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                    <Link href={`/dashboard/knowledge/${item.id}`} className="flex items-center gap-3 group">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 group-hover:bg-blue-100 transition-colors">
                         📄
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-900">{item.name}</p>
-                        <p className="text-xs text-gray-500">{item.description}</p>
+                        <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{item.name}</p>
+                        {item.description && <p className="text-xs text-gray-500 line-clamp-1">{item.description}</p>}
                       </div>
-                    </div>
+                    </Link>
                   </td>
                   <td className="px-6 py-4 font-medium text-gray-700">
                     {item.document_count ?? 0} files
@@ -130,6 +146,12 @@ export default function KnowledgePage() {
           </tbody>
         </table>
       </div>
+
+      <CreateDatasetModal
+        isOpen={isCreateModalOpen}
+        onClose={() => setIsCreateModalOpen(false)}
+        onSuccess={loadDatasets}
+      />
     </div>
   );
 }
