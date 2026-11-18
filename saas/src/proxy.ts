@@ -1,148 +1,72 @@
-// oxlint-disable-next-line no-restricted-imports
-import type { NextRequest } from 'next/server'
-import { Buffer } from 'node:buffer'
-// oxlint-disable-next-line no-restricted-imports
-import { NextResponse } from 'next/server'
-import { env } from '@/env'
-import { Env } from '@/libs/Env'
-import { getWebAppDocumentResponse } from '@/features/app-access-error/document-response'
+import { detectBot } from '@arcjet/next';
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import createMiddleware from 'next-intl/middleware';
+import type { NextFetchEvent, NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
+import arcjet from '@/libs/Arcjet';
+import { routing } from './libs/I18nRouting';
 
-const NECESSARY_DOMAIN =
-  '*.sentry.io http://localhost:* http://127.0.0.1:* https://analytics.google.com googletagmanager.com *.googletagmanager.com https://www.google-analytics.com https://cdn-cookieyes.com https://ungh.cc https://api2.amplitude.com *.amplitude.com'
-const COOKIEYES_LOGGING_ORIGIN = 'https://log.cookieyes.com'
-const CURRENT_PATHNAME_HEADER = 'x-dify-pathname'
-const CURRENT_SEARCH_HEADER = 'x-dify-search'
-const EMBEDDABLE_PATH_SEGMENTS = [
-  '/agent',
-  '/chat',
-  '/chatbot',
-  '/completion',
-  '/webapp-signin',
-  '/workflow',
-]
-const NON_EMBEDDABLE_PATH_SEGMENTS = ['/device']
-const FRAME_ANCESTORS_NONE = "'none'"
+const handleI18nRouting = createMiddleware(routing);
 
-const getHttpOrigin = (value: string | undefined) => {
-  if (!value) return ''
+const isProtectedRoute = createRouteMatcher(['/dashboard(.*)', '/:locale/dashboard(.*)']);
 
-  try {
-    const url = new URL(value)
-    return url.protocol === 'http:' || url.protocol === 'https:' ? url.origin : ''
-  } catch {
-    return ''
-  }
-}
+const isAuthPage = createRouteMatcher([
+  '/sign-in(.*)',
+  '/:locale/sign-in(.*)',
+  '/sign-up(.*)',
+  '/:locale/sign-up(.*)',
+]);
 
-const matchesPathSegment = (pathname: string, segments: string[]) =>
-  segments.some((segment) => pathname === segment || pathname.startsWith(`${segment}/`))
+// Improve security with Arcjet
+const aj = arcjet.withRule(
+  detectBot({
+    mode: 'LIVE',
+    // Block all bots except the following
+    allow: [
+      // See https://docs.arcjet.com/bot-protection/identifying-bots
+      'CATEGORY:SEARCH_ENGINE', // Allow search engines
+      'CATEGORY:PREVIEW', // Allow preview links to show OG images
+      'CATEGORY:MONITOR', // Allow uptime monitoring services
+    ],
+  }),
+);
 
-export const canEmbedPath = (pathname: string) =>
-  matchesPathSegment(pathname, EMBEDDABLE_PATH_SEGMENTS)
+export default async function proxy(request: NextRequest, event: NextFetchEvent) {
+  // Verify the request with Arcjet
+  // Use `process.env` instead of Env to reduce bundle size in middleware
+  if (process.env.ARCJET_KEY) {
+    const decision = await aj.protect(request);
 
-const appendFrameAncestors = (response: NextResponse, frameOrigin: string) => {
-  const existingCsp = response.headers.get('Content-Security-Policy')
-  if (existingCsp?.includes('frame-ancestors')) return
-  response.headers.set(
-    'Content-Security-Policy',
-    `${existingCsp ? `${existingCsp} ` : ''}frame-ancestors ${frameOrigin};`,
-  )
-}
-
-const wrapResponseWithFrameProtection = (response: NextResponse, pathname: string) => {
-  // Published app routes are intentionally embeddable; all other routes default to clickjacking protection.
-  const preventEmbedding =
-    matchesPathSegment(pathname, NON_EMBEDDABLE_PATH_SEGMENTS) ||
-    (env.NEXT_PUBLIC_ALLOW_EMBED !== true && !canEmbedPath(pathname))
-
-  if (preventEmbedding) {
-    response.headers.set('X-Frame-Options', 'DENY')
-    appendFrameAncestors(response, FRAME_ANCESTORS_NONE)
+    if (decision.isDenied()) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+    }
   }
 
-  return response
-}
-export async function proxy(request: NextRequest) {
-  const { pathname, search } = request.nextUrl
+  // Clerk keyless mode doesn't work with i18n, this is why we need to run the middleware conditionally
+  if (isAuthPage(request) || isProtectedRoute(request)) {
+    // Match Clerk's documented middleware composition pattern, `return await` is not necessary.
+    // oxlint-disable-next-line typescript/return-await
+    return clerkMiddleware(async (auth, req) => {
+      if (isProtectedRoute(req)) {
+        const locale = req.nextUrl.pathname.match(/(\/.*)\/dashboard/u)?.at(1) ?? '';
 
-  const requestHeaders = new Headers(request.headers)
-  requestHeaders.set(CURRENT_PATHNAME_HEADER, pathname)
-  requestHeaders.set(CURRENT_SEARCH_HEADER, search)
+        const signInUrl = new URL(`${locale}/sign-in`, req.url);
 
-  const isWhiteListEnabled =
-    !!env.NEXT_PUBLIC_CSP_WHITELIST && Env.NODE_ENV === 'production'
-  if (!isWhiteListEnabled) {
-    const response =
-      (await getWebAppDocumentResponse(request, requestHeaders)) ??
-      NextResponse.next({
-        request: {
-          headers: requestHeaders,
-        },
-      })
-    return wrapResponseWithFrameProtection(response, pathname)
+        await auth.protect({
+          unauthenticatedUrl: signInUrl.toString(),
+        });
+      }
+
+      return handleI18nRouting(req);
+    })(request, event);
   }
 
-  const turnstileOrigin = env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
-    ? ' https://challenges.cloudflare.com'
-    : ''
-  const whiteList = `${env.NEXT_PUBLIC_CSP_WHITELIST} ${NECESSARY_DOMAIN}${turnstileOrigin}`
-  const marketplaceFrameOrigin = getHttpOrigin(env.NEXT_PUBLIC_MARKETPLACE_URL_PREFIX)
-  const marketplaceFrameSrc = marketplaceFrameOrigin ? ` ${marketplaceFrameOrigin}` : ''
-  const nonce = Buffer.from(crypto.randomUUID()).toString('base64')
-  const csp = `'nonce-${nonce}'`
-
-  const scheme_source = 'data: mediastream: blob: filesystem:'
-
-  const cspHeader = `
-    default-src 'self' ${scheme_source} ${csp} ${whiteList};
-    connect-src 'self' ${scheme_source} ${csp} ${whiteList} ${COOKIEYES_LOGGING_ORIGIN};
-    script-src 'self' 'wasm-unsafe-eval' ${scheme_source} ${csp} ${whiteList};
-    style-src 'self' 'unsafe-inline' ${scheme_source} ${whiteList};
-    worker-src 'self' ${scheme_source} ${csp} ${whiteList};
-    media-src 'self' ${scheme_source} ${csp} ${whiteList};
-    frame-src 'self' ${scheme_source} ${whiteList}${marketplaceFrameSrc};
-    img-src * data: blob:;
-    font-src 'self';
-    object-src 'none';
-    base-uri 'self';
-    form-action 'self';
-    upgrade-insecure-requests;
-`
-  // Replace newline characters and spaces
-  const contentSecurityPolicyHeaderValue = cspHeader.replace(/\s{2,}/g, ' ').trim()
-
-  requestHeaders.set('x-nonce', nonce)
-
-  requestHeaders.set('Content-Security-Policy', contentSecurityPolicyHeaderValue)
-
-  const response =
-    (await getWebAppDocumentResponse(request, requestHeaders)) ??
-    NextResponse.next({
-      request: {
-        headers: requestHeaders,
-      },
-    })
-
-  response.headers.set('Content-Security-Policy', contentSecurityPolicyHeaderValue)
-
-  return wrapResponseWithFrameProtection(response, pathname)
+  return handleI18nRouting(request);
 }
 
 export const config = {
-  matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - favicon.ico (favicon file)
-     */
-    {
-      source: '/((?!_next/static|favicon.ico).*)',
-      // source: '/(.*)',
-      // missing: [
-      //   { type: 'header', key: 'next-router-prefetch' },
-      //   { type: 'header', key: 'purpose', value: 'prefetch' },
-      // ],
-    },
-  ],
-}
+  // Match all pathnames except for
+  // - … if they start with `/_next`, `/_vercel` or `monitoring`
+  // - … the ones containing a dot (e.g. `favicon.ico`)
+  matcher: '/((?!_next|_vercel|monitoring|api|.*\\..*).*)',
+};

@@ -1,4 +1,3 @@
-import { Env, IS_DEV } from '@/libs/Env';
 // oxlint-disable import/namespace
 // This file configures the initialization of Sentry on the client.
 // The added config here will be used whenever a users loads a page in their browser.
@@ -10,9 +9,9 @@ import { installTranslationResilience } from 'translation-resilience';
 // text nodes, which can cause crashes and frozen updates.
 installTranslationResilience();
 
-if (!Env.NEXT_PUBLIC_SENTRY_DISABLED) {
+if (!process.env.NEXT_PUBLIC_SENTRY_DISABLED) {
   Sentry.init({
-    dsn: Env.NEXT_PUBLIC_SENTRY_DSN,
+    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
 
     // Add optional integrations for additional features
     integrations: [
@@ -24,7 +23,7 @@ if (!Env.NEXT_PUBLIC_SENTRY_DISABLED) {
       Sentry.consoleLoggingIntegration(),
       Sentry.browserTracingIntegration(),
 
-      ...(IS_DEV ? [Sentry.spotlightBrowserIntegration()] : []),
+      ...(process.env.NODE_ENV === 'development' ? [Sentry.spotlightBrowserIntegration()] : []),
     ],
 
     // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.

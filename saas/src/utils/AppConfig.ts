@@ -1,14 +1,26 @@
+import { enUS, frFR } from '@clerk/localizations';
 import type { LocalePrefixMode } from 'next-intl/routing';
 
 /** Locale prefix strategy for next-intl routing. */
 const localePrefix: LocalePrefixMode = 'as-needed';
 
+// FIXME: Customize this configuration for your product
 /** Centralized application configuration */
 export const AppConfig = {
-  name: 'Dify AI Agents SaaS',
+  name: 'Nextjs Starter',
   i18n: {
-    locales: ['en', 'vi', 'zh-Hans'],
+    locales: ['en', 'fr'],
     defaultLocale: 'en',
     localePrefix,
   },
+};
+
+const supportedLocales: Record<string, typeof enUS> = {
+  en: enUS,
+  fr: frFR,
+};
+
+export const ClerkLocalizations = {
+  defaultLocale: enUS,
+  supportedLocales,
 };

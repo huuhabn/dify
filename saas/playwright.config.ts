@@ -1,43 +1,78 @@
+import type { ChromaticConfig } from '@chromatic-com/playwright';
 import { defineConfig, devices } from '@playwright/test';
-import { testEnv } from './tests/support/Env';
 
-const baseURL = `http://localhost:${testEnv.SAAS_E2E_PORT}`;
-const apiURL = testEnv.SAAS_E2E_API_URL.replace(/\/$/, '');
+// Use process.env.PORT by default and fallback to port 3008
+// to avoid conflicts with the Next.js default port 3000.
+const PORT = process.env.PORT ?? '3008';
 
-export default defineConfig({
+// Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
+const baseURL = `http://localhost:${PORT}`;
+
+/**
+ * See https://playwright.dev/docs/test-configuration.
+ */
+export default defineConfig<ChromaticConfig>({
   testDir: './tests',
-  testMatch: '**/*.{integ,e2e}.ts',
-  fullyParallel: false,
-  workers: 2,
-  timeout: 120_000,
-  expect: { timeout: 20_000 },
-  forbidOnly: Boolean(testEnv.CI),
-  reporter: testEnv.CI ? 'github' : 'list',
+  // Look for files with the .integ.js or .e2e.js extension
+  testMatch: '*.@(integ|e2e).?(c|m)[jt]s?(x)',
+  // Timeout per test, test running locally are slower due to database connections with PGLite
+  timeout: 30 * 1000,
+  // Fail the build on CI if you accidentally left test.only in the source code.
+  forbidOnly: !!process.env.CI,
+  // Reporter to use. See https://playwright.dev/docs/test-reporters
+  reporter: process.env.CI ? 'github' : 'list',
+
+  expect: {
+    // Set timeout for async expect matchers
+    timeout: 15 * 1000,
+  },
+
+  // Run your local dev server before starting the tests:
+  // https://playwright.dev/docs/test-advanced#launching-a-development-web-server-during-the-tests
   webServer: {
-    command: testEnv.CI ? 'pnpm start' : 'pnpm dev',
-    url: `${baseURL}/signin`,
-    timeout: 240_000,
-    reuseExistingServer: testEnv.SAAS_E2E_REUSE_SERVER === 'true' && !testEnv.CI,
-    gracefulShutdown: { signal: 'SIGTERM', timeout: 10_000 },
+    command: process.env.CI
+      ? "pglite-server -m 100 --run 'run-s db:migrate start'"
+      : "pglite-server -m 100 --run 'run-s db:migrate dev:next'",
+    url: baseURL,
+    timeout: 60 * 1000,
+    reuseExistingServer: !process.env.CI,
+    gracefulShutdown: { signal: 'SIGTERM', timeout: 2 * 1000 },
     env: {
-      PORT: String(testEnv.SAAS_E2E_PORT),
-      SAAS_OUTPUT_DIR: testEnv.CI ? '.next' : '.next-e2e',
-      NODE_OPTIONS: '--max-old-space-size=4096',
       BROWSER_TO_TERMINAL_DISABLED: 'true',
       NEXT_PUBLIC_SENTRY_DISABLED: 'true',
-      NEXT_PUBLIC_ENABLE_AGENTATION: 'false',
       NEXT_PUBLIC_APP_URL: baseURL,
-      CONSOLE_API_URL: apiURL,
-      SERVER_CONSOLE_API_URL: apiURL,
-      NEXT_PUBLIC_API_PREFIX: `${apiURL}/console/api`,
-      NEXT_PUBLIC_PUBLIC_API_PREFIX: `${apiURL}/api`,
+      PORT,
     },
   },
+
+  // Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions.
   use: {
+    // Use baseURL so to make navigations relative.
+    // More information: https://playwright.dev/docs/api/class-testoptions#test-options-base-url
     baseURL,
-    trace: 'retain-on-failure',
-    screenshot: 'only-on-failure',
-    launchOptions: testEnv.SAAS_E2E_CHANNEL ? { channel: testEnv.SAAS_E2E_CHANNEL } : {},
+
+    // Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer
+    trace: process.env.CI ? 'on' : 'retain-on-failure',
+
+    // Record videos when retrying the failed test.
+    video: process.env.CI ? 'retain-on-failure' : undefined,
+
+    // Disable automatic screenshots at test completion when using Chromatic test fixture.
+    disableAutoSnapshot: true,
   },
-  projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
+
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+    ...(process.env.CI
+      ? [
+          {
+            name: 'firefox',
+            use: { ...devices['Desktop Firefox'] },
+          },
+        ]
+      : []),
+  ],
 });

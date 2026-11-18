@@ -1,13 +1,25 @@
 import type { MetadataRoute } from 'next';
-import { getBaseUrl } from '@/utils/Helpers';
+import { routing } from '@/libs/I18nRouting';
+import { getBaseUrl, getI18nPath } from '@/utils/Helpers';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getBaseUrl();
 
-  const routes = ['', '/signin', '/signup', '/apps', '/datasets', '/tools', '/explore'];
+  const routes = ['', '/about', '/counter', '/portfolio'];
 
-  return routes.map((route) => ({
+  // Generate portfolio detail pages
+  const portfolioRoutes = Array.from({ length: 6 }, (_, i) => `/portfolio/${i}`);
+  const allRoutes = [...routes, ...portfolioRoutes];
+
+  return allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
+    alternates: {
+      languages: Object.fromEntries(
+        routing.locales
+          .filter((locale) => locale !== routing.defaultLocale)
+          .map((locale) => [locale, `${baseUrl}${getI18nPath(route, locale)}`]),
+      ),
+    },
   }));
 }

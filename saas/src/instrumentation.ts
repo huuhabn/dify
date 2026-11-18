@@ -1,12 +1,11 @@
-import { Env, IS_DEV } from '@/libs/Env';
 import * as Sentry from '@sentry/nextjs';
 
 const sentryOptions: Sentry.NodeOptions | Sentry.EdgeOptions = {
   // Sentry DSN
-  dsn: Env.NEXT_PUBLIC_SENTRY_DSN,
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
 
   // Enable Spotlight in development
-  spotlight: IS_DEV,
+  spotlight: process.env.NODE_ENV === 'development',
 
   integrations: [Sentry.consoleLoggingIntegration()],
 
@@ -28,13 +27,13 @@ const sentryOptions: Sentry.NodeOptions | Sentry.EdgeOptions = {
 };
 
 export function register() {
-  if (!Env.NEXT_PUBLIC_SENTRY_DISABLED) {
-    if (Env.NEXT_RUNTIME === 'nodejs') {
+  if (!process.env.NEXT_PUBLIC_SENTRY_DISABLED) {
+    if (process.env.NEXT_RUNTIME === 'nodejs') {
       // Node.js Sentry configuration
       Sentry.init(sentryOptions);
     }
 
-    if (Env.NEXT_RUNTIME === 'edge') {
+    if (process.env.NEXT_RUNTIME === 'edge') {
       // Edge Sentry configuration
       Sentry.init(sentryOptions);
     }
