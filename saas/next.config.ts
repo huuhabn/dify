@@ -12,6 +12,8 @@ const baseConfig: NextConfig = {
   reactStrictMode: true,
   reactCompiler: process.env.NODE_ENV === 'production', // Keep the development environment fast
   experimental: {
+    // Configured for agent upgrades
+    agentUpgrade: 'security',
     // Clean up unused compilation work from memory and disk caches.
     turbopackGc: true,
     // Use the Rust version, instead of the OG Babel one

@@ -73,15 +73,12 @@
   },
   "Dashboard": {
     "hello_message": "Xin chào {email}!",
-    "alternative_message": "Cần thêm tính năng cao cấp? Hãy thử phiên bản Pro.",
-    "max_message": "Hỗ trợ tự lưu trữ toàn diện với Dify SaaS."
+    "alternative_message": "Cần tính năng nâng cao? Đa người thuê & Nhóm, Vai trò & Quyền hạn, Shadcn UI, An toàn kiểu đầu-cuối với oRPC, Thanh toán Stripe, Chế độ Sáng / Tối. Thử ngay <url></url>.",
+    "max_message": "Hoặc cần hệ thống xác thực tự lưu trữ (Better Auth)? Thử ngay <url></url>."
   },
   "DashboardLayout": {
     "meta_title": "Bảng điều khiển",
-    "meta_description": "Quản lý các ứng dụng AI và kho tri thức.",
-    "dashboard_link": "Ứng dụng & Studio",
-    "user_profile_link": "Cài đặt tài khoản",
-    "sign_out": "Đăng xuất"
+    "meta_description": "Quản lý các ứng dụng AI và kho tri thức."
   },
   "LocaleSwitcher": {
     "change_language": "Đổi ngôn ngữ"
