@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
-import AccessPoint from '@/app/components/app/access-point'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+import AccessPoint from '@/components/dify/app/access-point'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 
 type AppAccessPointPageProps = {
   params: Promise<{ appId: string }>

@@ -2,10 +2,10 @@ import type {
   Subject as ApiSubject,
   WebAppAuthSearchForWhilteListCandidatesData,
 } from '@dify/contracts/enterprise/types.gen'
-import type { Subject } from '@/models/access-control'
+import type { Subject } from '@/types/dify/access-control'
 import { useInfiniteQuery, useQuery, useSuspenseQuery } from '@tanstack/react-query'
 import { systemFeaturesQueryOptions } from '@/features/system-features/client'
-import { SubjectType } from '@/models/access-control'
+import { SubjectType } from '@/types/dify/access-control'
 import { consoleQuery } from '@/service/console'
 import { getUserCanAccess } from '../share'
 

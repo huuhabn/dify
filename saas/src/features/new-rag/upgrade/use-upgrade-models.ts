@@ -4,7 +4,7 @@ import type {
   KnowledgeFsUpgradeModelRecommendationsResponse,
   KnowledgeFsUpgradeModelsPayload,
 } from '@dify/contracts/api/console/datasets/types.gen'
-import type { ModelSelectorValue } from '@/app/components/header/account-setting/model-provider-page/model-selector/types'
+import type { ModelSelectorValue } from '@/components/dify/header/account-setting/model-provider-page/model-selector/types'
 import type {
   CreationModelFieldState,
   CreationModelIssue,

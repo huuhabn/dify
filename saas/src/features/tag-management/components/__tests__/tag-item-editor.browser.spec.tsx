@@ -1,7 +1,7 @@
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
-import { toast } from '@/app/notifications'
-import { AppToaster } from '@/app/notifications/app-toaster'
+import { toast } from '@/components/providers/notifications'
+import { AppToaster } from '@/components/providers/notifications/app-toaster'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { TagItemEditor } from '../tag-item-editor'
 

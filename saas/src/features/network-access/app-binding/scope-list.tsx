@@ -2,11 +2,11 @@
 
 import type { AccessControlDraft } from './draft'
 import type { AccessControlAppIcon } from './index'
-import type { AccessPoint } from '@/app/components/app/deploy/utils/access-point'
+import type { AccessPoint } from '@/components/dify/app/deploy/utils/access-point'
 import { cn } from '@langgenius/dify-ui/cn'
 import { Switch } from '@langgenius/dify-ui/switch'
 import { useTranslation } from 'react-i18next'
-import AppIcon from '@/app/components/base/app-icon'
+import AppIcon from '@/components/dify/base/app-icon'
 
 const SCOPE_ICONS: Record<Exclude<AccessPoint, 'webApp'>, string> = {
   serviceApi: 'i-custom-vender-knowledge-api-aggregate',

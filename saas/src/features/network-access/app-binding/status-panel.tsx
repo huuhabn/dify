@@ -2,7 +2,7 @@
 
 import type { AccessControlDraft, AccessControlPolicy } from './draft'
 import type { AccessControlAppIcon } from './index'
-import type { AccessPoint } from '@/app/components/app/deploy/utils/access-point'
+import type { AccessPoint } from '@/components/dify/app/deploy/utils/access-point'
 import type { AccessControlAnalyticsContext } from '@/features/network-access/analytics'
 import {
   AlertDialog,
@@ -20,7 +20,7 @@ import { PopoverTitle } from '@langgenius/dify-ui/popover'
 import { Switch } from '@langgenius/dify-ui/switch'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import AppIcon from '@/app/components/base/app-icon'
+import AppIcon from '@/components/dify/base/app-icon'
 import { trackNetworkAccessEvent } from '@/features/network-access/analytics'
 import { splitPolicySummary } from '@/features/network-access/ip-policy'
 import { getInServiceCoverage } from './chip-status'

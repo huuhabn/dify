@@ -3,7 +3,7 @@
 import type { AgentChatRuntimeEmptyStateProps, AgentChatRuntimeProps } from './chat-runtime'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import AppIcon from '@/app/components/base/app-icon'
+import AppIcon from '@/components/dify/base/app-icon'
 import { consoleQuery } from '@/service/console'
 import { AgentChatRuntime } from './chat-runtime'
 import { sendPreviewChatMessage } from './preview-chat-request'

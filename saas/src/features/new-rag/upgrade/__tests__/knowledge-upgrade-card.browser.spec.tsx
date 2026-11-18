@@ -2,7 +2,7 @@ import type { KnowledgeFsUpgradeJobResponse } from '@dify/contracts/api/console/
 import type { KnowledgeUpgrade } from '../knowledge-upgrade-context-value'
 import type { consoleClient } from '@/service/console'
 import { useState } from 'react'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { createDeferred } from '@/test/deferred'

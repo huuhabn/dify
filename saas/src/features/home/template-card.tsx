@@ -5,9 +5,9 @@ import { cn } from '@langgenius/dify-ui/cn'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { useId } from 'react'
 import { useTranslation } from 'react-i18next'
-import { AppTypeIcon } from '@/app/components/app/type-selector'
-import { trackEvent } from '@/app/components/base/amplitude'
-import AppIcon from '@/app/components/base/app-icon'
+import { AppTypeIcon } from '@/components/dify/app/type-selector'
+import { trackEvent } from '@/components/dify/base/amplitude'
+import AppIcon from '@/components/dify/base/app-icon'
 import { systemFeaturesQueryOptions } from '@/features/system-features/client'
 
 type TemplateCardProps = {

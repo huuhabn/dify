@@ -9,10 +9,10 @@ import type {
   Credential,
   CredentialTypeEnum,
   PluginPayload,
-} from '@/app/components/plugins/plugin-auth/types'
+} from '@/components/dify/plugins/plugin-auth/types'
 import { skipToken, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useCallback } from 'react'
-import { AuthCategory } from '@/app/components/plugins/plugin-auth/types'
+import { AuthCategory } from '@/components/dify/plugins/plugin-auth/types'
 import { get } from './base'
 import { consoleQuery } from './console'
 import { selectCredentialFormSchema } from './console/plugin-auth-select'

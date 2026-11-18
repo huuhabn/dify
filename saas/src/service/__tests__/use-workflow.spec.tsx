@@ -10,7 +10,7 @@ import type {
 } from '@dify/contracts/enterprise-app-deploy/types.gen'
 import type { InfiniteData } from '@tanstack/react-query'
 import type { ReactNode } from 'react'
-import type { EditorResource } from '@/app/components/workflow/editor-resource/resource'
+import type { EditorResource } from '@/components/dify/workflow/editor-resource/resource'
 import {
   DeploymentOperationStatus,
   DeploymentOperationType,
@@ -20,7 +20,7 @@ import {
 } from '@dify/contracts/enterprise-app-deploy/types.gen'
 import { QueryClient, QueryClientProvider, useMutation } from '@tanstack/react-query'
 import { act, renderHook } from '@testing-library/react'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { consoleQuery } from '@/service/console'
 import { useRestoreWorkflow, useUpdateWorkflow } from '../use-workflow'
 import {

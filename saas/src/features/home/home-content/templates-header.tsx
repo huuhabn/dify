@@ -1,8 +1,8 @@
 'use client'
 
 import { useTranslation } from 'react-i18next'
-import { SearchInput } from '@/app/components/base/search-input'
-import Category from '@/app/components/explore/category'
+import { SearchInput } from '@/components/dify/base/search-input'
+import Category from '@/components/dify/explore/category'
 import { useMarketplace } from '@/features/marketplace/client'
 
 export function HomeTemplatesHeader({

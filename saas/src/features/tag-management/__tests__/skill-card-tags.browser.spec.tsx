@@ -1,6 +1,6 @@
 import type { TagResponse as Tag } from '@dify/contracts/api/console/tags/types.gen'
 import { useState } from 'react'
-import { page } from 'vite-plus/test/browser'
+import { page } from 'vitest/browser'
 import { guardUnexpectedFetch } from '@/test/unexpected-fetch'
 import { SkillCardTags } from '../components/skill-card-tags'
 import { TagManagementModal } from '../components/tag-management-modal'

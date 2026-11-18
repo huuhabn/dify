@@ -4,7 +4,7 @@ import type { ReactNode } from 'react'
 import { Button } from '@langgenius/dify-ui/button'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { FullScreenLoading } from '@/app/components/full-screen-loading'
+import { FullScreenLoading } from '@/components/dify/full-screen-loading'
 import { isClient } from '@/utils/client'
 import { systemFeaturesQueryOptions } from './client'
 

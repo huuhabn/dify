@@ -3,10 +3,10 @@
 import type { RecentAppResponse } from '@dify/contracts/api/console/apps/types.gen'
 import type { RecommendedAppResponse } from '@dify/contracts/api/console/explore/types.gen'
 import dynamic from 'next/dynamic'
-import { STEP_BY_STEP_TOUR_TARGETS } from '@/app/components/step-by-step-tour/target-registry'
+import { STEP_BY_STEP_TOUR_TARGETS } from '@/components/dify/step-by-step-tour/target-registry'
 import { ContinueWork } from '../continue-work/continue-work'
 
-const LearnDify = dynamic(() => import('@/app/components/explore/learn-dify'), { ssr: false })
+const LearnDify = dynamic(() => import('@/components/dify/explore/learn-dify'), { ssr: false })
 
 export function HomeRecommendations({
   canCreate,

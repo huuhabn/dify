@@ -1,5 +1,5 @@
-import type { LegacyToolsSearchParams } from '@/app/components/integrations/routes'
-import { getIntegrationRedirectPathByLegacyToolsSearchParams } from '@/app/components/integrations/routes'
+import type { LegacyToolsSearchParams } from '@/components/dify/integrations/routes'
+import { getIntegrationRedirectPathByLegacyToolsSearchParams } from '@/components/dify/integrations/routes'
 import { redirect } from '@/next/navigation'
 
 type ToolsPageProps = {

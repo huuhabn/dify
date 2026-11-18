@@ -1,7 +1,7 @@
 // @vitest-environment node
 
 import { AsyncLocalStorage } from 'node:async_hooks'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 const mocks = vi.hoisted(() => ({
   headers: vi.fn(),

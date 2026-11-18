@@ -1,6 +1,6 @@
 import type { DatasourceParameters, DatasourceParameterSchema } from '../datasource-parameter-model'
 import { useState } from 'react'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { guardUnexpectedFetch } from '@/test/unexpected-fetch'
 import {

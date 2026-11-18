@@ -1,7 +1,7 @@
 import { QueryClientProvider } from '@tanstack/react-query'
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { imageUpload } from '@/app/components/base/image-uploader/utils'
+import { imageUpload } from '@/components/dify/base/image-uploader/utils'
 import { createTestQueryClient } from '@/test/query-client'
 import { createCroppedAvatarImage } from '../avatar-image'
 import AvatarWithEdit from '../AvatarWithEdit'
@@ -24,8 +24,8 @@ vi.mock('@/service/base', () => ({
   request: mocks.request,
 }))
 
-vi.mock('@/app/components/base/image-uploader/utils', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/app/components/base/image-uploader/utils')>()),
+vi.mock('@/components/dify/base/image-uploader/utils', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/components/dify/base/image-uploader/utils')>()),
   imageUpload: mocks.imageUpload,
 }))
 

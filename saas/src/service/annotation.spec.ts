@@ -1,4 +1,4 @@
-import { AnnotationEnableStatus } from '@/app/components/app/annotation/type'
+import { AnnotationEnableStatus } from '@/components/dify/app/annotation/type'
 import { updateAnnotationStatus } from './annotation'
 import { consoleClient } from './console'
 

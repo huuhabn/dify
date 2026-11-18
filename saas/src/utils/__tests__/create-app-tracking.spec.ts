@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
-import * as amplitude from '@/app/components/base/amplitude/utils'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import * as amplitude from '@/components/dify/base/amplitude/utils'
 import { AgentScope } from '@/features/agent-v2/analytics'
 import {
   buildCreateAppEventPayload,

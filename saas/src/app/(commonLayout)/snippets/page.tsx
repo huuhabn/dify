@@ -1,4 +1,4 @@
-import SnippetList from '@/app/components/snippet-list'
+import SnippetList from '@/components/dify/snippet-list'
 
 const SnippetsPage = () => {
   return <SnippetList />

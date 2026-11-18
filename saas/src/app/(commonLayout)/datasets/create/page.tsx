@@ -1,4 +1,4 @@
-import DatasetUpdateForm from '@/app/components/datasets/create'
+import DatasetUpdateForm from '@/components/dify/datasets/create'
 import { getRouteMetadata } from '@/app/route-metadata'
 
 export function generateMetadata() {

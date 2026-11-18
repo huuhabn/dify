@@ -3,7 +3,7 @@
 import type { SelectorParam } from 'i18next'
 import { readFileSync } from 'node:fs'
 import { createInstance } from 'i18next'
-import { describe, expect, it } from 'vite-plus/test'
+import { describe, expect, it } from 'vitest'
 import { supportedLocales } from '../locale'
 import deployments from '../locales/en-US/deployments.json'
 import skill from '../locales/en-US/skill.json'

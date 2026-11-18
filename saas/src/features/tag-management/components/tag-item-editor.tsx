@@ -15,7 +15,7 @@ import { useMutation } from '@tanstack/react-query'
 import { useDebounceFn } from 'ahooks'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { consoleQuery } from '@/service/console'
 import { getErrorMessage } from '@/utils/error-message'
 

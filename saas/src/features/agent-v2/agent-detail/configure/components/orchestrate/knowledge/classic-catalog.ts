@@ -1,7 +1,7 @@
 import type { DatasetDetailWithPartialMembersResponse } from '@dify/contracts/api/console/datasets/types.gen'
 import type { AgentKnowledgeRetrievalItem } from '@/features/agent-v2/agent-composer/form-state'
 import { useInfiniteQuery } from '@tanstack/react-query'
-import { getMultipleRetrievalConfig } from '@/app/components/workflow/nodes/knowledge-retrieval/utils'
+import { getMultipleRetrievalConfig } from '@/components/dify/workflow/nodes/knowledge-retrieval/utils'
 import { DATASET_DEFAULT } from '@/config'
 import { consoleQuery } from '@/service/console'
 

@@ -1,4 +1,4 @@
-import { page } from 'vite-plus/test/browser'
+import { page } from 'vitest/browser'
 import { SourcesPage } from '../page'
 import {
   clearSourceClients,

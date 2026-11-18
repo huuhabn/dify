@@ -6,9 +6,9 @@ import {
   API_KEY_LIMIT,
   ApiKeyCreateAction,
   ApiKeyDialogContent,
-} from '@/app/components/api-key/api-key-dialog-content'
-import { ApiKeyListContent } from '@/app/components/api-key/api-key-list-content'
-import { CreatedApiKeyDialog } from '@/app/components/api-key/created-api-key-dialog'
+} from '@/components/dify/api-key/api-key-dialog-content'
+import { ApiKeyListContent } from '@/components/dify/api-key/api-key-list-content'
+import { CreatedApiKeyDialog } from '@/components/dify/api-key/created-api-key-dialog'
 import { consoleQuery } from '@/service/console'
 
 type AgentApiKeyDialogContentProps = {

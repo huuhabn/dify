@@ -3,7 +3,7 @@
 import { Suspense } from 'react'
 import { renderToReadableStream } from 'react-dom/server'
 import { useTranslation } from 'react-i18next'
-import { I18nClientProvider } from '@/app/components/provider/i18n'
+import { I18nClientProvider } from '@/components/providers/i18n'
 
 vi.unmock('react-i18next')
 const mocks = vi.hoisted(() => ({ loadResource: vi.fn() }))

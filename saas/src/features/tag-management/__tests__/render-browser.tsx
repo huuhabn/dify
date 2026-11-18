@@ -1,7 +1,7 @@
 import type { TagResponse } from '@dify/contracts/api/console/tags/types.gen'
 import type { ReactElement } from 'react'
 import { render } from 'vitest-browser-react'
-import { AppToaster } from '@/app/notifications/app-toaster'
+import { AppToaster } from '@/components/providers/notifications/app-toaster'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { seedTags } from '@/test/console/tags'
 

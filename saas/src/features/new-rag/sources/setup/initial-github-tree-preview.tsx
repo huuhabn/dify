@@ -10,7 +10,7 @@ import { Button } from '@langgenius/dify-ui/button'
 import { Checkbox } from '@langgenius/dify-ui/checkbox'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import { consoleClient } from '@/service/console'
 
 type DocumentResource = Extract<PreviewResource, { kind: 'document' }>

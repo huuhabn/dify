@@ -1,6 +1,6 @@
-import type { CredentialTypeEnum as CredentialType } from '@/app/components/plugins/plugin-auth/types'
+import type { CredentialTypeEnum as CredentialType } from '@/components/dify/plugins/plugin-auth/types'
 import { act, renderHook, waitFor } from '@testing-library/react'
-import { AuthCategory, CredentialTypeEnum } from '@/app/components/plugins/plugin-auth/types'
+import { AuthCategory, CredentialTypeEnum } from '@/components/dify/plugins/plugin-auth/types'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import {
   useGetPluginCredentialSchema,

@@ -4,7 +4,7 @@ import type { NetworkAccessGroupCurrentIpCheckResponse } from '@dify/contracts/a
 import type { SubmitEvent } from 'react'
 import type { AccessControlDraft, AccessControlPolicy } from './draft'
 import type { AccessControlAppIcon } from './index'
-import type { AccessPoint } from '@/app/components/app/deploy/utils/access-point'
+import type { AccessPoint } from '@/components/dify/app/deploy/utils/access-point'
 import type { AccessControlAnalyticsContext } from '@/features/network-access/analytics'
 import { Button } from '@langgenius/dify-ui/button'
 import { cn } from '@langgenius/dify-ui/cn'

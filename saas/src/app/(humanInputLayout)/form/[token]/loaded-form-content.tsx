@@ -1,20 +1,20 @@
-import type { HumanInputFieldValue } from '@/app/components/base/chat/chat/answer/human-input-content/field-renderer'
-import type { UserAction } from '@/app/components/workflow/nodes/human-input/types'
+import type { HumanInputFieldValue } from '@/components/dify/base/chat/chat/answer/human-input-content/field-renderer'
+import type { UserAction } from '@/components/dify/workflow/nodes/human-input/types'
 import type { LegacyHumanInputFormData as FormData } from '@/features/human-input/form/types'
 import { Button } from '@langgenius/dify-ui/button'
 import { cn } from '@langgenius/dify-ui/cn'
 import { produce } from 'immer'
 import { useMemo, useState } from 'react'
-import AppIcon from '@/app/components/base/app-icon'
-import ContentItem from '@/app/components/base/chat/chat/answer/human-input-content/content-item'
-import ExpirationTime from '@/app/components/base/chat/chat/answer/human-input-content/expiration-time'
+import AppIcon from '@/components/dify/base/app-icon'
+import ContentItem from '@/components/dify/base/chat/chat/answer/human-input-content/content-item'
+import ExpirationTime from '@/components/dify/base/chat/chat/answer/human-input-content/expiration-time'
 import {
   getButtonStyle,
   getRenderedFormInputs,
   hasInvalidRequiredHumanInput,
   initializeInputs,
   splitByOutputVar,
-} from '@/app/components/base/chat/chat/answer/human-input-content/utils'
+} from '@/components/dify/base/chat/chat/answer/human-input-content/utils'
 import BrandingFooter from '@/features/human-input/form/branding-footer'
 
 type LoadedFormContentProps = {

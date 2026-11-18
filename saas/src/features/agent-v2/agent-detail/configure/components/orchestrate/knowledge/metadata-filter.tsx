@@ -1,8 +1,8 @@
 import type { ComponentProps } from 'react'
-import type { Var } from '@/app/components/workflow/types'
-import useAvailableVarList from '@/app/components/workflow/nodes/_base/hooks/use-available-var-list'
-import MetadataFilter from '@/app/components/workflow/nodes/knowledge-retrieval/components/metadata/metadata-filter'
-import { VarType } from '@/app/components/workflow/types'
+import type { Var } from '@/components/dify/workflow/types'
+import useAvailableVarList from '@/components/dify/workflow/nodes/_base/hooks/use-available-var-list'
+import MetadataFilter from '@/components/dify/workflow/nodes/knowledge-retrieval/components/metadata/metadata-filter'
+import { VarType } from '@/components/dify/workflow/types'
 
 type Props = ComponentProps<typeof MetadataFilter> & {
   workflowNodeId?: string

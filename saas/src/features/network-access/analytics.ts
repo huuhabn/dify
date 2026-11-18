@@ -8,7 +8,7 @@ import type {
   PaidPlanRequiredError,
 } from '@dify/contracts/api/console/workspaces/types.gen'
 import { isDefinedError, ORPCError } from '@orpc/client'
-import { trackEvent } from '@/app/components/base/amplitude'
+import { trackEvent } from '@/components/dify/base/amplitude'
 
 type NetworkAccessPoint = AppNetworkAccessGroupResponse['available_access_points'][number]
 

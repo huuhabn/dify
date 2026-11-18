@@ -1,15 +1,15 @@
 import type { HumanInputFormDefinition, LegacyHumanInputFormData } from '../types'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
-import { UserActionButtonType } from '@/app/components/workflow/nodes/human-input/types'
-import { InputVarType } from '@/app/components/workflow/types'
+import { UserActionButtonType } from '@/components/dify/workflow/nodes/human-input/types'
+import { InputVarType } from '@/components/dify/workflow/types'
 import { guardUnexpectedFetch } from '@/test/unexpected-fetch'
 import LoadedFormContent from '../loaded-form-content'
 import { normalizeLegacyHumanInputForm } from '../normalize-legacy-definition'
 
 // Load the real code-split renderer before assertions start their interaction deadlines.
 beforeAll(async () => {
-  await import('@/app/components/base/markdown/streamdown-wrapper')
+  await import('@/components/dify/base/markdown/streamdown-wrapper')
 })
 
 describe('LoadedFormContent', () => {

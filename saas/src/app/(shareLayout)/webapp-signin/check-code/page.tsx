@@ -9,9 +9,9 @@ import {
   navigateAfterWebAppLogin,
   resolveWebAppLoginRedirect,
 } from '@/app/(shareLayout)/webapp-signin/login-redirect'
-import { focusOnArrival } from '@/app/components/auth-shell/focus-on-arrival'
-import Countdown from '@/app/components/signin/countdown'
-import { toast } from '@/app/notifications'
+import { focusOnArrival } from '@/components/dify/auth-shell/focus-on-arrival'
+import Countdown from '@/components/dify/signin/countdown'
+import { toast } from '@/components/providers/notifications'
 import { useWebAppStore } from '@/context/web-app-context'
 import { useRouter, useSearchParams } from '@/next/navigation'
 import { sendWebAppEMailLoginCode, webAppEmailLoginWithCode } from '@/service/common'

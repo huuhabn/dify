@@ -5,7 +5,7 @@ import {
   zPostAppsImportsResponse,
 } from '@dify/contracts/api/console/apps/zod.gen'
 import { act, render, screen, waitFor } from '@testing-library/react'
-import { DSLImportMode, DSLImportStatus } from '@/models/app'
+import { DSLImportMode, DSLImportStatus } from '@/types/dify/app'
 import { httpErrorFromResponse } from '@/service/http-error'
 import { renderHookWithConsoleQuery } from '@/test/console/query-data'
 import { createDeferred } from '@/test/deferred'
@@ -38,7 +38,7 @@ const toastMocks = vi.hoisted(() => ({
   warning: vi.fn(),
 }))
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: toastMocks,
 }))
 

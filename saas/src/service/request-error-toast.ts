@@ -1,4 +1,4 @@
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 
 const DEDUPE_WINDOW_MS = 10000
 

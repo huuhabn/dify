@@ -1,5 +1,5 @@
 import type { KnowledgeUpgrade } from '../knowledge-upgrade-context-value'
-import { describe, expect, it } from 'vite-plus/test'
+import { describe, expect, it } from 'vitest'
 import { matchesKnowledgeUpgradeFilters } from '../knowledge-upgrade-filters'
 
 const upgrade = {

@@ -6,7 +6,7 @@ import type {
 import type {
   DefaultModel,
   FormValue,
-} from '@/app/components/header/account-setting/model-provider-page/declarations'
+} from '@/components/dify/header/account-setting/model-provider-page/declarations'
 // oxlint-disable-next-line no-restricted-imports
 import type { IOnCompleted, IOnData, IOnError } from '@/service/base'
 // oxlint-disable-next-line no-restricted-imports

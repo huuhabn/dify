@@ -1,4 +1,4 @@
-import AppDeploy from '@/app/components/app/deploy'
+import AppDeploy from '@/components/dify/app/deploy'
 
 export default function AppDeployPage() {
   return <AppDeploy />

@@ -1,14 +1,14 @@
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
-import { toast } from '@/app/notifications'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { toast } from '@/components/providers/notifications'
 import { defaultAgentSoulConfigFormState } from '@/features/agent-v2/agent-composer/form-state'
 import { AgentComposerProvider } from '@/features/agent-v2/agent-composer/provider'
 import { AgentOrchestrateReadOnlyContext } from '../../read-only-context'
 import { AgentEnvEditor, EnvVariablesTable } from '../env'
 import { getEnvImportPlatform, parseEnvImport } from '../env-utils'
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: {
     error: vi.fn(),
   },

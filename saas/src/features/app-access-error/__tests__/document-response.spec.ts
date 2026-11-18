@@ -1,6 +1,6 @@
 // oxlint-disable-next-line no-restricted-imports -- Exercise the real HTTP request/response boundary used by Proxy, not a mocked status wrapper.
 import { NextRequest } from 'next/server'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { proxy } from '@/proxy'
 import { APP_UNAVAILABLE_IP_HEADER } from '../document-constants'
 import { getWebAppDocumentResponse } from '../document-response'

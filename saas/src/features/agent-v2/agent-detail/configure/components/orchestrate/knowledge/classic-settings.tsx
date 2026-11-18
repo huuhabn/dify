@@ -7,7 +7,7 @@ import type {
 import type {
   MetadataFilteringCondition,
   MultipleRetrievalConfig,
-} from '@/app/components/workflow/nodes/knowledge-retrieval/types'
+} from '@/components/dify/workflow/nodes/knowledge-retrieval/types'
 import type { AgentKnowledgeRetrievalItem } from '@/features/agent-v2/agent-composer/form-state'
 import type { KnowledgeValidationResult } from '@/features/agent-v2/agent-composer/knowledge-validation'
 import { Button } from '@langgenius/dify-ui/button'
@@ -20,23 +20,23 @@ import { useQueries } from '@tanstack/react-query'
 import { intersectionBy, xorBy } from 'es-toolkit/compat'
 import { useId, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ModelTypeEnum } from '@/app/components/header/account-setting/model-provider-page/declarations'
-import { useModelListAndDefaultModelAndCurrentProviderAndModel } from '@/app/components/header/account-setting/model-provider-page/hooks'
-import WorkflowField from '@/app/components/workflow/nodes/_base/components/field'
-import AddKnowledge from '@/app/components/workflow/nodes/knowledge-retrieval/components/add-dataset'
+import { ModelTypeEnum } from '@/components/dify/header/account-setting/model-provider-page/declarations'
+import { useModelListAndDefaultModelAndCurrentProviderAndModel } from '@/components/dify/header/account-setting/model-provider-page/hooks'
+import WorkflowField from '@/components/dify/workflow/nodes/_base/components/field'
+import AddKnowledge from '@/components/dify/workflow/nodes/knowledge-retrieval/components/add-dataset'
 import {
   comparisonOperatorNotRequireValue,
   getOperators,
   VARIABLE_REGEX,
-} from '@/app/components/workflow/nodes/knowledge-retrieval/components/metadata/condition-list/utils'
-import RetrievalConfig from '@/app/components/workflow/nodes/knowledge-retrieval/components/retrieval-config'
+} from '@/components/dify/workflow/nodes/knowledge-retrieval/components/metadata/condition-list/utils'
+import RetrievalConfig from '@/components/dify/workflow/nodes/knowledge-retrieval/components/retrieval-config'
 import {
   ComparisonOperator,
   LogicalOperator,
   MetadataFilteringVariableType,
   MetadataFilteringModeEnum as WorkflowMetadataFilteringModeEnum,
-} from '@/app/components/workflow/nodes/knowledge-retrieval/types'
-import { getMultipleRetrievalConfig } from '@/app/components/workflow/nodes/knowledge-retrieval/utils'
+} from '@/components/dify/workflow/nodes/knowledge-retrieval/types'
+import { getMultipleRetrievalConfig } from '@/components/dify/workflow/nodes/knowledge-retrieval/utils'
 import { DATASET_DEFAULT } from '@/config'
 import {
   getMetadataConditionsMissingValues,

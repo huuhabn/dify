@@ -1,8 +1,8 @@
 'use client'
 
 import type { FC, PropsWithChildren } from 'react'
-import type { ChatConfig } from '@/app/components/base/chat/types'
-import type { AppData, AppMeta } from '@/models/share'
+import type { ChatConfig } from '@/components/dify/base/chat/types'
+import type { AppData, AppMeta } from '@/types/dify/share'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { useEffect } from 'react'
 import { create } from 'zustand'
@@ -10,10 +10,10 @@ import {
   isWebAppSigninPath,
   resolveWebAppLoginRedirect,
 } from '@/app/(shareLayout)/webapp-signin/login-redirect'
-import { getProcessedSystemVariablesFromUrlParams } from '@/app/components/base/chat/utils'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+import { getProcessedSystemVariablesFromUrlParams } from '@/components/dify/base/chat/utils'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import { systemFeaturesQueryOptions } from '@/features/system-features/client'
-import { AccessMode } from '@/models/access-control'
+import { AccessMode } from '@/types/dify/access-control'
 import { usePathname, useSearchParams } from '@/next/navigation'
 import { useGetWebAppAccessModeByCode } from '@/service/use-share'
 import { parseWebAppAddress } from '@/service/webapp-address'

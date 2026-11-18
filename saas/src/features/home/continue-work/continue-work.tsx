@@ -3,7 +3,7 @@
 import type { RecentAppResponse } from '@dify/contracts/api/console/apps/types.gen'
 import { cn } from '@langgenius/dify-ui/cn'
 import { useTranslation } from 'react-i18next'
-import { MAIN_NAV_APP_CARD_GRID_CLASS_NAME } from '@/app/components/main-nav/app-card-grid'
+import { MAIN_NAV_APP_CARD_GRID_CLASS_NAME } from '@/components/dify/main-nav/app-card-grid'
 import Link from '@/next/link'
 import { ContinueWorkItem } from './item'
 

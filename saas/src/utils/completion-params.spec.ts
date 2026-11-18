@@ -1,7 +1,7 @@
 import type {
   FormValue,
   ModelParameterRule,
-} from '@/app/components/header/account-setting/model-provider-page/declarations'
+} from '@/components/dify/header/account-setting/model-provider-page/declarations'
 import { mergeValidCompletionParams } from './completion-params'
 
 const createRule = (overrides: Partial<ModelParameterRule> = {}): ModelParameterRule => ({

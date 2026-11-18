@@ -1,8 +1,8 @@
 import type { AgentKnowledgeRetrievalItem } from './form-state'
 import { useTranslation } from 'react-i18next'
-import { comparisonOperatorNotRequireValue } from '@/app/components/workflow/nodes/knowledge-retrieval/components/metadata/condition-list/utils'
-import { MetadataFilteringModeEnum } from '@/app/components/workflow/nodes/knowledge-retrieval/types'
-import { checkoutRerankModelConfiguredInRetrievalSettings } from '@/app/components/workflow/nodes/knowledge-retrieval/utils'
+import { comparisonOperatorNotRequireValue } from '@/components/dify/workflow/nodes/knowledge-retrieval/components/metadata/condition-list/utils'
+import { MetadataFilteringModeEnum } from '@/components/dify/workflow/nodes/knowledge-retrieval/types'
+import { checkoutRerankModelConfiguredInRetrievalSettings } from '@/components/dify/workflow/nodes/knowledge-retrieval/utils'
 import { RETRIEVE_TYPE } from '@/types/app'
 
 export type KnowledgeValidationIssueCode =

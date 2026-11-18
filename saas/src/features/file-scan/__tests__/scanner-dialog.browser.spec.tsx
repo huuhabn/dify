@@ -3,7 +3,7 @@ import type {
   FileScanProviderTypeResponse,
 } from '@dify/contracts/api/console/file-scan/types.gen'
 import { ORPCError } from '@orpc/client'
-import { page } from 'vite-plus/test/browser'
+import { page } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { createDeferred } from '@/test/deferred'

@@ -12,7 +12,7 @@ import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { createInstance } from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import { trackEvent } from '@/app/components/base/amplitude'
+import { trackEvent } from '@/components/dify/base/amplitude'
 import appOverviewTranslations from '@/i18n/locales/en-US/app-overview.json'
 import commonTranslations from '@/i18n/locales/en-US/common.json'
 import deploymentTranslations from '@/i18n/locales/en-US/deployments.json'
@@ -28,7 +28,7 @@ import { createConsoleQueryClient, renderWithConsoleQuery } from '@/test/console
 import { createNuqsTestWrapper } from '@/test/nuqs-testing'
 import { AccessControlEntry } from '..'
 
-vi.mock('@/app/components/base/amplitude', () => ({ trackEvent: vi.fn() }))
+vi.mock('@/components/dify/base/amplitude', () => ({ trackEvent: vi.fn() }))
 vi.unmock('react-i18next')
 
 const initialSearchParams = 'source=network-access'

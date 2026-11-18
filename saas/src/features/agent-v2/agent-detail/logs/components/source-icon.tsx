@@ -1,5 +1,5 @@
 import type { AgentLogSourceResponse } from '@dify/contracts/api/console/agent/types.gen'
-import AppIcon from '@/app/components/base/app-icon'
+import AppIcon from '@/components/dify/base/app-icon'
 
 export function LogSourceIcon({ source }: { source?: AgentLogSourceResponse | null }) {
   if (!source)

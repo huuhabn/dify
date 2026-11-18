@@ -8,9 +8,9 @@ import { QueryClient, useQuery } from '@tanstack/react-query'
 import { act, render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { NuqsTestingAdapter } from 'nuqs/adapters/testing'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { AgentPermission } from '@/features/agent-v2/acl'
-import { AccessMode } from '@/models/access-control'
+import { AccessMode } from '@/types/dify/access-control'
 import { consoleQuery } from '@/service/console'
 import { seedAccountProfileQuery } from '@/test/console/account-profile'
 import { createQueryClientWrapper } from '@/test/console/query-client'
@@ -44,7 +44,7 @@ vi.mock('@/context/i18n', () => ({
   useDocLink: () => (path: string) => `https://docs.example.test${path}`,
 }))
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: {
     error: vi.fn(),
     success: vi.fn(),

@@ -6,11 +6,11 @@ import type { DeploymentEdition } from '@dify/contracts/api/console/system-featu
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import * as React from 'react'
-import { trackEvent } from '@/app/components/base/amplitude'
+import { trackEvent } from '@/components/dify/base/amplitude'
 import { renderWithConsoleQuery } from '@/test/console/query-data'
 import { TemplateCard } from '../template-card'
 
-vi.mock('@/app/components/base/amplitude', () => ({
+vi.mock('@/components/dify/base/amplitude', () => ({
   trackEvent: vi.fn(),
 }))
 

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { OAuthRegistrationAnalytics } from '@/app/components/oauth-registration-analytics'
+import { OAuthRegistrationAnalytics } from '@/components/dify/oauth-registration-analytics'
 
 export default function OAuthAuthorizeLayout({ children }: { children: ReactNode }) {
   return (

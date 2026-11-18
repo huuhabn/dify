@@ -1,4 +1,4 @@
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { ThemeProvider } from '../provider'
 import { ThemeSelector } from '../theme-selector'

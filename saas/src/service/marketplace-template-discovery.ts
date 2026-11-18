@@ -3,7 +3,7 @@ import type {
   MarketplaceTemplateCollection,
 } from '@dify/contracts/marketplace'
 import { cache } from 'react'
-import { SERVER_PREFETCH_BUDGET_MS } from '@/app/components/plugins/marketplace/server-budget'
+import { SERVER_PREFETCH_BUDGET_MS } from '@/components/dify/plugins/marketplace/server-budget'
 import { marketplaceClient } from '@/service/marketplace'
 
 export type MarketplaceTemplateCollectionsResult = {

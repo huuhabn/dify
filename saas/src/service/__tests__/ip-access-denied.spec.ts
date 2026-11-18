@@ -1,7 +1,7 @@
 import { ORPCError } from '@orpc/client'
 import { waitFor } from '@testing-library/react'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
-import { toast } from '@/app/notifications'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { toast } from '@/components/providers/notifications'
 import {
   appAccessErrorAtom,
   appAccessStore,
@@ -19,7 +19,7 @@ import * as webAppAuth from '../webapp-auth'
 
 const refreshAccessTokenOrReLogin = vi.hoisted(() => vi.fn())
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: { error: vi.fn() },
 }))
 

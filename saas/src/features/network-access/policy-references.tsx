@@ -2,7 +2,7 @@
 
 import type { NetworkAccessGroupResponse } from '@dify/contracts/api/console/workspaces/types.gen'
 import { useTranslation } from 'react-i18next'
-import AppIcon from '@/app/components/base/app-icon'
+import AppIcon from '@/components/dify/base/app-icon'
 
 type PolicyReferencedAppsProps = {
   apps: NetworkAccessGroupResponse['apps']

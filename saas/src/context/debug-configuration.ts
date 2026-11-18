@@ -1,9 +1,9 @@
 import type { DatasetDetailWithPartialMembersResponse } from '@dify/contracts/api/console/datasets/types.gen'
 import type { RefObject } from 'react'
-import type { ConfigurationAppMode } from '@/app/components/app/configuration/hooks/configuration-lifecycle/types'
-import type { FormValue } from '@/app/components/header/account-setting/model-provider-page/declarations'
-import type { Collection } from '@/app/components/tools/types'
-import type { ExternalDataTool } from '@/models/common'
+import type { ConfigurationAppMode } from '@/components/dify/app/configuration/hooks/configuration-lifecycle/types'
+import type { FormValue } from '@/components/dify/header/account-setting/model-provider-page/declarations'
+import type { Collection } from '@/components/dify/tools/types'
+import type { ExternalDataTool } from '@/types/dify/common'
 import type {
   AnnotationReplyConfig,
   BlockStatus,
@@ -21,7 +21,7 @@ import type {
   SpeechToTextConfig,
   SuggestedQuestionsAfterAnswerConfig,
   TextToSpeechConfig,
-} from '@/models/debug'
+} from '@/types/dify/debug'
 import type { VisionSettings } from '@/types/app'
 import { noop } from 'es-toolkit/function'
 import { createContext, useContext } from 'use-context-selector'
@@ -31,7 +31,7 @@ import {
   DEFAULT_CHAT_PROMPT_CONFIG,
   DEFAULT_COMPLETION_PROMPT_CONFIG,
 } from '@/config'
-import { PromptMode } from '@/models/debug'
+import { PromptMode } from '@/types/dify/debug'
 import { ModelModeType, Resolution, RETRIEVE_TYPE, TransferMethod } from '@/types/app'
 
 type IDebugConfiguration = {

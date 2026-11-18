@@ -4,7 +4,7 @@ import { QueryClient, skipToken } from '@tanstack/react-query'
 import { act, render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { useAtomValue } from 'jotai'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { formStateToAgentSoulConfig } from '@/features/agent-v2/agent-composer/conversions'
 import { defaultAgentSoulConfigFormState } from '@/features/agent-v2/agent-composer/form-state'
 import { AgentComposerProvider } from '@/features/agent-v2/agent-composer/provider'
@@ -63,7 +63,7 @@ const mocks = vi.hoisted(() => ({
   },
 }))
 
-vi.mock('@/app/components/base/file-uploader/pdf-highlighter-adapter', () => ({
+vi.mock('@/components/dify/base/file-uploader/pdf-highlighter-adapter', () => ({
   PdfLoader: ({ url }: { url: string }) => <div data-testid="pdf-loader" data-url={url} />,
   PdfHighlighter: () => null,
 }))

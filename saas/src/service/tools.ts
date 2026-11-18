@@ -4,7 +4,7 @@ import type {
   ToolCredential,
   WorkflowToolProviderParameter,
   WorkflowToolProviderRequest,
-} from '@/app/components/tools/types'
+} from '@/components/dify/tools/types'
 import type { ConsoleClientContext } from '@/service/console'
 import {
   selectApiSchemaParameters,
@@ -12,7 +12,7 @@ import {
   selectCustomCollection,
   selectToolCollections,
   selectWorkflowToolDetail,
-} from '@/app/components/tools/utils/query-select'
+} from '@/components/dify/tools/utils/query-select'
 // oxlint-disable-next-line no-restricted-imports -- legacy built-in credential flow, see below
 import { get, post } from './base'
 import { consoleClient } from './console'

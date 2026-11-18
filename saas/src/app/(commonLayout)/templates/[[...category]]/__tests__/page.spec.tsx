@@ -1,7 +1,7 @@
 import type { FunctionComponent, ReactElement, ReactNode } from 'react'
 import { render, screen } from '@testing-library/react'
 import { createElement } from 'react'
-import { describe, expect, it, vi } from 'vite-plus/test'
+import { describe, expect, it, vi } from 'vitest'
 import { redirect } from '@/next/navigation'
 import TemplatesPage from '../page'
 
@@ -18,7 +18,7 @@ const resolveTemplatesPage = async (props: TemplatesPageProps) => {
   return createElement(tree.type, tree.props, content)
 }
 
-vi.mock('@/app/components/plugins/marketplace/templates/template-detail-route', () => ({
+vi.mock('@/components/dify/plugins/marketplace/templates/template-detail-route', () => ({
   TemplateDetailRouteProvider: ({
     children,
     initialSelection,
@@ -32,7 +32,7 @@ vi.mock('@/app/components/plugins/marketplace/templates/template-detail-route', 
   ),
 }))
 
-vi.mock('@/app/components/plugins/marketplace/templates', () => ({
+vi.mock('@/components/dify/plugins/marketplace/templates', () => ({
   EmbeddedTemplatesMarketplace: ({
     category,
     page,

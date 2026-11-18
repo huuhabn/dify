@@ -38,7 +38,7 @@ forwarding hooks and handwritten API DTOs create a second owner.
 
 [Browser transport]: ./browser.ts
 [Instrumentation]: ../../instrumentation.ts
-[QueryClient factory]: ../../app/get-query-client.ts
+[QueryClient factory]: ../../libs/query/get-query-client.ts
 [Server transport]: ./server.ts
 [query-policies.ts]: ./query-policies.ts
 [root layout]: ../../app/layout.tsx

@@ -2,7 +2,7 @@ import type {
   CodeBasedExtension,
   CodeBasedExtensionForm,
   CodeBasedExtensionItem,
-} from '@/models/common'
+} from '@/types/dify/common'
 import { consoleQuery } from '@/service/console'
 
 // `label` and `form_schema` are plugin-defined JSON in the console API response.

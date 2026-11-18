@@ -1,4 +1,4 @@
-import type { HumanInputFormSubmitData } from '@/app/components/base/chat/chat/answer/human-input-content/type'
+import type { HumanInputFormSubmitData } from '@/components/dify/base/chat/chat/answer/human-input-content/type'
 import { submitHumanInputForm } from '../workflow'
 
 const mocks = vi.hoisted(() => ({ legacyPost: vi.fn(), approveV2: vi.fn() }))

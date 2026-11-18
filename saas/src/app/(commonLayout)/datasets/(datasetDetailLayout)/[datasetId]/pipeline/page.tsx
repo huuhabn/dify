@@ -1,5 +1,5 @@
 'use client'
-import RagPipeline from '@/app/components/rag-pipeline'
+import RagPipeline from '@/components/dify/rag-pipeline'
 
 const PipelinePage = () => {
   return (

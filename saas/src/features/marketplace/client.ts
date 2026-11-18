@@ -1,8 +1,8 @@
 'use client'
 
-import type { Plugin } from '@/app/components/plugins/types'
+import type { Plugin } from '@/components/dify/plugins/types'
 import { keepPreviousData, skipToken, useQuery, useSuspenseQuery } from '@tanstack/react-query'
-import { getFormattedPlugin } from '@/app/components/plugins/marketplace/utils'
+import { getFormattedPlugin } from '@/components/dify/plugins/marketplace/utils'
 import { systemFeaturesQueryOptions } from '@/features/system-features/client'
 import { marketplaceQuery } from '@/service/marketplace'
 import { marketplaceLinks } from './links'

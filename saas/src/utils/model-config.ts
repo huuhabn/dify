@@ -1,5 +1,5 @@
-import type { FileEntity } from '@/app/components/base/file-uploader/types'
-import type { PromptVariable } from '@/models/debug'
+import type { FileEntity } from '@/components/dify/base/file-uploader/types'
+import type { PromptVariable } from '@/types/dify/debug'
 import type { UserInputFormItem } from '@/types/app'
 import { zAppExternalDataToolPayload } from '@dify/contracts/api/console/apps/zod.gen'
 

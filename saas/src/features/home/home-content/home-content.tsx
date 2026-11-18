@@ -2,7 +2,7 @@
 
 import type { UpdateAppPayload } from '@dify/contracts/api/console/apps/types.gen'
 import type { RecommendedAppResponse } from '@dify/contracts/api/console/explore/types.gen'
-import type { StepByStepTourTaskId } from '@/app/components/step-by-step-tour/types'
+import type { StepByStepTourTaskId } from '@/components/dify/step-by-step-tour/types'
 import type { TrackCreateAppParams } from '@/utils/create-app-tracking'
 import { zIconType } from '@dify/contracts/api/console/apps/zod.gen'
 import { cn } from '@langgenius/dify-ui/cn'
@@ -20,13 +20,13 @@ import { useQueryState } from 'nuqs'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocale } from '#i18n'
-import { AppMetadataForm } from '@/app/components/app/app-metadata'
-import { getTemplateImportSource } from '@/app/components/explore/template-import'
-import { MAIN_NAV_APP_CARD_GRID_CLASS_NAME } from '@/app/components/main-nav/app-card-grid'
+import { AppMetadataForm } from '@/components/dify/app/app-metadata'
+import { getTemplateImportSource } from '@/components/dify/explore/template-import'
+import { MAIN_NAV_APP_CARD_GRID_CLASS_NAME } from '@/components/dify/main-nav/app-card-grid'
 import {
   getStepByStepTourPermissionVariant,
   trackStepByStepTourEvent,
-} from '@/app/components/step-by-step-tour/analytics'
+} from '@/components/dify/step-by-step-tour/analytics'
 import {
   activeStepByStepTourGuideIndexAtom,
   activeStepByStepTourTaskIdAtom,
@@ -34,10 +34,10 @@ import {
   completedStepByStepTourTaskIdsAtom,
   completeStepByStepTourTaskAtom,
   resetStepByStepTourSessionAtom,
-} from '@/app/components/step-by-step-tour/state'
-import { STEP_BY_STEP_TOUR_TARGETS } from '@/app/components/step-by-step-tour/target-registry'
-import { STEP_BY_STEP_TOUR_TASKS } from '@/app/components/step-by-step-tour/tasks'
-import { toast } from '@/app/notifications'
+} from '@/components/dify/step-by-step-tour/state'
+import { STEP_BY_STEP_TOUR_TARGETS } from '@/components/dify/step-by-step-tour/target-registry'
+import { STEP_BY_STEP_TOUR_TASKS } from '@/components/dify/step-by-step-tour/tasks'
+import { toast } from '@/components/providers/notifications'
 import { workspacePermissionKeysAtom } from '@/context/permission-state'
 import { useCanImportAgents } from '@/features/agent-v2/permissions'
 import { systemFeaturesQueryOptions } from '@/features/system-features/client'
@@ -53,9 +53,9 @@ import { TemplateCard } from '../template-card'
 import { HomeRecommendations } from './recommendations'
 import { HomeTemplatesHeader } from './templates-header'
 
-const TryApp = dynamic(() => import('@/app/components/explore/try-app'), { ssr: false })
+const TryApp = dynamic(() => import('@/components/dify/explore/try-app'), { ssr: false })
 const DSLConfirmModal = dynamic(
-  () => import('@/app/components/app/create-from-dsl-modal/dsl-confirm-modal'),
+  () => import('@/components/dify/app/create-from-dsl-modal/dsl-confirm-modal'),
   { ssr: false },
 )
 

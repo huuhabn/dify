@@ -1,6 +1,6 @@
-import type { PluginPayload } from '@/app/components/plugins/plugin-auth/types'
+import type { PluginPayload } from '@/components/dify/plugins/plugin-auth/types'
 import { act, renderHook, waitFor } from '@testing-library/react'
-import { AuthCategory } from '@/app/components/plugins/plugin-auth/types'
+import { AuthCategory } from '@/components/dify/plugins/plugin-auth/types'
 import { consoleQuery } from '@/service/console'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import {

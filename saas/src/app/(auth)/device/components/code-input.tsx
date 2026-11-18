@@ -3,7 +3,7 @@
 import type { FC } from 'react'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { focusOnArrival } from '@/app/components/auth-shell/focus-on-arrival'
+import { focusOnArrival } from '@/components/dify/auth-shell/focus-on-arrival'
 import { normaliseUserCodeInput } from '../utils/user-code'
 
 type Props = {

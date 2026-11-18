@@ -1,17 +1,17 @@
 import type { ComponentPropsWithoutRef, ReactNode } from 'react'
 import type { HumanInputFormDefinition } from './types'
-import type { HumanInputFieldValue } from '@/app/components/base/chat/chat/answer/human-input-content/field-renderer'
-import type { UnsubmittedHumanInputContentProps } from '@/app/components/base/chat/chat/answer/human-input-content/type'
-import type { MarkdownProps } from '@/app/components/base/markdown'
+import type { HumanInputFieldValue } from '@/components/dify/base/chat/chat/answer/human-input-content/field-renderer'
+import type { UnsubmittedHumanInputContentProps } from '@/components/dify/base/chat/chat/answer/human-input-content/type'
+import type { MarkdownProps } from '@/components/dify/base/markdown'
 import { Button } from '@langgenius/dify-ui/button'
 import { Field, FieldError, FieldLabel } from '@langgenius/dify-ui/field'
 import { Textarea } from '@langgenius/dify-ui/textarea'
 import { useId, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import AppIcon from '@/app/components/base/app-icon'
-import ExpirationTime from '@/app/components/base/chat/chat/answer/human-input-content/expiration-time'
-import HumanInputFieldRenderer from '@/app/components/base/chat/chat/answer/human-input-content/field-renderer'
-import Tips from '@/app/components/base/chat/chat/answer/human-input-content/tips'
+import AppIcon from '@/components/dify/base/app-icon'
+import ExpirationTime from '@/components/dify/base/chat/chat/answer/human-input-content/expiration-time'
+import HumanInputFieldRenderer from '@/components/dify/base/chat/chat/answer/human-input-content/field-renderer'
+import Tips from '@/components/dify/base/chat/chat/answer/human-input-content/tips'
 import {
   getButtonStyle,
   getProcessedHumanInputFormInputs,
@@ -20,13 +20,13 @@ import {
   hasInvalidSelectOrFileInput,
   initializeInputs,
   splitByOutputVar,
-} from '@/app/components/base/chat/chat/answer/human-input-content/utils'
-import ImagePreview from '@/app/components/base/image-uploader/image-preview'
-import { Markdown } from '@/app/components/base/markdown'
+} from '@/components/dify/base/chat/chat/answer/human-input-content/utils'
+import ImagePreview from '@/components/dify/base/image-uploader/image-preview'
+import { Markdown } from '@/components/dify/base/markdown'
 import {
   isParagraphFormInput,
   UserActionButtonType,
-} from '@/app/components/workflow/nodes/human-input/types'
+} from '@/components/dify/workflow/nodes/human-input/types'
 import BrandingFooter from './branding-footer'
 
 type LoadedFormContentProps = {

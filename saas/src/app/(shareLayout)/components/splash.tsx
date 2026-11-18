@@ -7,8 +7,8 @@ import {
   navigateAfterWebAppLogin,
   resolveWebAppLoginRedirect,
 } from '@/app/(shareLayout)/webapp-signin/login-redirect'
-import AppUnavailable from '@/app/components/base/app-unavailable'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+import AppUnavailable from '@/components/dify/base/app-unavailable'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import { useWebAppStore } from '@/context/web-app-context'
 import {
   captureAppAccessScope,
@@ -16,7 +16,7 @@ import {
   isAppAccessError,
   isAppAccessScopeCurrent,
 } from '@/features/app-access-error/state'
-import { AccessMode } from '@/models/access-control'
+import { AccessMode } from '@/types/dify/access-control'
 import { usePathname, useRouter, useSearchParams } from '@/next/navigation'
 import { getHttpErrorStatus } from '@/service/http-error'
 import { fetchAccessToken } from '@/service/share'

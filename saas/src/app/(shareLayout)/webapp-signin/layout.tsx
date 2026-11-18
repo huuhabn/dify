@@ -2,7 +2,7 @@
 
 import type { PropsWithChildren } from 'react'
 import { useTranslation } from 'react-i18next'
-import { AuthShell } from '@/app/components/auth-shell'
+import { AuthShell } from '@/components/dify/auth-shell'
 import useDocumentTitle from '@/hooks/use-document-title'
 
 export default function WebappSignInLayout({ children }: PropsWithChildren) {

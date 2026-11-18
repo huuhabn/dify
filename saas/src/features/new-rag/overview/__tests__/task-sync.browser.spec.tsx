@@ -1,7 +1,7 @@
 import type { KnowledgeFsOverviewAttentionResponse } from '@dify/contracts/api/console/knowledge-fs/types.gen'
 import { zGetFeaturesVectorSpaceResponse } from '@dify/contracts/api/console/features/zod.gen'
 import { QueryObserver } from '@tanstack/react-query'
-import { page } from 'vite-plus/test/browser'
+import { page } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { consoleQuery } from '@/service/console'
 import {

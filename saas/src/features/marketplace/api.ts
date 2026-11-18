@@ -1,3 +1,4 @@
+import { Env } from '@/libs/Env'
 import type { MarketplacePlugin } from '@dify/contracts/marketplace'
 import { env } from '@/env'
 
@@ -15,9 +16,9 @@ const marketplaceApiPrefixFromUrl = (url: string) => {
 
 const runtimeMarketplaceApiUrl =
   typeof globalThis.window === 'undefined' &&
-  process.env.MARKETPLACE_API_URL &&
-  !isLocalMarketplaceApiUrl(process.env.MARKETPLACE_API_URL)
-    ? marketplaceApiPrefixFromUrl(process.env.MARKETPLACE_API_URL)
+  Env.MARKETPLACE_API_URL &&
+  !isLocalMarketplaceApiUrl(Env.MARKETPLACE_API_URL)
+    ? marketplaceApiPrefixFromUrl(Env.MARKETPLACE_API_URL)
     : undefined
 
 export const MARKETPLACE_API_PREFIX =

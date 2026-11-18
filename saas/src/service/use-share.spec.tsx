@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import type { AppConversationData, ConversationItem } from '@/models/share'
+import type { AppConversationData, ConversationItem } from '@/types/dify/share'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { act, renderHook, waitFor } from '@testing-library/react'
 import { httpErrorFromResponse } from '@/service/http-error'

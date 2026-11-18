@@ -1,4 +1,4 @@
-import { userEvent } from 'vite-plus/test/browser'
+import { userEvent } from 'vitest/browser'
 import { createDeferred } from '@/test/deferred'
 import { renderDevicePage } from '../../__tests__/device-page-fixture'
 

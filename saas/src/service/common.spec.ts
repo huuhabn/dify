@@ -2,11 +2,11 @@ import type { ReactNode } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { act, renderHook } from '@testing-library/react'
 import { createElement } from 'react'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import {
   OAUTH_REGISTRATION_GA_SENT_KEY,
   REGISTRATION_SUCCESS_STORAGE_KEY,
-} from '@/app/components/base/amplitude/registration-session-state'
+} from '@/components/dify/base/amplitude/registration-session-state'
 import { clearPageLeaveGuards } from '@/utils/page-leave-guard'
 import { useLogout } from './use-common'
 
@@ -25,7 +25,7 @@ vi.mock('./base', () => ({
   request: mocks.request,
 }))
 
-vi.mock('@/app/components/base/amplitude/utils', () => ({ resetUser: mocks.resetUser }))
+vi.mock('@/components/dify/base/amplitude/utils', () => ({ resetUser: mocks.resetUser }))
 vi.mock('@/utils/var', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@/utils/var')>()),
   get basePath() {

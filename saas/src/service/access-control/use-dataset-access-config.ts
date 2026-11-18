@@ -2,7 +2,7 @@ import type { AccessControlTemplateLanguage } from '@/i18n/language'
 import type {
   RemoveResourceAccessPolicyMemberBindingsRequest,
   UpdateResourceUserAccessSettingsRequest,
-} from '@/models/access-control'
+} from '@/types/dify/access-control'
 import { keepPreviousData, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { consoleClient, consoleQuery } from '@/service/console'
 import { normalizeDatasetAccessMatrix, normalizeDatasetUserAccessPolicies } from './normalizers'

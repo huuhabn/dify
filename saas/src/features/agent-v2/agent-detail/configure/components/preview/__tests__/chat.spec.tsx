@@ -4,7 +4,7 @@ import type {
 } from '@dify/contracts/api/console/agent/types.gen'
 import type { ComponentProps } from 'react'
 import type { AgentPreviewChatController } from '../chat-conversation'
-import type { VoiceRecorder } from '@/app/components/base/voice-input/recorder'
+import type { VoiceRecorder } from '@/components/dify/base/voice-input/recorder'
 import type { AgentSoulConfigFormState } from '@/features/agent-v2/agent-composer/form-state'
 import { act, render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -29,10 +29,10 @@ const api = vi.hoisted(() => ({
   stop: vi.fn(),
   transcribe: vi.fn(),
   uploadRemote: vi.fn(),
-  error: vi.fn<typeof import('@/app/notifications').toast.error>(),
-  record: vi.fn<typeof import('@/app/components/base/voice-input/recorder').startVoiceRecorder>(),
+  error: vi.fn<typeof import('@/components/providers/notifications').toast.error>(),
+  record: vi.fn<typeof import('@/components/dify/base/voice-input/recorder').startVoiceRecorder>(),
 }))
-vi.mock('@/app/notifications', () => ({ toast: { error: api.error } }))
+vi.mock('@/components/providers/notifications', () => ({ toast: { error: api.error } }))
 vi.mock('@/next/navigation', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@/next/navigation')>()),
   useParams: () => ({ agentId: 'agent-1' }),
@@ -43,7 +43,7 @@ vi.mock('@/service/base', async (importOriginal) => ({
   ssePost,
 }))
 // Audio capture/encoding is a platform boundary; keep VoiceInput and its service routing real.
-vi.mock('@/app/components/base/voice-input/recorder', () => ({ startVoiceRecorder: api.record }))
+vi.mock('@/components/dify/base/voice-input/recorder', () => ({ startVoiceRecorder: api.record }))
 vi.mock('@/service/console', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@/service/console')>()
   const { withConsoleResponses, withConsoleClientResponses } =
@@ -95,7 +95,7 @@ const abortControllers: AbortController[] = []
 
 beforeAll(async () => {
   // Preload the real dynamic Chat module before the timed interaction scenarios.
-  await import('@/app/components/base/chat/chat')
+  await import('@/components/dify/base/chat/chat')
 })
 beforeEach(() => {
   messages.clear()

@@ -8,10 +8,10 @@ import { queryClientAtom } from 'jotai-tanstack-query'
 import { useHydrateAtoms } from 'jotai/react/utils'
 import { Suspense } from 'react'
 import { ExternalServiceSync } from '@/app/(commonLayout)/external-service-sync'
-import { setUserId, setUserProperties } from '@/app/components/base/amplitude'
-import { flushRegistrationSuccess } from '@/app/components/base/amplitude/registration-tracking'
-import { setAnalyticsConsent } from '@/app/components/base/analytics-consent/consent-store'
-import { zendeskRuntime } from '@/app/components/base/zendesk/runtime'
+import { setUserId, setUserProperties } from '@/components/dify/base/amplitude'
+import { flushRegistrationSuccess } from '@/components/dify/base/amplitude/registration-tracking'
+import { setAnalyticsConsent } from '@/components/dify/base/analytics-consent/consent-store'
+import { zendeskRuntime } from '@/components/dify/base/zendesk/runtime'
 import { ZENDESK_FIELD_IDS } from '@/config'
 import { userProfileQueryOptions } from '@/features/account-profile/client'
 import { consoleQuery } from '@/service/console'
@@ -108,22 +108,22 @@ vi.mock('@/config', async (importOriginal) => {
 
 vi.mock('@/service/base', () => ({ request: mockRequest }))
 
-vi.mock('@/app/components/base/amplitude', () => ({
+vi.mock('@/components/dify/base/amplitude', () => ({
   setUserId: vi.fn(),
   setUserProperties: vi.fn(),
 }))
 
-vi.mock('@/app/components/base/amplitude/use-amplitude-initialized', () => ({
+vi.mock('@/components/dify/base/amplitude/use-amplitude-initialized', () => ({
   useAmplitudeInitialized: () => true,
 }))
 
-vi.mock('@/app/components/base/amplitude/registration-tracking', () => ({
+vi.mock('@/components/dify/base/amplitude/registration-tracking', () => ({
   flushRegistrationSuccess: vi.fn(),
   subscribeRegistrationSuccess: () => () => {},
   getRegistrationSuccessSnapshot: () => 0,
 }))
 
-vi.mock('@/app/components/base/zendesk/runtime', () => ({
+vi.mock('@/components/dify/base/zendesk/runtime', () => ({
   zendeskRuntime: {
     setConversationFields: vi.fn(),
   },

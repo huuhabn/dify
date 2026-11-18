@@ -4,7 +4,7 @@ import type {
 } from '@dify/contracts/api/console/agent/types.gen'
 import { createInstance } from 'i18next'
 import { I18nextProvider } from 'react-i18next'
-import { page } from 'vite-plus/test/browser'
+import { page } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import agentV2 from '@/i18n/locales/en-US/agent-v-2.json'
 import appLog from '@/i18n/locales/en-US/app-log.json'

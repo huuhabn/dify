@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { useLocale } from '#i18n'
 import { useSearchParams } from '@/next/navigation'
 import { getBrowserTimezone } from '@/utils/timezone'

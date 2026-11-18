@@ -3,7 +3,7 @@ import { ORPCError } from '@orpc/client'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import EducationApplyPage from '@/app/education/apply/application-form'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { render } from '@/test/console/render'
 

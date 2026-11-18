@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vite-plus/test'
-import { InputVarType } from '@/app/components/workflow/types'
+import { describe, expect, it } from 'vitest'
+import { InputVarType } from '@/components/dify/workflow/types'
 import { getMaxVarNameLength, MAX_VAR_KEY_LENGTH } from '@/config'
 import {
   checkKey,

@@ -1,0 +1,8 @@
+[
+  {
+    "kind": "api",
+    "url": "/api/counter",
+    "removedFeature": "src/app/api/counter/route.ts",
+    "reason": "Remove the isolated boilerplate Counter demo; Dify APIs remain owned by the backend."
+  }
+]

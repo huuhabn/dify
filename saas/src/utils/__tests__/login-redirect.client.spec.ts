@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { replaceLoginRedirect } from '../login-redirect.client'
 
 describe('replaceLoginRedirect', () => {

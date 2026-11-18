@@ -6,7 +6,7 @@ import { Form } from '@langgenius/dify-ui/form'
 import { Input } from '@langgenius/dify-ui/input'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import Countdown from '@/app/components/signin/countdown'
+import Countdown from '@/components/dify/signin/countdown'
 import Link from '@/next/link'
 import { useAccountDeleteStore, useConfirmDeleteAccount, useSendDeleteAccountEmail } from '../state'
 

@@ -2,8 +2,8 @@
 
 import type { AgentOrchestrateAddActionOptions } from '../add-actions-context'
 import type { ToolSettingTarget } from './types'
-import type { ToolDefaultValue, ToolValue } from '@/app/components/workflow/block-selector/types'
-import type { ToolWithProvider } from '@/app/components/workflow/types'
+import type { ToolDefaultValue, ToolValue } from '@/components/dify/workflow/block-selector/types'
+import type { ToolWithProvider } from '@/components/dify/workflow/types'
 import type {
   AgentCliTool,
   AgentProviderTool,
@@ -17,11 +17,11 @@ import { noop } from 'es-toolkit/function'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { memo, useCallback, useId, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { PluginCategoryEnum } from '@/app/components/plugins/types'
-import { parseToolProviderType } from '@/app/components/tools/provider-type'
-import { CollectionType } from '@/app/components/tools/types'
-import { selectToolsWithProvider } from '@/app/components/tools/utils/query-select'
-import { ToolPickerContent } from '@/app/components/workflow/block-selector/tool-picker'
+import { PluginCategoryEnum } from '@/components/dify/plugins/types'
+import { parseToolProviderType } from '@/components/dify/tools/provider-type'
+import { CollectionType } from '@/components/dify/tools/types'
+import { selectToolsWithProvider } from '@/components/dify/tools/utils/query-select'
+import { ToolPickerContent } from '@/components/dify/workflow/block-selector/tool-picker'
 import { useGetLanguage } from '@/context/i18n'
 import {
   addProviderToolsAtom,

@@ -6,7 +6,7 @@ import { useAtomValueRawSync } from 'jotai/react'
 import dynamic from 'next/dynamic'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import {
   appAccessStore,
   beginTrialAppAccess,

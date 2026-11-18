@@ -1,10 +1,10 @@
 import type { DatasetUpdatePayload } from '@dify/contracts/api/console/datasets/types.gen'
 import type { MutationFilters } from '@tanstack/react-query'
-import type { CreateKnowledgeBaseReq } from '@/app/components/datasets/external-knowledge-base/create/declarations'
-import type { FetchDatasetsParams } from '@/models/datasets'
+import type { CreateKnowledgeBaseReq } from '@/components/dify/datasets/external-knowledge-base/create/declarations'
+import type { FetchDatasetsParams } from '@/types/dify/datasets'
 import type { ConsoleClientContext } from '@/service/console'
 import { isPlainObject } from 'es-toolkit/predicate'
-import { DataSourceProvider } from '@/models/common'
+import { DataSourceProvider } from '@/types/dify/common'
 // oxlint-disable-next-line no-restricted-imports -- the zip download needs the raw Blob response
 import { post } from './base'
 import { consoleClient, consoleQuery } from './console'

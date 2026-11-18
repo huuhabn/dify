@@ -1,5 +1,5 @@
 import { useTranslation } from '#i18n'
-import Form from '@/app/components/datasets/settings/form'
+import Form from '@/components/dify/datasets/settings/form'
 
 const Settings = () => {
   const { t } = useTranslation(['datasetSettings'])

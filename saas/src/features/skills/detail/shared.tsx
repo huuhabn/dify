@@ -11,10 +11,10 @@ import type { InfiniteData, useQueryClient } from '@tanstack/react-query'
 import type {
   DefaultModel,
   FormValue,
-} from '@/app/components/header/account-setting/model-provider-page/declarations'
+} from '@/components/dify/header/account-setting/model-provider-page/declarations'
 import { cn } from '@langgenius/dify-ui/cn'
-import { CodeLanguage } from '@/app/components/workflow/nodes/code/types'
-import { toast } from '@/app/notifications'
+import { CodeLanguage } from '@/components/dify/workflow/nodes/code/types'
+import { toast } from '@/components/providers/notifications'
 import { getFileIconType } from '@/features/agent-v2/file-icon'
 import { consoleClient, consoleQuery } from '@/service/console'
 import { getErrorMessage } from '@/utils/error-message'

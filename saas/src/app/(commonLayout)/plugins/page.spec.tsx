@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { MARKETPLACE_API_PREFIX } from '@/features/marketplace/api'
 
 const mocks = vi.hoisted(() => ({

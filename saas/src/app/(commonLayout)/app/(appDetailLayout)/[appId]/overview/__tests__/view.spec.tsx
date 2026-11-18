@@ -4,7 +4,7 @@ import { act, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Suspense } from 'react'
 import CommonLayoutError from '@/app/(commonLayout)/error'
-import ErrorBoundary from '@/app/components/base/error-boundary'
+import ErrorBoundary from '@/components/dify/base/error-boundary'
 import { consoleQuery } from '@/service/console'
 import { createConsoleQueryClient, renderWithConsoleQuery } from '@/test/console/query-data'
 import { createAppDetailFixture } from '@/test/fixtures/app'
@@ -35,7 +35,7 @@ vi.mock('../chart-view', () => ({
   ),
 }))
 
-vi.mock('@/app/components/app/tracing/configuration', () => ({
+vi.mock('@/components/dify/app/tracing/configuration', () => ({
   TracingConfiguration: () => <button type="button">tracing</button>,
 }))
 

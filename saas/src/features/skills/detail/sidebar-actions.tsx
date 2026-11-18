@@ -19,7 +19,7 @@ import { Menu, MenuContent, MenuItem, MenuSeparator, MenuTrigger } from '@langge
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { useRouter } from '@/next/navigation'
 import { consoleQuery } from '@/service/console'
 import { downloadBlob } from '@/utils/download'

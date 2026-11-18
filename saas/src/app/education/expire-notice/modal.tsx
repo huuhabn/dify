@@ -17,7 +17,7 @@ import { useTranslation } from 'react-i18next'
 import {
   pricingQueryParamName,
   pricingQueryParser,
-} from '@/app/components/billing/pricing/query-params'
+} from '@/components/dify/billing/pricing/query-params'
 import { useDocLink } from '@/context/i18n'
 import { systemFeaturesQueryOptions } from '@/features/system-features/client'
 import useTimestamp from '@/hooks/use-timestamp'

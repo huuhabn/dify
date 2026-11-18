@@ -1,6 +1,6 @@
-import { userEvent } from 'vite-plus/test/browser'
+import { userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
-import { COUNT_DOWN_KEY, COUNT_DOWN_TIME_MS } from '@/app/components/signin/storage'
+import { COUNT_DOWN_KEY, COUNT_DOWN_TIME_MS } from '@/components/dify/signin/storage'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import CheckCode from '../page'
 

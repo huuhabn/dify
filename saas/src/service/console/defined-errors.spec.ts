@@ -1,6 +1,6 @@
 import { ORPCError } from '@orpc/client'
 import { oc } from '@orpc/contract'
-import { describe, expect, it } from 'vite-plus/test'
+import { describe, expect, it } from 'vitest'
 import { validateDefinedErrors } from './defined-errors'
 
 const contract = {

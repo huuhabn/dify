@@ -1,7 +1,7 @@
 import type { TagResponse as Tag, TagType } from '@dify/contracts/api/console/tags/types.gen'
 import { Combobox, createComboboxItems } from '@langgenius/dify-ui/combobox'
 import { useMemo, useState } from 'react'
-import { userEvent } from 'vite-plus/test/browser'
+import { userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { guardUnexpectedFetch } from '@/test/unexpected-fetch'

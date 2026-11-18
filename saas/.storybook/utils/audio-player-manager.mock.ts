@@ -1,4 +1,4 @@
-import { AudioPlayerManager } from '@/app/components/base/audio-btn/audio.player.manager'
+import { AudioPlayerManager } from '@/components/dify/base/audio-btn/audio.player.manager'
 
 type PlayerCallback = ((event: string) => void) | null
 

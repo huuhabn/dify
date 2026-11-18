@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
-import Main from '@/app/components/app/log-annotation'
-import { PageType } from '@/app/components/base/features/new-feature-panel/annotation-reply/type'
-import { SkeletonContainer, SkeletonRectangle } from '@/app/components/base/skeleton'
+import Main from '@/components/dify/app/log-annotation'
+import { PageType } from '@/components/dify/base/features/new-feature-panel/annotation-reply/type'
+import { SkeletonContainer, SkeletonRectangle } from '@/components/dify/base/skeleton'
 
 export default async function Page({ params }: { params: Promise<{ appId: string }> }) {
   const { appId } = await params

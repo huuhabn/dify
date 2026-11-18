@@ -2,7 +2,7 @@
 
 import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
-import { DifyLogo } from '@/app/components/base/logo/dify-logo'
+import { DifyLogo } from '@/components/dify/base/logo/dify-logo'
 import useDocumentTitle from '@/hooks/use-document-title'
 
 type EducationShellProps = {

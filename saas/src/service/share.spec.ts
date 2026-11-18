@@ -1,5 +1,5 @@
 import type { Parameters as AppParameters } from '@dify/contracts/api/console/installed-apps/types.gen'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { userInputsFormToPromptVariables } from '@/utils/model-config'
 import { createHttpError } from './http-error'
 

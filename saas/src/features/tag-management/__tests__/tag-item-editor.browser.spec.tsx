@@ -1,6 +1,6 @@
 import type { TagResponse as Tag } from '@dify/contracts/api/console/tags/types.gen'
-import { page, userEvent } from 'vite-plus/test/browser'
-import { toast } from '@/app/notifications'
+import { page, userEvent } from 'vitest/browser'
+import { toast } from '@/components/providers/notifications'
 import { createDeferred } from '@/test/deferred'
 import { guardUnexpectedFetch } from '@/test/unexpected-fetch'
 import { TagManagementModal } from '../components/tag-management-modal'

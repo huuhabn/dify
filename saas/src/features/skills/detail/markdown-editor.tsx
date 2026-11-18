@@ -15,7 +15,7 @@ import type {
   MouseEvent,
   RefObject,
 } from 'react'
-import type { MarkdownProps } from '@/app/components/base/markdown'
+import type { MarkdownProps } from '@/components/dify/base/markdown'
 import { AlertDialog, AlertDialogTrigger } from '@langgenius/dify-ui/alert-dialog'
 import { Button } from '@langgenius/dify-ui/button'
 import { cn } from '@langgenius/dify-ui/cn'
@@ -25,7 +25,7 @@ import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Textarea from 'react-textarea-autosize'
 import { visit } from 'unist-util-visit'
-import { Markdown } from '@/app/components/base/markdown'
+import { Markdown } from '@/components/dify/base/markdown'
 import useTimestamp from '@/hooks/use-timestamp'
 import { consoleQuery } from '@/service/console'
 import styles from './markdown-editor.module.css'

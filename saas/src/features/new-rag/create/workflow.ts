@@ -6,7 +6,7 @@ import type {
   KnowledgeFsSpaceDetailResponse,
 } from '@dify/contracts/api/console/knowledge-fs/types.gen'
 import type { CreationModelSelections } from './use-creation-models'
-import type { ModelSelectorValue } from '@/app/components/header/account-setting/model-provider-page/model-selector/types'
+import type { ModelSelectorValue } from '@/components/dify/header/account-setting/model-provider-page/model-selector/types'
 import { consoleClient } from '@/service/console'
 import { getHttpErrorStatus } from '@/service/http-error'
 import { KNOWLEDGE_DESCRIPTION_MAX_LENGTH, KNOWLEDGE_NAME_MAX_LENGTH } from '../constants'

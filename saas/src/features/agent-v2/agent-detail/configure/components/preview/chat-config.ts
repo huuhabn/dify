@@ -3,15 +3,15 @@ import type {
   AgentSoulConfig,
   AgentSoulDifyToolConfig,
 } from '@dify/contracts/api/console/agent/types.gen'
-import type { InputForm } from '@/app/components/base/chat/chat/type'
-import type { ChatConfig } from '@/app/components/base/chat/types'
-import type { FileUpload } from '@/app/components/base/features/types'
+import type { InputForm } from '@/components/dify/base/chat/chat/type'
+import type { ChatConfig } from '@/components/dify/base/chat/types'
+import type { FileUpload } from '@/components/dify/base/features/types'
 import type { AgentComposerModel } from '@/features/agent-v2/agent-composer/form-state'
-import type { Inputs } from '@/models/debug'
-import { InputVarType, SupportUploadFileTypes } from '@/app/components/workflow/types'
+import type { Inputs } from '@/types/dify/debug'
+import { InputVarType, SupportUploadFileTypes } from '@/components/dify/workflow/types'
 import { DEFAULT_CHAT_PROMPT_CONFIG, DEFAULT_COMPLETION_PROMPT_CONFIG } from '@/config'
 import { ENABLE_AGENT_CLI_TOOLS } from '@/features/agent-v2/agent-detail/configure/feature-flags'
-import { PromptMode } from '@/models/debug'
+import { PromptMode } from '@/types/dify/debug'
 import { AgentStrategy, ModelModeType, RETRIEVE_TYPE, TransferMethod } from '@/types/app'
 
 export type AgentPreviewChatConfig = ChatConfig & {

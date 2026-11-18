@@ -6,15 +6,15 @@ import type {
 } from '@dify/contracts/api/console/agent/types.gen'
 import type { DatasetDetailWithPartialMembersResponse } from '@dify/contracts/api/console/datasets/types.gen'
 import type { FileTreeIconType } from '@langgenius/dify-ui/file-tree'
-import type { DefaultModel } from '@/app/components/header/account-setting/model-provider-page/declarations'
-import type { ToolDefaultValue } from '@/app/components/workflow/block-selector/types'
+import type { DefaultModel } from '@/components/dify/header/account-setting/model-provider-page/declarations'
+import type { ToolDefaultValue } from '@/components/dify/workflow/block-selector/types'
 import type {
   MetadataFilteringConditions,
   MetadataFilteringModeEnum,
   MultipleRetrievalConfig,
   SingleRetrievalConfig,
-} from '@/app/components/workflow/nodes/knowledge-retrieval/types'
-import type { ModelConfig } from '@/app/components/workflow/types'
+} from '@/components/dify/workflow/nodes/knowledge-retrieval/types'
+import type { ModelConfig } from '@/components/dify/workflow/types'
 import type { RETRIEVE_TYPE } from '@/types/app'
 import type { I18nKeysWithoutVariables, I18nKeysWithPrefix } from '@/types/i18n'
 

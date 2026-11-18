@@ -1,5 +1,5 @@
 import type { KnowledgeFsSpaceListItemResponse } from '@dify/contracts/api/console/knowledge-fs/types.gen'
-import type { Node, Var } from '@/app/components/workflow/types'
+import type { Node, Var } from '@/components/dify/workflow/types'
 import type { AgentKnowledgeRetrievalItem } from '@/features/agent-v2/agent-composer/form-state'
 import { zKnowledgeFsSpaceListResponse } from '@dify/contracts/api/console/knowledge-fs/zod.gen'
 import { ORPCError } from '@orpc/client'
@@ -7,14 +7,14 @@ import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { useAtomValue } from 'jotai'
 import { ReactFlowProvider } from 'reactflow'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import {
   ComparisonOperator,
   LogicalOperator,
   MetadataFilteringModeEnum,
   MetadataFilteringVariableType,
-} from '@/app/components/workflow/nodes/knowledge-retrieval/types'
-import { BlockEnum, VarType } from '@/app/components/workflow/types'
+} from '@/components/dify/workflow/nodes/knowledge-retrieval/types'
+import { BlockEnum, VarType } from '@/components/dify/workflow/types'
 import {
   agentSoulConfigToFormState,
   formStateToAgentSoulConfig,
@@ -42,7 +42,7 @@ import {
 } from '../../read-only-context'
 import { AgentKnowledgeRetrieval } from '../index'
 
-vi.mock('@/app/components/workflow/nodes/_base/hooks/use-available-var-list', () => ({
+vi.mock('@/components/dify/workflow/nodes/_base/hooks/use-available-var-list', () => ({
   default: (_nodeId: string, { filterVar }: { filterVar: (value: Var) => boolean }) => ({
     availableVars: [
       {

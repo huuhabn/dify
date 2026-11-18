@@ -8,7 +8,7 @@ import { queryOptions, skipToken, useQuery, useQueryClient } from '@tanstack/rea
 import Cookies from 'js-cookie'
 import { useCallback, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { API_PREFIX, CSRF_COOKIE_NAME, CSRF_HEADER_NAME } from '@/config'
 import { getDriveFileIconType, hasFileDataPreview } from '@/features/agent-v2/file-icon'
 import { consoleQuery } from '@/service/console'

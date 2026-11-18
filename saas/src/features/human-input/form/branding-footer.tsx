@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { DifyLogo } from '@/app/components/base/logo/dify-logo'
+import { DifyLogo } from '@/components/dify/base/logo/dify-logo'
 
 type BrandingFooterProps = {
   variant?: 'form' | 'status' | 'legacy-status'

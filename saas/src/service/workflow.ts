@@ -2,12 +2,12 @@ import type {
   DraftWorkflowNodeRunPayload,
   WorkflowFeaturesConfigPayload,
 } from '@dify/contracts/api/console/apps/types.gen'
-import type { EditorResource } from '@/app/components/workflow/editor-resource/resource'
+import type { EditorResource } from '@/components/dify/workflow/editor-resource/resource'
 import type {
   BlockEnum,
   ConversationVariable,
   EnvironmentVariable,
-} from '@/app/components/workflow/types'
+} from '@/components/dify/workflow/types'
 import type { ConsoleClientContext } from '@/service/console'
 import type { FetchWorkflowDraftResponse, HumanInputFormData, VarInInspect } from '@/types/workflow'
 import { zConsoleHumanInputV2SubmitPayload } from '@dify/contracts/api/console/form/zod.gen'

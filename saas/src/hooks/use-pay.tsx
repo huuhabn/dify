@@ -3,7 +3,7 @@
 import { skipToken, useQuery } from '@tanstack/react-query'
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { useRouter, useSearchParams } from '@/next/navigation'
 import { consoleQuery } from '@/service/console'
 

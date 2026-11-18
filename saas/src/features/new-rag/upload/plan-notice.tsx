@@ -3,7 +3,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { useAtomValue } from 'jotai'
 import { useTranslation } from 'react-i18next'
-import UpgradeBtn from '@/app/components/billing/upgrade-btn'
+import UpgradeBtn from '@/components/dify/billing/upgrade-btn'
 import { deploymentEditionAtom } from '@/features/system-features/state'
 import { consoleQuery } from '@/service/console'
 import { DOCUMENT_UPLOAD_ACCEPT } from './policy'

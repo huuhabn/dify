@@ -2,12 +2,12 @@
 import { ORPCError } from '@orpc/client'
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
-import { getProcessedHumanInputFormInputs } from '@/app/components/base/chat/chat/answer/human-input-content/utils'
+import { getProcessedHumanInputFormInputs } from '@/components/dify/base/chat/chat/answer/human-input-content/utils'
 import {
   FileUploadContext,
   useFileUploadContext,
-} from '@/app/components/base/file-uploader/upload-context'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+} from '@/components/dify/base/file-uploader/upload-context'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import { ENABLE_HITL_IM } from '@/config'
 import FormStatusCard from '@/features/human-input/form/form-status-card'
 import LoadedFormContent from '@/features/human-input/form/loaded-form-content'

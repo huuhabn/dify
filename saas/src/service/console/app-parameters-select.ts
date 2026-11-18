@@ -1,9 +1,9 @@
 import type { Parameters as AppParameters } from '@dify/contracts/api/console/installed-apps/types.gen'
-import type { ChatConfig } from '@/app/components/base/chat/types'
-import type { FileEntity } from '@/app/components/base/file-uploader/types'
-import { SupportUploadFileTypes } from '@/app/components/workflow/types'
+import type { ChatConfig } from '@/components/dify/base/chat/types'
+import type { FileEntity } from '@/components/dify/base/file-uploader/types'
+import { SupportUploadFileTypes } from '@/components/dify/workflow/types'
 import { ANNOTATION_DEFAULT, DEFAULT_AGENT_SETTING } from '@/config'
-import { PromptMode } from '@/models/debug'
+import { PromptMode } from '@/types/dify/debug'
 import { Resolution, RETRIEVE_TYPE, TransferMethod, TtsAutoPlay } from '@/types/app'
 
 const transferMethodValues = new Set<string>(Object.values(TransferMethod))

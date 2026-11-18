@@ -1,12 +1,12 @@
-import type { InputVar } from '@/app/components/workflow/types'
+import type { InputVar } from '@/components/dify/workflow/types'
 import type { I18nKeysByPrefix } from '@/types/i18n'
 import {
   CONTEXT_PLACEHOLDER_TEXT,
   HISTORY_PLACEHOLDER_TEXT,
   PRE_PROMPT_PLACEHOLDER_TEXT,
   QUERY_PLACEHOLDER_TEXT,
-} from '@/app/components/base/prompt-editor/constants'
-import { InputVarType } from '@/app/components/workflow/types'
+} from '@/components/dify/base/prompt-editor/constants'
+import { InputVarType } from '@/components/dify/workflow/types'
 import {
   getMaxVarNameLength,
   MAX_VAR_KEY_LENGTH,

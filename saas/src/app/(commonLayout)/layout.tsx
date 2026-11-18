@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Zendesk from '@/app/components/base/zendesk'
-import MainNavLayout from '@/app/components/main-nav/server'
+import Zendesk from '@/components/dify/base/zendesk'
+import MainNavLayout from '@/components/dify/main-nav/server'
 import { CommonLayoutGlobalMounts } from './global-mounts'
 import { ConsoleContextProviders, ConsoleRuntimeProviders } from './providers'
 

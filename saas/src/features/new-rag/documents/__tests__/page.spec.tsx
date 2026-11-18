@@ -29,7 +29,7 @@ vi.mock('../../components/knowledge-model-readiness-banner', () => ({
 }))
 
 // pdf.js needs a real canvas and worker; the documents page owns only the preview URL.
-vi.mock('@/app/components/base/file-uploader/pdf-preview', () => ({
+vi.mock('@/components/dify/base/file-uploader/pdf-preview', () => ({
   PdfPreview: ({ url }: { url: string }) => (
     <div role="img" aria-label="PDF preview" data-url={url}>
       PDF preview
@@ -233,12 +233,12 @@ const metadataFieldApiResponse = vi.hoisted(() => (field: DocumentMetadataField)
   updated_at: field.updatedAt,
 }))
 
-vi.mock('@/app/components/billing/upgrade-btn', () => ({
+vi.mock('@/components/dify/billing/upgrade-btn', () => ({
   default: ({ labelKey }: { labelKey: string }) => (
     <button type="button">{`billing.${labelKey}`}</button>
   ),
 }))
-vi.mock('@/app/notifications', () => ({ toast: toastMock }))
+vi.mock('@/components/providers/notifications', () => ({ toast: toastMock }))
 vi.mock('@/next/navigation', () => ({
   usePathname: () => '/datasets/new/space-1/documents',
   useRouter: () => routerMock,

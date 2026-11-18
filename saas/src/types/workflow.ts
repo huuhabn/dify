@@ -4,8 +4,8 @@ import type {
 } from '@dify/contracts/api/console/apps/types.gen'
 import type { RefObject } from 'react'
 import type { Viewport } from 'reactflow'
-import type { ErrorHandleTypeEnum } from '@/app/components/workflow/nodes/_base/components/error-handle/types'
-import type { FormInputItem, UserAction } from '@/app/components/workflow/nodes/human-input/types'
+import type { ErrorHandleTypeEnum } from '@/components/dify/workflow/nodes/_base/components/error-handle/types'
+import type { FormInputItem, UserAction } from '@/components/dify/workflow/nodes/human-input/types'
 import type {
   BlockEnum,
   CommonNodeType,
@@ -16,8 +16,8 @@ import type {
   Node,
   Variable,
   WorkflowRunningStatus,
-} from '@/app/components/workflow/types'
-import type { RAGPipelineVariables } from '@/models/pipeline'
+} from '@/components/dify/workflow/types'
+import type { RAGPipelineVariables } from '@/types/dify/pipeline'
 import type { TransferMethod } from '@/types/app'
 
 export type AgentLogItem = {

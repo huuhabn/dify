@@ -1,6 +1,6 @@
 import type { GetAccountProfileResponse } from '@dify/contracts/api/console/account/types.gen'
 import { QueryClientProvider } from '@tanstack/react-query'
-import { userEvent } from 'vite-plus/test/browser'
+import { userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { createTestQueryClient } from '@/test/query-client'
 import { ChangePasswordDialog } from '../change-password-dialog'

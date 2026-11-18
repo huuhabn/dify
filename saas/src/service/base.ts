@@ -1,6 +1,6 @@
 import type { FetchOptionType } from './fetch'
 import type { RequestGuard } from './request-guard'
-import type { MessageEnd, MessageReplace, ThoughtItem } from '@/app/components/base/chat/chat/type'
+import type { MessageEnd, MessageReplace, ThoughtItem } from '@/components/dify/base/chat/chat/type'
 import type { VisionFile } from '@/types/app'
 import type {
   DataSourceNodeCompletedResponse,
@@ -31,8 +31,8 @@ import type {
 } from '@/types/workflow'
 import { ORPCError } from '@orpc/client'
 import Cookies from 'js-cookie'
-import { discardRegistrationSessionState } from '@/app/components/base/amplitude/registration-session-state'
-import { toast } from '@/app/notifications'
+import { discardRegistrationSessionState } from '@/components/dify/base/amplitude/registration-session-state'
+import { toast } from '@/components/providers/notifications'
 import {
   API_PREFIX,
   CSRF_COOKIE_NAME,

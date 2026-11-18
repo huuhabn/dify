@@ -7,11 +7,11 @@ import { useAtomValue } from 'jotai'
 import { useQueryState } from 'nuqs'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useExportAppDsl } from '@/app/components/app/use-export-app-dsl'
+import { useExportAppDsl } from '@/components/dify/app/use-export-app-dsl'
 import {
   pricingQueryParamName,
   pricingQueryParser,
-} from '@/app/components/billing/pricing/query-params'
+} from '@/components/dify/billing/pricing/query-params'
 import { userProfileQueryOptions } from '@/features/account-profile/client'
 import { useAgentPermissions } from '@/features/agent-v2/permissions'
 import { deploymentEditionAtom } from '@/features/system-features/state'

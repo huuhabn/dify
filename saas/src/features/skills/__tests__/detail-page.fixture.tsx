@@ -5,13 +5,13 @@ import type {
 } from '@dify/contracts/api/console/workspaces/types.gen'
 import type userEvent from '@testing-library/user-event'
 import type { ReactNode } from 'react'
-import type { DefaultModel } from '@/app/components/header/account-setting/model-provider-page/declarations'
+import type { DefaultModel } from '@/components/dify/header/account-setting/model-provider-page/declarations'
 import { zGetFeaturesResponse } from '@dify/contracts/api/console/features/zod.gen'
 import { detectPlatform } from '@tanstack/react-hotkeys'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { fireEvent, render, screen, within } from '@testing-library/react'
 import { StrictMode } from 'react'
-import { afterEach, vi } from 'vite-plus/test'
+import { afterEach, vi } from 'vitest'
 import { consoleQuery } from '@/service/console'
 import { seedSystemFeatures } from '@/test/console/query-data'
 import { createSystemFeaturesFixture } from '@/test/console/system-features'
@@ -63,7 +63,7 @@ const mocks = vi.hoisted(() => ({
   versionPatchMutationFn: vi.fn(),
 }))
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: {
     error: mocks.toastError,
     info: mocks.toastInfo,
@@ -75,7 +75,7 @@ vi.mock('copy-to-clipboard', () => ({
   default: mocks.copyToClipboard,
 }))
 
-vi.mock('@/app/components/base/markdown', () => ({
+vi.mock('@/components/dify/base/markdown', () => ({
   Markdown: ({
     content,
     customComponents,
@@ -94,7 +94,7 @@ vi.mock('@/app/components/base/markdown', () => ({
   },
 }))
 
-vi.mock('@/app/components/main-nav/components/account-section', () => ({
+vi.mock('@/components/dify/main-nav/components/account-section', () => ({
   default: ({ compact = false }: { compact?: boolean }) => (
     <button type="button" aria-label={compact ? 'compact-account-section' : 'account-section'}>
       Current account
@@ -102,7 +102,7 @@ vi.mock('@/app/components/main-nav/components/account-section', () => ({
   ),
 }))
 
-vi.mock('@/app/components/main-nav/components/help-menu', () => ({
+vi.mock('@/components/dify/main-nav/components/help-menu', () => ({
   default: () => (
     <button type="button" aria-label="help-menu">
       Help
@@ -110,7 +110,7 @@ vi.mock('@/app/components/main-nav/components/help-menu', () => ({
   ),
 }))
 
-vi.mock('@/app/components/header/account-setting/model-provider-page/hooks', () => ({
+vi.mock('@/components/dify/header/account-setting/model-provider-page/hooks', () => ({
   useLanguage: () => 'en_US',
   useDefaultModel: () => ({
     data: mocks.defaultTextGenerationModel,
@@ -129,12 +129,12 @@ vi.mock('@/app/components/header/account-setting/model-provider-page/hooks', () 
   },
 }))
 
-vi.mock('@/app/components/header/account-setting/model-provider-page/model-selector', () => ({
+vi.mock('@/components/dify/header/account-setting/model-provider-page/model-selector', () => ({
   ModelSelector: () => <button type="button">model-settings</button>,
   SplitModelSelector: () => <button type="button">model-settings</button>,
 }))
 
-vi.mock('@/app/components/workflow/nodes/_base/components/editor/code-editor', () => ({
+vi.mock('@/components/dify/workflow/nodes/_base/components/editor/code-editor', () => ({
   default: ({ onChange, value }: { onChange?: (value: string) => void; value: string }) => (
     <textarea
       aria-label="code-editor"

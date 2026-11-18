@@ -1,0 +1,42 @@
+[
+  {
+    "from": "src/models/access-control.ts",
+    "to": "src/types/dify/access-control.ts"
+  },
+  {
+    "from": "src/models/app.ts",
+    "to": "src/types/dify/app.ts"
+  },
+  {
+    "from": "src/models/common.ts",
+    "to": "src/types/dify/common.ts"
+  },
+  {
+    "from": "src/models/datasets.ts",
+    "to": "src/types/dify/datasets.ts"
+  },
+  {
+    "from": "src/models/debug.ts",
+    "to": "src/types/dify/debug.ts"
+  },
+  {
+    "from": "src/models/log.ts",
+    "to": "src/types/dify/log.ts"
+  },
+  {
+    "from": "src/models/permission.ts",
+    "to": "src/types/dify/permission.ts"
+  },
+  {
+    "from": "src/models/pipeline.ts",
+    "to": "src/types/dify/pipeline.ts"
+  },
+  {
+    "from": "src/models/share.ts",
+    "to": "src/types/dify/share.ts"
+  },
+  {
+    "from": "src/models/snippet.ts",
+    "to": "src/types/dify/snippet.ts"
+  }
+]

@@ -1,4 +1,4 @@
-import { TracingConfiguration } from '@/app/components/app/tracing/configuration'
+import { TracingConfiguration } from '@/components/dify/app/tracing/configuration'
 import { useAgentPermissions } from '../../permissions'
 
 export function AgentTracingConfiguration({ agentId }: { agentId: string }) {

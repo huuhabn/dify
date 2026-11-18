@@ -2,15 +2,15 @@ import type {
   AgentThought,
   MessageDetailResponse,
 } from '@dify/contracts/api/console/agent/types.gen'
-import type { FeedbackType, IChatItem, ThoughtItem } from '@/app/components/base/chat/chat/type'
-import type { ChatItemInTree } from '@/app/components/base/chat/types'
-import type { FileEntity } from '@/app/components/base/file-uploader/types'
-import type { MessageRating } from '@/models/log'
+import type { FeedbackType, IChatItem, ThoughtItem } from '@/components/dify/base/chat/chat/type'
+import type { ChatItemInTree } from '@/components/dify/base/chat/types'
+import type { FileEntity } from '@/components/dify/base/file-uploader/types'
+import type { MessageRating } from '@/types/dify/log'
 import type { TransferMethod } from '@/types/app'
 import type { FileResponse } from '@/types/workflow'
-import { buildChatItemTree } from '@/app/components/base/chat/utils'
-import { getProcessedFilesFromResponse } from '@/app/components/base/file-uploader/utils'
-import { addFileInfos, sortAgentSorts } from '@/app/components/tools/utils'
+import { buildChatItemTree } from '@/components/dify/base/chat/utils'
+import { getProcessedFilesFromResponse } from '@/components/dify/base/file-uploader/utils'
+import { addFileInfos, sortAgentSorts } from '@/components/dify/tools/utils'
 
 const toFileResponse = (
   file: NonNullable<MessageDetailResponse['message_files']>[number],

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import MainDetail from '@/app/components/datasets/documents/detail'
+import MainDetail from '@/components/dify/datasets/documents/detail'
 
 export type IDocumentDetailProps = {
   params: Promise<{ datasetId: string; documentId: string }>

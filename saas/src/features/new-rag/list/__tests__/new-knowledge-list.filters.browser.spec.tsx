@@ -1,5 +1,5 @@
 import type { consoleClient } from '@/service/console'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { consoleQuery } from '@/service/console'
 import { guardUnexpectedFetch } from '@/test/unexpected-fetch'
 import {

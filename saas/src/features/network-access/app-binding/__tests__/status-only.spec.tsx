@@ -3,7 +3,7 @@ import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { createInstance } from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import deploymentTranslations from '@/i18n/locales/en-US/deployments.json'
 import { consoleQuery } from '@/service/console'
 import { clearRequestErrorToasts } from '@/service/request-error-toast'
@@ -11,8 +11,8 @@ import { createConsoleQueryClient, renderWithConsoleQuery } from '@/test/console
 import { AccessControlEntry } from '..'
 
 vi.unmock('react-i18next')
-vi.mock('@/app/components/base/amplitude', () => ({ trackEvent: vi.fn() }))
-vi.mock('@/app/notifications', () => ({ toast: { error: vi.fn() } }))
+vi.mock('@/components/dify/base/amplitude', () => ({ trackEvent: vi.fn() }))
+vi.mock('@/components/providers/notifications', () => ({ toast: { error: vi.fn() } }))
 
 const statusPath = '/apps/app-1/network-access-group/status'
 const requests: Request[] = []

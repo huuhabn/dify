@@ -9,7 +9,7 @@ import type { CrawlPreviewPage } from '../sources/source-models'
 import { useQuery } from '@tanstack/react-query'
 import { atom, useAtomValue } from 'jotai'
 import { useMemo } from 'react'
-import { buildIntegrationPath } from '@/app/components/integrations/routes'
+import { buildIntegrationPath } from '@/components/dify/integrations/routes'
 import { consoleQuery } from '@/service/console'
 import { connectedInitialSource } from '../sources/setup/connected-source-selection'
 import {

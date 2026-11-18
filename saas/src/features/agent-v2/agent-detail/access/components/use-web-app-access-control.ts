@@ -6,7 +6,7 @@ import { useSuspenseQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { getAgentACLCapabilities } from '@/features/agent-v2/acl'
 import { systemFeaturesQueryOptions } from '@/features/system-features/client'
-import { AccessMode, isAccessMode } from '@/models/access-control'
+import { AccessMode, isAccessMode } from '@/types/dify/access-control'
 import { useAppWhiteListSubjects } from '@/service/access-control/use-app-access-control'
 import { useWebAppAccessPermission } from '../../web-app-access'
 

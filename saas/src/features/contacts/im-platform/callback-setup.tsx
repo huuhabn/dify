@@ -4,7 +4,7 @@ import { Field, FieldLabel } from '@langgenius/dify-ui/field'
 import { InputGroup, InputGroupAddon, InputGroupInput } from '@langgenius/dify-ui/input-group'
 import { useEffect, useRef } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { CopyFeedback } from '@/app/components/base/copy-feedback'
+import { CopyFeedback } from '@/components/dify/base/copy-feedback'
 
 type ContactImCallbackSetupProps = {
   callbackUrl: string

@@ -1,4 +1,4 @@
-import type { WorkflowRunDetailResponse } from '@/models/log'
+import type { WorkflowRunDetailResponse } from '@/types/dify/log'
 import type { NodeTracingListResponse } from '@/types/workflow'
 // oxlint-disable-next-line no-restricted-imports -- Run detail and tracing URLs are supplied by the workflow log surface.
 import { get } from './base'

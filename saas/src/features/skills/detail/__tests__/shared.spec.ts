@@ -1,5 +1,5 @@
 import { QueryClient } from '@tanstack/react-query'
-import { describe, expect, it } from 'vite-plus/test'
+import { describe, expect, it } from 'vitest'
 import { consoleQuery } from '@/service/console'
 import {
   createUploadItemId,

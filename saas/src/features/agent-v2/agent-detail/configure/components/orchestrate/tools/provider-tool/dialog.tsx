@@ -1,12 +1,12 @@
 'use client'
 
 import type { ToolSettingTarget } from '../types'
-import type { Tool } from '@/app/components/tools/types'
-import type { ToolWithProvider } from '@/app/components/workflow/types'
+import type { Tool } from '@/components/dify/tools/types'
+import type { ToolWithProvider } from '@/components/dify/workflow/types'
 import type { AgentProviderTool } from '@/features/agent-v2/agent-composer/form-state'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { useCallback, useMemo } from 'react'
-import SettingBuiltInTool from '@/app/components/app/configuration/config/agent/agent-tools/setting-built-in-tool'
+import SettingBuiltInTool from '@/components/dify/app/configuration/config/agent/agent-tools/setting-built-in-tool'
 import {
   agentComposerToolsAtom,
   agentComposerToolSettingsAtom,

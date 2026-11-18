@@ -2,7 +2,7 @@ import { QueryClient } from '@tanstack/react-query'
 import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { useState } from 'react'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { createHttpError } from '@/service/http-error'
 import { renderWithConsoleQuery } from '@/test/console/query-data'
 import { KnowledgeSpaceTestProvider } from '@/test/knowledge-space'
@@ -15,7 +15,7 @@ const serviceMock = vi.hoisted(() => ({
   listReplays: vi.fn(),
 }))
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: { error: vi.fn(), success: vi.fn() },
 }))
 

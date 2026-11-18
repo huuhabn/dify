@@ -1,4 +1,4 @@
-import type { PermissionKey } from '@/models/access-control'
+import type { PermissionKey } from '@/types/dify/access-control'
 
 export const AppACLPermission = {
   AccessPointManage: 'app.acl.access_point_manage',

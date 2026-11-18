@@ -1,7 +1,7 @@
 import { zSsoProtocol } from '@dify/contracts/api/console/system-features/zod.gen'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { AccessMode } from '@/models/access-control'
+import { AccessMode } from '@/types/dify/access-control'
 import { webAppLogout } from '@/service/webapp-auth'
 import { renderWithConsoleQuery } from '@/test/console/query-data'
 import WebSSOForm from '../page'

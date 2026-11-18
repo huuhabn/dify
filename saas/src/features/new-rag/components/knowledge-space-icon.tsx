@@ -1,5 +1,5 @@
 import type { ComponentProps } from 'react'
-import AppIcon from '@/app/components/base/app-icon'
+import AppIcon from '@/components/dify/base/app-icon'
 
 const DEFAULT_KNOWLEDGE_SPACE_ICON = '📙'
 export const DEFAULT_KNOWLEDGE_SPACE_ICON_BACKGROUND = '#F0F9FF'

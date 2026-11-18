@@ -2,7 +2,7 @@
 
 import { useAtomValueRawSync, useSetAtom } from 'jotai'
 import { useTranslation } from 'react-i18next'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import { getHttpErrorStatus } from '@/service/http-error'
 import { DocumentErrorState } from './error-state'
 import { DocumentDetailStateBoundary } from './state/boundary'

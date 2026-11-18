@@ -3,7 +3,7 @@ import type {
   KnowledgeFsProfileModelSelection,
   KnowledgeFsSettingsResponse,
 } from '@dify/contracts/api/console/knowledge-fs/types.gen'
-import type { DefaultModel } from '@/app/components/header/account-setting/model-provider-page/declarations'
+import type { DefaultModel } from '@/components/dify/header/account-setting/model-provider-page/declarations'
 
 export const TOP_K_MIN = 1
 export const TOP_K_MAX = 10

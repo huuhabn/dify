@@ -1,7 +1,7 @@
 import type { HumanInputContact } from '@dify/contracts/api/console/workspaces/types.gen'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { NuqsTestingAdapter } from 'nuqs/adapters/testing'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { ContactsManagementProvider } from '../composition'
 import { ContactsDirectoryPage } from '../directory-page'

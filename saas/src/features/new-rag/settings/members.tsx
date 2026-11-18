@@ -3,7 +3,7 @@
 import type { KnowledgeFsControlSpaceVisibility } from '@dify/contracts/api/console/knowledge-fs/types.gen'
 import type { AccountWithRoleResponse } from '@dify/contracts/api/console/workspaces/types.gen'
 import { useTranslation } from 'react-i18next'
-import PermissionSelector from '@/app/components/datasets/settings/permission-selector'
+import PermissionSelector from '@/components/dify/datasets/settings/permission-selector'
 
 type KnowledgeSettingsMembersProps = {
   disabled: boolean

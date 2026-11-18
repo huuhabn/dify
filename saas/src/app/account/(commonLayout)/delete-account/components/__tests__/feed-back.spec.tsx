@@ -22,7 +22,7 @@ vi.mock('@/service/console', async (importOriginal) => {
 })
 
 // Analytics is an external SDK; logout and its redirect remain real.
-vi.mock('@/app/components/base/amplitude/utils', () => ({ resetUser: vi.fn() }))
+vi.mock('@/components/dify/base/amplitude/utils', () => ({ resetUser: vi.fn() }))
 
 describe('FeedBack', () => {
   beforeEach(() => {

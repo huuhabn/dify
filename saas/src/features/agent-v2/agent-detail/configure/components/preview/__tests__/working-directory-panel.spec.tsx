@@ -2,8 +2,8 @@ import type { AgentWorkingDirectorySource } from '../working-directory-panel'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
-import { toast } from '@/app/notifications'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { toast } from '@/components/providers/notifications'
 import { AgentWorkingDirectoryPanel } from '../working-directory-panel'
 
 type QueryOptionsInput = {
@@ -197,7 +197,7 @@ vi.mock('@/service/console', async (importOriginal) => {
   }
 })
 
-vi.mock('@/app/components/base/file-uploader/pdf-highlighter-adapter', () => ({
+vi.mock('@/components/dify/base/file-uploader/pdf-highlighter-adapter', () => ({
   PdfLoader: ({ url }: { url: string }) => <div data-testid="pdf-loader" data-url={url} />,
   PdfHighlighter: () => null,
 }))
@@ -206,7 +206,7 @@ vi.mock('@/utils/download', () => ({
   downloadUrl: mocks.downloadUrl,
 }))
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: {
     success: mocks.toastSuccess,
   },

@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
-import { toast } from '@/app/notifications'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { toast } from '@/components/providers/notifications'
 import { CliToolDialog } from '../dialog'
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: {
     error: vi.fn(),
   },

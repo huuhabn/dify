@@ -6,7 +6,7 @@ import { isIP } from 'node:net'
 // oxlint-disable-next-line no-restricted-imports -- A rewrite with an explicit status must run before Next starts streaming the document.
 import { NextResponse } from 'next/server'
 import { env } from '@/env'
-import { isAccessMode } from '@/models/access-control'
+import { isAccessMode } from '@/types/dify/access-control'
 import { parseWebAppAddress } from '@/service/webapp-address'
 import { APP_UNAVAILABLE_IP_HEADER, APP_UNAVAILABLE_PATH } from './document-constants'
 

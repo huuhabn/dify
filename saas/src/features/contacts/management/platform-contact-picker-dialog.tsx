@@ -13,7 +13,7 @@ import {
 import { useInfiniteQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { SearchInput } from '@/app/components/base/search-input'
+import { SearchInput } from '@/components/dify/base/search-input'
 import { consoleQuery } from '@/service/console'
 import { availablePlatformCandidatesOptions } from './available-platform-candidates'
 import { useContactsFeatureContext } from './composition-context'

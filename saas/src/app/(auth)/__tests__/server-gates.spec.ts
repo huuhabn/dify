@@ -13,7 +13,7 @@ const { redirect, getSetupStatus, getProfile } = vi.hoisted(() => ({
 
 vi.mock('server-only', () => ({}))
 vi.mock('@/next/navigation', () => ({ redirect }))
-vi.mock('@/app/get-query-client', () => ({ getQueryClient: () => new QueryClient() }))
+vi.mock('@/libs/query/get-query-client', () => ({ getQueryClient: () => new QueryClient() }))
 vi.mock('@/service/console', () => ({ consoleClient: { setup: { get: getSetupStatus } } }))
 vi.mock('@/service/console/server', () => ({
   resolveServerConsoleApiPrefix: () => 'http://api.test/console/api',

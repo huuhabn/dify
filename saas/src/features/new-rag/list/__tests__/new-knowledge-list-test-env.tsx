@@ -1,7 +1,7 @@
 import type { KnowledgeFsUpgradeJobResponse } from '@dify/contracts/api/console/datasets/types.gen'
 import type { consoleClient } from '@/service/console'
 import type { ConsoleQueryTestOptions } from '@/test/console/query-data'
-import { page } from 'vite-plus/test/browser'
+import { page } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { consoleQuery } from '@/service/console'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'

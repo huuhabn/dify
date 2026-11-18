@@ -1,9 +1,9 @@
 'use client'
-import type { DocType } from '@/models/datasets'
+import type { DocType } from '@/types/dify/datasets'
 import type { I18nKeysByPrefix } from '@/types/i18n'
 import { useTranslation } from 'react-i18next'
 import useTimestamp from '@/hooks/use-timestamp'
-import { ChunkingMode } from '@/models/datasets'
+import { ChunkingMode } from '@/types/dify/datasets'
 import { formatFileSize, formatNumber, formatTime } from '@/utils/format'
 
 export type inputType = 'input' | 'select' | 'textarea'

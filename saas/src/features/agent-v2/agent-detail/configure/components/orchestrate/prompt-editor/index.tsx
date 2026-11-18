@@ -8,7 +8,7 @@ import type {
 } from 'react'
 import type { TextRange } from './options'
 import type { SlashMenuCategory, SlashMenuView } from './slash'
-import type { RosterReferenceToken } from '@/app/components/base/prompt-editor/plugins/roster-reference-block/utils'
+import type { RosterReferenceToken } from '@/components/dify/base/prompt-editor/plugins/roster-reference-block/utils'
 import type {
   AgentFileNode,
   AgentProviderTool,
@@ -36,10 +36,10 @@ import {
 } from 'lexical'
 import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import PromptEditor from '@/app/components/base/prompt-editor'
-import BlockIcon from '@/app/components/workflow/block-icon'
-import { BlockEnum } from '@/app/components/workflow/types'
-import { toast } from '@/app/notifications'
+import PromptEditor from '@/components/dify/base/prompt-editor'
+import BlockIcon from '@/components/dify/workflow/block-icon'
+import { BlockEnum } from '@/components/dify/workflow/types'
+import { toast } from '@/components/providers/notifications'
 import {
   agentComposerKnowledgeRetrievalsAtom,
   getVisibleKnowledgeRetrievals,

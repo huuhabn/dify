@@ -23,7 +23,7 @@ vi.mock('@/features/agent-v2/permissions', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@/features/agent-v2/permissions')>()),
   useCanCreateAgents: () => true,
 }))
-vi.mock('@/app/components/app/use-export-app-dsl', () => ({
+vi.mock('@/components/dify/app/use-export-app-dsl', () => ({
   useExportAppDsl: () => ({
     exportAppDsl: mocks.exportAppDsl,
     isExporting: false,
@@ -39,7 +39,7 @@ vi.mock('@/next/navigation', () => ({
   }),
 }))
 
-vi.mock('@/app/components/app-sidebar/nav-link', () => ({
+vi.mock('@/components/dify/app-sidebar/nav-link', () => ({
   default: ({ disabled, href, name }: { disabled?: boolean; href: string; name: string }) =>
     disabled ? <button disabled>{name}</button> : <a href={href}>{name}</a>,
 }))

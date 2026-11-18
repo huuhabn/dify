@@ -1,5 +1,5 @@
 import type { UseQueryOptions } from '@tanstack/react-query'
-import type { EditorResource } from '@/app/components/workflow/editor-resource/resource'
+import type { EditorResource } from '@/components/dify/workflow/editor-resource/resource'
 import type { ConsoleClientContext } from '@/service/console'
 import type {
   FetchWorkflowDraftPageParams,

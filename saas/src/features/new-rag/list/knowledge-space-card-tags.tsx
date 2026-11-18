@@ -5,7 +5,7 @@ import type { TagResponse as Tag } from '@dify/contracts/api/console/tags/types.
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { TagSelector } from '@/features/tag-management/components/tag-selector'
 import { consoleQuery } from '@/service/console'
 

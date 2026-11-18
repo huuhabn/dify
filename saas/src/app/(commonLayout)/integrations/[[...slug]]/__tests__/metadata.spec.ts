@@ -2,7 +2,7 @@ import { generateMetadata } from '../layout'
 
 vi.mock('server-only', () => ({}))
 
-vi.mock('@/app/components/integrations', () => ({
+vi.mock('@/components/dify/integrations', () => ({
   default: () => null,
 }))
 

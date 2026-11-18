@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { trackMarketplaceSiteCardClick, trackMarketplaceSiteEvent } from '../marketplace-site-track'
 
 describe('marketplace site track bridge', () => {

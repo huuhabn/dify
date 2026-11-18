@@ -1,7 +1,7 @@
-import type { CommonResponse } from '@/models/common'
+import type { CommonResponse } from '@/types/dify/common'
 import { useMutation, useQuery } from '@tanstack/react-query'
-import { discardRegistrationSessionState } from '@/app/components/base/amplitude/registration-session-state'
-import { resetUser } from '@/app/components/base/amplitude/utils'
+import { discardRegistrationSessionState } from '@/components/dify/base/amplitude/registration-session-state'
+import { resetUser } from '@/components/dify/base/amplitude/utils'
 import { clearPageLeaveGuards, confirmPageLeave } from '@/utils/page-leave-guard'
 import { basePath } from '@/utils/var'
 // oxlint-disable-next-line no-restricted-imports

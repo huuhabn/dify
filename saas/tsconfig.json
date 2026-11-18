@@ -5,8 +5,17 @@
     // Defines JavaScript version and runtime environment
     // ======================================================================
     "target": "ES2017",
+    "types": [
+      "node",
+      "vitest/globals",
+      "@testing-library/jest-dom"
+    ],
     "module": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "moduleResolution": "bundler",
     "isolatedModules": true,
     // ======================================================================
@@ -54,10 +63,18 @@
     // Configure import paths and module resolution
     // ======================================================================
     "paths": {
-      "#i18n": ["./src/i18n/lib.client.ts"],
-      "@/*": ["./src/*"],
-      "~@/*": ["./src/*"],
-      "@/public/*": ["./public/*"]
+      "#i18n": [
+        "./src/i18n/lib.client.ts"
+      ],
+      "@/*": [
+        "./src/*"
+      ],
+      "~@/*": [
+        "./src/*"
+      ],
+      "@/public/*": [
+        "./public/*"
+      ]
     },
     // ======================================================================
     // Next.js Project Configuration
@@ -75,11 +92,22 @@
   "contentMappers": [
     {
       "package": "@dify/openapi-content-mapper",
-      "extensions": [".openapi", ".openapi-source", ".openapi-types"]
+      "extensions": [
+        ".openapi",
+        ".openapi-source",
+        ".openapi-types"
+      ]
     }
   ],
   // Files to include/exclude from the project
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx", "**/*.test.ts", "**/*.test.tsx", "**/__tests__/**"],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/__tests__/**"
+  ],
   "include": [
     "next-env.d.ts",
     "**/*.ts",

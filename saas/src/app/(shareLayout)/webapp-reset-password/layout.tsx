@@ -1,4 +1,4 @@
-import { AuthShell } from '@/app/components/auth-shell'
+import { AuthShell } from '@/components/dify/auth-shell'
 import { getRouteMetadata } from '@/app/route-metadata'
 
 export function generateMetadata() {

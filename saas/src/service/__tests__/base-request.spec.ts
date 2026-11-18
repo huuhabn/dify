@@ -1,10 +1,10 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import {
   discardRegistrationSessionState,
   OAUTH_REGISTRATION_GA_SENT_KEY,
   REGISTRATION_SUCCESS_STORAGE_KEY,
-} from '@/app/components/base/amplitude/registration-session-state'
-import { toast } from '@/app/notifications'
+} from '@/components/dify/base/amplitude/registration-session-state'
+import { toast } from '@/components/providers/notifications'
 // oxlint-disable-next-line no-restricted-imports -- This spec directly tests the legacy request owner.
 import { request, ssePost, upload } from '../base'
 

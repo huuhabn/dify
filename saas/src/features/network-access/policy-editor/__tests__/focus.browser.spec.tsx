@@ -1,7 +1,7 @@
 import type { ComponentProps } from 'react'
 import { createInstance } from 'i18next'
 import { I18nextProvider } from 'react-i18next'
-import { userEvent } from 'vite-plus/test/browser'
+import { userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { IpPolicyDialog } from '@/features/network-access/policy-editor'
 import common from '@/i18n/locales/en-US/common.json'

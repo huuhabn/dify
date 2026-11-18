@@ -1,7 +1,7 @@
 import { act, render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { useWebAppStore } from '@/context/web-app-context'
-import { AccessMode } from '@/models/access-control'
+import { AccessMode } from '@/types/dify/access-control'
 import { createHttpError } from '@/service/http-error'
 import Splash from '../splash'
 

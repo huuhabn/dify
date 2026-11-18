@@ -1,0 +1,1986 @@
+[
+  {
+    "from": "src/app/components/app/__tests__/app-detail-loading.spec.tsx",
+    "to": "src/components/dify/app/__tests__/app-detail-loading.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/__tests__/export-confirm-modal.spec.tsx",
+    "to": "src/components/dify/app/__tests__/export-confirm-modal.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/__tests__/use-export-app-dsl.spec.tsx",
+    "to": "src/components/dify/app/__tests__/use-export-app-dsl.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-config/index.tsx",
+    "to": "src/components/dify/app/access-config/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/access-point-card.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/access-point-card.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/access-point-query-fixtures.ts",
+    "to": "src/components/dify/app/access-point/__tests__/access-point-query-fixtures.ts"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/access-point-url.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/access-point-url.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/api-secret-key-button.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/api-secret-key-button.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/built-in-access-points.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/built-in-access-points.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/built-in-permissions.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/built-in-permissions.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/deployed-environment-access-points.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/deployed-environment-access-points.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/environment-access-control.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/environment-access-control.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/environment-access-point-cards.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/environment-access-point-cards.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/environment-tabs.browser.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/environment-tabs.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/mcp-card.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/mcp-card.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/service-api-card.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/service-api-card.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/trigger-card.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/trigger-card.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/use-access-point-actions.spec.ts",
+    "to": "src/components/dify/app/access-point/__tests__/use-access-point-actions.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/access-point/__tests__/web-app-card.spec.tsx",
+    "to": "src/components/dify/app/access-point/__tests__/web-app-card.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/built-in-access-points/api-secret-key-button.tsx",
+    "to": "src/components/dify/app/access-point/built-in-access-points/api-secret-key-button.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/built-in-access-points/index.tsx",
+    "to": "src/components/dify/app/access-point/built-in-access-points/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/built-in-access-points/mcp-card.tsx",
+    "to": "src/components/dify/app/access-point/built-in-access-points/mcp-card.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/built-in-access-points/service-api-card.tsx",
+    "to": "src/components/dify/app/access-point/built-in-access-points/service-api-card.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/built-in-access-points/trigger-card.tsx",
+    "to": "src/components/dify/app/access-point/built-in-access-points/trigger-card.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/built-in-access-points/web-app-card.tsx",
+    "to": "src/components/dify/app/access-point/built-in-access-points/web-app-card.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/deployed-environment-access-points/environment-access-control.tsx",
+    "to": "src/components/dify/app/access-point/deployed-environment-access-points/environment-access-control.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/deployed-environment-access-points/environment-api-key-button.tsx",
+    "to": "src/components/dify/app/access-point/deployed-environment-access-points/environment-api-key-button.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/deployed-environment-access-points/environment-service-api-card.tsx",
+    "to": "src/components/dify/app/access-point/deployed-environment-access-points/environment-service-api-card.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/deployed-environment-access-points/environment-web-app-card.tsx",
+    "to": "src/components/dify/app/access-point/deployed-environment-access-points/environment-web-app-card.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/deployed-environment-access-points/environment-web-app-utils.ts",
+    "to": "src/components/dify/app/access-point/deployed-environment-access-points/environment-web-app-utils.ts"
+  },
+  {
+    "from": "src/app/components/app/access-point/deployed-environment-access-points/index.tsx",
+    "to": "src/components/dify/app/access-point/deployed-environment-access-points/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/index.tsx",
+    "to": "src/components/dify/app/access-point/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/shared/service-api-card-view.tsx",
+    "to": "src/components/dify/app/access-point/shared/service-api-card-view.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/shared/use-access-point-actions.ts",
+    "to": "src/components/dify/app/access-point/shared/use-access-point-actions.ts"
+  },
+  {
+    "from": "src/app/components/app/access-point/shared/use-access-point-status-label.ts",
+    "to": "src/components/dify/app/access-point/shared/use-access-point-status-label.ts"
+  },
+  {
+    "from": "src/app/components/app/access-point/shared/utils.ts",
+    "to": "src/components/dify/app/access-point/shared/utils.ts"
+  },
+  {
+    "from": "src/app/components/app/access-point/shared/web-app-access-control.tsx",
+    "to": "src/components/dify/app/access-point/shared/web-app-access-control.tsx"
+  },
+  {
+    "from": "src/app/components/app/access-point/state.ts",
+    "to": "src/components/dify/app/access-point/state.ts"
+  },
+  {
+    "from": "src/app/components/app/annotation/__tests__/batch-action.spec.tsx",
+    "to": "src/components/dify/app/annotation/__tests__/batch-action.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/__tests__/filter.browser.spec.tsx",
+    "to": "src/components/dify/app/annotation/__tests__/filter.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/annotation/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/__tests__/job-failure.spec.tsx",
+    "to": "src/components/dify/app/annotation/__tests__/job-failure.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/__tests__/list.spec.tsx",
+    "to": "src/components/dify/app/annotation/__tests__/list.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/add-annotation-modal/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/app/annotation/add-annotation-modal/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/add-annotation-modal/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/annotation/add-annotation-modal/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/add-annotation-modal/index.tsx",
+    "to": "src/components/dify/app/annotation/add-annotation-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/assets/robot-avatar.svg",
+    "to": "src/components/dify/app/annotation/assets/robot-avatar.svg"
+  },
+  {
+    "from": "src/app/components/app/annotation/batch-action.tsx",
+    "to": "src/components/dify/app/annotation/batch-action.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/batch-add-annotation-modal/__tests__/csv-downloader.spec.tsx",
+    "to": "src/components/dify/app/annotation/batch-add-annotation-modal/__tests__/csv-downloader.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/batch-add-annotation-modal/__tests__/csv-uploader.spec.tsx",
+    "to": "src/components/dify/app/annotation/batch-add-annotation-modal/__tests__/csv-uploader.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/batch-add-annotation-modal/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/annotation/batch-add-annotation-modal/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/batch-add-annotation-modal/csv-downloader.tsx",
+    "to": "src/components/dify/app/annotation/batch-add-annotation-modal/csv-downloader.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/batch-add-annotation-modal/csv-uploader.tsx",
+    "to": "src/components/dify/app/annotation/batch-add-annotation-modal/csv-uploader.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/batch-add-annotation-modal/index.tsx",
+    "to": "src/components/dify/app/annotation/batch-add-annotation-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/clear-all-annotations-confirm-modal/index.tsx",
+    "to": "src/components/dify/app/annotation/clear-all-annotations-confirm-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/edit-annotation-modal/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/annotation/edit-annotation-modal/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/edit-annotation-modal/annotation-editor.tsx",
+    "to": "src/components/dify/app/annotation/edit-annotation-modal/annotation-editor.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/edit-annotation-modal/edit-item/index.tsx",
+    "to": "src/components/dify/app/annotation/edit-annotation-modal/edit-item/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/edit-annotation-modal/index.tsx",
+    "to": "src/components/dify/app/annotation/edit-annotation-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/edit-annotation-modal/remove-annotation-dialog.tsx",
+    "to": "src/components/dify/app/annotation/edit-annotation-modal/remove-annotation-dialog.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/empty-element.tsx",
+    "to": "src/components/dify/app/annotation/empty-element.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/filter.tsx",
+    "to": "src/components/dify/app/annotation/filter.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/header-opts/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/annotation/header-opts/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/header-opts/index.tsx",
+    "to": "src/components/dify/app/annotation/header-opts/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/index.tsx",
+    "to": "src/components/dify/app/annotation/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/list.tsx",
+    "to": "src/components/dify/app/annotation/list.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/remove-annotation-confirm-modal/index.tsx",
+    "to": "src/components/dify/app/annotation/remove-annotation-confirm-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/type.ts",
+    "to": "src/components/dify/app/annotation/type.ts"
+  },
+  {
+    "from": "src/app/components/app/annotation/view-annotation-modal/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/app/annotation/view-annotation-modal/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/view-annotation-modal/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/annotation/view-annotation-modal/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/view-annotation-modal/hit-history-no-data.tsx",
+    "to": "src/components/dify/app/annotation/view-annotation-modal/hit-history-no-data.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/view-annotation-modal/hit-history.tsx",
+    "to": "src/components/dify/app/annotation/view-annotation-modal/hit-history.tsx"
+  },
+  {
+    "from": "src/app/components/app/annotation/view-annotation-modal/index.tsx",
+    "to": "src/components/dify/app/annotation/view-annotation-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/__tests__/access-control.spec.tsx",
+    "to": "src/components/dify/app/app-access-control/__tests__/access-control.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/__tests__/add-member-or-group-pop.spec.tsx",
+    "to": "src/components/dify/app/app-access-control/__tests__/add-member-or-group-pop.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/__tests__/group-picker-layout.browser.spec.tsx",
+    "to": "src/components/dify/app/app-access-control/__tests__/group-picker-layout.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/app-access-control/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/__tests__/specific-groups-or-members.spec.tsx",
+    "to": "src/components/dify/app/app-access-control/__tests__/specific-groups-or-members.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/access-control-dialog.tsx",
+    "to": "src/components/dify/app/app-access-control/access-control-dialog.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/access-control-form.tsx",
+    "to": "src/components/dify/app/app-access-control/access-control-form.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/access-control-item.tsx",
+    "to": "src/components/dify/app/app-access-control/access-control-item.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/add-member-or-group-pop/breadcrumb.tsx",
+    "to": "src/components/dify/app/app-access-control/add-member-or-group-pop/breadcrumb.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/add-member-or-group-pop/index.tsx",
+    "to": "src/components/dify/app/app-access-control/add-member-or-group-pop/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/add-member-or-group-pop/subject-item.tsx",
+    "to": "src/components/dify/app/app-access-control/add-member-or-group-pop/subject-item.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/index.tsx",
+    "to": "src/components/dify/app/app-access-control/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-access-control/specific-groups-or-members.tsx",
+    "to": "src/components/dify/app/app-access-control/specific-groups-or-members.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-detail-route.ts",
+    "to": "src/components/dify/app/app-detail-route.ts"
+  },
+  {
+    "from": "src/app/components/app/app-metadata/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/app-metadata/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-metadata/index.tsx",
+    "to": "src/components/dify/app/app-metadata/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/__tests__/environment-deployment-flow.spec.tsx",
+    "to": "src/components/dify/app/app-publisher/__tests__/environment-deployment-flow.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/__tests__/environment-tabs.spec.tsx",
+    "to": "src/components/dify/app/app-publisher/__tests__/environment-tabs.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/__tests__/features-wrapper.spec.tsx",
+    "to": "src/components/dify/app/app-publisher/__tests__/features-wrapper.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/app-publisher/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/__tests__/publish-with-multiple-model.spec.tsx",
+    "to": "src/components/dify/app/app-publisher/__tests__/publish-with-multiple-model.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/__tests__/sections.spec.tsx",
+    "to": "src/components/dify/app/app-publisher/__tests__/sections.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/__tests__/state.spec.tsx",
+    "to": "src/components/dify/app/app-publisher/__tests__/state.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/__tests__/suggested-action.browser.spec.tsx",
+    "to": "src/components/dify/app/app-publisher/__tests__/suggested-action.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/__tests__/utils.spec.ts",
+    "to": "src/components/dify/app/app-publisher/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/__tests__/version-info-modal.browser.spec.tsx",
+    "to": "src/components/dify/app/app-publisher/__tests__/version-info-modal.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/__tests__/workflow-kind-change-dialog.spec.tsx",
+    "to": "src/components/dify/app/app-publisher/__tests__/workflow-kind-change-dialog.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/built-in-publisher/actions-section.tsx",
+    "to": "src/components/dify/app/app-publisher/built-in-publisher/actions-section.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/built-in-publisher/constants.ts",
+    "to": "src/components/dify/app/app-publisher/built-in-publisher/constants.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/built-in-publisher/index.tsx",
+    "to": "src/components/dify/app/app-publisher/built-in-publisher/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/built-in-publisher/summary-section.tsx",
+    "to": "src/components/dify/app/app-publisher/built-in-publisher/summary-section.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/built-in-publisher/workflow-kind-change-dialog.tsx",
+    "to": "src/components/dify/app/app-publisher/built-in-publisher/workflow-kind-change-dialog.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/environment-deployment-flow/actions-section.tsx",
+    "to": "src/components/dify/app/app-publisher/environment-deployment-flow/actions-section.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/environment-deployment-flow/index.tsx",
+    "to": "src/components/dify/app/app-publisher/environment-deployment-flow/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/environment-deployment-flow/latest-version-row.tsx",
+    "to": "src/components/dify/app/app-publisher/environment-deployment-flow/latest-version-row.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/environment-deployment-flow/summary-section.tsx",
+    "to": "src/components/dify/app/app-publisher/environment-deployment-flow/summary-section.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/environment-tabs/__tests__/layout.spec.ts",
+    "to": "src/components/dify/app/app-publisher/environment-tabs/__tests__/layout.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/environment-tabs/environment-button.tsx",
+    "to": "src/components/dify/app/app-publisher/environment-tabs/environment-button.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/environment-tabs/index.tsx",
+    "to": "src/components/dify/app/app-publisher/environment-tabs/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/environment-tabs/layout-calculations.ts",
+    "to": "src/components/dify/app/app-publisher/environment-tabs/layout-calculations.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/environment-tabs/measurement-probe.tsx",
+    "to": "src/components/dify/app/app-publisher/environment-tabs/measurement-probe.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/environment-tabs/types.ts",
+    "to": "src/components/dify/app/app-publisher/environment-tabs/types.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/environment-tabs/use-measurements.ts",
+    "to": "src/components/dify/app/app-publisher/environment-tabs/use-measurements.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/features-wrapper.tsx",
+    "to": "src/components/dify/app/app-publisher/features-wrapper.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/hooks/use-refresh-app-environments-after-deployment-polling.ts",
+    "to": "src/components/dify/app/app-publisher/hooks/use-refresh-app-environments-after-deployment-polling.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/hotkeys.ts",
+    "to": "src/components/dify/app/app-publisher/hotkeys.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/index.tsx",
+    "to": "src/components/dify/app/app-publisher/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/publish-with-multiple-model.tsx",
+    "to": "src/components/dify/app/app-publisher/publish-with-multiple-model.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/publisher-content/index.tsx",
+    "to": "src/components/dify/app/app-publisher/publisher-content/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/publisher-content/publisher-panel/index.tsx",
+    "to": "src/components/dify/app/app-publisher/publisher-content/publisher-panel/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/publisher-content/use-marketplace-publish.ts",
+    "to": "src/components/dify/app/app-publisher/publisher-content/use-marketplace-publish.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/publisher-content/use-publish-controller.ts",
+    "to": "src/components/dify/app/app-publisher/publisher-content/use-publish-controller.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/publisher-content/use-version-info.ts",
+    "to": "src/components/dify/app/app-publisher/publisher-content/use-version-info.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/publisher-content/use-workflow-launch.ts",
+    "to": "src/components/dify/app/app-publisher/publisher-content/use-workflow-launch.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/publisher-content/use-workflow-tool.ts",
+    "to": "src/components/dify/app/app-publisher/publisher-content/use-workflow-tool.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/publisher-deploying-marker/index.module.css",
+    "to": "src/components/dify/app/app-publisher/publisher-deploying-marker/index.module.css"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/publisher-deploying-marker/index.tsx",
+    "to": "src/components/dify/app/app-publisher/publisher-deploying-marker/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/shared/timeline-marker.tsx",
+    "to": "src/components/dify/app/app-publisher/shared/timeline-marker.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/state.ts",
+    "to": "src/components/dify/app/app-publisher/state.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/suggested-action.tsx",
+    "to": "src/components/dify/app/app-publisher/suggested-action.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/types.ts",
+    "to": "src/components/dify/app/app-publisher/types.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/utils.ts",
+    "to": "src/components/dify/app/app-publisher/utils.ts"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/version-info-modal.tsx",
+    "to": "src/components/dify/app/app-publisher/version-info-modal.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/workflow-tool-action/disabled-reason.tsx",
+    "to": "src/components/dify/app/app-publisher/workflow-tool-action/disabled-reason.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/workflow-tool-action/index.tsx",
+    "to": "src/components/dify/app/app-publisher/workflow-tool-action/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/workflow-tool-action/loading-status.tsx",
+    "to": "src/components/dify/app/app-publisher/workflow-tool-action/loading-status.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/workflow-tool-action/setup-status.tsx",
+    "to": "src/components/dify/app/app-publisher/workflow-tool-action/setup-status.tsx"
+  },
+  {
+    "from": "src/app/components/app/app-publisher/workflow-tool-action/state-label.tsx",
+    "to": "src/components/dify/app/app-publisher/workflow-tool-action/state-label.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/__tests__/configuration-flow.spec.tsx",
+    "to": "src/components/dify/app/configuration/__tests__/configuration-flow.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/__tests__/utils.spec.ts",
+    "to": "src/components/dify/app/configuration/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/base/feature-panel/index.tsx",
+    "to": "src/components/dify/app/configuration/base/feature-panel/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/base/group-name/index.tsx",
+    "to": "src/components/dify/app/configuration/base/group-name/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/base/operation-button/index.tsx",
+    "to": "src/components/dify/app/configuration/base/operation-button/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/base/var-highlight/index.tsx",
+    "to": "src/components/dify/app/configuration/base/var-highlight/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/base/var-highlight/style.module.css",
+    "to": "src/components/dify/app/configuration/base/var-highlight/style.module.css"
+  },
+  {
+    "from": "src/app/components/app/configuration/base/warning-mask/__tests__/has-not-set-api.spec.tsx",
+    "to": "src/components/dify/app/configuration/base/warning-mask/__tests__/has-not-set-api.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/base/warning-mask/cannot-query-dataset.tsx",
+    "to": "src/components/dify/app/configuration/base/warning-mask/cannot-query-dataset.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/base/warning-mask/formatting-changed.tsx",
+    "to": "src/components/dify/app/configuration/base/warning-mask/formatting-changed.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/base/warning-mask/has-not-set-api.tsx",
+    "to": "src/components/dify/app/configuration/base/warning-mask/has-not-set-api.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/base/warning-mask/index.tsx",
+    "to": "src/components/dify/app/configuration/base/warning-mask/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/base/warning-mask/style.module.css",
+    "to": "src/components/dify/app/configuration/base/warning-mask/style.module.css"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/__tests__/config-audio.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/__tests__/config-audio.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/__tests__/config-document.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/__tests__/config-document.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/agent/agent-setting/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/agent/agent-setting/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/agent/agent-setting/index.tsx",
+    "to": "src/components/dify/app/configuration/config/agent/agent-setting/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/agent/agent-setting/item-panel.tsx",
+    "to": "src/components/dify/app/configuration/config/agent/agent-setting/item-panel.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/agent/agent-tools/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/agent/agent-tools/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/agent/agent-tools/__tests__/setting-built-in-tool.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/agent/agent-tools/__tests__/setting-built-in-tool.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/agent/agent-tools/index.tsx",
+    "to": "src/components/dify/app/configuration/config/agent/agent-tools/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/agent/agent-tools/setting-built-in-tool.tsx",
+    "to": "src/components/dify/app/configuration/config/agent/agent-tools/setting-built-in-tool.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/auto-gen-model-storage.ts",
+    "to": "src/components/dify/app/configuration/config/auto-gen-model-storage.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/__tests__/generator-reflow.browser.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/__tests__/generator-reflow.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/__tests__/get-automatic-res.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/__tests__/get-automatic-res.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/__tests__/idea-output.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/__tests__/idea-output.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/__tests__/instruction-editor-accessibility.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/__tests__/instruction-editor-accessibility.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/__tests__/instruction-editor.browser.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/__tests__/instruction-editor.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/__tests__/result.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/__tests__/result.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/__tests__/use-gen-data.spec.ts",
+    "to": "src/components/dify/app/configuration/config/automatic/__tests__/use-gen-data.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/__tests__/version-selector.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/__tests__/version-selector.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/automatic-btn.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/automatic-btn.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/get-automatic-res.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/get-automatic-res.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/idea-output.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/idea-output.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/instruction-editor-in-workflow.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/instruction-editor-in-workflow.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/instruction-editor.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/instruction-editor.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/prompt-res-in-workflow.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/prompt-res-in-workflow.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/prompt-res.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/prompt-res.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/prompt-toast.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/prompt-toast.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/res-placeholder.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/res-placeholder.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/result.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/result.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/style.module.css",
+    "to": "src/components/dify/app/configuration/config/automatic/style.module.css"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/types.ts",
+    "to": "src/components/dify/app/configuration/config/automatic/types.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/use-gen-data.ts",
+    "to": "src/components/dify/app/configuration/config/automatic/use-gen-data.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/automatic/version-selector.tsx",
+    "to": "src/components/dify/app/configuration/config/automatic/version-selector.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/code-generator/__tests__/get-code-generator-res.spec.tsx",
+    "to": "src/components/dify/app/configuration/config/code-generator/__tests__/get-code-generator-res.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/code-generator/get-code-generator-res.tsx",
+    "to": "src/components/dify/app/configuration/config/code-generator/get-code-generator-res.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/config-audio.tsx",
+    "to": "src/components/dify/app/configuration/config/config-audio.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/config-document.tsx",
+    "to": "src/components/dify/app/configuration/config/config-document.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config/index.tsx",
+    "to": "src/components/dify/app/configuration/config/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/__tests__/advanced-prompt-input.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/__tests__/advanced-prompt-input.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/__tests__/message-type-selector.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/__tests__/message-type-selector.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/__tests__/prompt-editor-height-resize-wrap.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/__tests__/prompt-editor-height-resize-wrap.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/__tests__/simple-prompt-input-accessibility.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/__tests__/simple-prompt-input-accessibility.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/__tests__/simple-prompt-input.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/__tests__/simple-prompt-input.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/advanced-prompt-input.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/advanced-prompt-input.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/confirm-add-var/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/confirm-add-var/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/confirm-add-var/index.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/confirm-add-var/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/conversation-history/__tests__/edit-modal.browser.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/conversation-history/__tests__/edit-modal.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/conversation-history/edit-modal.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/conversation-history/edit-modal.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/conversation-history/history-panel.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/conversation-history/history-panel.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/index.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/message-type-selector.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/message-type-selector.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/prompt-editor-height-resize-wrap.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/prompt-editor-height-resize-wrap.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/simple-prompt-input.tsx",
+    "to": "src/components/dify/app/configuration/config-prompt/simple-prompt-input.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-prompt/style.module.css",
+    "to": "src/components/dify/app/configuration/config-prompt/style.module.css"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-var/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/__tests__/select-var-type.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-var/__tests__/select-var-type.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/__tests__/var-item.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-var/__tests__/var-item.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-modal/__tests__/file-default.browser.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-modal/__tests__/file-default.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-modal/__tests__/form-fields.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-modal/__tests__/form-fields.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-modal/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-modal/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-modal/__tests__/type-select.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-modal/__tests__/type-select.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-modal/__tests__/utils.spec.ts",
+    "to": "src/components/dify/app/configuration/config-var/config-modal/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-modal/config.ts",
+    "to": "src/components/dify/app/configuration/config-var/config-modal/config.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-modal/field.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-modal/field.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-modal/form-fields.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-modal/form-fields.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-modal/index.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-modal/type-select.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-modal/type-select.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-modal/utils.ts",
+    "to": "src/components/dify/app/configuration/config-var/config-modal/utils.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-select/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-select/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-select/index.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-select/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-string/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-string/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/config-string/index.tsx",
+    "to": "src/components/dify/app/configuration/config-var/config-string/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/index.tsx",
+    "to": "src/components/dify/app/configuration/config-var/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/input-type-icon.tsx",
+    "to": "src/components/dify/app/configuration/config-var/input-type-icon.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/modal-foot.tsx",
+    "to": "src/components/dify/app/configuration/config-var/modal-foot.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/select-var-type.tsx",
+    "to": "src/components/dify/app/configuration/config-var/select-var-type.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-var/var-item.tsx",
+    "to": "src/components/dify/app/configuration/config-var/var-item.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-vision/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-vision/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-vision/__tests__/param-config-content.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-vision/__tests__/param-config-content.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-vision/__tests__/param-config.spec.tsx",
+    "to": "src/components/dify/app/configuration/config-vision/__tests__/param-config.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-vision/index.tsx",
+    "to": "src/components/dify/app/configuration/config-vision/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-vision/param-config-content.tsx",
+    "to": "src/components/dify/app/configuration/config-vision/param-config-content.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/config-vision/param-config.tsx",
+    "to": "src/components/dify/app/configuration/config-vision/param-config.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/configuration-view/index.tsx",
+    "to": "src/components/dify/app/configuration/configuration-view/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/configuration-view/legacy-agent-badge.tsx",
+    "to": "src/components/dify/app/configuration/configuration-view/legacy-agent-badge.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/card-item/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/card-item/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/card-item/index.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/card-item/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/context-var/__tests__/var-picker.spec.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/context-var/__tests__/var-picker.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/context-var/index.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/context-var/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/context-var/var-picker.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/context-var/var-picker.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/index.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/params-config/__tests__/config-content.spec.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/params-config/__tests__/config-content.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/params-config/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/params-config/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/params-config/__tests__/weighted-score.browser.spec.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/params-config/__tests__/weighted-score.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/params-config/config-content.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/params-config/config-content.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/params-config/index.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/params-config/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/params-config/weighted-score.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/params-config/weighted-score.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/select-dataset/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/select-dataset/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/select-dataset/index.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/select-dataset/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/settings-modal/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/settings-modal/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/settings-modal/__tests__/retrieval-section.spec.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/settings-modal/__tests__/retrieval-section.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/settings-modal/index.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/settings-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/dataset-config/settings-modal/retrieval-section.tsx",
+    "to": "src/components/dify/app/configuration/dataset-config/settings-modal/retrieval-section.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/__tests__/chat-user-input.spec.tsx",
+    "to": "src/components/dify/app/configuration/debug/__tests__/chat-user-input.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/__tests__/hooks.spec.tsx",
+    "to": "src/components/dify/app/configuration/debug/__tests__/hooks.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/debug/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/chat-user-input.tsx",
+    "to": "src/components/dify/app/configuration/debug/chat-user-input.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-multiple-model/__tests__/debug-item.spec.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-multiple-model/__tests__/debug-item.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-multiple-model/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-multiple-model/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-multiple-model/__tests__/model-parameter-trigger.spec.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-multiple-model/__tests__/model-parameter-trigger.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-multiple-model/__tests__/text-generation-item.spec.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-multiple-model/__tests__/text-generation-item.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-multiple-model/chat-item.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-multiple-model/chat-item.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-multiple-model/context-provider.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-multiple-model/context-provider.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-multiple-model/context.ts",
+    "to": "src/components/dify/app/configuration/debug/debug-with-multiple-model/context.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-multiple-model/debug-item.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-multiple-model/debug-item.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-multiple-model/index.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-multiple-model/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-multiple-model/model-parameter-trigger.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-multiple-model/model-parameter-trigger.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-multiple-model/text-generation-item.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-multiple-model/text-generation-item.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-single-model/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-single-model/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/debug-with-single-model/index.tsx",
+    "to": "src/components/dify/app/configuration/debug/debug-with-single-model/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/hooks.tsx",
+    "to": "src/components/dify/app/configuration/debug/hooks.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/index.tsx",
+    "to": "src/components/dify/app/configuration/debug/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/storage.ts",
+    "to": "src/components/dify/app/configuration/debug/storage.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/debug/types.ts",
+    "to": "src/components/dify/app/configuration/debug/types.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/__tests__/use-advanced-prompt-config.spec.tsx",
+    "to": "src/components/dify/app/configuration/hooks/__tests__/use-advanced-prompt-config.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/__tests__/use-configuration-utils.spec.ts",
+    "to": "src/components/dify/app/configuration/hooks/__tests__/use-configuration-utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/build-configuration-context.ts",
+    "to": "src/components/dify/app/configuration/hooks/build-configuration-context.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/dataset.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/dataset.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/load.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/load.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/model.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/model.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/prompt-config.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/prompt-config.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/publish.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/publish.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/published-config.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/published-config.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/types.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/types.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/use-configuration-app-context.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/use-configuration-app-context.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/use-configuration-loader.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/use-configuration-loader.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/use-configuration-publish.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/use-configuration-publish.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/use-dataset-configuration-state.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/use-dataset-configuration-state.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/use-feature-configuration-state.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/use-feature-configuration-state.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/use-model-configuration-state.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/use-model-configuration-state.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/use-multiple-model-debug.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/use-multiple-model-debug.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-lifecycle/use-published-config-sync.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-lifecycle/use-published-config-sync.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/configuration-view-model.ts",
+    "to": "src/components/dify/app/configuration/hooks/configuration-view-model.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/use-advanced-prompt-config.ts",
+    "to": "src/components/dify/app/configuration/hooks/use-advanced-prompt-config.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/hooks/use-configuration.ts",
+    "to": "src/components/dify/app/configuration/hooks/use-configuration.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/images/prompt.svg",
+    "to": "src/components/dify/app/configuration/images/prompt.svg"
+  },
+  {
+    "from": "src/app/components/app/configuration/index.tsx",
+    "to": "src/components/dify/app/configuration/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/prompt-value-panel/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/configuration/prompt-value-panel/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/prompt-value-panel/index.tsx",
+    "to": "src/components/dify/app/configuration/prompt-value-panel/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/toast.ts",
+    "to": "src/components/dify/app/configuration/toast.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/tools/__tests__/external-data-tool-loading.spec.tsx",
+    "to": "src/components/dify/app/configuration/tools/__tests__/external-data-tool-loading.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/tools/__tests__/external-data-tool-modal-utils.spec.ts",
+    "to": "src/components/dify/app/configuration/tools/__tests__/external-data-tool-modal-utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/tools/__tests__/external-data-tool-modal.spec.tsx",
+    "to": "src/components/dify/app/configuration/tools/__tests__/external-data-tool-modal.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/tools/external-data-tool-dialog-content.tsx",
+    "to": "src/components/dify/app/configuration/tools/external-data-tool-dialog-content.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/tools/external-data-tool-modal-utils.ts",
+    "to": "src/components/dify/app/configuration/tools/external-data-tool-modal-utils.ts"
+  },
+  {
+    "from": "src/app/components/app/configuration/tools/external-data-tool-modal.tsx",
+    "to": "src/components/dify/app/configuration/tools/external-data-tool-modal.tsx"
+  },
+  {
+    "from": "src/app/components/app/configuration/utils.ts",
+    "to": "src/components/dify/app/configuration/utils.ts"
+  },
+  {
+    "from": "src/app/components/app/create-app-dialog/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/create-app-dialog/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-app-dialog/app-card/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/create-app-dialog/app-card/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-app-dialog/app-card/index.tsx",
+    "to": "src/components/dify/app/create-app-dialog/app-card/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-app-dialog/app-list/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/create-app-dialog/app-list/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-app-dialog/app-list/__tests__/sidebar.spec.tsx",
+    "to": "src/components/dify/app/create-app-dialog/app-list/__tests__/sidebar.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-app-dialog/app-list/index.tsx",
+    "to": "src/components/dify/app/create-app-dialog/app-list/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-app-dialog/app-list/sidebar.tsx",
+    "to": "src/components/dify/app/create-app-dialog/app-list/sidebar.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-app-dialog/index.tsx",
+    "to": "src/components/dify/app/create-app-dialog/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-app-dialog-shell.tsx",
+    "to": "src/components/dify/app/create-app-dialog-shell.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-app-menu.tsx",
+    "to": "src/components/dify/app/create-app-menu.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-app-modal/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/app/create-app-modal/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-app-modal/index.tsx",
+    "to": "src/components/dify/app/create-app-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-from-dsl-modal/__tests__/dsl-confirm-modal.spec.tsx",
+    "to": "src/components/dify/app/create-from-dsl-modal/__tests__/dsl-confirm-modal.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-from-dsl-modal/__tests__/dsl-import-warning-description.spec.tsx",
+    "to": "src/components/dify/app/create-from-dsl-modal/__tests__/dsl-import-warning-description.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-from-dsl-modal/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/create-from-dsl-modal/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-from-dsl-modal/__tests__/uploader.spec.tsx",
+    "to": "src/components/dify/app/create-from-dsl-modal/__tests__/uploader.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-from-dsl-modal/dsl-confirm-modal.tsx",
+    "to": "src/components/dify/app/create-from-dsl-modal/dsl-confirm-modal.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-from-dsl-modal/dsl-import-warning-description.tsx",
+    "to": "src/components/dify/app/create-from-dsl-modal/dsl-import-warning-description.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-from-dsl-modal/index.tsx",
+    "to": "src/components/dify/app/create-from-dsl-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/create-from-dsl-modal/types.ts",
+    "to": "src/components/dify/app/create-from-dsl-modal/types.ts"
+  },
+  {
+    "from": "src/app/components/app/create-from-dsl-modal/uploader.tsx",
+    "to": "src/components/dify/app/create-from-dsl-modal/uploader.tsx"
+  },
+  {
+    "from": "src/app/components/app/delete-app-form.tsx",
+    "to": "src/components/dify/app/delete-app-form.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/__tests__/accessibility-configuration.browser.spec.tsx",
+    "to": "src/components/dify/app/deploy/__tests__/accessibility-configuration.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/__tests__/accessibility-test-env.tsx",
+    "to": "src/components/dify/app/deploy/__tests__/accessibility-test-env.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/__tests__/accessibility.browser.spec.tsx",
+    "to": "src/components/dify/app/deploy/__tests__/accessibility.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/deploy/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/__tests__/state.spec.tsx",
+    "to": "src/components/dify/app/deploy/__tests__/state.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/__tests__/version.spec.ts",
+    "to": "src/components/dify/app/deploy/__tests__/version.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/built-in-environment-card/index.tsx",
+    "to": "src/components/dify/app/deploy/built-in-environment-card/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/deployment-dialog/index.tsx",
+    "to": "src/components/dify/app/deploy/deployment-dialog/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/environment-table/__tests__/activity-cell.browser.spec.tsx",
+    "to": "src/components/dify/app/deploy/environment-table/__tests__/activity-cell.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/environment-table/activity-cell.tsx",
+    "to": "src/components/dify/app/deploy/environment-table/activity-cell.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/environment-table/deploy-menu/index.tsx",
+    "to": "src/components/dify/app/deploy/environment-table/deploy-menu/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/environment-table/empty-state/data.ts",
+    "to": "src/components/dify/app/deploy/environment-table/empty-state/data.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/environment-table/empty-state/index.tsx",
+    "to": "src/components/dify/app/deploy/environment-table/empty-state/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/environment-table/empty-state/skeleton.tsx",
+    "to": "src/components/dify/app/deploy/environment-table/empty-state/skeleton.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/environment-table/index.tsx",
+    "to": "src/components/dify/app/deploy/environment-table/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/environment-table/row-actions.tsx",
+    "to": "src/components/dify/app/deploy/environment-table/row-actions.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/environment-table/row.tsx",
+    "to": "src/components/dify/app/deploy/environment-table/row.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/environment-table/types.ts",
+    "to": "src/components/dify/app/deploy/environment-table/types.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/environment-table/undeploy-confirm-dialog/index.tsx",
+    "to": "src/components/dify/app/deploy/environment-table/undeploy-confirm-dialog/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/hooks/use-deploy-workflow.ts",
+    "to": "src/components/dify/app/deploy/hooks/use-deploy-workflow.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/hooks/use-refresh-app-environments-after-deployment-polling.ts",
+    "to": "src/components/dify/app/deploy/hooks/use-refresh-app-environments-after-deployment-polling.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/hooks/use-undeploy-workflow.ts",
+    "to": "src/components/dify/app/deploy/hooks/use-undeploy-workflow.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/index.tsx",
+    "to": "src/components/dify/app/deploy/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/access-point-icon.tsx",
+    "to": "src/components/dify/app/deploy/shared/access-point-icon.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/__tests__/credential-field.browser.spec.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/__tests__/credential-field.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/__tests__/deployment-configuration-cache.browser.spec.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/__tests__/deployment-configuration-cache.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/__tests__/deployment-precheck-alert.browser.spec.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/__tests__/deployment-precheck-alert.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/__tests__/environment-variable-field.browser.spec.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/__tests__/environment-variable-field.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/__tests__/use-provider-icon.spec.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/__tests__/use-provider-icon.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/__tests__/workflow-deployment-input.spec.ts",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/__tests__/workflow-deployment-input.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/content.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/content.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/credential-field.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/credential-field.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/credentials-section.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/credentials-section.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/deployment-precheck-alert.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/deployment-precheck-alert.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/environment-variable-field.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/environment-variable-field.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/environment-variables-section.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/environment-variables-section.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/index.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/section-heading.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/section-heading.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/use-deployment-configuration-form.ts",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/use-deployment-configuration-form.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/use-deployment-configuration-queries.ts",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/use-deployment-configuration-queries.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/use-deployment-configuration-values.ts",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/use-deployment-configuration-values.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/use-provider-icon.ts",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/use-provider-icon.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/utils/field-id.ts",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/utils/field-id.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/utils/workflow-deployment-input.ts",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/utils/workflow-deployment-input.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/utils/workflow-path.ts",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/utils/workflow-path.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/deployment-configuration/workflow-source-popover.tsx",
+    "to": "src/components/dify/app/deploy/shared/deployment-configuration/workflow-source-popover.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/environment-deployment-flow/index.tsx",
+    "to": "src/components/dify/app/deploy/shared/environment-deployment-flow/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/runtime-state.tsx",
+    "to": "src/components/dify/app/deploy/shared/runtime-state.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/version-label.tsx",
+    "to": "src/components/dify/app/deploy/shared/version-label.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/version-selection/__tests__/use-infinite-scroll.spec.ts",
+    "to": "src/components/dify/app/deploy/shared/version-selection/__tests__/use-infinite-scroll.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/version-selection/index.tsx",
+    "to": "src/components/dify/app/deploy/shared/version-selection/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/version-selection/use-infinite-scroll.ts",
+    "to": "src/components/dify/app/deploy/shared/version-selection/use-infinite-scroll.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/shared/version-selection/version-list.tsx",
+    "to": "src/components/dify/app/deploy/shared/version-selection/version-list.tsx"
+  },
+  {
+    "from": "src/app/components/app/deploy/state.ts",
+    "to": "src/components/dify/app/deploy/state.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/types.ts",
+    "to": "src/components/dify/app/deploy/types.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/utils/access-point.ts",
+    "to": "src/components/dify/app/deploy/utils/access-point.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/utils/environment-deployment.ts",
+    "to": "src/components/dify/app/deploy/utils/environment-deployment.ts"
+  },
+  {
+    "from": "src/app/components/app/deploy/utils/version.ts",
+    "to": "src/components/dify/app/deploy/utils/version.ts"
+  },
+  {
+    "from": "src/app/components/app/duplicate-modal/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/duplicate-modal/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/duplicate-modal/index.tsx",
+    "to": "src/components/dify/app/duplicate-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/export-confirm-modal.tsx",
+    "to": "src/components/dify/app/export-confirm-modal.tsx"
+  },
+  {
+    "from": "src/app/components/app/in-site-message/__tests__/notification.browser.spec.tsx",
+    "to": "src/components/dify/app/in-site-message/__tests__/notification.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/in-site-message/index.tsx",
+    "to": "src/components/dify/app/in-site-message/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/in-site-message/notification.tsx",
+    "to": "src/components/dify/app/in-site-message/notification.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/__tests__/archived-logs-notice.browser.spec.tsx",
+    "to": "src/components/dify/app/log/__tests__/archived-logs-notice.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/__tests__/empty-element.spec.tsx",
+    "to": "src/components/dify/app/log/__tests__/empty-element.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/__tests__/filter.spec.tsx",
+    "to": "src/components/dify/app/log/__tests__/filter.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/log/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/__tests__/list-utils.spec.ts",
+    "to": "src/components/dify/app/log/__tests__/list-utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/log/__tests__/list.spec.tsx",
+    "to": "src/components/dify/app/log/__tests__/list.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/__tests__/model-info.spec.tsx",
+    "to": "src/components/dify/app/log/__tests__/model-info.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/__tests__/retention-upgrade-notice.spec.tsx",
+    "to": "src/components/dify/app/log/__tests__/retention-upgrade-notice.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/__tests__/var-panel.spec.tsx",
+    "to": "src/components/dify/app/log/__tests__/var-panel.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/archived-logs-notice-utils.ts",
+    "to": "src/components/dify/app/log/archived-logs-notice-utils.ts"
+  },
+  {
+    "from": "src/app/components/app/log/archived-logs-notice.tsx",
+    "to": "src/components/dify/app/log/archived-logs-notice.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/cloud-sandbox-retention.ts",
+    "to": "src/components/dify/app/log/cloud-sandbox-retention.ts"
+  },
+  {
+    "from": "src/app/components/app/log/conversation-detail.tsx",
+    "to": "src/components/dify/app/log/conversation-detail.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/empty-element.tsx",
+    "to": "src/components/dify/app/log/empty-element.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/filter.tsx",
+    "to": "src/components/dify/app/log/filter.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/index.tsx",
+    "to": "src/components/dify/app/log/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/list-utils.ts",
+    "to": "src/components/dify/app/log/list-utils.ts"
+  },
+  {
+    "from": "src/app/components/app/log/list.tsx",
+    "to": "src/components/dify/app/log/list.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/loading.tsx",
+    "to": "src/components/dify/app/log/loading.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/model-info.tsx",
+    "to": "src/components/dify/app/log/model-info.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/retention-upgrade-notice.tsx",
+    "to": "src/components/dify/app/log/retention-upgrade-notice.tsx"
+  },
+  {
+    "from": "src/app/components/app/log/var-panel.tsx",
+    "to": "src/components/dify/app/log/var-panel.tsx"
+  },
+  {
+    "from": "src/app/components/app/log-annotation/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/log-annotation/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/log-annotation/index.tsx",
+    "to": "src/components/dify/app/log-annotation/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/log-annotation/page-title.tsx",
+    "to": "src/components/dify/app/log-annotation/page-title.tsx"
+  },
+  {
+    "from": "src/app/components/app/monitoring/__tests__/date-range-picker.spec.tsx",
+    "to": "src/components/dify/app/monitoring/__tests__/date-range-picker.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/monitoring/date-range-picker.tsx",
+    "to": "src/components/dify/app/monitoring/date-range-picker.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/__tests__/app-card-utils.spec.ts",
+    "to": "src/components/dify/app/overview/__tests__/app-card-utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/overview/__tests__/app-chart-utils.spec.ts",
+    "to": "src/components/dify/app/overview/__tests__/app-chart-utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/overview/__tests__/app-chart.spec.tsx",
+    "to": "src/components/dify/app/overview/__tests__/app-chart.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/__tests__/workflow-hidden-input-fields.spec.tsx",
+    "to": "src/components/dify/app/overview/__tests__/workflow-hidden-input-fields.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/__tests__/workflow-launch-dialog.spec.tsx",
+    "to": "src/components/dify/app/overview/__tests__/workflow-launch-dialog.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/app-card-utils.ts",
+    "to": "src/components/dify/app/overview/app-card-utils.ts"
+  },
+  {
+    "from": "src/app/components/app/overview/app-chart-utils.ts",
+    "to": "src/components/dify/app/overview/app-chart-utils.ts"
+  },
+  {
+    "from": "src/app/components/app/overview/app-chart.tsx",
+    "to": "src/components/dify/app/overview/app-chart.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/assets/chromeplugin-install.svg",
+    "to": "src/components/dify/app/overview/assets/chromeplugin-install.svg"
+  },
+  {
+    "from": "src/app/components/app/overview/assets/chromeplugin-option.svg",
+    "to": "src/components/dify/app/overview/assets/chromeplugin-option.svg"
+  },
+  {
+    "from": "src/app/components/app/overview/assets/iframe-option.svg",
+    "to": "src/components/dify/app/overview/assets/iframe-option.svg"
+  },
+  {
+    "from": "src/app/components/app/overview/assets/scripts-option.svg",
+    "to": "src/components/dify/app/overview/assets/scripts-option.svg"
+  },
+  {
+    "from": "src/app/components/app/overview/customize/index.tsx",
+    "to": "src/components/dify/app/overview/customize/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/embedded/__tests__/embedded-dialog.browser.spec.tsx",
+    "to": "src/components/dify/app/overview/embedded/__tests__/embedded-dialog.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/embedded/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/overview/embedded/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/embedded/index.tsx",
+    "to": "src/components/dify/app/overview/embedded/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/embedded/style.module.css",
+    "to": "src/components/dify/app/overview/embedded/style.module.css"
+  },
+  {
+    "from": "src/app/components/app/overview/settings/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/overview/settings/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/settings/__tests__/settings-dialog.browser.spec.tsx",
+    "to": "src/components/dify/app/overview/settings/__tests__/settings-dialog.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/settings/index.tsx",
+    "to": "src/components/dify/app/overview/settings/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/workflow-hidden-input-fields.tsx",
+    "to": "src/components/dify/app/overview/workflow-hidden-input-fields.tsx"
+  },
+  {
+    "from": "src/app/components/app/overview/workflow-launch-dialog/index.tsx",
+    "to": "src/components/dify/app/overview/workflow-launch-dialog/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/switch-app-modal/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/switch-app-modal/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/switch-app-modal/index.tsx",
+    "to": "src/components/dify/app/switch-app-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/item/__tests__/action-groups.spec.tsx",
+    "to": "src/components/dify/app/text-generate/item/__tests__/action-groups.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/item/__tests__/index.hitl-v2.spec.tsx",
+    "to": "src/components/dify/app/text-generate/item/__tests__/index.hitl-v2.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/item/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/text-generate/item/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/item/__tests__/result-tab.spec.tsx",
+    "to": "src/components/dify/app/text-generate/item/__tests__/result-tab.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/item/__tests__/utils.spec.ts",
+    "to": "src/components/dify/app/text-generate/item/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/app/text-generate/item/__tests__/workflow-body.spec.tsx",
+    "to": "src/components/dify/app/text-generate/item/__tests__/workflow-body.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/item/action-groups.tsx",
+    "to": "src/components/dify/app/text-generate/item/action-groups.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/item/index.tsx",
+    "to": "src/components/dify/app/text-generate/item/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/item/result-tab.tsx",
+    "to": "src/components/dify/app/text-generate/item/result-tab.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/item/utils.ts",
+    "to": "src/components/dify/app/text-generate/item/utils.ts"
+  },
+  {
+    "from": "src/app/components/app/text-generate/item/workflow-body.tsx",
+    "to": "src/components/dify/app/text-generate/item/workflow-body.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/saved-items/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/text-generate/saved-items/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/saved-items/index.tsx",
+    "to": "src/components/dify/app/text-generate/saved-items/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/text-generate/saved-items/no-data/index.tsx",
+    "to": "src/components/dify/app/text-generate/saved-items/no-data/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/__tests__/inherited-tracing-summary.spec.tsx",
+    "to": "src/components/dify/app/tracing/__tests__/inherited-tracing-summary.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/__tests__/panel.spec.tsx",
+    "to": "src/components/dify/app/tracing/__tests__/panel.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/__tests__/provider-config-modal.spec.tsx",
+    "to": "src/components/dify/app/tracing/__tests__/provider-config-modal.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/__tests__/selection.browser.spec.tsx",
+    "to": "src/components/dify/app/tracing/__tests__/selection.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/capabilities.ts",
+    "to": "src/components/dify/app/tracing/capabilities.ts"
+  },
+  {
+    "from": "src/app/components/app/tracing/config-popup.tsx",
+    "to": "src/components/dify/app/tracing/config-popup.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/configuration.tsx",
+    "to": "src/components/dify/app/tracing/configuration.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/inherited-tracing-summary.tsx",
+    "to": "src/components/dify/app/tracing/inherited-tracing-summary.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/provider-capabilities.tsx",
+    "to": "src/components/dify/app/tracing/provider-capabilities.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/provider-config-modal.tsx",
+    "to": "src/components/dify/app/tracing/provider-config-modal.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/provider-panel.tsx",
+    "to": "src/components/dify/app/tracing/provider-panel.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/providers.ts",
+    "to": "src/components/dify/app/tracing/providers.ts"
+  },
+  {
+    "from": "src/app/components/app/tracing/query-params.ts",
+    "to": "src/components/dify/app/tracing/query-params.ts"
+  },
+  {
+    "from": "src/app/components/app/tracing/resource.ts",
+    "to": "src/components/dify/app/tracing/resource.ts"
+  },
+  {
+    "from": "src/app/components/app/tracing/summary-disclosure.tsx",
+    "to": "src/components/dify/app/tracing/summary-disclosure.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/trace-policy.tsx",
+    "to": "src/components/dify/app/tracing/trace-policy.tsx"
+  },
+  {
+    "from": "src/app/components/app/tracing/tracing-icon.tsx",
+    "to": "src/components/dify/app/tracing/tracing-icon.tsx"
+  },
+  {
+    "from": "src/app/components/app/type-selector/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/type-selector/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/type-selector/index.tsx",
+    "to": "src/components/dify/app/type-selector/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/use-export-app-dsl.ts",
+    "to": "src/components/dify/app/use-export-app-dsl.ts"
+  },
+  {
+    "from": "src/app/components/app/workflow-log/__tests__/detail.spec.tsx",
+    "to": "src/components/dify/app/workflow-log/__tests__/detail.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/workflow-log/__tests__/filter.browser.spec.tsx",
+    "to": "src/components/dify/app/workflow-log/__tests__/filter.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/workflow-log/__tests__/index.spec.tsx",
+    "to": "src/components/dify/app/workflow-log/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/workflow-log/__tests__/list.spec.tsx",
+    "to": "src/components/dify/app/workflow-log/__tests__/list.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/workflow-log/__tests__/run-fixture.ts",
+    "to": "src/components/dify/app/workflow-log/__tests__/run-fixture.ts"
+  },
+  {
+    "from": "src/app/components/app/workflow-log/__tests__/trigger-by-display.spec.tsx",
+    "to": "src/components/dify/app/workflow-log/__tests__/trigger-by-display.spec.tsx"
+  },
+  {
+    "from": "src/app/components/app/workflow-log/detail.tsx",
+    "to": "src/components/dify/app/workflow-log/detail.tsx"
+  },
+  {
+    "from": "src/app/components/app/workflow-log/filter.tsx",
+    "to": "src/components/dify/app/workflow-log/filter.tsx"
+  },
+  {
+    "from": "src/app/components/app/workflow-log/index.tsx",
+    "to": "src/components/dify/app/workflow-log/index.tsx"
+  },
+  {
+    "from": "src/app/components/app/workflow-log/list.tsx",
+    "to": "src/components/dify/app/workflow-log/list.tsx"
+  },
+  {
+    "from": "src/app/components/app/workflow-log/trigger-by-display.tsx",
+    "to": "src/components/dify/app/workflow-log/trigger-by-display.tsx"
+  }
+]

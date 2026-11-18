@@ -3,7 +3,7 @@
 import { Button } from '@langgenius/dify-ui/button'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { useTranslation } from 'react-i18next'
-import { SkeletonRectangle } from '@/app/components/base/skeleton'
+import { SkeletonRectangle } from '@/components/dify/base/skeleton'
 import { CapabilityReturnController } from './capability-return-controller'
 import { KnowledgeSettingsForm } from './form'
 import { KnowledgeSettingsStateBoundary } from './state/boundary'

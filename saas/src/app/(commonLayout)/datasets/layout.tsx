@@ -2,7 +2,7 @@
 
 import { useAtomValue } from 'jotai'
 import { useEffect } from 'react'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import {
   workspacePermissionKeysAtom,
   workspacePermissionKeysLoadingAtom,

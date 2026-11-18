@@ -36,7 +36,7 @@ import {
   DatePickerLabel,
   DatePickerTrigger,
   DatePickerValue,
-} from '@/app/components/base/date-time-picker/date-picker'
+} from '@/components/dify/base/date-time-picker/date-picker'
 import { deploymentEditionAtom } from '@/features/system-features/state'
 import { consoleQuery } from '@/service/console'
 import { getAvatarInitial } from '@/utils/avatar'

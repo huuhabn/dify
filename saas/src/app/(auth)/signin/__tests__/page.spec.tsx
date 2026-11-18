@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { renderWithConsoleQuery as render } from '@/test/console/query-data'
 import SignInPage from '../sign-in-page'
 

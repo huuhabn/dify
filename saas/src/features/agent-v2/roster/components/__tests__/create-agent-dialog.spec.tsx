@@ -15,7 +15,7 @@ const routerPushMock = vi.hoisted(() => vi.fn())
 
 const trackCreateAppMock = vi.hoisted(() => vi.fn())
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: toastMock,
 }))
 

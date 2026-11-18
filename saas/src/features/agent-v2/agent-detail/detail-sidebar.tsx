@@ -1,6 +1,6 @@
 'use client'
 
-import { DetailSidebarFrame } from '@/app/components/detail-sidebar'
+import { DetailSidebarFrame } from '@/components/dify/detail-sidebar'
 import { AgentDetailSection, AgentDetailTop } from './navigation'
 
 export function AgentDetailSidebar() {

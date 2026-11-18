@@ -1,7 +1,7 @@
 import type { TagResponse as Tag } from '@dify/contracts/api/console/tags/types.gen'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { guardUnexpectedFetch } from '@/test/unexpected-fetch'
 import { TagFilter } from '../components/tag-filter'
 import { renderWithTags } from './render-browser'

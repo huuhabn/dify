@@ -1,5 +1,5 @@
 import type { MessageDetailResponse } from '@dify/contracts/api/console/agent/types.gen'
-import { describe, expect, it } from 'vite-plus/test'
+import { describe, expect, it } from 'vitest'
 import { getFormattedAgentDebugChatTree } from '../chat-history'
 
 describe('Agent history knowledge evidence', () => {

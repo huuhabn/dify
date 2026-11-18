@@ -1,4 +1,4 @@
-import { SnippetDetailSidebar } from '@/app/components/snippets/components/snippet-detail-sidebar'
+import { SnippetDetailSidebar } from '@/components/dify/snippets/components/snippet-detail-sidebar'
 
 export function SnippetDetailSidebarSlot() {
   return <SnippetDetailSidebar />

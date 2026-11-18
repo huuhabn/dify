@@ -20,7 +20,7 @@ import { keepPreviousData, useInfiniteQuery } from '@tanstack/react-query'
 import { useDebouncedValue } from 'foxact/use-debounced-value'
 import { useId, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { InfiniteScrollSentinel } from '@/app/components/base/infinite-scroll-sentinel'
+import { InfiniteScrollSentinel } from '@/components/dify/base/infinite-scroll-sentinel'
 import { consoleQuery } from '@/service/console'
 
 const EDUCATION_AUTOCOMPLETE_PAGE_SIZE = 40

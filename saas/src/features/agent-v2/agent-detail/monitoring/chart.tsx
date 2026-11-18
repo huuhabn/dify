@@ -9,7 +9,7 @@ import ReactECharts from 'echarts-for-react/esm/core'
 import { useId, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocale } from '#i18n'
-import { echarts } from '@/app/components/base/line-chart/echarts'
+import { echarts } from '@/components/dify/base/line-chart/echarts'
 import { formatToLocalTime } from '@/utils/format'
 import { buildChartOptions, getChartValueField, getTokenSummary } from './chart-utils'
 

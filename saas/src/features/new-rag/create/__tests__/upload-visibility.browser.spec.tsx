@@ -1,7 +1,7 @@
 import type { NewKnowledgeStartMode } from '../../routes'
 import { RadioGroup } from '@langgenius/dify-ui/radio-group'
 import { useState } from 'react'
-import { page } from 'vite-plus/test/browser'
+import { page } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { QueryTestingAdapter } from '@/test/query-state-testing-adapter'

@@ -492,7 +492,7 @@ vi.mock('@/service/console', async (importOriginal) => {
   }
 })
 
-vi.mock('@/app/notifications', () => ({ toast: toastState }))
+vi.mock('@/components/providers/notifications', () => ({ toast: toastState }))
 // Clipboard access is a browser permission boundary.
 vi.mock('copy-to-clipboard', () => ({ default: vi.fn(() => true) }))
 vi.mock('@/next/navigation', () => ({
@@ -727,7 +727,7 @@ describe('DocumentDetailPage', () => {
   beforeAll(async () => {
     // Load the real renderer before assertions start; next/dynamic otherwise loads it
     // during the first Markdown query, which can outlast the DOM query timeout.
-    await import('@/app/components/base/markdown/streamdown-wrapper')
+    await import('@/components/dify/base/markdown/streamdown-wrapper')
   })
 
   beforeEach(() => {

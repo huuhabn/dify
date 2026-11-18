@@ -1,5 +1,5 @@
-import type { FormInputItem, UserAction } from '@/app/components/workflow/nodes/human-input/types'
-import type { CustomConfigValueType, SiteInfo } from '@/models/share'
+import type { FormInputItem, UserAction } from '@/components/dify/workflow/nodes/human-input/types'
+import type { CustomConfigValueType, SiteInfo } from '@/types/dify/share'
 import type { HumanInputResolvedValue } from '@/types/workflow'
 
 type HumanInputFormBranding = {

@@ -29,7 +29,7 @@ vi.mock('@/features/agent-v2/permissions', () => ({
   }),
 }))
 
-vi.mock('@/app/components/app/use-export-app-dsl', () => ({
+vi.mock('@/components/dify/app/use-export-app-dsl', () => ({
   useExportAppDsl: () => ({
     exportAppDsl: exportState.exportAppDsl,
     isExporting: exportState.isExporting,

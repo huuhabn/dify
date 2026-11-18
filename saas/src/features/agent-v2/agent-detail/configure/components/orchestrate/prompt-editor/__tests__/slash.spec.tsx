@@ -1,7 +1,7 @@
 import type { AgentOrchestrateAddAction } from '../../add-actions-context'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { describe, expect, it, vi } from 'vite-plus/test'
+import { describe, expect, it, vi } from 'vitest'
 import { AgentPromptSlashMenu } from '../slash'
 
 describe('AgentPromptSlashMenu', () => {

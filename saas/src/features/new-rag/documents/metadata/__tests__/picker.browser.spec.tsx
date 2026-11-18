@@ -1,6 +1,6 @@
 import type { DocumentMetadataField } from '../editor-model'
-import { expect, it, vi } from 'vite-plus/test'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { expect, it, vi } from 'vitest'
+import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { DocumentMetadataPicker } from '../picker'
 

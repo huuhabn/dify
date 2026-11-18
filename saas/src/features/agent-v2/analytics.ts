@@ -1,6 +1,6 @@
 import { useAtomValue } from 'jotai'
-import { trackEvent } from '@/app/components/base/amplitude'
-import { isChatflowAtom } from '@/app/components/workflow/editor-resource/state'
+import { trackEvent } from '@/components/dify/base/amplitude'
+import { isChatflowAtom } from '@/components/dify/workflow/editor-resource/state'
 
 export type AgentScope = (typeof AgentScope)[keyof typeof AgentScope]
 export const AgentScope = {

@@ -1,4 +1,4 @@
-import SnippetPage from '@/app/components/snippets'
+import SnippetPage from '@/components/dify/snippets'
 
 const Page = async (props: { params: Promise<{ snippetId: string }> }) => {
   const { snippetId } = await props.params

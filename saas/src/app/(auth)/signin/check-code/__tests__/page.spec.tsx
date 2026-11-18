@@ -3,7 +3,7 @@ import type { DeploymentEdition } from '@dify/contracts/api/console/system-featu
 import { noop, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { act, render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { COUNT_DOWN_KEY, COUNT_DOWN_TIME_MS } from '@/app/components/signin/storage'
+import { COUNT_DOWN_KEY, COUNT_DOWN_TIME_MS } from '@/components/dify/signin/storage'
 import { userProfileQueryOptions } from '@/features/account-profile/client'
 import { consoleClient } from '@/service/console'
 import { createHttpError } from '@/service/http-error'
@@ -41,7 +41,7 @@ const turnstileMocks = vi.hoisted(() => ({
 }))
 const turnstileWidgets = new Map<string, HTMLElement>()
 
-vi.mock('@/app/components/base/amplitude', () => ({
+vi.mock('@/components/dify/base/amplitude', () => ({
   trackEvent: vi.fn(),
 }))
 

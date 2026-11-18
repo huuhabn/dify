@@ -1,7 +1,7 @@
 'use client'
 
 import type { RetrievalSettingsDraft } from './model'
-import type { DefaultModel } from '@/app/components/header/account-setting/model-provider-page/declarations'
+import type { DefaultModel } from '@/components/dify/header/account-setting/model-provider-page/declarations'
 import { Alert, AlertDescription, AlertTitle } from '@langgenius/dify-ui/alert'
 import {
   AlertDialog,
@@ -27,8 +27,8 @@ import { useQuery } from '@tanstack/react-query'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ModelTypeEnum } from '@/app/components/header/account-setting/model-provider-page/declarations'
-import { ModelSelector } from '@/app/components/header/account-setting/model-provider-page/model-selector'
+import { ModelTypeEnum } from '@/components/dify/header/account-setting/model-provider-page/declarations'
+import { ModelSelector } from '@/components/dify/header/account-setting/model-provider-page/model-selector'
 import { consoleQuery } from '@/service/console'
 import { RetrievalModeSegmentedControl } from '../components/retrieval-mode-segmented-control'
 import {

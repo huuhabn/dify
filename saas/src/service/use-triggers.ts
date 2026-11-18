@@ -1,10 +1,10 @@
-import type { FormOption } from '@/app/components/base/form/types'
+import type { FormOption } from '@/components/dify/base/form/types'
 import type {
   ParametersSchema,
   PluginTriggerSubscriptionConstructor,
   TriggerEvent,
   TriggerEventParameter,
-} from '@/app/components/plugins/types'
+} from '@/components/dify/plugins/types'
 import type {
   TriggerLogEntity,
   TriggerOAuthClientParams,
@@ -12,13 +12,13 @@ import type {
   TriggerSubscription,
   TriggerSubscriptionBuilder,
   TriggerWithProvider,
-} from '@/app/components/workflow/block-selector/types'
+} from '@/components/dify/workflow/block-selector/types'
 import type { ConsoleClientContext } from '@/service/console'
 import { useMutation, useQuery } from '@tanstack/react-query'
-import { FormTypeEnum } from '@/app/components/base/form/types'
-import { SupportedCreationMethods } from '@/app/components/plugins/types'
-import { CollectionType } from '@/app/components/tools/types'
-import { TriggerCredentialType } from '@/app/components/workflow/block-selector/types'
+import { FormTypeEnum } from '@/components/dify/base/form/types'
+import { SupportedCreationMethods } from '@/components/dify/plugins/types'
+import { CollectionType } from '@/components/dify/tools/types'
+import { TriggerCredentialType } from '@/components/dify/workflow/block-selector/types'
 import { consoleClient, consoleQuery } from '@/service/console'
 import { useInvalid } from './use-base'
 
@@ -41,7 +41,7 @@ type GeneratedTriggerProvider =
 type GeneratedTriggerSubscription =
   import('@dify/contracts/api/console/workspaces/types.gen').TriggerProviderSubscriptionApiEntity
 type TriggerProviderApiEntity =
-  import('@/app/components/workflow/block-selector/types').TriggerProviderApiEntity
+  import('@/components/dify/workflow/block-selector/types').TriggerProviderApiEntity
 
 const getString = (value: unknown) => {
   return typeof value === 'string' ? value : ''

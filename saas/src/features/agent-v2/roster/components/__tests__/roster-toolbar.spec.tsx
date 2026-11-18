@@ -13,7 +13,7 @@ vi.mock('@/features/agent-v2/permissions', () => ({
   useCanImportAgents: () => permissions.canImport,
 }))
 
-vi.mock('@/app/components/app/create-from-dsl-modal', () => ({
+vi.mock('@/components/dify/app/create-from-dsl-modal', () => ({
   default: ({ show, onSuccess }: { show: boolean; onSuccess?: () => void }) =>
     show ? (
       <div role="dialog" aria-label="agentRoster.roster.importDSL">
@@ -23,9 +23,9 @@ vi.mock('@/app/components/app/create-from-dsl-modal', () => ({
 }))
 
 // The real template picker, plus a way to finish a creation without running the import flow.
-vi.mock('@/app/components/app/create-app-dialog', async (importOriginal) => {
+vi.mock('@/components/dify/app/create-app-dialog', async (importOriginal) => {
   const { default: CreateAppTemplateDialog } =
-    await importOriginal<typeof import('@/app/components/app/create-app-dialog')>()
+    await importOriginal<typeof import('@/components/dify/app/create-app-dialog')>()
   return {
     default: (props: Parameters<typeof CreateAppTemplateDialog>[0]) => (
       <>

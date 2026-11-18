@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { renderHook } from '@testing-library/react'
-import { describe, expect, it } from 'vite-plus/test'
+import { describe, expect, it } from 'vitest'
 import { systemFeaturesQueryOptions } from '@/features/system-features/client'
 import { createSystemFeaturesFixture } from '@/test/console/system-features'
 import { useMarketplace } from '../client'

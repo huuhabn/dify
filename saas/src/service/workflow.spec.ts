@@ -1,5 +1,5 @@
-import type { EnvironmentVariable } from '@/app/components/workflow/types'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import type { EnvironmentVariable } from '@/components/dify/workflow/types'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { updateEnvironmentVariables } from './workflow'
 
 const mockRequest = vi.hoisted(() => vi.fn())

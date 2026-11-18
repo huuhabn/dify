@@ -50,8 +50,8 @@ vi.mock('@/next/navigation', async (importOriginal) => ({
   useParams: () => ({ agentId: 'agent-1' }),
   usePathname: () => '/agents/agent-1/configure',
 }))
-vi.mock('@/app/notifications', () => ({ toast: { error: api.error, success: api.success } }))
-vi.mock('@/app/components/base/amplitude', () => ({ trackEvent: api.track }))
+vi.mock('@/components/providers/notifications', () => ({ toast: { error: api.error, success: api.success } }))
+vi.mock('@/components/dify/base/amplitude', () => ({ trackEvent: api.track }))
 vi.mock('@/service/base', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@/service/base')>()),
   ssePost,
@@ -100,7 +100,7 @@ vi.mock('@/service/console', async (importOriginal) => {
 
 // Keep the real dynamically imported Chat; compile its dependency graph before timed scenarios.
 beforeAll(async () => {
-  await import('@/app/components/base/chat/chat')
+  await import('@/components/dify/base/chat/chat')
 })
 
 const agentInput = { params: { agent_id: 'agent-1' } }

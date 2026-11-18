@@ -1,13 +1,13 @@
 import { waitFor } from '@testing-library/react'
-import { afterEach, describe, expect, it, vi } from 'vite-plus/test'
-import { toast } from '@/app/notifications'
+import { afterEach, describe, expect, it, vi } from 'vitest'
+import { toast } from '@/components/providers/notifications'
 import { PUBLIC_API_PREFIX } from '@/config'
 // oxlint-disable-next-line no-restricted-imports
 import { handleStream, postPublic, sseGet, ssePost, upload } from './base'
 
 const refreshAccessTokenOrReLoginMock = vi.hoisted(() => vi.fn())
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: {
     error: vi.fn(),
   },

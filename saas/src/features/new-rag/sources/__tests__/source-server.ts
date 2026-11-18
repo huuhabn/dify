@@ -1,7 +1,7 @@
 import type { KnowledgeFsProductPermission } from '@dify/contracts/api/console/knowledge-fs/types.gen'
 import type { RagPipelineDatasourceProviderResponse } from '@dify/contracts/api/console/rag/types.gen'
 import type { Source } from '../source-models'
-import { vi } from 'vite-plus/test'
+import { vi } from 'vitest'
 import { withConsoleClientResponses, withConsoleResponses } from '@/test/console/service-responses'
 import { sourceApiResponse } from './source-api-fixture'
 import { source, sourceConnectionResponse, workflow } from './source-fixtures'

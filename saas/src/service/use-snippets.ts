@@ -1,10 +1,10 @@
-import type { InputVar as SnippetInputFieldUIModel } from '@/models/pipeline'
+import type { InputVar as SnippetInputFieldUIModel } from '@/types/dify/pipeline'
 import type {
   SnippetCanvasData,
   SnippetDetailPayload,
   SnippetDetail as SnippetDetailUIModel,
   SnippetListItem as SnippetListItemUIModel,
-} from '@/models/snippet'
+} from '@/types/dify/snippet'
 import type { ConsoleClientContext } from '@/service/console'
 import type {
   CreateSnippetPayload,

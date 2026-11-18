@@ -20,7 +20,7 @@ import { Form } from '@langgenius/dify-ui/form'
 import { Input } from '@langgenius/dify-ui/input'
 import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { useDocLink } from '@/context/i18n'
 import { EnvVariablesTable } from '../../advanced/env'
 

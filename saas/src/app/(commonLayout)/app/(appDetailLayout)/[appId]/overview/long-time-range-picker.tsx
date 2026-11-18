@@ -1,6 +1,6 @@
 'use client'
 import type { FC } from 'react'
-import type { PeriodParams } from '@/app/components/app/overview/app-chart'
+import type { PeriodParams } from '@/components/dify/app/overview/app-chart'
 import type { I18nKeysByPrefix } from '@/types/i18n'
 import {
   Select,

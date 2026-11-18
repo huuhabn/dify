@@ -2,12 +2,12 @@
 
 import type { AccessControlAssignment } from './chip-status'
 import type { AccessControlAppIcon } from './index'
-import type { AccessPoint } from '@/app/components/app/deploy/utils/access-point'
+import type { AccessPoint } from '@/components/dify/app/deploy/utils/access-point'
 import { Button } from '@langgenius/dify-ui/button'
 import { cn } from '@langgenius/dify-ui/cn'
 import { PopoverDescription, PopoverTitle } from '@langgenius/dify-ui/popover'
 import { useTranslation } from 'react-i18next'
-import AppIcon from '@/app/components/base/app-icon'
+import AppIcon from '@/components/dify/base/app-icon'
 import { getInServiceCoverage } from './chip-status'
 
 const SCOPE_ICONS: Record<Exclude<AccessPoint, 'webApp'>, string> = {

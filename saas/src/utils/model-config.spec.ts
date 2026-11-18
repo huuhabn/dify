@@ -1,6 +1,6 @@
-import type { PromptVariable } from '@/models/debug'
+import type { PromptVariable } from '@/types/dify/debug'
 import type { UserInputFormItem } from '@/types/app'
-import { SupportUploadFileTypes } from '@/app/components/workflow/types'
+import { SupportUploadFileTypes } from '@/components/dify/workflow/types'
 import {
   formatBooleanInputs,
   promptVariablesToUserInputsForm,

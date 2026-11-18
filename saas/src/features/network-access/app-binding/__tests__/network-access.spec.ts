@@ -1,4 +1,4 @@
-import { ACCESS_POINT_ORDER } from '@/app/components/app/deploy/utils/access-point'
+import { ACCESS_POINT_ORDER } from '@/components/dify/app/deploy/utils/access-point'
 import {
   accessPointsFromScopes,
   draftFromBinding,

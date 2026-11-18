@@ -23,9 +23,9 @@ import { noop } from 'es-toolkit/function'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { useCallback, useId, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { SearchInput } from '@/app/components/base/search-input'
-import { SkeletonRectangle } from '@/app/components/base/skeleton'
-import { toast } from '@/app/notifications'
+import { SearchInput } from '@/components/dify/base/search-input'
+import { SkeletonRectangle } from '@/components/dify/base/skeleton'
+import { toast } from '@/components/providers/notifications'
 import {
   agentComposerSkillsAtom,
   removeAgentSkillAtom,

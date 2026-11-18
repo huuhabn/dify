@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import { page } from 'vite-plus/test/browser'
+import { page } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { humanInputV2FormClient } from '@/service/human-input-v2'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'

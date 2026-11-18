@@ -6,21 +6,21 @@ import type {
   PluginInstallTask,
 } from '@dify/contracts/api/console/workspaces/types.gen'
 import type { ReactNode } from 'react'
-import type { Permissions } from '@/app/components/plugins/types'
+import type { Permissions } from '@/components/dify/plugins/types'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { act, waitFor } from '@testing-library/react'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
-import { FormTypeEnum } from '@/app/components/base/form/types'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { FormTypeEnum } from '@/components/dify/base/form/types'
 import {
   AUTO_UPDATE_MODE,
   AUTO_UPDATE_STRATEGY,
-} from '@/app/components/plugins/reference-setting-modal/auto-update-setting/types'
+} from '@/components/dify/plugins/reference-setting-modal/auto-update-setting/types'
 import {
   PermissionType,
   PluginCategoryEnum,
   PluginSource,
   TaskStatus,
-} from '@/app/components/plugins/types'
+} from '@/components/dify/plugins/types'
 import { consoleQuery } from '@/service/console'
 import { renderHook } from '@/test/console/render'
 import {
@@ -64,7 +64,7 @@ mockRequest.mockImplementation(
   },
 )
 
-vi.mock('@/app/components/plugins/install-plugin/hooks/use-refresh-plugin-list', () => ({
+vi.mock('@/components/dify/plugins/install-plugin/hooks/use-refresh-plugin-list', () => ({
   default: () => ({
     refreshPluginList: vi.fn(),
   }),

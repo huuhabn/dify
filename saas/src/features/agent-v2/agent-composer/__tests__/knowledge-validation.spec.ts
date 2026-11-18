@@ -1,10 +1,10 @@
-import { describe, expect, it } from 'vite-plus/test'
+import { describe, expect, it } from 'vitest'
 import {
   ComparisonOperator,
   LogicalOperator,
   MetadataFilteringModeEnum,
-} from '@/app/components/workflow/nodes/knowledge-retrieval/types'
-import { RerankingModeEnum } from '@/models/datasets'
+} from '@/components/dify/workflow/nodes/knowledge-retrieval/types'
+import { RerankingModeEnum } from '@/types/dify/datasets'
 import { createDatasetFixture } from '@/test/fixtures/dataset'
 import { RETRIEVE_TYPE } from '@/types/app'
 import { validateKnowledgeRetrievals } from '../knowledge-validation'

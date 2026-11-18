@@ -1,8 +1,8 @@
 'use client'
 
 import type { AgentSoulAppFeaturesConfig } from '@dify/contracts/api/console/agent/types.gen'
-import type { Features } from '@/app/components/base/features/types'
-import type { ModerationConfig } from '@/models/debug'
+import type { Features } from '@/components/dify/base/features/types'
+import type { ModerationConfig } from '@/types/dify/debug'
 import { Button } from '@langgenius/dify-ui/button'
 import { createDialogHandle, Dialog, DialogTrigger } from '@langgenius/dify-ui/dialog'
 import { Switch } from '@langgenius/dify-ui/switch'
@@ -10,9 +10,9 @@ import { useQuery } from '@tanstack/react-query'
 import { useCallback, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocale } from '#i18n'
-import { FeaturesProvider } from '@/app/components/base/features'
-import { useFeatures, useFeaturesStore } from '@/app/components/base/features/hooks'
-import { ModerationDialogContent } from '@/app/components/base/features/new-feature-panel/moderation/dialog-content'
+import { FeaturesProvider } from '@/components/dify/base/features'
+import { useFeatures, useFeaturesStore } from '@/components/dify/base/features/hooks'
+import { ModerationDialogContent } from '@/components/dify/base/features/new-feature-panel/moderation/dialog-content'
 import {
   useAppFeatures,
   useSetAppFeatures,

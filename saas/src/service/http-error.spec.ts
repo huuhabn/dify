@@ -1,13 +1,13 @@
 import { ORPCError } from '@orpc/client'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
-import { toast } from '@/app/notifications'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { toast } from '@/components/providers/notifications'
 // oxlint-disable-next-line no-restricted-imports -- Exercise the HTTP transport and auth recovery together.
 import { get, post, request, upload } from './base'
 import { consoleClient } from './console'
 
 const refresh = vi.hoisted(() => vi.fn())
 vi.mock('./refresh-token', () => ({ refreshAccessTokenOrReLogin: refresh }))
-vi.mock('@/app/notifications', () => ({ toast: { error: vi.fn() } }))
+vi.mock('@/components/providers/notifications', () => ({ toast: { error: vi.fn() } }))
 
 beforeEach(() => {
   window.history.replaceState({}, '', '/')

@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import { render, screen } from '@testing-library/react'
 import { SkillPdfPreview } from '../skill-pdf-preview'
 
-vi.mock('@/app/components/base/file-uploader/pdf-highlighter-adapter', () => ({
+vi.mock('@/components/dify/base/file-uploader/pdf-highlighter-adapter', () => ({
   PdfLoader: ({
     children,
     beforeLoad,

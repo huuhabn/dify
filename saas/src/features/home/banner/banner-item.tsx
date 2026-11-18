@@ -1,5 +1,5 @@
 import type { BannerResponse } from '@dify/contracts/api/console/explore/types.gen'
-import { trackEvent } from '@/app/components/base/amplitude'
+import { trackEvent } from '@/components/dify/base/amplitude'
 
 type BannerItemProps = {
   banner: BannerResponse

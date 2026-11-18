@@ -1,5 +1,5 @@
 import type { PluginInfoFromMarketPlace } from '@dify/contracts/marketplace'
-import type { Dependency, PluginManifestInMarket } from '@/app/components/plugins/types'
+import type { Dependency, PluginManifestInMarket } from '@/components/dify/plugins/types'
 import type { ConsoleClientContext } from '@/service/console'
 import { consoleClient } from '@/service/console'
 import { getMarketplace, upload } from './base'

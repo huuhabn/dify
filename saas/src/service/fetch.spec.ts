@@ -1,5 +1,5 @@
 import { ORPCError } from '@orpc/client'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { PUBLIC_API_PREFIX } from '@/config'
 import {
   markAppDeletionFailed,
@@ -13,7 +13,7 @@ import { base } from './fetch'
 
 const refreshAccessTokenOrReLoginMock = vi.hoisted(() => vi.fn())
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: {
     add: vi.fn(),
     error: vi.fn(),
@@ -24,7 +24,7 @@ vi.mock('./refresh-token', () => ({
   refreshAccessTokenOrReLogin: refreshAccessTokenOrReLoginMock,
 }))
 
-const { toast } = await import('@/app/notifications')
+const { toast } = await import('@/components/providers/notifications')
 
 describe('base', () => {
   const originalUrl = window.location.href

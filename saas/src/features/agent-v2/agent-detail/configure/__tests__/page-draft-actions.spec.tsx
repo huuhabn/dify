@@ -1,6 +1,6 @@
 import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { replacePromptEditorText } from '@/app/components/base/prompt-editor/plugins/__tests__/test-helpers'
+import { replacePromptEditorText } from '@/components/dify/base/prompt-editor/plugins/__tests__/test-helpers'
 import { createDeferred } from '@/test/deferred'
 import {
   api,

@@ -4,7 +4,7 @@ import type { AccessControlChipKind } from './chip-status'
 import { cn } from '@langgenius/dify-ui/cn'
 import { StatusDot } from '@langgenius/dify-ui/status-dot'
 import { useTranslation } from 'react-i18next'
-import PremiumBadge from '@/app/components/base/premium-badge'
+import PremiumBadge from '@/components/dify/base/premium-badge'
 
 type AccessControlChipAffixProps = {
   kind: AccessControlChipKind

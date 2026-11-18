@@ -5,7 +5,7 @@ import { useQueryState } from 'nuqs'
 import {
   pricingQueryParamName,
   pricingQueryParser,
-} from '@/app/components/billing/pricing/query-params'
+} from '@/components/dify/billing/pricing/query-params'
 import { useEducationExpireNotice } from './use-expire-notice'
 
 const ExpireNoticeModal = dynamic(() => import('./modal'), { ssr: false })

@@ -1,4 +1,4 @@
-import type { AppData, AppMeta } from '@/models/share'
+import type { AppData, AppMeta } from '@/types/dify/share'
 import type { WebAppAddress } from '@/service/webapp-address'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'

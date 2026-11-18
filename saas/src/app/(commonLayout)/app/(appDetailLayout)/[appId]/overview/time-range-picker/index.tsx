@@ -4,13 +4,13 @@ import type { FC } from 'react'
 import type {
   PeriodParams,
   PeriodParamsWithTimeRange,
-} from '@/app/components/app/overview/app-chart'
+} from '@/components/dify/app/overview/app-chart'
 import type { I18nKeysByPrefix } from '@/types/i18n'
 import dayjs from 'dayjs'
 import * as React from 'react'
 import { useCallback, useState } from 'react'
 import { useLocale } from '#i18n'
-import { MonitoringDateRangePicker } from '@/app/components/app/monitoring/date-range-picker'
+import { MonitoringDateRangePicker } from '@/components/dify/app/monitoring/date-range-picker'
 import { formatToLocalTime } from '@/utils/format'
 import RangeSelector from './range-selector'
 

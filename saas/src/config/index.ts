@@ -1,8 +1,8 @@
-import type { ModelParameterRule } from '@/app/components/header/account-setting/model-provider-page/declarations'
-import { InputVarType } from '@/app/components/workflow/types'
+import type { ModelParameterRule } from '@/components/dify/header/account-setting/model-provider-page/declarations'
+import { InputVarType } from '@/components/dify/workflow/types'
 import { env } from '@/env'
-import { PromptRole } from '@/models/debug'
-import { PipelineInputVarType } from '@/models/pipeline'
+import { PromptRole } from '@/types/dify/debug'
+import { PipelineInputVarType } from '@/types/dify/pipeline'
 import { AgentStrategy } from '@/types/app'
 import pkg from '../../package.json'
 
@@ -24,8 +24,7 @@ export const COOKIEYES_SITE_KEY = getStringConfig(env.NEXT_PUBLIC_COOKIEYES_SITE
 export const TURNSTILE_SITE_KEY = getStringConfig(env.NEXT_PUBLIC_TURNSTILE_SITE_KEY, '')
 export const WEB_PREFIX = env.NEXT_PUBLIC_WEB_PREFIX
 
-export const IS_DEV = process.env.NODE_ENV === 'development'
-export const IS_PROD = process.env.NODE_ENV === 'production'
+export { IS_DEV, IS_PROD } from '@/libs/Env'
 export const TONE_LIST = [
   {
     id: 1,

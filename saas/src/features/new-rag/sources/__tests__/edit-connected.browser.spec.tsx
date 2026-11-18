@@ -1,4 +1,4 @@
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { SourcesPage } from '../page'
 import { clearSourceClients, renderSources as render } from './source-browser-env'
 import {

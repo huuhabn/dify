@@ -2,7 +2,7 @@ import type { KnowledgeFsProductPermission } from '@dify/contracts/api/console/k
 import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { NuqsTestingAdapter } from 'nuqs/adapters/testing'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { createHttpError } from '@/service/http-error'
 import { renderWithConsoleQuery } from '@/test/console/query-data'
 import { createKnowledgeSpaceFixture, KnowledgeSpaceTestProvider } from '@/test/knowledge-space'
@@ -58,7 +58,7 @@ vi.mock('@/next/navigation', () => ({
   useRouter: () => routerMock,
 }))
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: { error: vi.fn(), success: vi.fn() },
 }))
 

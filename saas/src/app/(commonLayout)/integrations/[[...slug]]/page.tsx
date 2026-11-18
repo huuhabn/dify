@@ -1,8 +1,8 @@
-import type { IntegrationRouteSearchParams } from '@/app/components/integrations/routes'
+import type { IntegrationRouteSearchParams } from '@/components/dify/integrations/routes'
 import {
   buildIntegrationPath,
   getIntegrationRouteTargetBySlug,
-} from '@/app/components/integrations/routes'
+} from '@/components/dify/integrations/routes'
 import { notFound, redirect } from '@/next/navigation'
 import { consoleClient } from '@/service/console'
 

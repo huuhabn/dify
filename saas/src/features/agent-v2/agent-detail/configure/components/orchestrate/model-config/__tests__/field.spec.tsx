@@ -12,7 +12,7 @@ const providerSummary = vi.hoisted(() => vi.fn())
 const modelList = vi.hoisted(() => vi.fn<() => Promise<{ data: ProviderWithModelsResponse[] }>>())
 
 vi.mock(
-  '@/app/components/header/account-setting/model-provider-page/provider-added-card/use-credential-panel-state',
+  '@/components/dify/header/account-setting/model-provider-page/provider-added-card/use-credential-panel-state',
   () => ({
     useCredentialPanelState: () => ({ variant: 'api-unavailable', hasCredentials: false }),
   }),

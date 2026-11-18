@@ -1,4 +1,4 @@
-import type { CommonResponse } from '@/models/common'
+import type { CommonResponse } from '@/types/dify/common'
 import { post } from './base'
 
 type LoginSuccess = {

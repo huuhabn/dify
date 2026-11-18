@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { act, renderHook } from '@testing-library/react'
-import { beforeEach, describe, expect, it, onTestFinished, vi } from 'vite-plus/test'
+import { beforeEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import { useExportSnippetMutation } from '../use-snippets'
 
 const mockExportSnippet = vi.hoisted(() => vi.fn())

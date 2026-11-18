@@ -1,4 +1,4 @@
-import ExternalKnowledgeBaseConnector from '@/app/components/datasets/external-knowledge-base/connector'
+import ExternalKnowledgeBaseConnector from '@/components/dify/datasets/external-knowledge-base/connector'
 import { getRouteMetadata } from '@/app/route-metadata'
 
 export function generateMetadata() {

@@ -1,5 +1,5 @@
 import { env } from './src/env';
-import './src/libs/Env';
+import { Env } from './src/libs/Env';
 import { withSentryConfig } from '@sentry/nextjs';
 import type { NextConfig } from 'next';
 
@@ -8,6 +8,7 @@ const openapiLoader = { loader: '@dify/openapi-content-mapper/loader' };
 
 const baseConfig: NextConfig = {
   agentRules: false,
+  distDir: Env.SAAS_OUTPUT_DIR ?? '.next',
   basePath: env.NEXT_PUBLIC_BASE_PATH,
   turbopack: {
     rules: {
@@ -30,6 +31,7 @@ const baseConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   typescript: {
+    tsconfigPath: Env.SAAS_OUTPUT_DIR === '.next-e2e' ? 'tsconfig.e2e.json' : 'tsconfig.json',
     ignoreBuildErrors: true,
   },
   transpilePackages: ['@langgenius/dify-ui', '@dify/contracts', '@t3-oss/env-core', '@t3-oss/env-nextjs', 'echarts', 'zrender'],
@@ -39,10 +41,7 @@ const baseConfig: NextConfig = {
     turbopackGc: true,
   },
   logging: {
-    browserToTerminal: process.env.BROWSER_TO_TERMINAL_DISABLED !== 'true',
-  },
-  outputFileTracingIncludes: {
-    '/': ['./migrations/**/*'],
+    browserToTerminal: Env.BROWSER_TO_TERMINAL_DISABLED !== true,
   },
   async redirects() {
     return [
@@ -58,11 +57,11 @@ const baseConfig: NextConfig = {
 let configWithPlugins = baseConfig;
 
 // Conditionally enable Sentry configuration
-if (!process.env.NEXT_PUBLIC_SENTRY_DISABLED && process.env.SENTRY_ORGANIZATION) {
+if (!Env.NEXT_PUBLIC_SENTRY_DISABLED && Env.SENTRY_ORGANIZATION) {
   configWithPlugins = withSentryConfig(configWithPlugins, {
-    org: process.env.SENTRY_ORGANIZATION,
-    project: process.env.SENTRY_PROJECT,
-    silent: !process.env.CI,
+    org: Env.SENTRY_ORGANIZATION,
+    project: Env.SENTRY_PROJECT,
+    silent: !Env.CI,
     widenClientFileUpload: true,
     tunnelRoute: '/monitoring',
     webpack: {

@@ -22,7 +22,7 @@ import { queryOptions, useQuery } from '@tanstack/react-query'
 import dynamic from 'next/dynamic'
 import { useCallback, useId, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import { getFileExtension, hasFileDataPreview } from '@/features/agent-v2/file-icon'
 import { AgentFileTree } from '../files/tree'
 

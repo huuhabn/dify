@@ -1,4 +1,4 @@
-import type { FileUploadStrategy } from '@/app/components/base/file-uploader/upload-context'
+import type { FileUploadStrategy } from '@/components/dify/base/file-uploader/upload-context'
 import { uploadHumanInputFormLocalFile, uploadHumanInputFormRemoteFileInfo } from '@/service/share'
 
 export const createLegacyFormUploadStrategy = (formToken: string): FileUploadStrategy => ({

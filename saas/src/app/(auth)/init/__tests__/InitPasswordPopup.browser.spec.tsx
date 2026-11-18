@@ -1,5 +1,5 @@
 import { ORPCError } from '@orpc/client'
-import { userEvent } from 'vite-plus/test/browser'
+import { userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import InitPasswordPopup from '../InitPasswordPopup'

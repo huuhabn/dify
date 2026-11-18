@@ -1,13 +1,13 @@
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { consoleClient } from '@/service/console'
 import { createHttpError } from '@/service/http-error'
 import EmailChangeModal from '../email-change-modal'
 
 const mockLogout = vi.fn()
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: { error: vi.fn() },
 }))
 

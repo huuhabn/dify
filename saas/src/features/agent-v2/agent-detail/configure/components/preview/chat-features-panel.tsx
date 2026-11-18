@@ -5,12 +5,12 @@ import type {
   FileTransferMethod,
   FileType,
 } from '@dify/contracts/api/console/agent/types.gen'
-import type { Features } from '@/app/components/base/features/types'
+import type { Features } from '@/components/dify/base/features/types'
 import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { FeaturesProvider } from '@/app/components/base/features'
-import { useFeaturesStore } from '@/app/components/base/features/hooks'
-import NewFeaturePanel from '@/app/components/base/features/new-feature-panel'
+import { FeaturesProvider } from '@/components/dify/base/features'
+import { useFeaturesStore } from '@/components/dify/base/features/hooks'
+import NewFeaturePanel from '@/components/dify/base/features/new-feature-panel'
 import {
   useAppFeatures,
   useSetAppFeatures,

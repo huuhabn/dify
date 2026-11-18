@@ -71,7 +71,7 @@ const connectionApiResponse = vi.hoisted(() => (connection: SourceConnection) =>
   version: connection.version,
 }))
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: { info: toastInfoMock },
 }))
 

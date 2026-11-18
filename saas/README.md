@@ -31,3 +31,9 @@ cp docker/envs/middleware.env.example docker/middleware.env
 ```
 
 Set a generated `SECRET_KEY` in `api/.env`, then run `pnpm dev:api` from the repository root. The development overlay starts the API at http://localhost:5001, its Celery worker, and middleware. If port 6379 is already occupied, set `EXPOSE_REDIS_PORT=6380` in `docker/middleware.env`; containers still connect to Redis at port 6379. API storage uses a Docker volume. API database migrations run automatically during startup.
+
+## Forms
+
+Use React Hook Form with Zod and `@hookform/resolvers` for new standalone SaaS forms. Keep existing Dify forms under their feature owner and preserve their current TanStack Form or local-state implementation until a feature change justifies migration. Shared input components own presentation; the feature owns validation, submission, API errors, and pending state. Never maintain two form stores for one form.
+
+The frontend does not own a database. Dify persists accounts, workspaces, permissions, and applications through its backend. Counter endpoints, Drizzle schema/migrations, PGlite scripts, and PostgreSQL client dependencies have been removed.

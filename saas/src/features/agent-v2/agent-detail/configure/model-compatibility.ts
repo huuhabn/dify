@@ -1,7 +1,7 @@
 import type {
   ModelSelectorModel,
   ModelSelectorProvider,
-} from '@/app/components/header/account-setting/model-provider-page/model-selector/types'
+} from '@/components/dify/header/account-setting/model-provider-page/model-selector/types'
 
 const agentIncompatibleModelPatterns: RegExp[] = [
   // openai

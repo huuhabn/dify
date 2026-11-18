@@ -20,7 +20,7 @@ import {
 import { useQuery } from '@tanstack/react-query'
 import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { emojiCatalogOptions } from '@/app/components/base/icon-picker/emoji-data'
+import { emojiCatalogOptions } from '@/components/dify/base/icon-picker/emoji-data'
 import { consoleQuery } from '@/service/console'
 import { validateDefinedErrors } from '@/service/console/defined-errors'
 import { createHttpError } from '@/service/http-error'
@@ -100,7 +100,7 @@ vi.mock('@/service/console', async (importOriginal) => {
   }
 })
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: toastMock,
 }))
 

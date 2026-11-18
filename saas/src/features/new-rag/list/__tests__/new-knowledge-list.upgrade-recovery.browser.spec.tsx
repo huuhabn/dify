@@ -1,7 +1,7 @@
 import type { KnowledgeFsUpgradeJobResponse } from '@dify/contracts/api/console/datasets/types.gen'
 import type { DatasetListResponse } from './new-knowledge-list-test-env'
 import type { consoleClient } from '@/service/console'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { consoleQuery } from '@/service/console'
 import { createDeferred } from '@/test/deferred'
 import { guardUnexpectedFetch } from '@/test/unexpected-fetch'

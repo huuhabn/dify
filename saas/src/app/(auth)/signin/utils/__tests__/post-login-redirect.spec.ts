@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { ReadonlyURLSearchParams } from '@/next/navigation'
 import { resolvePostLoginRedirect, setPostLoginRedirect } from '../post-login-redirect'
 

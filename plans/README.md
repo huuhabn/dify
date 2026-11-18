@@ -4,9 +4,12 @@ Lập ngày 2026-11-18 theo skill advisor. Đây là kế hoạch được ngư�
 
 | Plan | Mục tiêu | Priority | Effort | Dependency | Status |
 |---|---|---|---|---|---|
-| [001](001-align-saas-with-nextjs-boilerplate.md) | Chuẩn hóa SaaS theo ixartz/Next-js-Boilerplate, giữ auth/backend Dify | P1 | L | Không | TODO |
+| [001](001-align-saas-with-nextjs-boilerplate.md) | Chuẩn hóa SaaS theo ixartz/Next-js-Boilerplate, giữ auth/backend Dify | P1 | L | Không | IN PROGRESS |
 
 Thứ tự trong plan: baseline/test discovery → cấu trúc source/CSS → Env/dọn demo → next-intl/routing → tooling → production/CI/deployment. Mỗi giai đoạn là PR riêng, gate phải đạt trước khi chuyển tiếp.
+
+
+Theo dõi từng bước: [Tiến độ Plan 001](001-progress.md) — **14/30 bước, 2/6 gate; đang dọn demo frontend**.
 
 ## Quyết định và phương án đã loại
 

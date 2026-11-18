@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import { userEvent } from 'vite-plus/test/browser'
+import { userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { getBrowserTimezone } from '@/utils/timezone'
@@ -33,7 +33,7 @@ vi.mock('@/utils/gtag', () => ({
   sendGAEvent: (...args: unknown[]) => tracking.sendGAEvent(...args),
 }))
 
-vi.mock('@/app/components/base/amplitude/registration-tracking', () => ({
+vi.mock('@/components/dify/base/amplitude/registration-tracking', () => ({
   rememberRegistrationSuccess: (...args: unknown[]) =>
     tracking.rememberRegistrationSuccess(...args),
 }))

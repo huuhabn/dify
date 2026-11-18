@@ -1,7 +1,7 @@
 'use client'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { useSearchParams } from '@/next/navigation'
 import NormalForm from './normal-form'
 import OneMoreStep from './one-more-step'

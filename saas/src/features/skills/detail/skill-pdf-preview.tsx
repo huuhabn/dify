@@ -4,8 +4,8 @@ import { noop } from 'es-toolkit/function'
 import {
   PdfHighlighter,
   PdfLoader,
-} from '@/app/components/base/file-uploader/pdf-highlighter-adapter'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+} from '@/components/dify/base/file-uploader/pdf-highlighter-adapter'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import { basePath } from '@/utils/var'
 
 export function SkillPdfPreview({ fileName, url }: { fileName: string; url: string }) {

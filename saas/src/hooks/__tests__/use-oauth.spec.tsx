@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react'
 import { renderToString } from 'react-dom/server'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { useOAuthCallback } from '../use-oauth'
 
 const originalUrl = window.location.href

@@ -1,6 +1,6 @@
 import type { GetSystemFeaturesResponse } from '@dify/contracts/api/console/system-features/types.gen'
 import type { DeepPartial } from '@/test/console/system-features'
-import { userEvent } from 'vite-plus/test/browser'
+import { userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { userProfileQueryOptions } from '@/features/account-profile/client'
 import { createHttpError } from '@/service/http-error'

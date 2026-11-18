@@ -1,12 +1,12 @@
-import type { Dependency } from '@/app/components/plugins/types'
+import type { Dependency } from '@/components/dify/plugins/types'
 import { render, screen } from '@testing-library/react'
-import { useStore as usePluginDependencyStore } from '@/app/components/workflow/plugin-dependency/store'
+import { useStore as usePluginDependencyStore } from '@/components/dify/workflow/plugin-dependency/store'
 
 const mocks = vi.hoisted(() => ({
   guardAgentV2Route: vi.fn(),
 }))
 
-vi.mock('@/app/components/plugins/install-plugin/install-bundle', () => ({
+vi.mock('@/components/dify/plugins/install-plugin/install-bundle', () => ({
   default: ({ fromDSLPayload }: { fromDSLPayload: Dependency[] }) => (
     <div role="dialog" aria-label="Install missing plugins">
       {`bundle-size:${fromDSLPayload.length}`}

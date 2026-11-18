@@ -1,4 +1,4 @@
-import type { Locale } from '.'
+import type { Locale } from './'
 import type { Namespace, NamespaceInFileName } from './resources'
 import { match } from '@formatjs/intl-localematcher'
 import { createInstance } from 'i18next'

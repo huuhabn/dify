@@ -1,5 +1,5 @@
 import type { HumanInputV2FormTransport } from './types'
-import type { FileUploadStrategy } from '@/app/components/base/file-uploader/upload-context'
+import type { FileUploadStrategy } from '@/components/dify/base/file-uploader/upload-context'
 
 type UploadCallbacks = Omit<Parameters<FileUploadStrategy['uploadLocal']>[0], 'file'>
 

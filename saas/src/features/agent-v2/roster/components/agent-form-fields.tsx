@@ -1,6 +1,6 @@
 import type { Ref } from 'react'
 import type { AgentFormValues, AgentIconSelection } from './agent-form'
-import type { IconPickerValue } from '@/app/components/base/icon-picker'
+import type { IconPickerValue } from '@/components/dify/base/icon-picker'
 import { DialogBody } from '@langgenius/dify-ui/dialog'
 import { Field, FieldError, FieldLabel } from '@langgenius/dify-ui/field'
 import { Input } from '@langgenius/dify-ui/input'
@@ -11,7 +11,7 @@ import {
   IconPickerContent,
   IconPickerIcon,
   IconPickerTrigger,
-} from '@/app/components/base/icon-picker'
+} from '@/components/dify/base/icon-picker'
 
 type AgentFormFieldsProps = {
   defaultValues: AgentFormValues

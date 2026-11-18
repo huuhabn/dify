@@ -1,7 +1,7 @@
 import type { Locale } from '@/i18n'
 import { Suspense } from 'react'
-import AppAccessConfigPage from '@/app/components/app/access-config'
-import { SkeletonContainer, SkeletonRectangle } from '@/app/components/base/skeleton'
+import AppAccessConfigPage from '@/components/dify/app/access-config'
+import { SkeletonContainer, SkeletonRectangle } from '@/components/dify/base/skeleton'
 
 export type AccessConfigPageProps = {
   params: Promise<{ locale: Locale; appId: string }>

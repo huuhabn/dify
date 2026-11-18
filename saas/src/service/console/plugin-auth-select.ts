@@ -1,5 +1,5 @@
 import type { I18nObject, ProviderConfig } from '@dify/contracts/api/console/workspaces/types.gen'
-import type { FormSchema, TypeWithI18N } from '@/app/components/base/form/types'
+import type { FormSchema, TypeWithI18N } from '@/components/dify/base/form/types'
 
 function selectLabel(label: I18nObject, fallback = label.en_US): TypeWithI18N {
   return {

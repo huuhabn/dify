@@ -9,8 +9,8 @@ import {
 } from '@langgenius/dify-ui/dialog'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { FilePreviewContent } from '@/app/components/base/file-uploader/file-preview-content'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+import { FilePreviewContent } from '@/components/dify/base/file-uploader/file-preview-content'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import { TransferMethod } from '@/types/app'
 import { documentUploadFileExtension } from './policy'
 

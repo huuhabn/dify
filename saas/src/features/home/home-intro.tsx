@@ -2,7 +2,7 @@
 
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { SkeletonRectangle } from '@/app/components/base/skeleton'
+import { SkeletonRectangle } from '@/components/dify/base/skeleton'
 import { userProfileQueryOptions } from '@/features/account-profile/client'
 
 export function HomeIntroSkeleton() {

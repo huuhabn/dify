@@ -1,7 +1,7 @@
 'use client'
 
 import type { ToolSettingTarget } from './types'
-import type { ToolValue } from '@/app/components/workflow/block-selector/types'
+import type { ToolValue } from '@/components/dify/workflow/block-selector/types'
 import type { AgentCliTool, AgentTool } from '@/features/agent-v2/agent-composer/form-state'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { useCallback, useMemo, useState } from 'react'

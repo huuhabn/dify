@@ -1,4 +1,4 @@
-import { Apps } from '@/app/components/apps'
+import { Apps } from '@/components/dify/apps'
 import { getRouteMetadata } from '@/app/route-metadata'
 
 export function generateMetadata() {

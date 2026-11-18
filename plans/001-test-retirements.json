@@ -1,0 +1,7 @@
+[
+  {
+    "file": "src/templates/BaseTemplate.test.tsx",
+    "removedFeature": "src/templates/BaseTemplate.tsx",
+    "reason": "Remove the unused boilerplate template and its demo navigation test. Dify characterization tests remain in discovery."
+  }
+]

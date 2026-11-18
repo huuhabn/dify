@@ -14,7 +14,7 @@ import {
   navigateAfterWebAppLogin,
   resolveWebAppLoginRedirect,
 } from '@/app/(shareLayout)/webapp-signin/login-redirect'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { emailRegex } from '@/config'
 import { useWebAppStore } from '@/context/web-app-context'
 import Link from '@/next/link'

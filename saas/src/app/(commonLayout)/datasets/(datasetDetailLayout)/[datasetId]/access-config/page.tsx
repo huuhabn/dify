@@ -1,4 +1,4 @@
-import DatasetAccessConfigPage from '@/app/components/datasets/access-config'
+import DatasetAccessConfigPage from '@/components/dify/datasets/access-config'
 
 type Props = {
   params: Promise<{ datasetId: string }>

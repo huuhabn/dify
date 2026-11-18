@@ -3,7 +3,7 @@ import type {
   PersonalAccessTokenResourceResponse,
 } from '@dify/contracts/api/console/account/types.gen'
 import { Dialog, DialogContent } from '@langgenius/dify-ui/dialog'
-import { page } from 'vite-plus/test/browser'
+import { page } from 'vitest/browser'
 import { seedSystemFeatures } from '@/test/console/query-data'
 import { QueryClientTestProvider } from '@/test/console/query-provider'
 import { createTestQueryClient } from '@/test/query-client'

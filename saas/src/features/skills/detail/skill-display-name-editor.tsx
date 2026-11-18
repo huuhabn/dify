@@ -5,7 +5,7 @@ import type { SkillFileMutationCoordinator } from './shared'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useLayoutEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { consoleQuery } from '@/service/console'
 import {
   getErrorCode,

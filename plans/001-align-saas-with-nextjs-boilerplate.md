@@ -2,11 +2,15 @@
 
 > Dành cho executor chưa đọc hội thoại: đây là kế hoạch, chưa phải thay đổi đã triển khai. Thực hiện theo thứ tự các giai đoạn; mỗi giai đoạn là PR riêng. Không thay đổi auth hoặc mô hình quyền Dify. Khi gặp điều kiện STOP, báo lại thay vì tự mở rộng phạm vi.
 
+## Theo dõi thực hiện
+
+Trạng thái từng bước và bằng chứng kiểm tra được quản lý tại [001-progress.md](001-progress.md). Các mã `1.1`–`6.4` bên dưới khớp với bảng đó. Mỗi lần bắt đầu, hoàn thành hoặc bị chặn ở một bước, cập nhật ngay dòng tương ứng và nhật ký; không chờ hết giai đoạn. Chỉ hoàn thành giai đoạn khi gate tương ứng đạt. Không đánh dấu các thay đổi có trước kế hoạch là đã hoàn tất bước migration.
+
 ## Trạng thái và nguồn tham chiếu
 
 - Priority: P1. Effort: L, nhiều PR. Risk: HIGH ở routing/i18n, MED ở cấu trúc/tooling.
-- Status: TODO. Dependency: không có kế hoạch khác.
-- Ngày lập: 2026-11-18. Local HEAD: `385c25ef43` **cộng các thay đổi chưa commit trong working tree**.
+- Status: IN PROGRESS. Dependency: không có kế hoạch khác.
+- Ngày lập: 2026-11-18. Local HEAD khi lập: `385c25ef43`. Drift đã đối chiếu khi triển khai tại `58488b5e28`: các thay đổi UI trước đã được commit; giữ nguyên các thay đổi plan chưa commit.
 - Upstream đã khảo sát: `ixartz/Next-js-Boilerplate`, commit `b83157a8018f55b926a3c25a4b7a7e14b0dfbc35`.
 - Quyết định người dùng: **chuẩn hóa cấu trúc và tooling; giữ auth/backend Dify**. Không tích hợp Clerk. Không chuyển dữ liệu Dify sang Drizzle/PGlite.
 - Không hạ phiên bản dependencies của workspace để trùng số phiên bản upstream.
@@ -141,61 +145,61 @@ MCP graph đã được thử nhưng project chưa indexed; lần index trước
 
 ## Giai đoạn 1 — Thiết lập baseline đáng tin cậy (P1, M)
 
-1. Tạo inventory route/page/layout/API, imports `@/app/components`, alias `#i18n`, locale, CSS entrypoint và test discovery. Lưu báo cáo dưới `plans/` khi triển khai.
-2. Chụp hành vi hiện tại: setup chưa cài đặt, signin/logout/refresh, SSR account bootstrap, Home, workspace switch, template modal, workflow editor, một published WebApp. Fixture dùng Dify test environment riêng; không tự tạo/reset tài khoản admin trên database cá nhân.
-3. Sửa discovery Vitest: project Node cho test thuần, project tương thích DOM cho các test RTL hiện hữu, project Browser cho test UI đã port. Có thể cần thêm dependency DOM/test utilities vào SaaS theo workspace catalog. Không chuyển tất cả mock RTL sang Browser bằng cách đổi glob.
-4. Chuyển/copy helper cần thiết từ `web/test` sang `saas/src/test` và sửa imports trong phạm vi SaaS; không import helper từ `web/` ở cấu hình đích. Dùng test có sẵn của login redirect, console transport, Home/template và modal làm characterization tests.
-5. Sửa Playwright server command để dùng Next + Dify test backend, không khởi động PGlite. Thay test Counter bằng luồng Dify. Phân biệt integration Dify thật với network fixtures của UI.
+1. **1.1** — Tạo inventory route/page/layout/API, imports `@/app/components`, alias `#i18n`, locale, CSS entrypoint và test discovery. Lưu báo cáo dưới `plans/` khi triển khai.
+2. **1.2** — Chụp hành vi hiện tại: setup chưa cài đặt, signin/logout/refresh, SSR account bootstrap, Home, workspace switch, template modal, workflow editor, một published WebApp. Fixture dùng Dify test environment riêng; không tự tạo/reset tài khoản admin trên database cá nhân.
+3. **1.3** — Sửa discovery Vitest: project Node cho test thuần, project tương thích DOM cho các test RTL hiện hữu, project Browser cho test UI đã port. Có thể cần thêm dependency DOM/test utilities vào SaaS theo workspace catalog. Không chuyển tất cả mock RTL sang Browser bằng cách đổi glob.
+4. **1.4** — Chuyển/copy helper cần thiết từ `web/test` sang `saas/src/test` và sửa imports trong phạm vi SaaS; không import helper từ `web/` ở cấu hình đích. Dùng test có sẵn của login redirect, console transport, Home/template và modal làm characterization tests.
+5. **1.5** — Sửa Playwright server command để dùng Next + Dify test backend, không khởi động PGlite. Thay test Counter bằng luồng Dify. Phân biệt integration Dify thật với network fixtures của UI.
 
 **Gate:** command Helpers ở trên pass; discovery inventory ghi rõ mỗi test file thuộc đúng một project hoặc có lý do loại trừ; nhóm test thay đổi pass với `--maxWorkers=2`; Playwright smoke không yêu cầu Clerk/PGlite. Thêm script mới `migration:check` trong `saas/package.json` để kiểm tra route/import/CSS invariants từ manifest; `pnpm -C saas migration:check` phải exit 0 từ giai đoạn này.
 
 ## Giai đoạn 2 — Tách route, UI và type (P1, L)
 
-1. Dùng codemod có dry-run để chuyển `src/app/components/**` sang `src/components/dify/**`. Mỗi batch cập nhật cả static/dynamic import, CSS URL, story/mock, test và relative import. Không dùng replace chuỗi không phân biệt cú pháp trên toàn repo.
-2. Chuyển `app/query-provider.tsx`, `query-state-provider.tsx`, provider UI/notification phù hợp sang `components/providers`; route imports mới. `get-query-client.ts` chuyển sang `libs/query` nếu cần nhưng phải giữ factory/cache request lifetime hiện tại.
-3. Chuyển DTO trong `models/` sang `types/dify/`; tạm giữ `models/Schema.ts` cho đến bước xử lý demo. Không rename generated API types.
-4. Chuyển CSS dùng thật về `styles/`; cập nhật root layout và Storybook import cùng một entrypoint. Rebase `@source`, icon plugin, asset/font URLs và imports tới shared package theo vị trí mới. Chỉ giữ một preflight của Dify.
-5. Làm theo contract hiện hữu trong `packages/dify-ui/docs/overlays.md`: không thêm portal hay z-index để chữa triệu chứng. Giữ scoped Jotai state, query hydration, close/focus lifecycle của modal khi đổi path.
+1. **2.1** — Dùng codemod có dry-run để chuyển `src/app/components/**` sang `src/components/dify/**`. Mỗi batch cập nhật cả static/dynamic import, CSS URL, story/mock, test và relative import. Không dùng replace chuỗi không phân biệt cú pháp trên toàn repo.
+2. **2.2** — Chuyển `app/query-provider.tsx`, `query-state-provider.tsx`, provider UI/notification phù hợp sang `components/providers`; route imports mới. `get-query-client.ts` chuyển sang `libs/query` nếu cần nhưng phải giữ factory/cache request lifetime hiện tại.
+3. **2.3** — Chuyển DTO trong `models/` sang `types/dify/`; tạm giữ `models/Schema.ts` cho đến bước xử lý demo. Không rename generated API types.
+4. **2.4** — Chuyển CSS dùng thật về `styles/`; cập nhật root layout và Storybook import cùng một entrypoint. Rebase `@source`, icon plugin, asset/font URLs và imports tới shared package theo vị trí mới. Chỉ giữ một preflight của Dify.
+5. **2.5** — Làm theo contract hiện hữu trong `packages/dify-ui/docs/overlays.md`: không thêm portal hay z-index để chữa triệu chứng. Giữ scoped Jotai state, query hydration, close/focus lifecycle của modal khi đổi path.
 
 **Gate:** `check:types`, `migration:check`, test batch pass; `rg "@/app/components" saas/src` không còn imports thực; snapshots desktop/mobile của template modal, editor và theme không mất CSS/icon. App Router manifest không nhận thư mục component thành route.
 
 ## Giai đoạn 3 — Một nguồn Env và dọn demo (P1, M)
 
-1. Hợp nhất schema environment dưới `libs/Env.ts`, nhưng **giữ runtime dataset** của Dify: `getDatasetMap()` và browser runtime overrides không được bị thay bằng build-time env. Có thể để `src/env.ts` làm adapter re-export tạm; mỗi key chỉ được validate/coerce ở một owner.
-2. Phân tách server-only secrets, public build vars và public runtime config; cập nhật `config/server.ts`, instrumentation và next config theo đó. Kiểm thử thiếu/sai kiểu config, boolean `false`/`0`, basePath và lỗi server-secret import vào client.
-3. Dùng inventory consumer để bỏ demo Counter, demo banner/sponsors và tests liên quan. Chỉ bỏ Drizzle/PGlite/pg, schema/migration demo và scripts DB sau khi không còn consumer nghiệp vụ. Không xóa database/volume thực.
-4. Giữ React Hook Form cho form mới theo upstream; không rewrite hàng loạt TanStack Form đang phục vụ Dify. Đánh giá API/form từng feature khi có thay đổi thật.
-5. Dọn dependency trực tiếp theo imports/Knip. Giữ workspace packages và các adapter OpenAPI. `dev`/`build` không yêu cầu frontend DB; các dịch vụ monitoring tùy chọn tắt được khi local.
+1. **3.1** — Hợp nhất schema environment dưới `libs/Env.ts`, nhưng **giữ runtime dataset** của Dify: `getDatasetMap()` và browser runtime overrides không được bị thay bằng build-time env. Có thể để `src/env.ts` làm adapter re-export tạm; mỗi key chỉ được validate/coerce ở một owner.
+2. **3.2** — Phân tách server-only secrets, public build vars và public runtime config; cập nhật `config/server.ts`, instrumentation và next config theo đó. Kiểm thử thiếu/sai kiểu config, boolean `false`/`0`, basePath và lỗi server-secret import vào client.
+3. **3.3** — Dùng inventory consumer để bỏ demo Counter, demo banner/sponsors và tests liên quan. Chỉ bỏ Drizzle/PGlite/pg, schema/migration demo và scripts DB sau khi không còn consumer nghiệp vụ. Không xóa database/volume thực.
+4. **3.4** — Giữ React Hook Form cho form mới theo upstream; không rewrite hàng loạt TanStack Form đang phục vụ Dify. Đánh giá API/form từng feature khi có thay đổi thật.
+5. **3.5** — Dọn dependency trực tiếp theo imports/Knip. Giữ workspace packages và các adapter OpenAPI. `dev`/`build` không yêu cầu frontend DB; các dịch vụ monitoring tùy chọn tắt được khi local.
 
 **Gate:** `check:types`, `migration:check`, `check:deps` theo baseline đã xử lý; không có `/api/counter` trong route manifest; API key/secret không xuất hiện trong HTML/browser bundle; runtime config vẫn thay được mà không rebuild; auth/session test pass.
 
 ## Giai đoạn 4 — Đưa i18n/routing về next-intl (P1, L, risk HIGH)
 
-1. Tạo bảng mapping locale dựa trên `src/i18n/locale.ts` và `languages.ts`; không làm mất locale Dify chỉ vì AppConfig demo có ba locale. Giữ giá trị locale gửi Console API và legacy cookie aliases tương thích.
-2. Tạo bộ chuyển message có phát hiện collision: khóa phẳng chứa dấu chấm sang object, `{{var}}` sang ICU, plural/context sang ICU tương ứng, rich text, apostrophe/braces escaping. Giữ empty-string có chủ đích và fallback namespace (ví dụ Contacts chỉ có một số locale). Case không chuyển an toàn phải báo lỗi có vị trí, không tự dịch/đoán.
-3. Tạo `libs/I18n.ts` nạp namespace từ `locales/`, type augmentation riêng `types/next-intl.d.ts`; bật next-intl plugin trong next config và giữ loader/transpile/external của Dify.
-4. Pilot Home trước: `useTranslations`/`getTranslations`, metadata, locale switcher và next-intl provider; feature chưa chuyển vẫn dùng i18next tạm, cả hai đọc cùng locale. Không nạp toàn bộ message mọi ngôn ngữ xuống client.
-5. Sau pilot, chuyển các route page vào `[locale]` theo manifest và hợp nhất root providers. Chỉ một owner render `html/body`. Dùng `localePrefix: 'never'` để URL người dùng, callback và share token không đổi. Compose locale rewrite với CSP/nonce/frame protection/WebApp document gate trong `proxy.ts`; không copy Clerk middleware upstream. Header pathname/search phải phản ánh URL canonical đã kiểm thử.
-6. Chuyển auth/settings, console, workflow/agent/knowledge rồi published WebApp theo batch. Trong mỗi batch đổi cả selector translation, type utility, metadata, thông báo lỗi và tests. Xử lý `#i18n`, `types/i18n.d.ts` và navigation facade theo consumers; chỉ xóa adapter/i18next dependencies khi không còn consumer thực.
+1. **4.1** — Tạo bảng mapping locale dựa trên `src/i18n/locale.ts` và `languages.ts`; không làm mất locale Dify chỉ vì AppConfig demo có ba locale. Giữ giá trị locale gửi Console API và legacy cookie aliases tương thích.
+2. **4.2** — Tạo bộ chuyển message có phát hiện collision: khóa phẳng chứa dấu chấm sang object, `{{var}}` sang ICU, plural/context sang ICU tương ứng, rich text, apostrophe/braces escaping. Giữ empty-string có chủ đích và fallback namespace (ví dụ Contacts chỉ có một số locale). Case không chuyển an toàn phải báo lỗi có vị trí, không tự dịch/đoán.
+3. **4.3** — Tạo `libs/I18n.ts` nạp namespace từ `locales/`, type augmentation riêng `types/next-intl.d.ts`; bật next-intl plugin trong next config và giữ loader/transpile/external của Dify.
+4. **4.4** — Pilot Home trước: `useTranslations`/`getTranslations`, metadata, locale switcher và next-intl provider; feature chưa chuyển vẫn dùng i18next tạm, cả hai đọc cùng locale. Không nạp toàn bộ message mọi ngôn ngữ xuống client.
+5. **4.5** — Sau pilot, chuyển các route page vào `[locale]` theo manifest và hợp nhất root providers. Chỉ một owner render `html/body`. Dùng `localePrefix: 'never'` để URL người dùng, callback và share token không đổi. Compose locale rewrite với CSP/nonce/frame protection/WebApp document gate trong `proxy.ts`; không copy Clerk middleware upstream. Header pathname/search phải phản ánh URL canonical đã kiểm thử.
+6. **4.6** — Chuyển auth/settings, console, workflow/agent/knowledge rồi published WebApp theo batch. Trong mỗi batch đổi cả selector translation, type utility, metadata, thông báo lỗi và tests. Xử lý `#i18n`, `types/i18n.d.ts` và navigation facade theo consumers; chỉ xóa adapter/i18next dependencies khi không còn consumer thực.
 
 **Gate:** converter tests kiểm interpolation, plural, rich text, collision và empty translation; parity inventory không giảm locale/namespace; smoke en-US/vi-VN/zh-Hans và một locale RTL; `check:i18n` dùng corpus Dify đích thay demo; route matrix đảm bảo `/`, `/signin`, `/install`, `/apps`, OAuth callback, token WebApp, basePath và các API không bị prefix/redirect loop. Cross-request locale/auth isolation test phải pass. Nếu phải thay backend callback contract để chuyển locale: STOP.
 
 ## Giai đoạn 5 — Tooling và chất lượng theo upstream (P2, M/L)
 
-1. Đồng bộ cấu trúc config Oxlint/Ultracite/Oxfmt/Knip/Vitest/Playwright/Storybook với upstream đã ghim. Giữ version catalog của monorepo; không tạo lockfile npm/bun hoặc copy root package.json upstream.
-2. Port legacy tests từ compatibility project sang Browser từng feature khi thích hợp. Node-only logic vẫn ở project Node; explicit list test phụ thuộc mock/server không chạy Browser. Không được biến mất test bằng cách đổi glob. Cuối đợt không còn tests ngoài discovery hoặc compatibility debt không có owner.
-3. Sửa `oxfmt.config.ts` stylesheet path tới entrypoint mới; Storybook cùng alias/loader/i18n/theme/runtime env như app. Stories phải render được trong light/dark và locale pilot.
-4. Trước khi bỏ `ignoreBuildErrors`, chứng minh checker hỗ trợ OpenAPI mapper. Nếu Next checker không hiểu mapper, CI bắt buộc chạy `tsrs --runExternalCode` trước build và ghi ngoại lệ rõ ràng; không tuyên bố Next build đang typecheck khi thực tế bỏ qua.
-5. Lefthook chỉ xử lý file staged có liên quan SaaS, không auto-format toàn bộ mã Dify hoặc kích hoạt hook root mới ngoài phạm vi. Gate lint chỉ xanh khi không có lỗi mới và backlog cũ đã có lộ trình đến 0; không tắt rule toàn cục để đạt màu xanh.
+1. **5.1** — Đồng bộ cấu trúc config Oxlint/Ultracite/Oxfmt/Knip/Vitest/Playwright/Storybook với upstream đã ghim. Giữ version catalog của monorepo; không tạo lockfile npm/bun hoặc copy root package.json upstream.
+2. **5.2** — Port legacy tests từ compatibility project sang Browser từng feature khi thích hợp. Node-only logic vẫn ở project Node; explicit list test phụ thuộc mock/server không chạy Browser. Không được biến mất test bằng cách đổi glob. Cuối đợt không còn tests ngoài discovery hoặc compatibility debt không có owner.
+3. **5.3** — Sửa `oxfmt.config.ts` stylesheet path tới entrypoint mới; Storybook cùng alias/loader/i18n/theme/runtime env như app. Stories phải render được trong light/dark và locale pilot.
+4. **5.4** — Trước khi bỏ `ignoreBuildErrors`, chứng minh checker hỗ trợ OpenAPI mapper. Nếu Next checker không hiểu mapper, CI bắt buộc chạy `tsrs --runExternalCode` trước build và ghi ngoại lệ rõ ràng; không tuyên bố Next build đang typecheck khi thực tế bỏ qua.
+5. **5.5** — Lefthook chỉ xử lý file staged có liên quan SaaS, không auto-format toàn bộ mã Dify hoặc kích hoạt hook root mới ngoài phạm vi. Gate lint chỉ xanh khi không có lỗi mới và backlog cũ đã có lộ trình đến 0; không tắt rule toàn cục để đạt màu xanh.
 
 **Gate:** `check:types`, `lint`, `check:deps`, `check:i18n` exit 0 ở trạng thái đích; selected unit/UI/Storybook tests pass. Chạy full suite trên CI với worker cap; không chạy suite lớn vô hạn trên máy local.
 
 ## Giai đoạn 6 — Build, CI và chuyển deployment frontend (P2, M)
 
-1. Thêm CI SaaS có install frozen lockfile, checker, lint/deps/i18n, tests, Storybook và production build. Actions/npm scripts upstream phải được chỉnh cho pnpm workspace. Không hard-code browser image khác version Playwright đang resolve; pin tương thích khi triển khai.
-2. Thiết kế build Docker frontend SaaS riêng có workspace package artifacts, public assets, source tracing và runtime env tương thích. Không đổi API image hoặc main compose mặc định sang SaaS trước smoke/staging pass. Tạo đường chọn rõ ràng giữa legacy web và saas.
-3. Kiểm tra production SSR/API reachability, cookie/CSRF, websocket, uploads và share routes bằng backend Dify tương ứng. Image API local dùng khi khảo sát là published 1.19.0; không giả định mọi endpoint mới trong source checkout có sẵn trên mọi image.
-4. Chỉ đổi default deployment sau khi staging đạt parity matrix. Giữ rollback sang web; không xóa web trong kế hoạch này.
+1. **6.1** — Thêm CI SaaS có install frozen lockfile, checker, lint/deps/i18n, tests, Storybook và production build. Actions/npm scripts upstream phải được chỉnh cho pnpm workspace. Không hard-code browser image khác version Playwright đang resolve; pin tương thích khi triển khai.
+2. **6.2** — Thiết kế build Docker frontend SaaS riêng có workspace package artifacts, public assets, source tracing và runtime env tương thích. Không đổi API image hoặc main compose mặc định sang SaaS trước smoke/staging pass. Tạo đường chọn rõ ràng giữa legacy web và saas.
+3. **6.3** — Kiểm tra production SSR/API reachability, cookie/CSRF, websocket, uploads và share routes bằng backend Dify tương ứng. Image API local dùng khi khảo sát là published 1.19.0; không giả định mọi endpoint mới trong source checkout có sẵn trên mọi image.
+4. **6.4** — Chỉ đổi default deployment sau khi staging đạt parity matrix. Giữ rollback sang web; không xóa web trong kế hoạch này.
 
 **Gate build có giới hạn tài nguyên:**
 

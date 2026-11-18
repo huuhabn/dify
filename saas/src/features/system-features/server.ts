@@ -1,6 +1,6 @@
 import { dehydrate } from '@tanstack/react-query'
 import { cache } from 'react'
-import { getQueryClient } from '@/app/get-query-client'
+import { getQueryClient } from '@/libs/query/get-query-client'
 import { connection } from '@/next/server'
 import { consoleQuery } from '@/service/console'
 import 'server-only'

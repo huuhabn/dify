@@ -6,7 +6,7 @@ import { Checkbox } from '@langgenius/dify-ui/checkbox'
 import { SegmentedControl, SegmentedControlItem } from '@langgenius/dify-ui/segmented-control'
 import { useQueryState } from 'nuqs'
 import { useTranslation } from 'react-i18next'
-import { SearchInput } from '@/app/components/base/search-input'
+import { SearchInput } from '@/components/dify/base/search-input'
 import {
   rosterCreatedByMeQueryParser,
   rosterFilterQueryParser,

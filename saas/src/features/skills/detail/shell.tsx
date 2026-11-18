@@ -1,6 +1,6 @@
 'use client'
 
-import { SkeletonRectangle } from '@/app/components/base/skeleton'
+import { SkeletonRectangle } from '@/components/dify/base/skeleton'
 import { SkillBuilderGridTexture } from './builder-grid-texture'
 
 export function DetailSkeleton() {

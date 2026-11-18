@@ -1,4 +1,4 @@
-import CreateFromPipeline from '@/app/components/datasets/create-from-pipeline'
+import CreateFromPipeline from '@/components/dify/datasets/create-from-pipeline'
 import { getRouteMetadata } from '@/app/route-metadata'
 
 export function generateMetadata() {

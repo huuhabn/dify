@@ -22,12 +22,12 @@ import type {
   MetadataFilteringConditions,
   MultipleRetrievalConfig,
   SingleRetrievalConfig,
-} from '@/app/components/workflow/nodes/knowledge-retrieval/types'
-import type { ModelConfig } from '@/app/components/workflow/types'
-import { MetadataFilteringModeEnum } from '@/app/components/workflow/nodes/knowledge-retrieval/types'
+} from '@/components/dify/workflow/nodes/knowledge-retrieval/types'
+import type { ModelConfig } from '@/components/dify/workflow/types'
+import { MetadataFilteringModeEnum } from '@/components/dify/workflow/nodes/knowledge-retrieval/types'
 import { DATASET_DEFAULT } from '@/config'
 import { getFileIconType } from '@/features/agent-v2/file-icon'
-import { RerankingModeEnum } from '@/models/datasets'
+import { RerankingModeEnum } from '@/types/dify/datasets'
 import { RETRIEVE_TYPE } from '@/types/app'
 import { checkKey } from '@/utils/var'
 import { defaultAgentSoulConfigFormState } from './form-state'

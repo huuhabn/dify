@@ -4,7 +4,7 @@ import type {
   AgentReferencingWorkflowResponse,
 } from '@dify/contracts/api/console/agent/types.gen'
 import type { ComponentProps } from 'react'
-import type { Mock } from 'vite-plus/test'
+import type { Mock } from 'vitest'
 import { zAgentAppComposerResponse } from '@dify/contracts/api/console/agent/zod.gen'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
@@ -62,7 +62,7 @@ const composerQuery = vi.hoisted(() => ({
   shouldFail: false,
 }))
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: toastMock,
 }))
 

@@ -2,7 +2,7 @@ import type {
   ConsoleHumanInputV2FormDefinitionResponse,
   ResolvedForm,
 } from '@dify/contracts/api/console/form/types.gen'
-import { InputVarType, SupportUploadFileTypes } from '@/app/components/workflow/types'
+import { InputVarType, SupportUploadFileTypes } from '@/components/dify/workflow/types'
 import { normalizeConsoleFormDefinition } from '../definition'
 
 const createResponse = (

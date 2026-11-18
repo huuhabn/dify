@@ -3,7 +3,7 @@
 import type { AppMode } from '@dify/contracts/api/console/apps/types.gen'
 import type { AccessControlAssignment } from './chip-status'
 import type { AccessControlDraft } from './draft'
-import type { AppIconProps } from '@/app/components/base/app-icon'
+import type { AppIconProps } from '@/components/dify/base/app-icon'
 import type { AccessControlSaveProperties } from '@/features/network-access/analytics'
 import type { IpPolicyFormSession } from '@/features/network-access/policy-editor/policy-form-analytics'
 import {
@@ -26,11 +26,11 @@ import { useTranslation } from 'react-i18next'
 import {
   pricingQueryParamName,
   pricingQueryParser,
-} from '@/app/components/billing/pricing/query-params'
+} from '@/components/dify/billing/pricing/query-params'
 import {
   settingsQueryParamName,
   settingsQueryParser,
-} from '@/app/components/header/account-setting/query-params'
+} from '@/components/dify/header/account-setting/query-params'
 import {
   getAccessControlFailReason,
   getIpPolicyFailReason,

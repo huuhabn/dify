@@ -16,7 +16,7 @@ const mocks = vi.hoisted(() => ({
   toastSuccess: vi.fn(),
 }))
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: {
     error: mocks.toastError,
     success: mocks.toastSuccess,

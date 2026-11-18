@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from 'react'
-import type { IntegrationSection } from '@/app/components/integrations/routes'
+import type { IntegrationSection } from '@/components/dify/integrations/routes'
 import type { Metadata } from '@/next'
-import { getIntegrationRouteTargetBySlug } from '@/app/components/integrations/routes'
+import { getIntegrationRouteTargetBySlug } from '@/components/dify/integrations/routes'
 import { getLocaleOnServer, getTranslation } from '@/i18n/server'
 
 type IntegrationsRouteLayoutProps = PropsWithChildren<{

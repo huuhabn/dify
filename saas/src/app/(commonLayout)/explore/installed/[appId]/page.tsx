@@ -1,4 +1,4 @@
-import { buildInstalledAppPath } from '@/app/components/explore/installed-app/routes'
+import { buildInstalledAppPath } from '@/components/dify/explore/installed-app/routes'
 import { redirect } from '@/next/navigation'
 
 export type IInstalledAppProps = {

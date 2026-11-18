@@ -11,7 +11,7 @@ const mocks = vi.hoisted(() => ({
 
 vi.mock('server-only', () => ({}))
 
-vi.mock('@/app/get-query-client', () => ({
+vi.mock('@/libs/query/get-query-client', () => ({
   getQueryClient: mocks.getQueryClient,
 }))
 

@@ -1,4 +1,4 @@
-import List from '../../components/datasets/list'
+import List from '../../../components/dify/datasets/list/index'
 
 const DatasetList = async () => {
   return <List />

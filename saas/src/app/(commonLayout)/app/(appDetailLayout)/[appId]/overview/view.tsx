@@ -3,7 +3,7 @@
 import { useSuspenseQueries } from '@tanstack/react-query'
 import { useAtomValue } from 'jotai'
 import * as React from 'react'
-import { TracingConfiguration } from '@/app/components/app/tracing/configuration'
+import { TracingConfiguration } from '@/components/dify/app/tracing/configuration'
 import { workspacePermissionKeysAtom } from '@/context/permission-state'
 import { userProfileQueryOptions } from '@/features/account-profile/client'
 import { consoleQuery } from '@/service/console'

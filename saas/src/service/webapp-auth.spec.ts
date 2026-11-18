@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 const getPublicMock = vi.hoisted(() => vi.fn())
 
 vi.mock('./base', () => ({

@@ -1,5 +1,5 @@
 import type { consoleClient } from '@/service/console'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { guardUnexpectedFetch } from '@/test/unexpected-fetch'
 import { datasetsPage, members, setup, space, spacesPage } from './new-knowledge-list-test-env'
 

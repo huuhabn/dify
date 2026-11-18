@@ -1,7 +1,7 @@
 import type {
   AnnotationEnableStatus,
   EmbeddingModelConfig,
-} from '@/app/components/app/annotation/type'
+} from '@/components/dify/app/annotation/type'
 import { ANNOTATION_DEFAULT } from '@/config'
 import { post } from './base'
 import { consoleClient } from './console'

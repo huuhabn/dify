@@ -4,7 +4,7 @@ import type { KnowledgeFsDocumentMultimodalItemResponse } from '@dify/contracts/
 import { queryOptions, useQuery } from '@tanstack/react-query'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import ImageList from '@/app/components/datasets/common/image-list'
+import ImageList from '@/components/dify/datasets/common/image-list'
 // oxlint-disable-next-line no-restricted-imports -- Server-provided asset URLs need an authenticated raw Response to read the image blob.
 import { get } from '@/service/base'
 

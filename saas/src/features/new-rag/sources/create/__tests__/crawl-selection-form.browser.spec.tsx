@@ -2,7 +2,7 @@ import type { KnowledgeFsSettingsResponse } from '@dify/contracts/api/console/kn
 import type { SyncPolicyValue } from '../../setup/sync-policy-field'
 import type { Source, SourceWorkflowRun } from '../../source-models'
 import { useState } from 'react'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { createDeferred } from '@/test/deferred'

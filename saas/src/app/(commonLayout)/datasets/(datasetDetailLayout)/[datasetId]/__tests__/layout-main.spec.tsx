@@ -62,19 +62,19 @@ vi.mock('@/service/console', async (importOriginal) => {
   }
 })
 
-vi.mock('@/app/components/datasets/create/step-one', () => ({
+vi.mock('@/components/dify/datasets/create/step-one', () => ({
   default: () => <div>Create knowledge content</div>,
 }))
 
-vi.mock('@/app/components/datasets/create/step-two', () => ({
+vi.mock('@/components/dify/datasets/create/step-two', () => ({
   default: () => null,
 }))
 
-vi.mock('@/app/components/datasets/create/step-three', () => ({
+vi.mock('@/components/dify/datasets/create/step-three', () => ({
   default: () => null,
 }))
 
-vi.mock('@/app/components/datasets/create/top-bar', () => ({
+vi.mock('@/components/dify/datasets/create/top-bar', () => ({
   TopBar: () => null,
 }))
 

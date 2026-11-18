@@ -16,8 +16,8 @@ import type {
   PluginsFromMarketplaceResponse,
 } from '@dify/contracts/marketplace'
 import type { InfiniteData, MutateOptions, QueryClient, QueryOptions } from '@tanstack/react-query'
-import type { FormOption } from '@/app/components/header/account-setting/model-provider-page/declarations'
-import type { AutoUpdateConfig } from '@/app/components/plugins/reference-setting-modal/auto-update-setting/types'
+import type { FormOption } from '@/components/dify/header/account-setting/model-provider-page/declarations'
+import type { AutoUpdateConfig } from '@/components/dify/plugins/reference-setting-modal/auto-update-setting/types'
 import type {
   Dependency,
   GitHubItemAndMarketPlaceDependency,
@@ -31,8 +31,8 @@ import type {
   PluginTask,
   ReferenceSetting,
   VersionInfo,
-} from '@/app/components/plugins/types'
-import type { Collection } from '@/app/components/tools/types'
+} from '@/components/dify/plugins/types'
+import type { Collection } from '@/components/dify/tools/types'
 import {
   zAgentStrategyProviderEntity,
   zDatasourceProviderEntity,
@@ -42,10 +42,10 @@ import { useInfiniteQuery, useMutation, useQuery, useQueryClient } from '@tansta
 import { cloneDeep } from 'es-toolkit/object'
 import { useAtomValue } from 'jotai'
 import { useCallback, useEffect, useRef } from 'react'
-import { FormTypeEnum } from '@/app/components/base/form/types'
-import useRefreshPluginList from '@/app/components/plugins/install-plugin/hooks/use-refresh-plugin-list'
-import { getFormattedPlugin } from '@/app/components/plugins/marketplace/utils'
-import { PluginCategoryEnum, PluginSource, TaskStatus } from '@/app/components/plugins/types'
+import { FormTypeEnum } from '@/components/dify/base/form/types'
+import useRefreshPluginList from '@/components/dify/plugins/install-plugin/hooks/use-refresh-plugin-list'
+import { getFormattedPlugin } from '@/components/dify/plugins/marketplace/utils'
+import { PluginCategoryEnum, PluginSource, TaskStatus } from '@/components/dify/plugins/types'
 import { workspacePermissionKeysAtom } from '@/context/permission-state'
 import { consoleClient, consoleQuery } from '@/service/console'
 import { uninstallPlugin } from '@/service/plugins'

@@ -1,10 +1,10 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
-import { toast } from '@/app/notifications'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { toast } from '@/components/providers/notifications'
 // oxlint-disable-next-line no-restricted-imports -- Exercise the shared request transport and its notification behavior.
 import { base } from '../fetch'
 import { clearRequestErrorToasts, notifyRequestError } from '../request-error-toast'
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: { error: vi.fn() },
 }))
 

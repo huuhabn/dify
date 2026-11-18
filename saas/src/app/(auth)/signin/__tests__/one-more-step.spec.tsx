@@ -1,8 +1,8 @@
-import type { MockedFunction } from 'vite-plus/test'
+import type { MockedFunction } from 'vitest'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { beforeEach, describe, expect, it, onTestFinished, vi } from 'vite-plus/test'
+import { beforeEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import { useRouter, useSearchParams } from '@/next/navigation'
 import OneMoreStep from '../one-more-step'
 

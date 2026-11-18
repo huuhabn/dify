@@ -1,6 +1,6 @@
 import type { consoleClient } from '@/service/console'
 import { NuqsTestingAdapter } from 'nuqs/adapters/testing'
-import { userEvent } from 'vite-plus/test/browser'
+import { userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { QueryClientTestProvider } from '@/test/console/query-provider'

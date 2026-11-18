@@ -42,7 +42,7 @@ type FormQueryOptions = Omit<
 
 // Load the real code-split renderer before assertions start their interaction deadlines.
 beforeAll(async () => {
-  await import('@/app/components/base/markdown/streamdown-wrapper')
+  await import('@/components/dify/base/markdown/streamdown-wrapper')
 })
 
 vi.mock('@/service/console', () => ({
@@ -97,7 +97,7 @@ vi.mock('@/service/workflow', () => ({
   submitHumanInputForm: submitLegacyForm,
 }))
 
-vi.mock('@/app/components/base/amplitude/utils', () => ({ resetUser: vi.fn() }))
+vi.mock('@/components/dify/base/amplitude/utils', () => ({ resetUser: vi.fn() }))
 
 vi.mock('@/utils/var', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@/utils/var')>()),

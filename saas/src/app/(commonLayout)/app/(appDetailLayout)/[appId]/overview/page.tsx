@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
 import * as React from 'react'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import OverviewView from './view'
 
 export type IDevelopProps = {

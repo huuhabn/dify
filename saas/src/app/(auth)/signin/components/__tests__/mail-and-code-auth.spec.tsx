@@ -1,7 +1,7 @@
 import { act, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
-import { COUNT_DOWN_KEY, COUNT_DOWN_TIME_MS } from '@/app/components/signin/storage'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { COUNT_DOWN_KEY, COUNT_DOWN_TIME_MS } from '@/components/dify/signin/storage'
 import { renderWithConsoleQuery } from '@/test/console/query-data'
 import MailAndCodeAuth from '../mail-and-code-auth'
 

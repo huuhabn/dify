@@ -2,7 +2,7 @@ import type { GetAccountProfileResponse } from '@dify/contracts/api/console/acco
 import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { NuqsTestingAdapter } from 'nuqs/adapters/testing'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { userProfileQueryOptions } from '@/features/account-profile/client'
 import { consoleQuery } from '@/service/console'
 import { httpErrorFromResponse } from '@/service/http-error'

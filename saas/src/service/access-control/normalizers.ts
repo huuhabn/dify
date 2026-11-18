@@ -7,7 +7,7 @@ import type {
   ResourceUserAccessSetting,
   ResourceUserAccessSettingsResponse,
   Role,
-} from '@/models/access-control'
+} from '@/types/dify/access-control'
 
 type GeneratedAccessMatrixItem =
   import('@dify/contracts/api/console/workspaces/types.gen').AccessMatrixItem

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { ConsoleContextProviders, ConsoleRuntimeProviders } from '@/app/(commonLayout)/providers'
-import HeaderWrapper from '@/app/components/header/header-wrapper'
+import HeaderWrapper from '@/components/dify/header/header-wrapper'
 import Header from './header'
 
 export default async function Layout({ children }: { children: React.ReactNode }) {

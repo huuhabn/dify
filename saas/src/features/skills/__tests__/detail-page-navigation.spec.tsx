@@ -2,8 +2,8 @@ import { Dialog, DialogPopup, DialogPortal, DialogTitle } from '@langgenius/dify
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
-import { gotoAnythingDialogHandle } from '@/app/components/goto-anything/handles'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { gotoAnythingDialogHandle } from '@/components/dify/goto-anything/handles'
 import { seedFeatures, seedSystemFeatures } from '@/test/console/query-data'
 import { createNuqsTestWrapper } from '@/test/nuqs-testing'
 import {
@@ -28,7 +28,7 @@ const mocks = getMocks()
 const supportBoundary = vi.hoisted(() => ({ openZendesk: vi.fn() }))
 
 // boundary: Zendesk loads a third-party widget outside the test page.
-vi.mock('@/app/components/base/zendesk/runtime', () => ({
+vi.mock('@/components/dify/base/zendesk/runtime', () => ({
   zendeskRuntime: { open: supportBoundary.openZendesk },
 }))
 

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Main from '@/app/components/explore/installed-app'
+import Main from '@/components/dify/explore/installed-app'
 
 export type IInstalledAppProps = {
   params?: Promise<{

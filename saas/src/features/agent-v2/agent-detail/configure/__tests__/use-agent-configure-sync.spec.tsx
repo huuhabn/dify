@@ -1,14 +1,14 @@
 import type { PropsWithChildren } from 'react'
 import type { AgentConfigurePublishResult } from '../use-agent-configure-sync'
-import type { ToolWithProvider } from '@/app/components/workflow/types'
+import type { ToolWithProvider } from '@/components/dify/workflow/types'
 import type { AgentSoulConfigFormState } from '@/features/agent-v2/agent-composer/form-state'
 import { zToolProviderListResponse } from '@dify/contracts/api/console/workspaces/zod.gen'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { act, renderHook } from '@testing-library/react'
 import { createStore, Provider as JotaiProvider } from 'jotai'
 import { Suspense } from 'react'
-import { CollectionType } from '@/app/components/tools/types'
-import { MetadataFilteringModeEnum } from '@/app/components/workflow/nodes/knowledge-retrieval/types'
+import { CollectionType } from '@/components/dify/tools/types'
+import { MetadataFilteringModeEnum } from '@/components/dify/workflow/nodes/knowledge-retrieval/types'
 import { AgentPermission } from '@/features/agent-v2/acl'
 import { defaultAgentSoulConfigFormState } from '@/features/agent-v2/agent-composer/form-state'
 import {
@@ -140,11 +140,11 @@ const configuredModel = {
   model: 'gpt-4o-mini',
 }
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: toastMock,
 }))
 
-vi.mock('@/app/components/base/amplitude', () => ({
+vi.mock('@/components/dify/base/amplitude', () => ({
   trackEvent: trackEventMock,
 }))
 

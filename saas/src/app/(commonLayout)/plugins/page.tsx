@@ -1,4 +1,4 @@
-import type { LegacyPluginsSearchParams } from '@/app/components/plugins/plugin-routes'
+import type { LegacyPluginsSearchParams } from '@/components/dify/plugins/plugin-routes'
 import {
   getFirstPackageIdFromSearchParams,
   getInstallRedirectPathByPluginCategory,
@@ -6,7 +6,7 @@ import {
   getLegacyPluginRedirectPath,
   parseMarketplacePluginId,
   shouldResolveInstallCategoryRedirect,
-} from '@/app/components/plugins/plugin-routes'
+} from '@/components/dify/plugins/plugin-routes'
 import { getMarketplaceApiUrl } from '@/features/marketplace/api'
 import { redirect } from '@/next/navigation'
 

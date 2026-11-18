@@ -1,5 +1,5 @@
 import { ORPCError } from '@orpc/client'
-import { page } from 'vite-plus/test/browser'
+import { page } from 'vitest/browser'
 import { SourcesPage } from '../page'
 import { clearSourceClients, renderSources as render } from './source-browser-env'
 import { source } from './source-fixtures'

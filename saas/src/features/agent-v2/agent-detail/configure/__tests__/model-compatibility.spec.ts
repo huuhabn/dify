@@ -6,7 +6,7 @@ import {
   ConfigurationMethodEnum,
   ModelStatusEnum,
   ModelTypeEnum,
-} from '@/app/components/header/account-setting/model-provider-page/declarations'
+} from '@/components/dify/header/account-setting/model-provider-page/declarations'
 import { isAgentCompatibleModel, isAgentSuggestedModel } from '../model-compatibility'
 
 const createModel = (provider: string): ProviderWithModelsResponse => ({

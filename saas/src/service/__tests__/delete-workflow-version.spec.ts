@@ -1,5 +1,5 @@
 import type { QueryKey } from '@tanstack/react-query'
-import type { EditorResource } from '@/app/components/workflow/editor-resource/resource'
+import type { EditorResource } from '@/components/dify/workflow/editor-resource/resource'
 import { act, renderHook } from '@testing-library/react'
 import { consoleQuery } from '@/service/console'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'

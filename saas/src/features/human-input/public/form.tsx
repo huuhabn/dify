@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next'
 import {
   FileUploadContext,
   useFileUploadContext,
-} from '@/app/components/base/file-uploader/upload-context'
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+} from '@/components/dify/base/file-uploader/upload-context'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 import FormStatusCard from '@/features/human-input/form/form-status-card'
 import LoadedFormContent from '@/features/human-input/form/loaded-form-content'
 import useDocumentTitle from '@/hooks/use-document-title'

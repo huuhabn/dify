@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Main from '@/app/components/datasets/hit-testing'
+import Main from '@/components/dify/datasets/hit-testing'
 
 type Props = Readonly<{
   params: Promise<{ datasetId: string }>

@@ -23,7 +23,7 @@ import { Textarea } from '@langgenius/dify-ui/textarea'
 import { useMutation } from '@tanstack/react-query'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { SearchInput } from '@/app/components/base/search-input'
+import { SearchInput } from '@/components/dify/base/search-input'
 import { consoleQuery } from '@/service/console'
 import { getHttpErrorStatus } from '@/service/http-error'
 

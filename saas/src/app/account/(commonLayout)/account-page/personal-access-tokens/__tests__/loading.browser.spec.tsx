@@ -4,7 +4,7 @@ import type {
   PersonalAccessTokenResponse,
   PersonalAccessTokenWorkspaceCandidateResponse,
 } from '@dify/contracts/api/console/account/types.gen'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { seedSystemFeatures } from '@/test/console/query-data'
 import { QueryClientTestProvider } from '@/test/console/query-provider'
 import { createNuqsTestWrapper } from '@/test/nuqs-testing'

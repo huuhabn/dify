@@ -3,7 +3,7 @@
 import type { AgentAppDetailWithSite } from '@dify/contracts/api/console/agent/types.gen'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { systemFeaturesQueryOptions } from '@/features/system-features/client'
-import { AccessMode, isAccessMode } from '@/models/access-control'
+import { AccessMode, isAccessMode } from '@/types/dify/access-control'
 import { useGetUserCanAccessApp } from '@/service/access-control/use-app-access-control'
 
 export function useWebAppAccessPermission(agent: AgentAppDetailWithSite | undefined) {

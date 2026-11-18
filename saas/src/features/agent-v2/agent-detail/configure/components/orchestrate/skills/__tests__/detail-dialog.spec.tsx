@@ -4,7 +4,7 @@ import { Dialog } from '@langgenius/dify-ui/dialog'
 import { codeToTokens, isSupportedLanguage } from '@pierre/highlights'
 import { render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { QueryClientTestProvider } from '@/test/console/query-provider'
 import { createTestQueryClient } from '@/test/query-client'
 import { AgentSkillDetailDialog } from '../detail-dialog'
@@ -13,7 +13,7 @@ import { AgentSkillDetailDialog } from '../detail-dialog'
 vi.mock('@pierre/highlights', { spy: true })
 
 // The URL picks the loader state: "pending" keeps `beforeLoad`, "broken" renders `errorMessage`.
-vi.mock('@/app/components/base/file-uploader/pdf-highlighter-adapter', () => ({
+vi.mock('@/components/dify/base/file-uploader/pdf-highlighter-adapter', () => ({
   PdfLoader: ({
     beforeLoad,
     children,

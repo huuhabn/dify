@@ -3,7 +3,7 @@ import type { AgentRosterListState } from '../agent-roster-list'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { AgentPermission } from '@/features/agent-v2/acl'
 import { consoleQuery } from '@/service/console'
 import { createAgentFixture } from '@/test/fixtures/agent'
@@ -20,7 +20,7 @@ vi.mock('@/features/agent-v2/permissions', () => ({
 const exportAppDslMock = vi.hoisted(() => vi.fn())
 const exportAppDslState = vi.hoisted(() => ({ isExporting: false }))
 
-vi.mock('@/app/components/app/use-export-app-dsl', () => ({
+vi.mock('@/components/dify/app/use-export-app-dsl', () => ({
   useExportAppDsl: () => ({
     exportAppDsl: exportAppDslMock,
     isExporting: exportAppDslState.isExporting,

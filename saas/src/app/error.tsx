@@ -3,7 +3,7 @@
 import { Button } from '@langgenius/dify-ui/button'
 import { useQueryErrorResetBoundary } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { FullScreenLoading } from '@/app/components/full-screen-loading'
+import { FullScreenLoading } from '@/components/dify/full-screen-loading'
 import { isUnauthorizedError } from '@/service/http-error'
 
 type Props = Readonly<{

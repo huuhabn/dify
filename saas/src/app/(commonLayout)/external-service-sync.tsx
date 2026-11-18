@@ -6,15 +6,15 @@ import type { GetWorkspacesCurrentSummaryResponse } from '@dify/contracts/api/co
 import { skipToken, useQuery, useSuspenseQuery } from '@tanstack/react-query'
 import { useAtomValue } from 'jotai'
 import { Fragment, useEffect, useRef, useSyncExternalStore } from 'react'
-import { setUserId, setUserProperties } from '@/app/components/base/amplitude'
+import { setUserId, setUserProperties } from '@/components/dify/base/amplitude'
 import {
   flushRegistrationSuccess,
   getRegistrationSuccessSnapshot,
   subscribeRegistrationSuccess,
-} from '@/app/components/base/amplitude/registration-tracking'
-import { useAmplitudeInitialized } from '@/app/components/base/amplitude/use-amplitude-initialized'
-import { useAnalyticsConsent } from '@/app/components/base/analytics-consent/consent-store'
-import { zendeskRuntime } from '@/app/components/base/zendesk/runtime'
+} from '@/components/dify/base/amplitude/registration-tracking'
+import { useAmplitudeInitialized } from '@/components/dify/base/amplitude/use-amplitude-initialized'
+import { useAnalyticsConsent } from '@/components/dify/base/analytics-consent/consent-store'
+import { zendeskRuntime } from '@/components/dify/base/zendesk/runtime'
 import { ZENDESK_FIELD_IDS } from '@/config'
 import { getLangGeniusVersionInfo } from '@/context/app-context-normalizers'
 import { currentWorkspaceAtom } from '@/context/workspace-state'

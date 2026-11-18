@@ -1,6 +1,6 @@
 import { createInstance } from 'i18next'
 import { I18nextProvider } from 'react-i18next'
-import { page } from 'vite-plus/test/browser'
+import { page } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import common from '@/i18n/locales/en-US/common.json'
 import knowledgeCreate from '@/i18n/locales/en-US/knowledge-create.json'

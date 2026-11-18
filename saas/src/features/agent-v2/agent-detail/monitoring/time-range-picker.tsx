@@ -14,7 +14,7 @@ import dayjs from 'dayjs'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocale } from '#i18n'
-import { MonitoringDateRangePicker } from '@/app/components/app/monitoring/date-range-picker'
+import { MonitoringDateRangePicker } from '@/components/dify/app/monitoring/date-range-picker'
 import { formatToLocalTime } from '@/utils/format'
 
 export type AgentMonitoringPeriod = {

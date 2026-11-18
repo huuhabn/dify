@@ -14,7 +14,7 @@ import {
   useState,
 } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { ModelCostNotice } from '../components/model-cost-notice'
 import { DocumentUploadFileList } from './file-list'
 import { DocumentUploadPlanNotice } from './plan-notice'

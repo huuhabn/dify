@@ -1,6 +1,6 @@
 'use client'
 
-import { LoadingPlaceholder } from '@/app/components/base/loading-placeholder'
+import { LoadingPlaceholder } from '@/components/dify/base/loading-placeholder'
 
 export function AgentConfigurePageLoading({ label }: { label: string }) {
   return (

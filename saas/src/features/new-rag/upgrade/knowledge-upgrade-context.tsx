@@ -3,7 +3,7 @@
 import type { KnowledgeFsUpgradeJobResponse } from '@dify/contracts/api/console/datasets/types.gen'
 import type { ReactNode, RefObject } from 'react'
 import type { KnowledgeUpgrade } from './knowledge-upgrade-context-value'
-import type { DatasetCardItem } from '@/app/components/datasets/list/dataset-card/types'
+import type { DatasetCardItem } from '@/components/dify/datasets/list/dataset-card/types'
 import { useQueryClient } from '@tanstack/react-query'
 import { useCallback, useState } from 'react'
 import { consoleQuery } from '@/service/console'

@@ -1,4 +1,4 @@
-import Configuration from '@/app/components/app/configuration'
+import Configuration from '@/components/dify/app/configuration'
 
 const IConfiguration = async ({ params }: { params: Promise<{ appId: string }> }) => {
   const { appId } = await params

@@ -1,6 +1,6 @@
 import { dehydrate, HydrationBoundary, noop } from '@tanstack/react-query'
 import { Suspense } from 'react'
-import { getQueryClient } from '@/app/get-query-client'
+import { getQueryClient } from '@/libs/query/get-query-client'
 import { getOptionalSystemFeatures } from '@/features/system-features/server'
 import { getLocaleOnServer } from '@/i18n/server'
 import { consoleQuery } from '@/service/console'

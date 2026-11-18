@@ -5,7 +5,7 @@ import type {
   PersonalAccessTokenResponse,
 } from '@dify/contracts/api/console/account/types.gen'
 import { NuqsTestingAdapter } from 'nuqs/adapters/testing'
-import { page, userEvent } from 'vite-plus/test/browser'
+import { page, userEvent } from 'vitest/browser'
 import { seedSystemFeatures } from '@/test/console/query-data'
 import { QueryClientTestProvider } from '@/test/console/query-provider'
 import { createTestQueryClient } from '@/test/query-client'

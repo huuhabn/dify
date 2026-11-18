@@ -1,0 +1,3370 @@
+[
+  {
+    "from": "src/app/components/base/__tests__/app-unavailable.spec.tsx",
+    "to": "src/components/dify/base/__tests__/app-unavailable.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/access-point/card.tsx",
+    "to": "src/components/dify/base/access-point/card.tsx"
+  },
+  {
+    "from": "src/app/components/base/access-point/status.ts",
+    "to": "src/components/dify/base/access-point/status.ts"
+  },
+  {
+    "from": "src/app/components/base/access-point/url.tsx",
+    "to": "src/components/dify/base/access-point/url.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/__tests__/browser-test-env.tsx",
+    "to": "src/components/dify/base/agent-log-modal/__tests__/browser-test-env.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/__tests__/detail.browser.spec.tsx",
+    "to": "src/components/dify/base/agent-log-modal/__tests__/detail.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/agent-log-modal/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/__tests__/result.browser.spec.tsx",
+    "to": "src/components/dify/base/agent-log-modal/__tests__/result.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/__tests__/tool-call.browser.spec.tsx",
+    "to": "src/components/dify/base/agent-log-modal/__tests__/tool-call.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/__tests__/tracing.browser.spec.tsx",
+    "to": "src/components/dify/base/agent-log-modal/__tests__/tracing.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/detail.tsx",
+    "to": "src/components/dify/base/agent-log-modal/detail.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/index.stories.tsx",
+    "to": "src/components/dify/base/agent-log-modal/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/index.tsx",
+    "to": "src/components/dify/base/agent-log-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/iteration.tsx",
+    "to": "src/components/dify/base/agent-log-modal/iteration.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/result.tsx",
+    "to": "src/components/dify/base/agent-log-modal/result.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/tool-call.tsx",
+    "to": "src/components/dify/base/agent-log-modal/tool-call.tsx"
+  },
+  {
+    "from": "src/app/components/base/agent-log-modal/tracing.tsx",
+    "to": "src/components/dify/base/agent-log-modal/tracing.tsx"
+  },
+  {
+    "from": "src/app/components/base/amplitude/AmplitudeProvider.tsx",
+    "to": "src/components/dify/base/amplitude/AmplitudeProvider.tsx"
+  },
+  {
+    "from": "src/app/components/base/amplitude/WebAppAmplitudeProvider.tsx",
+    "to": "src/components/dify/base/amplitude/WebAppAmplitudeProvider.tsx"
+  },
+  {
+    "from": "src/app/components/base/amplitude/__tests__/AmplitudeProvider.spec.tsx",
+    "to": "src/components/dify/base/amplitude/__tests__/AmplitudeProvider.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/amplitude/__tests__/WebAppAmplitudeProvider.spec.tsx",
+    "to": "src/components/dify/base/amplitude/__tests__/WebAppAmplitudeProvider.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/amplitude/__tests__/access-point-page-view.spec.ts",
+    "to": "src/components/dify/base/amplitude/__tests__/access-point-page-view.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/__tests__/init.spec.ts",
+    "to": "src/components/dify/base/amplitude/__tests__/init.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/__tests__/registration-tracking.spec.ts",
+    "to": "src/components/dify/base/amplitude/__tests__/registration-tracking.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/amplitude/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/__tests__/web-app-client.spec.ts",
+    "to": "src/components/dify/base/amplitude/__tests__/web-app-client.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/access-point-page-properties.ts",
+    "to": "src/components/dify/base/amplitude/access-point-page-properties.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/index.ts",
+    "to": "src/components/dify/base/amplitude/index.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/init.ts",
+    "to": "src/components/dify/base/amplitude/init.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/lazy-amplitude-provider.tsx",
+    "to": "src/components/dify/base/amplitude/lazy-amplitude-provider.tsx"
+  },
+  {
+    "from": "src/app/components/base/amplitude/registration-consent-coordinator.tsx",
+    "to": "src/components/dify/base/amplitude/registration-consent-coordinator.tsx"
+  },
+  {
+    "from": "src/app/components/base/amplitude/registration-session-state.ts",
+    "to": "src/components/dify/base/amplitude/registration-session-state.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/registration-tracking.ts",
+    "to": "src/components/dify/base/amplitude/registration-tracking.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/runtime.ts",
+    "to": "src/components/dify/base/amplitude/runtime.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/use-amplitude-initialized.ts",
+    "to": "src/components/dify/base/amplitude/use-amplitude-initialized.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/utils.ts",
+    "to": "src/components/dify/base/amplitude/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/web-app-client.ts",
+    "to": "src/components/dify/base/amplitude/web-app-client.ts"
+  },
+  {
+    "from": "src/app/components/base/amplitude/web-app-event.ts",
+    "to": "src/components/dify/base/amplitude/web-app-event.ts"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/README.md",
+    "to": "src/components/dify/base/analytics-consent/README.md"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/__tests__/analytics-disabled.spec.tsx",
+    "to": "src/components/dify/base/analytics-consent/__tests__/analytics-disabled.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/__tests__/analytics-runtimes.spec.tsx",
+    "to": "src/components/dify/base/analytics-consent/__tests__/analytics-runtimes.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/__tests__/cloud-analytics-layout-boundary.spec.tsx",
+    "to": "src/components/dify/base/analytics-consent/__tests__/cloud-analytics-layout-boundary.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/__tests__/cloud-analytics.spec.tsx",
+    "to": "src/components/dify/base/analytics-consent/__tests__/cloud-analytics.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/__tests__/consent-store.spec.ts",
+    "to": "src/components/dify/base/analytics-consent/__tests__/consent-store.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/__tests__/cookieyes-consent-bridge.spec.tsx",
+    "to": "src/components/dify/base/analytics-consent/__tests__/cookieyes-consent-bridge.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/__tests__/request-boundary.spec.ts",
+    "to": "src/components/dify/base/analytics-consent/__tests__/request-boundary.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/analytics-disabled.tsx",
+    "to": "src/components/dify/base/analytics-consent/analytics-disabled.tsx"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/cloud-analytics-layout-boundary.tsx",
+    "to": "src/components/dify/base/analytics-consent/cloud-analytics-layout-boundary.tsx"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/cloud-analytics.tsx",
+    "to": "src/components/dify/base/analytics-consent/cloud-analytics.tsx"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/consent-store.ts",
+    "to": "src/components/dify/base/analytics-consent/consent-store.ts"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/console-analytics-runtime.tsx",
+    "to": "src/components/dify/base/analytics-consent/console-analytics-runtime.tsx"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/cookieyes-consent-bridge.tsx",
+    "to": "src/components/dify/base/analytics-consent/cookieyes-consent-bridge.tsx"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/request-boundary.ts",
+    "to": "src/components/dify/base/analytics-consent/request-boundary.ts"
+  },
+  {
+    "from": "src/app/components/base/analytics-consent/web-app-analytics-runtime.tsx",
+    "to": "src/components/dify/base/analytics-consent/web-app-analytics-runtime.tsx"
+  },
+  {
+    "from": "src/app/components/base/answer-icon/index.stories.tsx",
+    "to": "src/components/dify/base/answer-icon/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/answer-icon/index.tsx",
+    "to": "src/components/dify/base/answer-icon/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/app-icon/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/app-icon/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/app-icon/index.stories.tsx",
+    "to": "src/components/dify/base/app-icon/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/app-icon/index.tsx",
+    "to": "src/components/dify/base/app-icon/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/app-unavailable.tsx",
+    "to": "src/components/dify/base/app-unavailable.tsx"
+  },
+  {
+    "from": "src/app/components/base/audio-btn/__tests__/audio-browser-test-env.tsx",
+    "to": "src/components/dify/base/audio-btn/__tests__/audio-browser-test-env.tsx"
+  },
+  {
+    "from": "src/app/components/base/audio-btn/__tests__/audio.player.manager.spec.ts",
+    "to": "src/components/dify/base/audio-btn/__tests__/audio.player.manager.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/audio-btn/__tests__/audio.spec.ts",
+    "to": "src/components/dify/base/audio-btn/__tests__/audio.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/audio-btn/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/audio-btn/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/audio-btn/audio.player.manager.ts",
+    "to": "src/components/dify/base/audio-btn/audio.player.manager.ts"
+  },
+  {
+    "from": "src/app/components/base/audio-btn/audio.ts",
+    "to": "src/components/dify/base/audio-btn/audio.ts"
+  },
+  {
+    "from": "src/app/components/base/audio-btn/index.stories.tsx",
+    "to": "src/components/dify/base/audio-btn/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/audio-btn/index.tsx",
+    "to": "src/components/dify/base/audio-btn/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/audio-gallery/AudioPlayer.tsx",
+    "to": "src/components/dify/base/audio-gallery/AudioPlayer.tsx"
+  },
+  {
+    "from": "src/app/components/base/audio-gallery/__tests__/AudioPlayer.browser.spec.tsx",
+    "to": "src/components/dify/base/audio-gallery/__tests__/AudioPlayer.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/audio-gallery/index.stories.tsx",
+    "to": "src/components/dify/base/audio-gallery/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/audio-gallery/index.tsx",
+    "to": "src/components/dify/base/audio-gallery/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/auto-height-textarea/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/auto-height-textarea/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/auto-height-textarea/index.stories.tsx",
+    "to": "src/components/dify/base/auto-height-textarea/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/auto-height-textarea/index.tsx",
+    "to": "src/components/dify/base/auto-height-textarea/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/badge/index.css",
+    "to": "src/components/dify/base/badge/index.css"
+  },
+  {
+    "from": "src/app/components/base/badge/index.stories.tsx",
+    "to": "src/components/dify/base/badge/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/badge/index.tsx",
+    "to": "src/components/dify/base/badge/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/badge.tsx",
+    "to": "src/components/dify/base/badge.tsx"
+  },
+  {
+    "from": "src/app/components/base/block-input/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/block-input/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/block-input/index.tsx",
+    "to": "src/components/dify/base/block-input/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/carousel/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/carousel/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/carousel/index.tsx",
+    "to": "src/components/dify/base/carousel/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/__tests__/branchedTestMessages.json",
+    "to": "src/components/dify/base/chat/__tests__/branchedTestMessages.json"
+  },
+  {
+    "from": "src/app/components/base/chat/__tests__/file-input-defaults.spec.tsx",
+    "to": "src/components/dify/base/chat/__tests__/file-input-defaults.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/__tests__/legacyTestMessages.json",
+    "to": "src/components/dify/base/chat/__tests__/legacyTestMessages.json"
+  },
+  {
+    "from": "src/app/components/base/chat/__tests__/mixedTestMessages.json",
+    "to": "src/components/dify/base/chat/__tests__/mixedTestMessages.json"
+  },
+  {
+    "from": "src/app/components/base/chat/__tests__/multiRootNodesMessages.json",
+    "to": "src/components/dify/base/chat/__tests__/multiRootNodesMessages.json"
+  },
+  {
+    "from": "src/app/components/base/chat/__tests__/multiRootNodesWithLegacyTestMessages.json",
+    "to": "src/components/dify/base/chat/__tests__/multiRootNodesWithLegacyTestMessages.json"
+  },
+  {
+    "from": "src/app/components/base/chat/__tests__/partialMessages.json",
+    "to": "src/components/dify/base/chat/__tests__/partialMessages.json"
+  },
+  {
+    "from": "src/app/components/base/chat/__tests__/realWorldMessages.json",
+    "to": "src/components/dify/base/chat/__tests__/realWorldMessages.json"
+  },
+  {
+    "from": "src/app/components/base/chat/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/chat/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/__tests__/workflow-agent-tool-activity.spec.ts",
+    "to": "src/components/dify/base/chat/__tests__/workflow-agent-tool-activity.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/__tests__/announcements.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/__tests__/announcements.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/__tests__/chat-browser-test-env.tsx",
+    "to": "src/components/dify/base/chat/chat/__tests__/chat-browser-test-env.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/__tests__/chat-owner-preset.tsx",
+    "to": "src/components/dify/base/chat/chat/__tests__/chat-owner-preset.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/__tests__/check-input-forms-hooks.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/__tests__/check-input-forms-hooks.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/__tests__/conversation.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/__tests__/conversation.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/__tests__/hooks.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/__tests__/hooks.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/__tests__/layout.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/__tests__/layout.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/__tests__/log-actions.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/__tests__/log-actions.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/__tests__/question.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/__tests__/question.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/__tests__/siblings.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/__tests__/siblings.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/chat/chat/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__mocks__/markdownContent.ts",
+    "to": "src/components/dify/base/chat/chat/answer/__mocks__/markdownContent.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__mocks__/markdownContentSVG.ts",
+    "to": "src/components/dify/base/chat/chat/answer/__mocks__/markdownContentSVG.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__mocks__/workflowProcess.ts",
+    "to": "src/components/dify/base/chat/chat/answer/__mocks__/workflowProcess.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/agent-content.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/agent-content.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/agent-roster-response-content.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/agent-roster-response-content.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/answer-form-preset.ts",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/answer-form-preset.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/attachments.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/attachments.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/citations.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/citations.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/content.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/content.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/feedback-focus.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/feedback-focus.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/human-input-filled-form-list.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/human-input-filled-form-list.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/human-input-form-list.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/human-input-form-list.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/human-input.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/human-input.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/knowledge-citation-links.spec.ts",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/knowledge-citation-links.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/operation.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/operation.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/reasoning-panel.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/reasoning-panel.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/workflow-process.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/workflow-process.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/__tests__/workflow-tool-activity.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/__tests__/workflow-tool-activity.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/agent-content.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/agent-content.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/agent-roster-response-content.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/agent-roster-response-content.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/basic-content.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/basic-content.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/__tests__/content-wrapper.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/__tests__/content-wrapper.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/__tests__/executed-action.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/__tests__/executed-action.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/__tests__/field-renderer.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/__tests__/field-renderer.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/__tests__/form-state.spec.ts",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/__tests__/form-state.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/__tests__/human-input-form-gate.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/__tests__/human-input-form-gate.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/__tests__/human-input-form.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/__tests__/human-input-form.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/__tests__/submitted.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/__tests__/submitted.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/content-item.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/content-item.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/content-wrapper.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/content-wrapper.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/executed-action.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/executed-action.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/expiration-time.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/expiration-time.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/field-renderer.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/field-renderer.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/form-state.ts",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/form-state.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/human-input-form.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/human-input-form.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/submitted-content-item.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/submitted-content-item.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/submitted-content.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/submitted-content.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/submitted-field-values.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/submitted-field-values.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/submitted-form-content.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/submitted-form-content.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/submitted-utils.ts",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/submitted-utils.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/submitted.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/submitted.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/tips.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/tips.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/type.ts",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/type.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/unsubmitted.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/unsubmitted.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-content/utils.ts",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-content/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-filled-form-list.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-filled-form-list.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/human-input-form-list.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/human-input-form-list.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/index.stories.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/index.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/knowledge-citation-links.ts",
+    "to": "src/components/dify/base/chat/chat/answer/knowledge-citation-links.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/more.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/more.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/operation.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/operation.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/reasoning-panel.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/reasoning-panel.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/suggested-questions.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/suggested-questions.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/tool-activity-item.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/tool-activity-item.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/tool-detail.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/tool-detail.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/workflow-process.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/workflow-process.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/workflow-tool-activity.stories.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/workflow-tool-activity.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/answer/workflow-tool-activity.tsx",
+    "to": "src/components/dify/base/chat/chat/answer/workflow-tool-activity.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/chat-input-area/__tests__/hooks.spec.ts",
+    "to": "src/components/dify/base/chat/chat/chat-input-area/__tests__/hooks.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/chat-input-area/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/chat-input-area/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/chat-input-area/__tests__/operation.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/chat-input-area/__tests__/operation.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/chat-input-area/__tests__/voice-input.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/chat-input-area/__tests__/voice-input.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/chat-input-area/hooks.ts",
+    "to": "src/components/dify/base/chat/chat/chat-input-area/hooks.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/chat-input-area/index.tsx",
+    "to": "src/components/dify/base/chat/chat/chat-input-area/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/chat-input-area/operation.tsx",
+    "to": "src/components/dify/base/chat/chat/chat-input-area/operation.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/check-input-forms-hooks.ts",
+    "to": "src/components/dify/base/chat/chat/check-input-forms-hooks.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/citation/__tests__/citation-preset.ts",
+    "to": "src/components/dify/base/chat/chat/citation/__tests__/citation-preset.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/citation/__tests__/diagnostics.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/citation/__tests__/diagnostics.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/citation/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/citation/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/citation/__tests__/popup.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/citation/__tests__/popup.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/citation/index.tsx",
+    "to": "src/components/dify/base/chat/chat/citation/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/citation/popup.tsx",
+    "to": "src/components/dify/base/chat/chat/citation/popup.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/citation/progress-tooltip.tsx",
+    "to": "src/components/dify/base/chat/chat/citation/progress-tooltip.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/citation/tooltip.tsx",
+    "to": "src/components/dify/base/chat/chat/citation/tooltip.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/content-switch.tsx",
+    "to": "src/components/dify/base/chat/chat/content-switch.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/context-provider.tsx",
+    "to": "src/components/dify/base/chat/chat/context-provider.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/context.ts",
+    "to": "src/components/dify/base/chat/chat/context.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/hooks.ts",
+    "to": "src/components/dify/base/chat/chat/hooks.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/index.tsx",
+    "to": "src/components/dify/base/chat/chat/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/loading-anim/index.tsx",
+    "to": "src/components/dify/base/chat/chat/loading-anim/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/loading-anim/style.module.css",
+    "to": "src/components/dify/base/chat/chat/loading-anim/style.module.css"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/log/index.tsx",
+    "to": "src/components/dify/base/chat/chat/log/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/question.stories.tsx",
+    "to": "src/components/dify/base/chat/chat/question.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/question.tsx",
+    "to": "src/components/dify/base/chat/chat/question.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/thought/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat/thought/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/thought/index.tsx",
+    "to": "src/components/dify/base/chat/chat/thought/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/try-to-ask.tsx",
+    "to": "src/components/dify/base/chat/chat/try-to-ask.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/type.ts",
+    "to": "src/components/dify/base/chat/chat/type.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/use-chat-layout.ts",
+    "to": "src/components/dify/base/chat/chat/use-chat-layout.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat/utils.ts",
+    "to": "src/components/dify/base/chat/chat/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/__tests__/chat-history-test-env.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/__tests__/chat-history-test-env.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/__tests__/chat-wrapper.hitl-v2.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/__tests__/chat-wrapper.hitl-v2.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/__tests__/chat-wrapper.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/__tests__/chat-wrapper.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/__tests__/header-in-mobile.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/__tests__/header-in-mobile.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/__tests__/hooks.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/__tests__/hooks.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/__tests__/sidebar-focus.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/__tests__/sidebar-focus.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/chat-wrapper.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/chat-wrapper.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/context.ts",
+    "to": "src/components/dify/base/chat/chat-with-history/context.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/header/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/header/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/header/__tests__/mobile-operation-menu.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/header/__tests__/mobile-operation-menu.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/header/__tests__/operation.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/header/__tests__/operation.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/header/index.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/header/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/header/mobile-operation-menu.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/header/mobile-operation-menu.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/header/operation.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/header/operation.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/header-in-mobile.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/header-in-mobile.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/hooks.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/hooks.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/index.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/inputs-form/__tests__/content.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/inputs-form/__tests__/content.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/inputs-form/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/inputs-form/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/inputs-form/__tests__/view-form-dropdown.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/inputs-form/__tests__/view-form-dropdown.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/inputs-form/content.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/inputs-form/content.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/inputs-form/index.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/inputs-form/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/inputs-form/view-form-dropdown.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/inputs-form/view-form-dropdown.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/sidebar/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/sidebar/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/sidebar/__tests__/item.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/sidebar/__tests__/item.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/sidebar/__tests__/operation.browser.spec.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/sidebar/__tests__/operation.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/sidebar/index.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/sidebar/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/sidebar/item.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/sidebar/item.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/sidebar/list.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/sidebar/list.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/sidebar/operation.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/sidebar/operation.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/chat-with-history/sidebar/rename-modal.tsx",
+    "to": "src/components/dify/base/chat/chat-with-history/sidebar/rename-modal.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/constants.ts",
+    "to": "src/components/dify/base/chat/constants.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/__tests__/chat-wrapper.hitl-v2.spec.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/__tests__/chat-wrapper.hitl-v2.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/__tests__/chat-wrapper.spec.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/__tests__/chat-wrapper.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/__tests__/hooks.spec.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/__tests__/hooks.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/chat/embedded-chatbot/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/chat-wrapper.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/chat-wrapper.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/context.ts",
+    "to": "src/components/dify/base/chat/embedded-chatbot/context.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/header/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/header/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/header/index.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/header/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/hooks.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/hooks.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/index.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/inputs-form/__tests__/content.spec.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/inputs-form/__tests__/content.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/inputs-form/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/inputs-form/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/inputs-form/content.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/inputs-form/content.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/inputs-form/index.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/inputs-form/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/inputs-form/view-form-dropdown.tsx",
+    "to": "src/components/dify/base/chat/embedded-chatbot/inputs-form/view-form-dropdown.tsx"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/theme/__tests__/theme.spec.ts",
+    "to": "src/components/dify/base/chat/embedded-chatbot/theme/__tests__/theme.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/theme/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/chat/embedded-chatbot/theme/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/theme/theme.ts",
+    "to": "src/components/dify/base/chat/embedded-chatbot/theme/theme.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/theme/utils.ts",
+    "to": "src/components/dify/base/chat/embedded-chatbot/theme/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/embedded-chatbot/utils.ts",
+    "to": "src/components/dify/base/chat/embedded-chatbot/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/storage.ts",
+    "to": "src/components/dify/base/chat/storage.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/types.ts",
+    "to": "src/components/dify/base/chat/types.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/utils.ts",
+    "to": "src/components/dify/base/chat/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/chat/workflow-agent-tool-activity.ts",
+    "to": "src/components/dify/base/chat/workflow-agent-tool-activity.ts"
+  },
+  {
+    "from": "src/app/components/base/checkbox-list/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/checkbox-list/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/checkbox-list/index.tsx",
+    "to": "src/components/dify/base/checkbox-list/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/chip/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/chip/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/chip/index.stories.tsx",
+    "to": "src/components/dify/base/chip/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/chip/index.tsx",
+    "to": "src/components/dify/base/chip/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/copy-feedback/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/copy-feedback/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/copy-feedback/index.stories.tsx",
+    "to": "src/components/dify/base/copy-feedback/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/copy-feedback/index.tsx",
+    "to": "src/components/dify/base/copy-feedback/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/copy-icon/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/copy-icon/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/copy-icon/index.stories.tsx",
+    "to": "src/components/dify/base/copy-icon/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/copy-icon/index.tsx",
+    "to": "src/components/dify/base/copy-icon/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/corner-label/index.stories.tsx",
+    "to": "src/components/dify/base/corner-label/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/corner-label/index.tsx",
+    "to": "src/components/dify/base/corner-label/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/date-time-picker/README.md",
+    "to": "src/components/dify/base/date-time-picker/README.md"
+  },
+  {
+    "from": "src/app/components/base/date-time-picker/__tests__/localization.browser.spec.tsx",
+    "to": "src/components/dify/base/date-time-picker/__tests__/localization.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/date-time-picker/__tests__/types.test-d.tsx",
+    "to": "src/components/dify/base/date-time-picker/__tests__/types.test-d.tsx"
+  },
+  {
+    "from": "src/app/components/base/date-time-picker/calendar-locales.ts",
+    "to": "src/components/dify/base/date-time-picker/calendar-locales.ts"
+  },
+  {
+    "from": "src/app/components/base/date-time-picker/date-picker.tsx",
+    "to": "src/components/dify/base/date-time-picker/date-picker.tsx"
+  },
+  {
+    "from": "src/app/components/base/date-time-picker/date-time-picker.tsx",
+    "to": "src/components/dify/base/date-time-picker/date-time-picker.tsx"
+  },
+  {
+    "from": "src/app/components/base/date-time-picker/date-value.ts",
+    "to": "src/components/dify/base/date-time-picker/date-value.ts"
+  },
+  {
+    "from": "src/app/components/base/date-time-picker/time-picker.tsx",
+    "to": "src/components/dify/base/date-time-picker/time-picker.tsx"
+  },
+  {
+    "from": "src/app/components/base/date-time-picker/use-picker-labels.ts",
+    "to": "src/components/dify/base/date-time-picker/use-picker-labels.ts"
+  },
+  {
+    "from": "src/app/components/base/effect/index.stories.tsx",
+    "to": "src/components/dify/base/effect/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/effect/index.tsx",
+    "to": "src/components/dify/base/effect/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/encrypted-bottom/index.tsx",
+    "to": "src/components/dify/base/encrypted-bottom/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/error-boundary/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/error-boundary/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/error-boundary/index.tsx",
+    "to": "src/components/dify/base/error-boundary/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/__tests__/store.spec.ts",
+    "to": "src/components/dify/base/features/__tests__/store.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/features/context.tsx",
+    "to": "src/components/dify/base/features/context.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/hooks.ts",
+    "to": "src/components/dify/base/features/hooks.ts"
+  },
+  {
+    "from": "src/app/components/base/features/index.stories.tsx",
+    "to": "src/components/dify/base/features/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/index.tsx",
+    "to": "src/components/dify/base/features/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/__tests__/feature-bar.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/__tests__/feature-bar.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/__tests__/feature-browser-test-env.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/__tests__/feature-browser-test-env.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/__tests__/feature-card.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/__tests__/feature-card.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/__tests__/follow-up-preset.ts",
+    "to": "src/components/dify/base/features/new-feature-panel/__tests__/follow-up-preset.ts"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/__tests__/follow-up-setting-modal.browser.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/__tests__/follow-up-setting-modal.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/__tests__/follow-up.browser.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/__tests__/follow-up.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/__tests__/annotation-ctrl-button.browser.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/__tests__/annotation-ctrl-button.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/__tests__/config-param-modal.browser.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/__tests__/config-param-modal.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/__tests__/use-annotation-config-job-status.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/__tests__/use-annotation-config-job-status.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/__tests__/use-annotation-config.spec.ts",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/__tests__/use-annotation-config.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/annotation-ctrl-button.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/annotation-ctrl-button.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/config-param-modal.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/config-param-modal.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/config-param.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/config-param.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/index.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/score-slider/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/score-slider/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/score-slider/index.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/score-slider/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/type.ts",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/type.ts"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/annotation-reply/use-annotation-config.ts",
+    "to": "src/components/dify/base/features/new-feature-panel/annotation-reply/use-annotation-config.ts"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/citation.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/citation.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/conversation-opener/__tests__/drawer.browser.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/conversation-opener/__tests__/drawer.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/conversation-opener/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/conversation-opener/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/conversation-opener/__tests__/modal.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/conversation-opener/__tests__/modal.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/conversation-opener/index.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/conversation-opener/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/conversation-opener/modal.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/conversation-opener/modal.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/feature-bar.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/feature-bar.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/feature-card.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/feature-card.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/feature-panel-drawer.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/feature-panel-drawer.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/file-upload/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/file-upload/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/file-upload/__tests__/setting-modal.browser.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/file-upload/__tests__/setting-modal.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/file-upload/index.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/file-upload/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/file-upload/setting-content.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/file-upload/setting-content.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/file-upload/setting-modal.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/file-upload/setting-modal.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/follow-up-setting-modal.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/follow-up-setting-modal.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/follow-up.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/follow-up.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/image-upload/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/image-upload/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/image-upload/index.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/image-upload/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/index.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/moderation/__tests__/form-generation.browser.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/moderation/__tests__/form-generation.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/moderation/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/moderation/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/moderation/__tests__/moderation-content.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/moderation/__tests__/moderation-content.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/moderation/__tests__/moderation-setting-modal-submission.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/moderation/__tests__/moderation-setting-modal-submission.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/moderation/__tests__/moderation-setting-modal.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/moderation/__tests__/moderation-setting-modal.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/moderation/dialog-content.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/moderation/dialog-content.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/moderation/form-generation.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/moderation/form-generation.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/moderation/index.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/moderation/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/moderation/moderation-content.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/moderation/moderation-content.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/moderation/moderation-setting-modal.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/moderation/moderation-setting-modal.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/more-like-this.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/more-like-this.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/show-thoughts.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/show-thoughts.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/speech-to-text.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/speech-to-text.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/text-to-speech/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/text-to-speech/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/text-to-speech/__tests__/voice-settings.browser.spec.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/text-to-speech/__tests__/voice-settings.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/text-to-speech/index.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/text-to-speech/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/text-to-speech/param-config-content.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/text-to-speech/param-config-content.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/new-feature-panel/text-to-speech/voice-settings.tsx",
+    "to": "src/components/dify/base/features/new-feature-panel/text-to-speech/voice-settings.tsx"
+  },
+  {
+    "from": "src/app/components/base/features/store.ts",
+    "to": "src/components/dify/base/features/store.ts"
+  },
+  {
+    "from": "src/app/components/base/features/types.ts",
+    "to": "src/components/dify/base/features/types.ts"
+  },
+  {
+    "from": "src/app/components/base/file-icon/index.stories.tsx",
+    "to": "src/components/dify/base/file-icon/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-icon/index.tsx",
+    "to": "src/components/dify/base/file-icon/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-thumb/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/file-thumb/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-thumb/image-render.tsx",
+    "to": "src/components/dify/base/file-thumb/image-render.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-thumb/index.tsx",
+    "to": "src/components/dify/base/file-thumb/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/__tests__/constants.spec.ts",
+    "to": "src/components/dify/base/file-uploader/__tests__/constants.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/__tests__/file-input.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/__tests__/file-input.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/__tests__/file-list-in-log.browser.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/__tests__/file-list-in-log.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/__tests__/hooks.spec.ts",
+    "to": "src/components/dify/base/file-uploader/__tests__/hooks.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/__tests__/pdf-preview.browser.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/__tests__/pdf-preview.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/__tests__/store.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/__tests__/store.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/file-uploader/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/constants.ts",
+    "to": "src/components/dify/base/file-uploader/constants.ts"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-from-link-or-local/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/file-from-link-or-local/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-from-link-or-local/index.tsx",
+    "to": "src/components/dify/base/file-uploader/file-from-link-or-local/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-image-render.stories.tsx",
+    "to": "src/components/dify/base/file-uploader/file-image-render.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-image-render.tsx",
+    "to": "src/components/dify/base/file-uploader/file-image-render.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-input.tsx",
+    "to": "src/components/dify/base/file-uploader/file-input.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-list-in-log.tsx",
+    "to": "src/components/dify/base/file-uploader/file-list-in-log.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-list.stories.tsx",
+    "to": "src/components/dify/base/file-uploader/file-list.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-preview-content.tsx",
+    "to": "src/components/dify/base/file-uploader/file-preview-content.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-type-icon.stories.tsx",
+    "to": "src/components/dify/base/file-uploader/file-type-icon.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-type-icon.tsx",
+    "to": "src/components/dify/base/file-uploader/file-type-icon.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-attachment/__tests__/file-item.browser.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-attachment/__tests__/file-item.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-attachment/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-attachment/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-attachment/file-item.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-attachment/file-item.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-attachment/index.stories.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-attachment/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-attachment/index.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-attachment/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-chat-input/__tests__/file-image-item.browser.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-chat-input/__tests__/file-image-item.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-chat-input/__tests__/file-image-item.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-chat-input/__tests__/file-image-item.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-chat-input/__tests__/file-item.browser.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-chat-input/__tests__/file-item.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-chat-input/__tests__/file-list.browser.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-chat-input/__tests__/file-list.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-chat-input/__tests__/file-preview.browser.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-chat-input/__tests__/file-preview.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-chat-input/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-chat-input/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-chat-input/file-image-item.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-chat-input/file-image-item.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-chat-input/file-item.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-chat-input/file-item.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-chat-input/file-list.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-chat-input/file-list.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-chat-input/index.stories.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-chat-input/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/file-uploader-in-chat-input/index.tsx",
+    "to": "src/components/dify/base/file-uploader/file-uploader-in-chat-input/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/hooks.ts",
+    "to": "src/components/dify/base/file-uploader/hooks.ts"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/index.ts",
+    "to": "src/components/dify/base/file-uploader/index.ts"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/pdf-highlighter-adapter.tsx",
+    "to": "src/components/dify/base/file-uploader/pdf-highlighter-adapter.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/pdf-preview.tsx",
+    "to": "src/components/dify/base/file-uploader/pdf-preview.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/store.tsx",
+    "to": "src/components/dify/base/file-uploader/store.tsx"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/types.ts",
+    "to": "src/components/dify/base/file-uploader/types.ts"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/upload-context.ts",
+    "to": "src/components/dify/base/file-uploader/upload-context.ts"
+  },
+  {
+    "from": "src/app/components/base/file-uploader/utils.ts",
+    "to": "src/components/dify/base/file-uploader/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/filter-empty-state/index.tsx",
+    "to": "src/components/dify/base/filter-empty-state/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/float-right-container/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/float-right-container/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/float-right-container/index.stories.tsx",
+    "to": "src/components/dify/base/float-right-container/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/float-right-container/index.tsx",
+    "to": "src/components/dify/base/float-right-container/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/form/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/__tests__/label.browser.spec.tsx",
+    "to": "src/components/dify/base/form/components/__tests__/label.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/base/__tests__/base-field-choices.browser.spec.tsx",
+    "to": "src/components/dify/base/form/components/base/__tests__/base-field-choices.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/base/__tests__/base-field-dynamic-options.browser.spec.tsx",
+    "to": "src/components/dify/base/form/components/base/__tests__/base-field-dynamic-options.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/base/__tests__/base-field-semantics.browser.spec.tsx",
+    "to": "src/components/dify/base/form/components/base/__tests__/base-field-semantics.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/base/__tests__/base-field-test-env.tsx",
+    "to": "src/components/dify/base/form/components/base/__tests__/base-field-test-env.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/base/__tests__/base-field-values.browser.spec.tsx",
+    "to": "src/components/dify/base/form/components/base/__tests__/base-field-values.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/base/__tests__/base-form.browser.spec.tsx",
+    "to": "src/components/dify/base/form/components/base/__tests__/base-form.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/base/__tests__/validation-accessibility.browser.spec.tsx",
+    "to": "src/components/dify/base/form/components/base/__tests__/validation-accessibility.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/base/base-field.tsx",
+    "to": "src/components/dify/base/form/components/base/base-field.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/base/base-form.tsx",
+    "to": "src/components/dify/base/form/components/base/base-form.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/base/index.tsx",
+    "to": "src/components/dify/base/form/components/base/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/__tests__/field-integration.browser.spec.tsx",
+    "to": "src/components/dify/base/form/components/field/__tests__/field-integration.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/__tests__/upload-method.browser.spec.tsx",
+    "to": "src/components/dify/base/form/components/field/__tests__/upload-method.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/checkbox.tsx",
+    "to": "src/components/dify/base/form/components/field/checkbox.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/file-types.tsx",
+    "to": "src/components/dify/base/form/components/field/file-types.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/file-uploader.tsx",
+    "to": "src/components/dify/base/form/components/field/file-uploader.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/input-type-select/hooks.tsx",
+    "to": "src/components/dify/base/form/components/field/input-type-select/hooks.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/input-type-select/index.tsx",
+    "to": "src/components/dify/base/form/components/field/input-type-select/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/input-type-select/option.tsx",
+    "to": "src/components/dify/base/form/components/field/input-type-select/option.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/input-type-select/trigger.tsx",
+    "to": "src/components/dify/base/form/components/field/input-type-select/trigger.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/input-type-select/types.tsx",
+    "to": "src/components/dify/base/form/components/field/input-type-select/types.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/number-input.tsx",
+    "to": "src/components/dify/base/form/components/field/number-input.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/number-slider.tsx",
+    "to": "src/components/dify/base/form/components/field/number-slider.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/options.tsx",
+    "to": "src/components/dify/base/form/components/field/options.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/select.tsx",
+    "to": "src/components/dify/base/form/components/field/select.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/text-area.tsx",
+    "to": "src/components/dify/base/form/components/field/text-area.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/text.tsx",
+    "to": "src/components/dify/base/form/components/field/text.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/upload-method.tsx",
+    "to": "src/components/dify/base/form/components/field/upload-method.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/field/variable-selector.tsx",
+    "to": "src/components/dify/base/form/components/field/variable-selector.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/form/__tests__/actions.browser.spec.tsx",
+    "to": "src/components/dify/base/form/components/form/__tests__/actions.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/form/actions.tsx",
+    "to": "src/components/dify/base/form/components/form/actions.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/components/label.tsx",
+    "to": "src/components/dify/base/form/components/label.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/form-scenarios/auth/index.tsx",
+    "to": "src/components/dify/base/form/form-scenarios/auth/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/form-scenarios/base/__tests__/field.browser.spec.tsx",
+    "to": "src/components/dify/base/form/form-scenarios/base/__tests__/field.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/form-scenarios/base/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/form/form-scenarios/base/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/form/form-scenarios/base/field.tsx",
+    "to": "src/components/dify/base/form/form-scenarios/base/field.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/form-scenarios/base/types.ts",
+    "to": "src/components/dify/base/form/form-scenarios/base/types.ts"
+  },
+  {
+    "from": "src/app/components/base/form/form-scenarios/base/utils.ts",
+    "to": "src/components/dify/base/form/form-scenarios/base/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/form/form-scenarios/input-field/__tests__/field.browser.spec.tsx",
+    "to": "src/components/dify/base/form/form-scenarios/input-field/__tests__/field.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/form-scenarios/input-field/field.tsx",
+    "to": "src/components/dify/base/form/form-scenarios/input-field/field.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/form-scenarios/input-field/types.ts",
+    "to": "src/components/dify/base/form/form-scenarios/input-field/types.ts"
+  },
+  {
+    "from": "src/app/components/base/form/hooks/__tests__/use-check-validated.spec.ts",
+    "to": "src/components/dify/base/form/hooks/__tests__/use-check-validated.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/form/hooks/__tests__/use-get-form-values.spec.ts",
+    "to": "src/components/dify/base/form/hooks/__tests__/use-get-form-values.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/form/hooks/__tests__/use-get-validators.spec.ts",
+    "to": "src/components/dify/base/form/hooks/__tests__/use-get-validators.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/form/hooks/index.ts",
+    "to": "src/components/dify/base/form/hooks/index.ts"
+  },
+  {
+    "from": "src/app/components/base/form/hooks/use-check-validated.ts",
+    "to": "src/components/dify/base/form/hooks/use-check-validated.ts"
+  },
+  {
+    "from": "src/app/components/base/form/hooks/use-get-form-values.ts",
+    "to": "src/components/dify/base/form/hooks/use-get-form-values.ts"
+  },
+  {
+    "from": "src/app/components/base/form/hooks/use-get-validators.ts",
+    "to": "src/components/dify/base/form/hooks/use-get-validators.ts"
+  },
+  {
+    "from": "src/app/components/base/form/index.tsx",
+    "to": "src/components/dify/base/form/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/form/types.ts",
+    "to": "src/components/dify/base/form/types.ts"
+  },
+  {
+    "from": "src/app/components/base/form/utils/secret-input/__tests__/index.spec.ts",
+    "to": "src/components/dify/base/form/utils/secret-input/__tests__/index.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/form/utils/secret-input/index.ts",
+    "to": "src/components/dify/base/form/utils/secret-input/index.ts"
+  },
+  {
+    "from": "src/app/components/base/ga/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/ga/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/ga/index.tsx",
+    "to": "src/components/dify/base/ga/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/grid-mask/Grid.svg",
+    "to": "src/components/dify/base/grid-mask/Grid.svg"
+  },
+  {
+    "from": "src/app/components/base/grid-mask/index.stories.tsx",
+    "to": "src/components/dify/base/grid-mask/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/grid-mask/index.tsx",
+    "to": "src/components/dify/base/grid-mask/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/grid-mask/style.module.css",
+    "to": "src/components/dify/base/grid-mask/style.module.css"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/__tests__/async-session.browser.spec.tsx",
+    "to": "src/components/dify/base/icon-picker/__tests__/async-session.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/__tests__/harness.tsx",
+    "to": "src/components/dify/base/icon-picker/__tests__/harness.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/__tests__/icon-picker-caller.tsx",
+    "to": "src/components/dify/base/icon-picker/__tests__/icon-picker-caller.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/__tests__/image-confirmation.browser.spec.tsx",
+    "to": "src/components/dify/base/icon-picker/__tests__/image-confirmation.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/__tests__/image-crop.spec.ts",
+    "to": "src/components/dify/base/icon-picker/__tests__/image-crop.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/__tests__/image-input.browser.spec.tsx",
+    "to": "src/components/dify/base/icon-picker/__tests__/image-input.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/__tests__/ownership.browser.spec.tsx",
+    "to": "src/components/dify/base/icon-picker/__tests__/ownership.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/__tests__/picker.browser.spec.tsx",
+    "to": "src/components/dify/base/icon-picker/__tests__/picker.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/emoji-data.ts",
+    "to": "src/components/dify/base/icon-picker/emoji-data.ts"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/emoji-icon-editor.tsx",
+    "to": "src/components/dify/base/icon-picker/emoji-icon-editor.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/emoji-picker.tsx",
+    "to": "src/components/dify/base/icon-picker/emoji-picker.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/emoji-styles.ts",
+    "to": "src/components/dify/base/icon-picker/emoji-styles.ts"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/emoji-support.LICENSE",
+    "to": "src/components/dify/base/icon-picker/emoji-support.LICENSE"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/emoji-support.ts",
+    "to": "src/components/dify/base/icon-picker/emoji-support.ts"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/image-crop.ts",
+    "to": "src/components/dify/base/icon-picker/image-crop.ts"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/image-input-drag.tsx",
+    "to": "src/components/dify/base/icon-picker/image-input-drag.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/image-input.tsx",
+    "to": "src/components/dify/base/icon-picker/image-input.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/index.stories.tsx",
+    "to": "src/components/dify/base/icon-picker/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/index.tsx",
+    "to": "src/components/dify/base/icon-picker/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/icon-picker/recent-emojis.ts",
+    "to": "src/components/dify/base/icon-picker/recent-emojis.ts"
+  },
+  {
+    "from": "src/app/components/base/image-gallery/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/image-gallery/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-gallery/index.stories.tsx",
+    "to": "src/components/dify/base/image-gallery/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-gallery/index.tsx",
+    "to": "src/components/dify/base/image-gallery/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-gallery/style.module.css",
+    "to": "src/components/dify/base/image-gallery/style.module.css"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/__tests__/hooks.spec.ts",
+    "to": "src/components/dify/base/image-uploader/__tests__/hooks.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/__tests__/image-fixtures.ts",
+    "to": "src/components/dify/base/image-uploader/__tests__/image-fixtures.ts"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/__tests__/image-link-input.browser.spec.tsx",
+    "to": "src/components/dify/base/image-uploader/__tests__/image-link-input.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/__tests__/image-list.browser.spec.tsx",
+    "to": "src/components/dify/base/image-uploader/__tests__/image-list.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/__tests__/image-preview-actions.browser.spec.tsx",
+    "to": "src/components/dify/base/image-uploader/__tests__/image-preview-actions.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/__tests__/image-preview.browser.spec.tsx",
+    "to": "src/components/dify/base/image-uploader/__tests__/image-preview.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/__tests__/text-generation-image-uploader.browser.spec.tsx",
+    "to": "src/components/dify/base/image-uploader/__tests__/text-generation-image-uploader.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/__tests__/uploader.browser.spec.tsx",
+    "to": "src/components/dify/base/image-uploader/__tests__/uploader.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/image-uploader/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/hooks.ts",
+    "to": "src/components/dify/base/image-uploader/hooks.ts"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/image-link-input.tsx",
+    "to": "src/components/dify/base/image-uploader/image-link-input.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/image-list.stories.tsx",
+    "to": "src/components/dify/base/image-uploader/image-list.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/image-list.tsx",
+    "to": "src/components/dify/base/image-uploader/image-list.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/image-preview.tsx",
+    "to": "src/components/dify/base/image-uploader/image-preview.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/text-generation-image-uploader.tsx",
+    "to": "src/components/dify/base/image-uploader/text-generation-image-uploader.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/uploader.tsx",
+    "to": "src/components/dify/base/image-uploader/uploader.tsx"
+  },
+  {
+    "from": "src/app/components/base/image-uploader/utils.ts",
+    "to": "src/components/dify/base/image-uploader/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/infinite-scroll-sentinel/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/infinite-scroll-sentinel/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/infinite-scroll-sentinel/index.tsx",
+    "to": "src/components/dify/base/infinite-scroll-sentinel/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/keyboard-sortable/__tests__/keyboard-sortable.browser.spec.tsx",
+    "to": "src/components/dify/base/keyboard-sortable/__tests__/keyboard-sortable.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/keyboard-sortable/__tests__/use-keyboard-sortable.browser.spec.tsx",
+    "to": "src/components/dify/base/keyboard-sortable/__tests__/use-keyboard-sortable.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/keyboard-sortable/use-keyboard-sortable.tsx",
+    "to": "src/components/dify/base/keyboard-sortable/use-keyboard-sortable.tsx"
+  },
+  {
+    "from": "src/app/components/base/line-chart/__tests__/echarts.spec.ts",
+    "to": "src/components/dify/base/line-chart/__tests__/echarts.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/line-chart/echarts.ts",
+    "to": "src/components/dify/base/line-chart/echarts.ts"
+  },
+  {
+    "from": "src/app/components/base/linked-apps-panel/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/linked-apps-panel/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/linked-apps-panel/index.stories.tsx",
+    "to": "src/components/dify/base/linked-apps-panel/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/linked-apps-panel/index.tsx",
+    "to": "src/components/dify/base/linked-apps-panel/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/list-empty/horizontal-line.tsx",
+    "to": "src/components/dify/base/list-empty/horizontal-line.tsx"
+  },
+  {
+    "from": "src/app/components/base/list-empty/index.stories.tsx",
+    "to": "src/components/dify/base/list-empty/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/list-empty/index.tsx",
+    "to": "src/components/dify/base/list-empty/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/list-empty/vertical-line.tsx",
+    "to": "src/components/dify/base/list-empty/vertical-line.tsx"
+  },
+  {
+    "from": "src/app/components/base/loading-placeholder/README.md",
+    "to": "src/components/dify/base/loading-placeholder/README.md"
+  },
+  {
+    "from": "src/app/components/base/loading-placeholder/index.stories.tsx",
+    "to": "src/components/dify/base/loading-placeholder/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/loading-placeholder/index.tsx",
+    "to": "src/components/dify/base/loading-placeholder/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/logo/dify-logo.tsx",
+    "to": "src/components/dify/base/logo/dify-logo.tsx"
+  },
+  {
+    "from": "src/app/components/base/logo/logo-embedded-chat-avatar.tsx",
+    "to": "src/components/dify/base/logo/logo-embedded-chat-avatar.tsx"
+  },
+  {
+    "from": "src/app/components/base/logo/logo-embedded-chat-header.tsx",
+    "to": "src/components/dify/base/logo/logo-embedded-chat-header.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown/__tests__/error-boundary.spec.tsx",
+    "to": "src/components/dify/base/markdown/__tests__/error-boundary.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/markdown/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown/__tests__/markdown-utils.spec.ts",
+    "to": "src/components/dify/base/markdown/__tests__/markdown-utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown/__tests__/math.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown/__tests__/math.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown/__tests__/streamdown-wrapper-form.spec.tsx",
+    "to": "src/components/dify/base/markdown/__tests__/streamdown-wrapper-form.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown/__tests__/streamdown-wrapper.spec.tsx",
+    "to": "src/components/dify/base/markdown/__tests__/streamdown-wrapper.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown/error-boundary.tsx",
+    "to": "src/components/dify/base/markdown/error-boundary.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown/index.stories.tsx",
+    "to": "src/components/dify/base/markdown/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown/index.tsx",
+    "to": "src/components/dify/base/markdown/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown/markdown-utils.ts",
+    "to": "src/components/dify/base/markdown/markdown-utils.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown/streamdown-wrapper.tsx",
+    "to": "src/components/dify/base/markdown/streamdown-wrapper.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/audio-block.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/audio-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/button.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/button.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/code-block-load-error.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/code-block-load-error.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/code-block-loading.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/code-block-loading.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/code-block.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/code-block.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/code-highlight.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/code-highlight.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/form-default-name-characters.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/form-default-name-characters.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/form-field-name-max-length.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/form-field-name-max-length.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/form.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/form.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/form.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/form.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/link.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/link.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/music.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/music.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/paragraph.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/paragraph.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/plugin-assets.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/plugin-assets.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/plugin-img.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/plugin-img.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/plugin-paragraph.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/plugin-paragraph.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/think-block.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/think-block.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/__tests__/video-block.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/__tests__/video-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/audio-block.tsx",
+    "to": "src/components/dify/base/markdown-blocks/audio-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/button-appearance.ts",
+    "to": "src/components/dify/base/markdown-blocks/button-appearance.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/button.tsx",
+    "to": "src/components/dify/base/markdown-blocks/button.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/code-block.stories.tsx",
+    "to": "src/components/dify/base/markdown-blocks/code-block.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/code-block.tsx",
+    "to": "src/components/dify/base/markdown-blocks/code-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/code-highlight.tsx",
+    "to": "src/components/dify/base/markdown-blocks/code-highlight.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/date-values.ts",
+    "to": "src/components/dify/base/markdown-blocks/date-values.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/form.tsx",
+    "to": "src/components/dify/base/markdown-blocks/form.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/img.tsx",
+    "to": "src/components/dify/base/markdown-blocks/img.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/index.ts",
+    "to": "src/components/dify/base/markdown-blocks/index.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/link.tsx",
+    "to": "src/components/dify/base/markdown-blocks/link.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/mermaid-diagram/__tests__/diagram.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/mermaid-diagram/__tests__/diagram.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/mermaid-diagram/__tests__/export.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/mermaid-diagram/__tests__/export.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/mermaid-diagram/__tests__/rendering.browser.spec.tsx",
+    "to": "src/components/dify/base/markdown-blocks/mermaid-diagram/__tests__/rendering.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/mermaid-diagram/diagram-preview.tsx",
+    "to": "src/components/dify/base/markdown-blocks/mermaid-diagram/diagram-preview.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/mermaid-diagram/diagram-theme.ts",
+    "to": "src/components/dify/base/markdown-blocks/mermaid-diagram/diagram-theme.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/mermaid-diagram/export-diagram.ts",
+    "to": "src/components/dify/base/markdown-blocks/mermaid-diagram/export-diagram.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/mermaid-diagram/index.stories.tsx",
+    "to": "src/components/dify/base/markdown-blocks/mermaid-diagram/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/mermaid-diagram/index.tsx",
+    "to": "src/components/dify/base/markdown-blocks/mermaid-diagram/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/mermaid-diagram/use-diagram.ts",
+    "to": "src/components/dify/base/markdown-blocks/mermaid-diagram/use-diagram.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/music.tsx",
+    "to": "src/components/dify/base/markdown-blocks/music.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/paragraph.tsx",
+    "to": "src/components/dify/base/markdown-blocks/paragraph.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/plugin-asset-query.ts",
+    "to": "src/components/dify/base/markdown-blocks/plugin-asset-query.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/plugin-img.tsx",
+    "to": "src/components/dify/base/markdown-blocks/plugin-img.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/plugin-paragraph.tsx",
+    "to": "src/components/dify/base/markdown-blocks/plugin-paragraph.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/think-block.stories.tsx",
+    "to": "src/components/dify/base/markdown-blocks/think-block.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/think-block.tsx",
+    "to": "src/components/dify/base/markdown-blocks/think-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/thinking-details.tsx",
+    "to": "src/components/dify/base/markdown-blocks/thinking-details.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/use-elapsed-timer.ts",
+    "to": "src/components/dify/base/markdown-blocks/use-elapsed-timer.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/utils.ts",
+    "to": "src/components/dify/base/markdown-blocks/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-blocks/video-block.tsx",
+    "to": "src/components/dify/base/markdown-blocks/video-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-with-directive/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/markdown-with-directive/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-with-directive/components/__tests__/markdown-with-directive-schema.spec.ts",
+    "to": "src/components/dify/base/markdown-with-directive/components/__tests__/markdown-with-directive-schema.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-with-directive/components/__tests__/with-icon-card-item.spec.tsx",
+    "to": "src/components/dify/base/markdown-with-directive/components/__tests__/with-icon-card-item.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-with-directive/components/markdown-with-directive-schema.ts",
+    "to": "src/components/dify/base/markdown-with-directive/components/markdown-with-directive-schema.ts"
+  },
+  {
+    "from": "src/app/components/base/markdown-with-directive/components/with-icon-card-item.tsx",
+    "to": "src/components/dify/base/markdown-with-directive/components/with-icon-card-item.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-with-directive/components/with-icon-card-list.tsx",
+    "to": "src/components/dify/base/markdown-with-directive/components/with-icon-card-list.tsx"
+  },
+  {
+    "from": "src/app/components/base/markdown-with-directive/index.tsx",
+    "to": "src/components/dify/base/markdown-with-directive/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/message-log-modal/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/message-log-modal/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/message-log-modal/index.stories.tsx",
+    "to": "src/components/dify/base/message-log-modal/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/message-log-modal/index.tsx",
+    "to": "src/components/dify/base/message-log-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/new-audio-button/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/new-audio-button/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/new-audio-button/index.stories.tsx",
+    "to": "src/components/dify/base/new-audio-button/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/new-audio-button/index.tsx",
+    "to": "src/components/dify/base/new-audio-button/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/node-status/index.tsx",
+    "to": "src/components/dify/base/node-status/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-connector/index.stories.tsx",
+    "to": "src/components/dify/base/notion-connector/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-connector/index.tsx",
+    "to": "src/components/dify/base/notion-connector/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-icon/index.stories.tsx",
+    "to": "src/components/dify/base/notion-icon/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-icon/index.tsx",
+    "to": "src/components/dify/base/notion-icon/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/__tests__/base.spec.tsx",
+    "to": "src/components/dify/base/notion-page-selector/__tests__/base.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/assets/clear.svg",
+    "to": "src/components/dify/base/notion-page-selector/assets/clear.svg"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/assets/down-arrow.svg",
+    "to": "src/components/dify/base/notion-page-selector/assets/down-arrow.svg"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/assets/notion-empty-page.svg",
+    "to": "src/components/dify/base/notion-page-selector/assets/notion-empty-page.svg"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/assets/notion-page.svg",
+    "to": "src/components/dify/base/notion-page-selector/assets/notion-page.svg"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/assets/search.svg",
+    "to": "src/components/dify/base/notion-page-selector/assets/search.svg"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/assets/setting.svg",
+    "to": "src/components/dify/base/notion-page-selector/assets/setting.svg"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/base.tsx",
+    "to": "src/components/dify/base/notion-page-selector/base.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/credential-selector/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/notion-page-selector/credential-selector/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/credential-selector/index.tsx",
+    "to": "src/components/dify/base/notion-page-selector/credential-selector/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/index.stories.tsx",
+    "to": "src/components/dify/base/notion-page-selector/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/index.tsx",
+    "to": "src/components/dify/base/notion-page-selector/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/page-selector/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/notion-page-selector/page-selector/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/page-selector/__tests__/page-row.spec.tsx",
+    "to": "src/components/dify/base/notion-page-selector/page-selector/__tests__/page-row.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/page-selector/__tests__/use-page-selector-model.spec.ts",
+    "to": "src/components/dify/base/notion-page-selector/page-selector/__tests__/use-page-selector-model.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/page-selector/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/notion-page-selector/page-selector/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/page-selector/index.tsx",
+    "to": "src/components/dify/base/notion-page-selector/page-selector/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/page-selector/page-row.tsx",
+    "to": "src/components/dify/base/notion-page-selector/page-selector/page-row.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/page-selector/types.ts",
+    "to": "src/components/dify/base/notion-page-selector/page-selector/types.ts"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/page-selector/use-page-selector-model.ts",
+    "to": "src/components/dify/base/notion-page-selector/page-selector/use-page-selector-model.ts"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/page-selector/utils.ts",
+    "to": "src/components/dify/base/notion-page-selector/page-selector/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/page-selector/virtual-page-list.tsx",
+    "to": "src/components/dify/base/notion-page-selector/page-selector/virtual-page-list.tsx"
+  },
+  {
+    "from": "src/app/components/base/notion-page-selector/search-input/index.tsx",
+    "to": "src/components/dify/base/notion-page-selector/search-input/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/page-unavailable.tsx",
+    "to": "src/components/dify/base/page-unavailable.tsx"
+  },
+  {
+    "from": "src/app/components/base/param-item/__tests__/index-slider.browser.spec.tsx",
+    "to": "src/components/dify/base/param-item/__tests__/index-slider.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/param-item/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/param-item/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/param-item/__tests__/param-item-example.tsx",
+    "to": "src/components/dify/base/param-item/__tests__/param-item-example.tsx"
+  },
+  {
+    "from": "src/app/components/base/param-item/__tests__/score-threshold-item.browser.spec.tsx",
+    "to": "src/components/dify/base/param-item/__tests__/score-threshold-item.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/param-item/__tests__/top-k-item.browser.spec.tsx",
+    "to": "src/components/dify/base/param-item/__tests__/top-k-item.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/param-item/index.stories.tsx",
+    "to": "src/components/dify/base/param-item/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/param-item/index.tsx",
+    "to": "src/components/dify/base/param-item/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/param-item/score-threshold-item.tsx",
+    "to": "src/components/dify/base/param-item/score-threshold-item.tsx"
+  },
+  {
+    "from": "src/app/components/base/param-item/top-k-item.tsx",
+    "to": "src/components/dify/base/param-item/top-k-item.tsx"
+  },
+  {
+    "from": "src/app/components/base/premium-badge/index.css",
+    "to": "src/components/dify/base/premium-badge/index.css"
+  },
+  {
+    "from": "src/app/components/base/premium-badge/index.stories.tsx",
+    "to": "src/components/dify/base/premium-badge/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/premium-badge/index.tsx",
+    "to": "src/components/dify/base/premium-badge/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/__tests__/constants.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/__tests__/constants.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/__tests__/focus-transfer.browser.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/__tests__/focus-transfer.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/__tests__/focus.browser.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/__tests__/focus.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/__tests__/hooks.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/__tests__/hooks.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/__tests__/prompt-editor-content.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/__tests__/prompt-editor-content.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/prompt-editor/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/__tests__/variable-picker.browser.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/__tests__/variable-picker.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/constants.tsx",
+    "to": "src/components/dify/base/prompt-editor/constants.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/hooks.ts",
+    "to": "src/components/dify/base/prompt-editor/hooks.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/index.stories.tsx",
+    "to": "src/components/dify/base/prompt-editor/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/__tests__/on-blur-or-focus-block.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/__tests__/on-blur-or-focus-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/__tests__/test-helper.spec.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/__tests__/test-helper.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/__tests__/test-helpers.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/__tests__/test-helpers.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/__tests__/test-utils.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/__tests__/test-utils.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/__tests__/update-block.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/__tests__/update-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/__tests__/utils.spec.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/__tests__/utils.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/__tests__/utils.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/__tests__/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/agent-output-block/__tests__/component.browser.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/agent-output-block/__tests__/component.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/agent-output-block/__tests__/component.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/agent-output-block/__tests__/component.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/agent-output-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/agent-output-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/agent-output-block/__tests__/test-helpers.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/agent-output-block/__tests__/test-helpers.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/agent-output-block/commands.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/agent-output-block/commands.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/agent-output-block/component.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/agent-output-block/component.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/agent-output-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/agent-output-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/agent-output-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/agent-output-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/agent-output-block/utils.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/agent-output-block/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/component-picker-block/__tests__/hooks.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/component-picker-block/__tests__/hooks.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/component-picker-block/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/component-picker-block/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/component-picker-block/__tests__/prompt-option.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/component-picker-block/__tests__/prompt-option.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/component-picker-block/__tests__/variable-option.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/component-picker-block/__tests__/variable-option.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/component-picker-block/hooks.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/component-picker-block/hooks.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/component-picker-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/component-picker-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/component-picker-block/menu.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/component-picker-block/menu.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/component-picker-block/prompt-option.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/component-picker-block/prompt-option.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/component-picker-block/variable-option.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/component-picker-block/variable-option.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/context-block/__tests__/context-datasets.browser.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/context-block/__tests__/context-datasets.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/context-block/__tests__/context-insertion.browser.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/context-block/__tests__/context-insertion.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/context-block/__tests__/context-replacement.browser.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/context-block/__tests__/context-replacement.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/context-block/__tests__/datasets.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/context-block/__tests__/datasets.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/context-block/__tests__/editor-fixture.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/context-block/__tests__/editor-fixture.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/context-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/context-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/context-block/component.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/context-block/component.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/context-block/context-block-replacement-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/context-block/context-block-replacement-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/context-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/context-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/context-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/context-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/current-block/__tests__/component.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/current-block/__tests__/component.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/current-block/__tests__/current-block-replacement-block.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/current-block/__tests__/current-block-replacement-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/current-block/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/current-block/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/current-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/current-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/current-block/component.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/current-block/component.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/current-block/current-block-replacement-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/current-block/current-block-replacement-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/current-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/current-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/current-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/current-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/custom-text/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/custom-text/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/custom-text/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/custom-text/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/draggable-plugin/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/draggable-plugin/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/draggable-plugin/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/draggable-plugin/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/error-message-block/__tests__/error-message-block-replacement-block.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/error-message-block/__tests__/error-message-block-replacement-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/error-message-block/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/error-message-block/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/error-message-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/error-message-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/error-message-block/component.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/error-message-block/component.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/error-message-block/error-message-block-replacement-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/error-message-block/error-message-block-replacement-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/error-message-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/error-message-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/error-message-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/error-message-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/history-block/__tests__/component.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/history-block/__tests__/component.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/history-block/__tests__/history-block-replacement-block.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/history-block/__tests__/history-block-replacement-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/history-block/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/history-block/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/history-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/history-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/history-block/component.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/history-block/component.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/history-block/history-block-replacement-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/history-block/history-block-replacement-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/history-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/history-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/history-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/history-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/__tests__/component-ui.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/__tests__/component-ui.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/__tests__/component.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/__tests__/component.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/__tests__/hitl-input-block-replacement-block.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/__tests__/hitl-input-block-replacement-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/__tests__/input-field-keyboard.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/__tests__/input-field-keyboard.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/__tests__/input-field.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/__tests__/input-field.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/__tests__/pre-populate.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/__tests__/pre-populate.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/__tests__/variable-block.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/__tests__/variable-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/component-ui.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/component-ui.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/component.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/component.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/hitl-input-block-replacement-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/hitl-input-block-replacement-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/input-field.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/input-field.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/pre-populate.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/pre-populate.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/tag-label.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/tag-label.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/type-switch.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/type-switch.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/hitl-input-block/variable-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/hitl-input-block/variable-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/last-run-block/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/last-run-block/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/last-run-block/__tests__/last-run-block-replacement-block.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/last-run-block/__tests__/last-run-block-replacement-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/last-run-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/last-run-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/last-run-block/component.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/last-run-block/component.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/last-run-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/last-run-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/last-run-block/last-run-block-replacement-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/last-run-block/last-run-block-replacement-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/last-run-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/last-run-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/on-blur-or-focus-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/on-blur-or-focus-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/placeholder.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/placeholder.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/query-block/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/query-block/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/query-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/query-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/query-block/__tests__/query-block-replacement-block.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/query-block/__tests__/query-block-replacement-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/query-block/component.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/query-block/component.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/query-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/query-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/query-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/query-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/query-block/query-block-replacement-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/query-block/query-block-replacement-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/request-url-block/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/request-url-block/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/request-url-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/request-url-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/request-url-block/__tests__/request-url-block-replacement-block.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/request-url-block/__tests__/request-url-block-replacement-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/request-url-block/component.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/request-url-block/component.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/request-url-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/request-url-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/request-url-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/request-url-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/request-url-block/request-url-block-replacement-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/request-url-block/request-url-block-replacement-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/roster-reference-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/roster-reference-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/roster-reference-block/component.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/roster-reference-block/component.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/roster-reference-block/context.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/roster-reference-block/context.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/roster-reference-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/roster-reference-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/roster-reference-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/roster-reference-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/roster-reference-block/utils.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/roster-reference-block/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/shortcuts-popup-plugin/__tests__/editor-fixture.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/shortcuts-popup-plugin/__tests__/editor-fixture.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/shortcuts-popup-plugin/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/shortcuts-popup-plugin/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/shortcuts-popup-plugin/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/shortcuts-popup-plugin/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/shortcuts-popup-plugin/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/shortcuts-popup-plugin/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/update-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/update-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/variable-block/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/variable-block/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/variable-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/variable-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/variable-value-block/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/variable-value-block/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/variable-value-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/variable-value-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/variable-value-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/variable-value-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/variable-value-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/variable-value-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/variable-value-block/utils.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/variable-value-block/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/workflow-variable-block/__tests__/component.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/workflow-variable-block/__tests__/component.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/workflow-variable-block/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/workflow-variable-block/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/workflow-variable-block/__tests__/node.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/workflow-variable-block/__tests__/node.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/workflow-variable-block/__tests__/use-llm-model-plugin-installed.spec.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/workflow-variable-block/__tests__/use-llm-model-plugin-installed.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/workflow-variable-block/__tests__/workflow-variable-block-replacement-block.spec.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/workflow-variable-block/__tests__/workflow-variable-block-replacement-block.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/workflow-variable-block/component.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/workflow-variable-block/component.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/workflow-variable-block/index.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/workflow-variable-block/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/workflow-variable-block/node.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/workflow-variable-block/node.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/workflow-variable-block/use-llm-model-plugin-installed.ts",
+    "to": "src/components/dify/base/prompt-editor/plugins/workflow-variable-block/use-llm-model-plugin-installed.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/plugins/workflow-variable-block/workflow-variable-block-replacement-block.tsx",
+    "to": "src/components/dify/base/prompt-editor/plugins/workflow-variable-block/workflow-variable-block-replacement-block.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/prompt-editor-content.tsx",
+    "to": "src/components/dify/base/prompt-editor/prompt-editor-content.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/types.ts",
+    "to": "src/components/dify/base/prompt-editor/types.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-editor/utils.ts",
+    "to": "src/components/dify/base/prompt-editor/utils.ts"
+  },
+  {
+    "from": "src/app/components/base/prompt-log-modal/__tests__/card.spec.tsx",
+    "to": "src/components/dify/base/prompt-log-modal/__tests__/card.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-log-modal/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/prompt-log-modal/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-log-modal/card.tsx",
+    "to": "src/components/dify/base/prompt-log-modal/card.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-log-modal/index.stories.tsx",
+    "to": "src/components/dify/base/prompt-log-modal/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/prompt-log-modal/index.tsx",
+    "to": "src/components/dify/base/prompt-log-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/qrcode/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/qrcode/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/qrcode/index.stories.tsx",
+    "to": "src/components/dify/base/qrcode/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/qrcode/index.tsx",
+    "to": "src/components/dify/base/qrcode/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/radio-card/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/radio-card/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/radio-card/index.stories.tsx",
+    "to": "src/components/dify/base/radio-card/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/radio-card/index.tsx",
+    "to": "src/components/dify/base/radio-card/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/resize-handle/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/resize-handle/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/resize-handle/index.tsx",
+    "to": "src/components/dify/base/resize-handle/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/resize-handle/keyboard.ts",
+    "to": "src/components/dify/base/resize-handle/keyboard.ts"
+  },
+  {
+    "from": "src/app/components/base/search-input/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/search-input/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/search-input/__tests__/search-state.spec.ts",
+    "to": "src/components/dify/base/search-input/__tests__/search-state.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/search-input/index.tsx",
+    "to": "src/components/dify/base/search-input/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/search-input/search-state.ts",
+    "to": "src/components/dify/base/search-input/search-state.ts"
+  },
+  {
+    "from": "src/app/components/base/search-input/use-search-input.ts",
+    "to": "src/components/dify/base/search-input/use-search-input.ts"
+  },
+  {
+    "from": "src/app/components/base/simple-pie-chart/index.module.css",
+    "to": "src/components/dify/base/simple-pie-chart/index.module.css"
+  },
+  {
+    "from": "src/app/components/base/simple-pie-chart/index.stories.tsx",
+    "to": "src/components/dify/base/simple-pie-chart/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/simple-pie-chart/index.tsx",
+    "to": "src/components/dify/base/simple-pie-chart/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/skeleton/index.stories.tsx",
+    "to": "src/components/dify/base/skeleton/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/skeleton/index.tsx",
+    "to": "src/components/dify/base/skeleton/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/sort/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/sort/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/sort/__tests__/types.test-d.tsx",
+    "to": "src/components/dify/base/sort/__tests__/types.test-d.tsx"
+  },
+  {
+    "from": "src/app/components/base/sort/index.stories.tsx",
+    "to": "src/components/dify/base/sort/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/sort/index.tsx",
+    "to": "src/components/dify/base/sort/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/svg-gallery/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/svg-gallery/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/svg-gallery/index.stories.tsx",
+    "to": "src/components/dify/base/svg-gallery/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/svg-gallery/index.tsx",
+    "to": "src/components/dify/base/svg-gallery/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/tag-input/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/tag-input/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/tag-input/index.stories.tsx",
+    "to": "src/components/dify/base/tag-input/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/tag-input/index.tsx",
+    "to": "src/components/dify/base/tag-input/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/text-generation/__tests__/hooks.spec.ts",
+    "to": "src/components/dify/base/text-generation/__tests__/hooks.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/text-generation/hooks.ts",
+    "to": "src/components/dify/base/text-generation/hooks.ts"
+  },
+  {
+    "from": "src/app/components/base/text-generation/types.ts",
+    "to": "src/components/dify/base/text-generation/types.ts"
+  },
+  {
+    "from": "src/app/components/base/tree-branch-line.tsx",
+    "to": "src/components/dify/base/tree-branch-line.tsx"
+  },
+  {
+    "from": "src/app/components/base/upgrade-modal/index.tsx",
+    "to": "src/components/dify/base/upgrade-modal/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/upgrade-modal/style.module.css",
+    "to": "src/components/dify/base/upgrade-modal/style.module.css"
+  },
+  {
+    "from": "src/app/components/base/user-avatar-list/index.spec.tsx",
+    "to": "src/components/dify/base/user-avatar-list/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/user-avatar-list/index.tsx",
+    "to": "src/components/dify/base/user-avatar-list/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/video-gallery/VideoPlayer.module.css",
+    "to": "src/components/dify/base/video-gallery/VideoPlayer.module.css"
+  },
+  {
+    "from": "src/app/components/base/video-gallery/VideoPlayer.tsx",
+    "to": "src/components/dify/base/video-gallery/VideoPlayer.tsx"
+  },
+  {
+    "from": "src/app/components/base/video-gallery/__tests__/VideoPlayer.browser.spec.tsx",
+    "to": "src/components/dify/base/video-gallery/__tests__/VideoPlayer.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/video-gallery/index.stories.tsx",
+    "to": "src/components/dify/base/video-gallery/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/video-gallery/index.tsx",
+    "to": "src/components/dify/base/video-gallery/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/voice-input/__tests__/api.spec.ts",
+    "to": "src/components/dify/base/voice-input/__tests__/api.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/voice-input/__tests__/index.browser.spec.tsx",
+    "to": "src/components/dify/base/voice-input/__tests__/index.browser.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/voice-input/__tests__/recorder.spec.ts",
+    "to": "src/components/dify/base/voice-input/__tests__/recorder.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/voice-input/api.ts",
+    "to": "src/components/dify/base/voice-input/api.ts"
+  },
+  {
+    "from": "src/app/components/base/voice-input/index.module.css",
+    "to": "src/components/dify/base/voice-input/index.module.css"
+  },
+  {
+    "from": "src/app/components/base/voice-input/index.stories.tsx",
+    "to": "src/components/dify/base/voice-input/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/voice-input/index.tsx",
+    "to": "src/components/dify/base/voice-input/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/voice-input/mp3-encoder.ts",
+    "to": "src/components/dify/base/voice-input/mp3-encoder.ts"
+  },
+  {
+    "from": "src/app/components/base/voice-input/recorder.ts",
+    "to": "src/components/dify/base/voice-input/recorder.ts"
+  },
+  {
+    "from": "src/app/components/base/voice-input/types.ts",
+    "to": "src/components/dify/base/voice-input/types.ts"
+  },
+  {
+    "from": "src/app/components/base/workspace-avatar/index.stories.tsx",
+    "to": "src/components/dify/base/workspace-avatar/index.stories.tsx"
+  },
+  {
+    "from": "src/app/components/base/workspace-avatar/index.tsx",
+    "to": "src/components/dify/base/workspace-avatar/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/zendesk/__tests__/index.spec.tsx",
+    "to": "src/components/dify/base/zendesk/__tests__/index.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/zendesk/__tests__/runtime.spec.ts",
+    "to": "src/components/dify/base/zendesk/__tests__/runtime.spec.ts"
+  },
+  {
+    "from": "src/app/components/base/zendesk/__tests__/script.spec.tsx",
+    "to": "src/components/dify/base/zendesk/__tests__/script.spec.tsx"
+  },
+  {
+    "from": "src/app/components/base/zendesk/index.tsx",
+    "to": "src/components/dify/base/zendesk/index.tsx"
+  },
+  {
+    "from": "src/app/components/base/zendesk/runtime.ts",
+    "to": "src/components/dify/base/zendesk/runtime.ts"
+  },
+  {
+    "from": "src/app/components/base/zendesk/script.tsx",
+    "to": "src/components/dify/base/zendesk/script.tsx"
+  }
+]

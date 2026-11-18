@@ -2,7 +2,7 @@
 
 import type { AgentAppDetailWithSite } from '@dify/contracts/api/console/agent/types.gen'
 import type { AppSiteUpdatePayload } from '@dify/contracts/api/console/apps/types.gen'
-import type { SettingsAppInfo } from '@/app/components/app/overview/settings'
+import type { SettingsAppInfo } from '@/components/dify/app/overview/settings'
 import type { AppIconType } from '@/types/app'
 import { Button } from '@langgenius/dify-ui/button'
 import { Dialog, DialogTrigger } from '@langgenius/dify-ui/dialog'
@@ -13,21 +13,21 @@ import { useTranslation } from 'react-i18next'
 import {
   WebAppAccessControlEntry,
   WebAppAccessControlEntrySkeleton,
-} from '@/app/components/app/access-point/shared/web-app-access-control'
-import { CustomizeDialog } from '@/app/components/app/overview/customize'
-import { EmbeddedDialogContent } from '@/app/components/app/overview/embedded'
-import { SettingsDialog } from '@/app/components/app/overview/settings'
-import { AccessPointCard } from '@/app/components/base/access-point/card'
-import { AccessPointUrl } from '@/app/components/base/access-point/url'
-import AppIcon from '@/app/components/base/app-icon'
-import { toast } from '@/app/notifications'
+} from '@/components/dify/app/access-point/shared/web-app-access-control'
+import { CustomizeDialog } from '@/components/dify/app/overview/customize'
+import { EmbeddedDialogContent } from '@/components/dify/app/overview/embedded'
+import { SettingsDialog } from '@/components/dify/app/overview/settings'
+import { AccessPointCard } from '@/components/dify/base/access-point/card'
+import { AccessPointUrl } from '@/components/dify/base/access-point/url'
+import AppIcon from '@/components/dify/base/app-icon'
+import { toast } from '@/components/providers/notifications'
 import { getAgentACLCapabilities } from '@/features/agent-v2/acl'
 import { consoleQuery } from '@/service/console'
 import { getErrorMessage } from '@/utils/error-message'
 import { getAgentWebAppUrl } from '../../web-app-access'
 import { useWebAppAccessControl } from './use-web-app-access-control'
 
-const AccessControl = dynamic(() => import('@/app/components/app/app-access-control'), {
+const AccessControl = dynamic(() => import('@/components/dify/app/app-access-control'), {
   ssr: false,
 })
 

@@ -6,8 +6,8 @@ import { fireEvent, render, screen, waitFor, within } from '@testing-library/rea
 import userEvent from '@testing-library/user-event'
 import { useAtomValue } from 'jotai'
 import { useState } from 'react'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
-import { toast } from '@/app/notifications'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { toast } from '@/components/providers/notifications'
 import { formStateToAgentSoulConfig } from '@/features/agent-v2/agent-composer/conversions'
 import { defaultAgentSoulConfigFormState } from '@/features/agent-v2/agent-composer/form-state'
 import { AgentComposerProvider } from '@/features/agent-v2/agent-composer/provider'
@@ -87,14 +87,14 @@ const mocks = vi.hoisted(() => ({
   skillEnabled: true,
 }))
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: {
     success: vi.fn(),
     error: vi.fn(),
   },
 }))
 
-vi.mock('@/app/components/base/file-uploader/pdf-highlighter-adapter', () => ({
+vi.mock('@/components/dify/base/file-uploader/pdf-highlighter-adapter', () => ({
   PdfLoader: ({ url }: { url: string }) => <div data-testid="pdf-loader" data-url={url} />,
   PdfHighlighter: () => null,
 }))

@@ -1,4 +1,4 @@
-import WorkflowApp from '@/app/components/workflow-app'
+import WorkflowApp from '@/components/dify/workflow-app'
 
 const Page = () => {
   return (

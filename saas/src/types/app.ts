@@ -1,17 +1,17 @@
 import type { ToolProviderType } from '@dify/contracts/api/console/agent/types.gen'
 import type { FileTransferMethod } from '@dify/contracts/api/console/apps/types.gen'
-import type { FileEntity } from '@/app/components/base/file-uploader/types'
-import type { UploadFileSetting } from '@/app/components/workflow/types'
+import type { FileEntity } from '@/components/dify/base/file-uploader/types'
+import type { UploadFileSetting } from '@/components/dify/workflow/types'
 import type { LanguagesSupported } from '@/i18n/language'
-import type { ExternalDataTool } from '@/models/common'
-import type { RerankingModeEnum, WeightedScoreEnum } from '@/models/datasets'
+import type { ExternalDataTool } from '@/types/dify/common'
+import type { RerankingModeEnum, WeightedScoreEnum } from '@/types/dify/datasets'
 import type {
   AnnotationReplyConfig,
   ChatPromptConfig,
   CompletionPromptConfig,
   DatasetConfigs,
   PromptMode,
-} from '@/models/debug'
+} from '@/types/dify/debug'
 
 export type ModelModeType = 'chat' | 'completion' | ''
 export const ModelModeType = {

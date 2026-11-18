@@ -15,7 +15,7 @@ import { queryOptions, useMutation, useQuery, useQueryClient } from '@tanstack/r
 import isEqual from 'fast-deep-equal'
 import { useCallback, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { agentSoulConfigToFormState } from '@/features/agent-v2/agent-composer/conversions'
 import { useAgentBuildDraftRefresh } from '@/features/agent-v2/build-draft-refresh'
 import { consoleQuery } from '@/service/console'

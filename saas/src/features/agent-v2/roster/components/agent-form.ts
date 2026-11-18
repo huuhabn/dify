@@ -3,7 +3,7 @@ import type {
   AgentAppPartial,
 } from '@dify/contracts/api/console/agent/types.gen'
 import type { AgentComposerAgentResponse } from '@dify/contracts/api/console/apps/types.gen'
-import type { IconPickerValue } from '@/app/components/base/icon-picker'
+import type { IconPickerValue } from '@/components/dify/base/icon-picker'
 
 type AgentFormField = 'description' | 'name' | 'role'
 

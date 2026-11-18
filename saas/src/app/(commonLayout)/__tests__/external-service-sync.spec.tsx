@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
 import { waitFor } from '@testing-library/react'
-import { REGISTRATION_SUCCESS_STORAGE_KEY } from '@/app/components/base/amplitude/registration-session-state'
-import { rememberRegistrationSuccess } from '@/app/components/base/amplitude/registration-tracking'
+import { REGISTRATION_SUCCESS_STORAGE_KEY } from '@/components/dify/base/amplitude/registration-session-state'
+import { rememberRegistrationSuccess } from '@/components/dify/base/amplitude/registration-tracking'
 import { renderWithConsoleQuery } from '@/test/console/query-data'
 import { AmplitudeIdentitySync } from '../external-service-sync'
 
@@ -13,22 +13,22 @@ const { mockSetUserId, mockSetUserProperties, mockTrackEvent } = vi.hoisted(() =
   })),
 }))
 
-vi.mock('@/app/components/base/amplitude', () => ({
+vi.mock('@/components/dify/base/amplitude', () => ({
   setUserId: (...args: unknown[]) => mockSetUserId(...args),
   setUserProperties: (...args: unknown[]) => mockSetUserProperties(...args),
 }))
 
-vi.mock('@/app/components/base/amplitude/utils', () => ({
+vi.mock('@/components/dify/base/amplitude/utils', () => ({
   trackEvent: (...args: unknown[]) => mockTrackEvent(...args),
 }))
 
-vi.mock('@/app/components/base/amplitude/init', () => ({
+vi.mock('@/components/dify/base/amplitude/init', () => ({
   getIsAmplitudeInitialized: () => true,
 }))
 
-vi.mock('@/app/components/base/analytics-consent/consent-store', async (importOriginal) => {
+vi.mock('@/components/dify/base/analytics-consent/consent-store', async (importOriginal) => {
   const original =
-    await importOriginal<typeof import('@/app/components/base/analytics-consent/consent-store')>()
+    await importOriginal<typeof import('@/components/dify/base/analytics-consent/consent-store')>()
   return {
     ...original,
     getAnalyticsConsent: () => 'granted',

@@ -1,6 +1,6 @@
-import { MARKETPLACE_CONTAINER_ID } from '@/app/components/plugins/marketplace/constants'
-import { EmbeddedMarketplace } from '@/app/components/plugins/marketplace/embedded'
-import MarketplaceInstallPermissionProvider from '@/app/components/plugins/marketplace/marketplace-install-permission-provider'
+import { MARKETPLACE_CONTAINER_ID } from '@/components/dify/plugins/marketplace/constants'
+import { EmbeddedMarketplace } from '@/components/dify/plugins/marketplace/embedded'
+import MarketplaceInstallPermissionProvider from '@/components/dify/plugins/marketplace/marketplace-install-permission-provider'
 
 // Sync route: async pages under this client shell Flight-double-resolve.
 const MarketplacePage = () => {

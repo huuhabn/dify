@@ -1,6 +1,6 @@
 import type { AgentProviderToolDefaultValue } from '../tools'
 import { createStore } from 'jotai'
-import { describe, expect, it } from 'vite-plus/test'
+import { describe, expect, it } from 'vitest'
 import { defaultAgentSoulConfigFormState } from '../../form-state'
 import { agentComposerDraftAtom } from '../../store'
 import {

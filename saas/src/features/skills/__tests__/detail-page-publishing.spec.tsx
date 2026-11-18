@@ -2,7 +2,7 @@ import type { SkillReferenceResponse } from '@dify/contracts/api/console/workspa
 import { QueryClient } from '@tanstack/react-query'
 import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { consoleQueryKey } from '@/test/console/operation-hooks'
 import { createDeferred } from '@/test/deferred'
 import {

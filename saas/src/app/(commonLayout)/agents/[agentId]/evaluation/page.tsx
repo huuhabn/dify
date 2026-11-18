@@ -1,4 +1,4 @@
-import SnippetAndEvaluationPlanGuard from '@/app/components/billing/snippet-and-evaluation-plan-guard'
+import SnippetAndEvaluationPlanGuard from '@/components/dify/billing/snippet-and-evaluation-plan-guard'
 import { AgentDetailPage } from '@/features/agent-v2/agent-detail/page'
 
 type PageProps = {

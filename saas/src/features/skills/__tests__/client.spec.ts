@@ -1,7 +1,7 @@
-import { describe, expect, it, vi } from 'vite-plus/test'
+import { describe, expect, it, vi } from 'vitest'
 import { uploadSkillFile } from '../client'
 
-vi.mock('@/app/notifications', () => ({ toast: { error: vi.fn() } }))
+vi.mock('@/components/providers/notifications', () => ({ toast: { error: vi.fn() } }))
 
 describe('Skill upload transport failures', () => {
   afterEach(() => {

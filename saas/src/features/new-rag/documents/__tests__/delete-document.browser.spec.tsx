@@ -3,9 +3,9 @@ import {
   zKnowledgeFsDurableDeletionAcceptedResponse,
   zKnowledgeFsLogicalDocumentListResponse,
 } from '@dify/contracts/api/console/knowledge-fs/zod.gen'
-import { userEvent } from 'vite-plus/test/browser'
+import { userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
-import { AppToaster } from '@/app/notifications/app-toaster'
+import { AppToaster } from '@/components/providers/notifications/app-toaster'
 import { consoleQuery } from '@/service/console'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { QueryClientTestProvider } from '@/test/console/query-provider'

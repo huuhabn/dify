@@ -13,7 +13,7 @@ import {
 
 vi.mock('@/next/navigation', () => ({ useParams: () => ({}) }))
 
-vi.mock('@/app/components/base/chat/chat/answer/human-input-content/expiration-time', () => ({
+vi.mock('@/components/dify/base/chat/chat/answer/human-input-content/expiration-time', () => ({
   default: () => null,
 }))
 

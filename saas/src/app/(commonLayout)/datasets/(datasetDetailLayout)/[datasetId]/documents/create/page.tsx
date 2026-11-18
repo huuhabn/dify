@@ -1,5 +1,5 @@
 import * as React from 'react'
-import DatasetUpdateForm from '@/app/components/datasets/create'
+import DatasetUpdateForm from '@/components/dify/datasets/create'
 
 export type IProps = {
   params: Promise<{ datasetId: string }>

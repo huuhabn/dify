@@ -1,5 +1,5 @@
 import { ORPCError } from '@orpc/client'
-import { trackEvent } from '@/app/components/base/amplitude'
+import { trackEvent } from '@/components/dify/base/amplitude'
 import {
   getAccessControlFailReason,
   getIpPolicyFailReason,
@@ -7,7 +7,7 @@ import {
   trackNetworkAccessEvent,
 } from '../analytics'
 
-vi.mock('@/app/components/base/amplitude', () => ({ trackEvent: vi.fn() }))
+vi.mock('@/components/dify/base/amplitude', () => ({ trackEvent: vi.fn() }))
 
 it('maps API scopes to the analytics vocabulary', () => {
   expect(getProtectedAccessPoints(['webapp', 'service_api', 'mcp', 'trigger'])).toEqual([

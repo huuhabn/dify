@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Main from '@/app/components/datasets/documents'
+import Main from '@/components/dify/datasets/documents'
 
 export type IProps = {
   params: Promise<{ datasetId: string }>

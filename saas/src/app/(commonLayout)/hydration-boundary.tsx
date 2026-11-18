@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { ORPCError } from '@orpc/client'
 import { dehydrate, HydrationBoundary, noop } from '@tanstack/react-query'
-import { getQueryClient } from '@/app/get-query-client'
+import { getQueryClient } from '@/libs/query/get-query-client'
 import {
   redirectForBootstrapError,
   serverUserProfileQueryOptions,

@@ -16,7 +16,7 @@ vi.mock('react-i18next', async () => {
 })
 vi.mock('@/features/agent-v2/permissions', () => ({ useCanCreateAgents: () => false }))
 vi.mock('@/hooks/use-timestamp', () => ({ default: () => ({ formatTime: () => '' }) }))
-vi.mock('@/app/components/app/use-export-app-dsl', () => ({
+vi.mock('@/components/dify/app/use-export-app-dsl', () => ({
   useExportAppDsl: () => ({ exportAppDsl: vi.fn(), isExporting: false }),
 }))
 vi.mock('@/service/console', async (importOriginal) => {

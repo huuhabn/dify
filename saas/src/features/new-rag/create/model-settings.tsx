@@ -5,7 +5,7 @@ import { cn } from '@langgenius/dify-ui/cn'
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from '@langgenius/dify-ui/collapsible'
 import { useEffect, useId, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ModelSelector } from '@/app/components/header/account-setting/model-provider-page/model-selector'
+import { ModelSelector } from '@/components/dify/header/account-setting/model-provider-page/model-selector'
 
 type CreationModels = ReturnType<typeof useCreationModels>
 

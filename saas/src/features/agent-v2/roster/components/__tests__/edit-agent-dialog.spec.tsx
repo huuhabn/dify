@@ -11,7 +11,7 @@ const toastMock = vi.hoisted(() => ({
   success: vi.fn(),
 }))
 
-vi.mock('@/app/notifications', () => ({
+vi.mock('@/components/providers/notifications', () => ({
   toast: toastMock,
 }))
 

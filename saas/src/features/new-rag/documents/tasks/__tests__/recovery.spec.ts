@@ -1,5 +1,5 @@
 import type { KnowledgeFsBackgroundTaskResponse } from '@dify/contracts/api/console/knowledge-fs/types.gen'
-import { beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { findBackgroundTasks } from '../recovery'
 
 const { listBackgroundTasks } = vi.hoisted(() => ({ listBackgroundTasks: vi.fn() }))

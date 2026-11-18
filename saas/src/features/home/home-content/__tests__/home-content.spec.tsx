@@ -7,7 +7,7 @@ import type {
 } from '@dify/contracts/api/console/explore/types.gen'
 import type { DeploymentEdition } from '@dify/contracts/api/console/system-features/types.gen'
 import type { ReactNode } from 'react'
-import type { StepByStepTourSessionState } from '@/app/components/step-by-step-tour/types'
+import type { StepByStepTourSessionState } from '@/components/dify/step-by-step-tour/types'
 import type { consoleClient } from '@/service/console'
 import { zPostAppsImportsResponse } from '@dify/contracts/api/console/apps/zod.gen'
 import { zGetFeaturesResponse } from '@dify/contracts/api/console/features/zod.gen'
@@ -15,13 +15,13 @@ import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { useSetAtom } from 'jotai'
 import { useHydrateAtoms } from 'jotai/utils'
-import { LEARN_DIFY_HIDDEN_STORAGE_KEY } from '@/app/components/explore/learn-dify/storage'
+import { LEARN_DIFY_HIDDEN_STORAGE_KEY } from '@/components/dify/explore/learn-dify/storage'
 import {
   resetStepByStepTourSessionAtom,
   stepByStepTourSessionAtom,
-} from '@/app/components/step-by-step-tour/state'
-import { STEP_BY_STEP_TOUR_TARGETS } from '@/app/components/step-by-step-tour/target-registry'
-import { DSLImportStatus } from '@/models/app'
+} from '@/components/dify/step-by-step-tour/state'
+import { STEP_BY_STEP_TOUR_TARGETS } from '@/components/dify/step-by-step-tour/target-registry'
+import { DSLImportStatus } from '@/types/dify/app'
 import { consoleQuery } from '@/service/console'
 import { createConsoleQueryWrapper } from '@/test/console/query-data'
 import { createDeferred } from '@/test/deferred'
@@ -93,15 +93,15 @@ const toastMocks = vi.hoisted(() => ({
   warning: vi.fn(),
 }))
 
-vi.mock('@/app/notifications', () => ({ toast: toastMocks }))
+vi.mock('@/components/providers/notifications', () => ({ toast: toastMocks }))
 
 vi.mock('@/next/navigation', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@/next/navigation')>()),
   useRouter: () => ({ push }),
 }))
 
-vi.mock('@/app/components/base/amplitude/utils', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/app/components/base/amplitude/utils')>()),
+vi.mock('@/components/dify/base/amplitude/utils', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/components/dify/base/amplitude/utils')>()),
   trackEvent: mockTrackEvent,
   flushEvents: vi.fn(),
 }))
@@ -133,7 +133,7 @@ vi.mock('@/service/console', async (importOriginal) => {
   }
 })
 
-vi.mock('@/app/components/explore/try-app', () => ({
+vi.mock('@/components/dify/explore/try-app', () => ({
   default: ({
     canCreate = true,
     createButtonStepByStepTourTarget,

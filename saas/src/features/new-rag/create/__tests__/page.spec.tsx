@@ -79,7 +79,7 @@ const uploadPlanMock = vi.hoisted(() => ({
   plan: 'professional' as string | undefined,
 }))
 
-vi.mock('@/app/components/billing/upgrade-btn', () => ({
+vi.mock('@/components/dify/billing/upgrade-btn', () => ({
   default: ({ labelKey }: { labelKey: string }) => (
     <button type="button">{`billing.${labelKey}`}</button>
   ),

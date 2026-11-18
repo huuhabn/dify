@@ -1,6 +1,6 @@
 'use client'
 import type { FC } from 'react'
-import type { PeriodParamsWithTimeRange, TimeRange } from '@/app/components/app/overview/app-chart'
+import type { PeriodParamsWithTimeRange, TimeRange } from '@/components/dify/app/overview/app-chart'
 import type { I18nKeysByPrefix } from '@/types/i18n'
 import {
   Select,

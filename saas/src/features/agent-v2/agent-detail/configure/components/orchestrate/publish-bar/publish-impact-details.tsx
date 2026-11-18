@@ -3,7 +3,7 @@
 import type { AgentReferencingWorkflowResponse } from '@dify/contracts/api/console/agent/types.gen'
 import { useId } from 'react'
 import { useTranslation } from 'react-i18next'
-import AppIcon from '@/app/components/base/app-icon'
+import AppIcon from '@/components/dify/base/app-icon'
 import { useFormatTimeFromNow } from '@/hooks/use-format-time-from-now'
 import Link from '@/next/link'
 

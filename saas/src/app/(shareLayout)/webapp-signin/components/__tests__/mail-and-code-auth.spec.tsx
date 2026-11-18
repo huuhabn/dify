@@ -15,7 +15,7 @@ vi.mock('@/next/navigation', () => ({
   useSearchParams: () => searchParams,
 }))
 
-vi.mock('@/app/components/signin/storage', () => ({
+vi.mock('@/components/dify/signin/storage', () => ({
   COUNT_DOWN_TIME_MS: 60_000,
   useSetCountdownLeftTime: () => setCountdownLeftTimeMock,
 }))

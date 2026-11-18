@@ -1,9 +1,9 @@
 import type {
   FormValue,
   ModelParameterRule,
-} from '@/app/components/header/account-setting/model-provider-page/declarations'
+} from '@/components/dify/header/account-setting/model-provider-page/declarations'
 import type { ConsoleClientContext } from '@/service/console'
-import { normalizeModelParameterRule } from '@/app/components/header/account-setting/model-provider-page/utils'
+import { normalizeModelParameterRule } from '@/components/dify/header/account-setting/model-provider-page/utils'
 
 export const mergeValidCompletionParams = (
   oldParams: FormValue | undefined,

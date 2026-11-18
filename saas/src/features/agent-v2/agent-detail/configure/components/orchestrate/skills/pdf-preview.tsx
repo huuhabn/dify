@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import {
   PdfHighlighter,
   PdfLoader,
-} from '@/app/components/base/file-uploader/pdf-highlighter-adapter'
+} from '@/components/dify/base/file-uploader/pdf-highlighter-adapter'
 import { basePath } from '@/utils/var'
 
 export function AgentFilePdfPreview({

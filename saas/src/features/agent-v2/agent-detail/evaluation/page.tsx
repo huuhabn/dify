@@ -1,4 +1,4 @@
-import Evaluation from '@/app/components/evaluation'
+import Evaluation from '@/components/dify/evaluation'
 
 type AgentEvaluationPageProps = {
   agentId: string

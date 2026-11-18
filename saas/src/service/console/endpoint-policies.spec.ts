@@ -1,6 +1,6 @@
 import type { QueryKey } from '@tanstack/react-query'
 import { MutationObserver, QueryClient } from '@tanstack/react-query'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { consoleQuery } from './index'
 
 const { request } = vi.hoisted(() => ({

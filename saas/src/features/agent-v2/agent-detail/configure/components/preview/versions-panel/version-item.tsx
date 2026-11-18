@@ -3,7 +3,7 @@ import { cn } from '@langgenius/dify-ui/cn'
 import { IconButton } from '@langgenius/dify-ui/icon-button'
 import { Menu, MenuContent, MenuItem, MenuTrigger } from '@langgenius/dify-ui/menu'
 import { useTranslation } from 'react-i18next'
-import PremiumBadge from '@/app/components/base/premium-badge'
+import PremiumBadge from '@/components/dify/base/premium-badge'
 import useTimestamp from '@/hooks/use-timestamp'
 import { VersionTimelineDot } from './version-timeline-dot'
 

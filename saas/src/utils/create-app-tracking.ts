@@ -1,6 +1,6 @@
 import type { AgentScope } from '@/features/agent-v2/analytics'
 import Cookies from 'js-cookie'
-import { flushEvents, trackEvent } from '@/app/components/base/amplitude/utils'
+import { flushEvents, trackEvent } from '@/components/dify/base/amplitude/utils'
 
 const CREATE_APP_EXTERNAL_ATTRIBUTION_STORAGE_KEY = 'create_app_external_attribution'
 

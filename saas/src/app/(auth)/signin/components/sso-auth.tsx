@@ -7,7 +7,7 @@ import { Button } from '@langgenius/dify-ui/button'
 import { ORPCError } from '@orpc/client'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/app/notifications'
+import { toast } from '@/components/providers/notifications'
 import { useRouter, useSearchParams } from '@/next/navigation'
 import { getUserOAuth2SSOUrl, getUserOIDCSSOUrl, getUserSAMLSSOUrl } from '@/service/sso'
 
