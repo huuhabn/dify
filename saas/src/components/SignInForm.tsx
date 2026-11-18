@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useState, type FormEvent } from 'react';
 import { Link, useRouter } from '@/libs/I18nNavigation';
+import { encryptPassword } from '@/utils/encryption';
 
 export function SignInForm() {
   const t = useTranslations('SignIn');
@@ -26,7 +27,7 @@ export function SignInForm() {
         },
         body: JSON.stringify({
           email,
-          password,
+          password: encryptPassword(password),
           remember_me: true,
         }),
       });
