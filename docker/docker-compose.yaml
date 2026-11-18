@@ -475,7 +475,7 @@ services:
       - ssrf_proxy_network
       - default
 
-  # Frontend web application.
+  # Frontend web application (Legacy).
   web:
     image: langgenius/dify-web:1.19.0
     restart: always
@@ -489,6 +489,20 @@ services:
       - ./.env
       - ./envs/core-services/urls.defaults
       - ./envs/core-services/web.defaults
+
+  # Modern Next.js 16 SaaS frontend application (Tailwind CSS v4, multi-language).
+  saas:
+    build:
+      context: ../saas
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "${SAAS_PORT:-3001}:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+    depends_on:
+      - api
 
   # The PostgreSQL database.
   db_postgres:

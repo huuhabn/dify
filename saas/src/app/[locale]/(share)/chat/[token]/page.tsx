@@ -1,6 +1,9 @@
 'use client';
 
 import { use, useState } from 'react';
+import { VoiceInputButton } from '@/components/chat/VoiceInputButton';
+import { AudioPlayerButton } from '@/components/chat/AudioPlayerButton';
+import { AttachmentUploader, type AttachedFile } from '@/components/chat/AttachmentUploader';
 
 type Message = {
   id: string;
@@ -23,6 +26,7 @@ export default function StandaloneChatPage({
   ]);
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
+  const [attachedFiles, setAttachedFiles] = useState<AttachedFile[]>([]);
 
   const handleSend = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -102,7 +106,12 @@ export default function StandaloneChatPage({
                   : 'bg-gray-100 text-gray-800 rounded-bl-xs'
               }`}
             >
-              {m.content}
+              <div>{m.content}</div>
+              {m.role === 'assistant' && (
+                <div className="mt-1 flex items-center justify-end">
+                  <AudioPlayerButton text={m.content} />
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -116,18 +125,27 @@ export default function StandaloneChatPage({
       </div>
 
       {/* Input */}
-      <form onSubmit={handleSend} className="border-t border-gray-200 p-4">
+      <form onSubmit={handleSend} className="relative border-t border-gray-200 p-4">
         <div className="flex items-center gap-2">
+          <AttachmentUploader
+            files={attachedFiles}
+            onFilesChange={setAttachedFiles}
+            disabled={sending}
+          />
+          <VoiceInputButton
+            onTranscript={(text) => setInput((prev) => (prev ? `${prev} ${text}` : text))}
+            disabled={sending}
+          />
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Type your message..."
+            placeholder="Type your message or use voice..."
             className="flex-1 rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
           <button
             type="submit"
-            disabled={sending || !input.trim()}
+            disabled={sending || (!input.trim() && attachedFiles.length === 0)}
             className="cursor-pointer rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 disabled:opacity-50 transition-colors"
           >
             Send

@@ -4,6 +4,9 @@ import { use, useEffect, useState } from 'react';
 import { AppsService } from '@/services/apps.service';
 import type { AppDetail } from '@/types/dify/app';
 import { Link } from '@/libs/I18nNavigation';
+import { VoiceInputButton } from '@/components/chat/VoiceInputButton';
+import { AudioPlayerButton } from '@/components/chat/AudioPlayerButton';
+import { AttachmentUploader, type AttachedFile } from '@/components/chat/AttachmentUploader';
 
 type ChatMsg = {
   id: string;
@@ -39,6 +42,7 @@ export default function AppStudioPage({
   ]);
   const [inputQuery, setInputQuery] = useState('');
   const [sending, setSending] = useState(false);
+  const [attachedFiles, setAttachedFiles] = useState<AttachedFile[]>([]);
 
   // Publish state
   const [publishModalOpen, setPublishModalOpen] = useState(false);
@@ -254,7 +258,12 @@ export default function AppStudioPage({
                       : 'bg-white border border-gray-200 text-gray-800 rounded-bl-xs shadow-2xs'
                   }`}
                 >
-                  {msg.content}
+                  <div className="flex items-center justify-between gap-3">
+                    <div>{msg.content}</div>
+                    {msg.role === 'assistant' && (
+                      <AudioPlayerButton text={msg.content} />
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
@@ -270,19 +279,28 @@ export default function AppStudioPage({
           {/* Chat Input */}
           <form
             onSubmit={handleSendMessage}
-            className="border-t border-gray-200 bg-white p-4"
+            className="relative border-t border-gray-200 bg-white p-4"
           >
             <div className="flex items-center gap-2">
+              <AttachmentUploader
+                files={attachedFiles}
+                onFilesChange={setAttachedFiles}
+                disabled={sending}
+              />
+              <VoiceInputButton
+                onTranscript={(text) => setInputQuery((prev) => (prev ? `${prev} ${text}` : text))}
+                disabled={sending}
+              />
               <input
                 type="text"
                 value={inputQuery}
                 onChange={(e) => setInputQuery(e.target.value)}
-                placeholder="Type your message to test this assistant..."
+                placeholder="Type your message or use voice..."
                 className="flex-1 rounded-xl border border-gray-300 px-4 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
               <button
                 type="submit"
-                disabled={sending || !inputQuery.trim()}
+                disabled={sending || (!inputQuery.trim() && attachedFiles.length === 0)}
                 className="cursor-pointer rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 disabled:opacity-50 transition-colors"
               >
                 Send

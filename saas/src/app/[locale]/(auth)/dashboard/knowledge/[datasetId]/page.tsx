@@ -246,12 +246,12 @@ export default function DatasetDetailPage({
                     </button>
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <button
-                      type="button"
+                    <Link
+                      href={`/dashboard/knowledge/${datasetId}/documents/${doc.id}`}
                       className="text-xs font-medium text-blue-600 hover:text-blue-500 cursor-pointer"
                     >
                       Manage Chunks →
-                    </button>
+                    </Link>
                   </td>
                 </tr>
               ))}

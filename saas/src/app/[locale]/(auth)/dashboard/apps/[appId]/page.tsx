@@ -87,7 +87,7 @@ export default function AppOverviewPage({
       </div>
 
       {/* Navigation Sub-Tabs */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Link
           href={isWorkflow ? `/dashboard/apps/${appId}/workflow` : `/dashboard/apps/${appId}/studio`}
           className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-2xs hover:border-blue-400 hover:shadow-sm transition-all"
@@ -120,20 +120,35 @@ export default function AppOverviewPage({
           </p>
         </Link>
 
-        <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-2xs">
+        <Link
+          href={`/dashboard/apps/${appId}/access-point`}
+          className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-2xs hover:border-blue-400 hover:shadow-sm transition-all"
+        >
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 text-lg">
             🌐
           </div>
-          <h3 className="mt-4 font-semibold text-gray-900">
-            API & Public WebApp
+          <h3 className="mt-4 font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+            Access Point & WebApp
           </h3>
           <p className="mt-1 text-xs text-gray-500">
-            Direct REST endpoints and shareable public link for your team or end-users.
+            Configure custom domains, branding colors, rate limiting, and web embed widgets.
           </p>
-          <div className="mt-4 text-xs font-mono bg-gray-50 p-2 rounded-lg border border-gray-200 text-gray-700 truncate">
-            /api/chat-messages
+        </Link>
+
+        <Link
+          href={`/dashboard/apps/${appId}/evaluation`}
+          className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-2xs hover:border-blue-400 hover:shadow-sm transition-all"
+        >
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-50 text-purple-600 text-lg">
+            🎯
           </div>
-        </div>
+          <h3 className="mt-4 font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+            Evaluation & Benchmark
+          </h3>
+          <p className="mt-1 text-xs text-gray-500">
+            Test model output regression against golden benchmark test cases.
+          </p>
+        </Link>
       </div>
     </div>
   );

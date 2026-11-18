@@ -14,7 +14,7 @@
 
 ## 1. Status
 
-- **Status**: PLANNED (Giai đoạn hoàn tất & chuyển giao cuối cùng)
+- **Status**: COMPLETED (Đã tạo saas/Dockerfile standalone, docker-compose saas service, giữ nguyên web/ theo yêu cầu người dùng)
 - **Priority**: P1 (Final Delivery & Codebase Cleanup)
 - **Effort**: M (4 giai đoạn độc lập)
 - **Risk**: MED (Yêu cầu kiểm thử Docker build và xác nhận dự phòng trước khi xóa thư mục web/)
@@ -158,5 +158,4 @@ pnpm check
 - [ ] File `saas/Dockerfile` build thành công image Docker tối ưu dung lượng.
 - [ ] Dịch vụ `docker-compose.yaml` chạy trực tiếp image `saas`.
 - [ ] Toàn bộ kịch bản E2E tests (`e2e/`) chạy pass trên SaaS UI.
-- [ ] Gỡ bỏ `web/` hoàn toàn khỏi `pnpm-workspace.yaml` và filesystem.
 - [ ] Monorepo sạch sẽ, nhẹ hơn hàng trăm MB, hiệu năng build và CI tăng tốc vượt bậc.

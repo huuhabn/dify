@@ -66,5 +66,29 @@ export type CreateAppRequest = {
 };
 
 export type UpdateAppRequest = Partial<CreateAppRequest> & {
+  enable_site?: boolean;
+  enable_api?: boolean;
   model_config?: AppDetail['model_config'];
 };
+
+export type AppTemplateCategory =
+  | 'all'
+  | 'writing'
+  | 'translate'
+  | 'analysis'
+  | 'programming'
+  | 'customer-service'
+  | 'hr';
+
+export type AppTemplate = {
+  id: string;
+  name: string;
+  description: string;
+  mode: AppMode;
+  icon: string;
+  icon_background: string;
+  category: string;
+  author: string;
+  model_config?: AppDetail['model_config'];
+};
+

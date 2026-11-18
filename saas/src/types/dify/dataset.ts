@@ -37,13 +37,16 @@ export type Segment = {
   position: number;
   document_id: string;
   content: string;
+  answer?: string;
   word_count: number;
   tokens: number;
   hit_count: number;
+  keywords?: string[];
   index_node_id?: string;
   index_node_hash?: string;
   enabled: boolean;
   status: string;
+  error?: string;
 };
 
 export type HitTestingRecord = {

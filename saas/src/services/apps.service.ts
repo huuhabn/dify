@@ -1,5 +1,5 @@
 import { request } from './api-client';
-import type { AppDetail, CreateAppRequest, UpdateAppRequest } from '@/types/dify/app';
+import type { AppDetail, AppTemplate, CreateAppRequest, UpdateAppRequest } from '@/types/dify/app';
 
 export type AppsListResponse = {
   data: AppDetail[];
@@ -53,6 +53,22 @@ export const AppsService = {
         inputs,
         response_mode: 'blocking',
         conversation_id: conversationId,
+      },
+    });
+  },
+
+  async listRecommendedApps(category?: string): Promise<{ categories: string[]; recommended_apps: AppTemplate[] }> {
+    return request('/console/api/explore/apps', {
+      params: category && category !== 'all' ? { category } : undefined,
+    });
+  },
+
+  async installAppFromTemplate(app_id: string, name?: string): Promise<{ id: string; app: AppDetail }> {
+    return request('/console/api/explore/installed-apps', {
+      method: 'POST',
+      body: {
+        app_id,
+        name,
       },
     });
   },

@@ -1,5 +1,5 @@
 import { request } from './api-client';
-import type { Dataset, Document, HitTestingResponse } from '@/types/dify/dataset';
+import type { Dataset, Document, HitTestingResponse, Segment } from '@/types/dify/dataset';
 
 export type DatasetsListResponse = {
   data: Dataset[];
@@ -14,6 +14,11 @@ export type DocumentsListResponse = {
   total: number;
   page: number;
   limit: number;
+};
+
+export type SegmentsListResponse = {
+  data: Segment[];
+  doc_form?: string;
 };
 
 export const DatasetsService = {
@@ -62,6 +67,47 @@ export const DatasetsService = {
           score_threshold_enabled: false,
         },
       },
+    });
+  },
+
+  async listSegments(datasetId: string, documentId: string): Promise<SegmentsListResponse> {
+    return request<SegmentsListResponse>(`/console/api/datasets/${datasetId}/documents/${documentId}/segments`);
+  },
+
+  async createSegment(
+    datasetId: string,
+    documentId: string,
+    content: string,
+    answer?: string,
+    keywords?: string[],
+  ): Promise<{ data: Segment }> {
+    return request<{ data: Segment }>(`/console/api/datasets/${datasetId}/documents/${documentId}/segments`, {
+      method: 'POST',
+      body: {
+        segment: {
+          content,
+          answer,
+          keywords,
+        },
+      },
+    });
+  },
+
+  async updateSegment(
+    datasetId: string,
+    documentId: string,
+    segmentId: string,
+    segment: { content?: string; answer?: string; keywords?: string[]; enabled?: boolean },
+  ): Promise<{ data: Segment }> {
+    return request<{ data: Segment }>(`/console/api/datasets/${datasetId}/documents/${documentId}/segments/${segmentId}`, {
+      method: 'POST',
+      body: { segment },
+    });
+  },
+
+  async deleteSegment(datasetId: string, documentId: string, segmentId: string): Promise<void> {
+    return request<void>(`/console/api/datasets/${datasetId}/documents/${documentId}/segments/${segmentId}`, {
+      method: 'DELETE',
     });
   },
 };

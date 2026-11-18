@@ -2,6 +2,7 @@
 
 import { useState, type ReactNode } from 'react';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
+import { CommandPalette } from '@/components/CommandPalette';
 import { useAuth } from '@/context/AuthContext';
 import { Link, usePathname } from '@/libs/I18nNavigation';
 
@@ -27,6 +28,21 @@ export function DashboardShell({ children }: { children: ReactNode }) {
       current: pathname === '/dashboard',
     },
     {
+      name: 'Explore & Templates',
+      href: '/dashboard/explore',
+      icon: (
+        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.75}
+            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+          />
+        </svg>
+      ),
+      current: pathname.startsWith('/dashboard/explore'),
+    },
+    {
       name: 'Knowledge & Datasets',
       href: '/dashboard/knowledge',
       icon: (
@@ -42,7 +58,7 @@ export function DashboardShell({ children }: { children: ReactNode }) {
       current: pathname.startsWith('/dashboard/knowledge'),
     },
     {
-      name: 'Tools & Plugins',
+      name: 'Tools & Providers',
       href: '/dashboard/tools',
       icon: (
         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,6 +77,51 @@ export function DashboardShell({ children }: { children: ReactNode }) {
         </svg>
       ),
       current: pathname.startsWith('/dashboard/tools'),
+    },
+    {
+      name: 'Plugins Marketplace',
+      href: '/dashboard/plugins',
+      icon: (
+        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.75}
+            d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"
+          />
+        </svg>
+      ),
+      current: pathname.startsWith('/dashboard/plugins'),
+    },
+    {
+      name: 'Annotations & Q&A',
+      href: '/dashboard/annotations',
+      icon: (
+        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.75}
+            d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+          />
+        </svg>
+      ),
+      current: pathname.startsWith('/dashboard/annotations'),
+    },
+    {
+      name: 'Prompt Snippets',
+      href: '/dashboard/snippets',
+      icon: (
+        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.75}
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+          />
+        </svg>
+      ),
+      current: pathname.startsWith('/dashboard/snippets'),
     },
     {
       name: 'Account & Settings',
@@ -195,9 +256,21 @@ export function DashboardShell({ children }: { children: ReactNode }) {
           </div>
 
           <div className="flex items-center gap-4">
+            <button
+              type="button"
+              onClick={() => {
+                window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true }));
+              }}
+              className="hidden sm:flex items-center gap-2 rounded-xl border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs text-gray-500 hover:bg-gray-100 cursor-pointer"
+            >
+              <span>Search or jump to...</span>
+              <kbd className="rounded bg-white px-1.5 py-0.5 text-[10px] font-semibold text-gray-600 border border-gray-200">⌘K</kbd>
+            </button>
             <LocaleSwitcher />
           </div>
         </header>
+
+        <CommandPalette />
 
         {/* Mobile Navigation Dropdown */}
         {mobileMenuOpen && (
