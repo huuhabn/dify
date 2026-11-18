@@ -8,7 +8,7 @@ Lập ngày 2026-11-18 theo skill advisor.
 |---|---|---|---|---|---|
 | [001](001-align-saas-with-nextjs-boilerplate.md) | Chuẩn hóa SaaS theo ixartz/Next-js-Boilerplate (cũ - port nguyên khối từ web) | P1 | L | Không | REJECTED (Phương án copy nguyên khối từ web làm mất style của boilerplate) |
 | [002](002-rebuild-saas-with-boilerplate-style.md) | Khôi phục SaaS Boilerplate gốc và Tích hợp Dify theo phong cách Boilerplate | P1 | L | Không | COMPLETED (Steps 1, 2, 3, 4 đã xong - Nền tảng sạch 48 files) |
-| [003](003-complete-web-to-saas-migration.md) | Chuyển đổi toàn diện các phân hệ Dify Web sang Next.js SaaS Boilerplate (8 Phases) | P1 | XL | Plan 002 | READY |
+| [003](003-complete-web-to-saas-migration.md) | Chuyển đổi toàn diện các phân hệ Dify Web sang Next.js SaaS Boilerplate (8 Phases) | P1 | XL | Plan 002 | COMPLETED (Hoàn thành toàn bộ 8 Phase với 100% Tailwind v4, typecheck & build sạch) |
 
 ## Ghi chú định hướng & Quyết định
 
