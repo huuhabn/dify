@@ -1,68 +1,94 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from '@/libs/I18nNavigation';
+import { request } from '@/services/api-client';
 
 type Member = {
   id: string;
   name: string;
   email: string;
-  role: 'owner' | 'admin' | 'member';
+  role: 'owner' | 'admin' | 'member' | string;
   joined_at: number;
 };
 
 export default function WorkspaceMembersPage() {
-  const [members, setMembers] = useState<Member[]>([
-    {
-      id: 'm1',
-      name: 'Nguyen Van A',
-      email: 'owner@dify.local',
-      role: 'owner',
-      joined_at: Date.now() / 1000 - 86400 * 30,
-    },
-    {
-      id: 'm2',
-      name: 'Tran Thi B',
-      email: 'admin@dify.local',
-      role: 'admin',
-      joined_at: Date.now() / 1000 - 86400 * 14,
-    },
-    {
-      id: 'm3',
-      name: 'Le Van C',
-      email: 'developer@dify.local',
-      role: 'member',
-      joined_at: Date.now() / 1000 - 86400 * 5,
-    },
-  ]);
-
+  const [members, setMembers] = useState<Member[]>([]);
+  const [loading, setLoading] = useState(true);
   const [inviteModalOpen, setInviteModalOpen] = useState(false);
   const [inviteEmail, setInviteEmail] = useState('');
   const [inviteRole, setInviteRole] = useState<'admin' | 'member'>('member');
   const [sending, setSending] = useState(false);
+
+  const loadMembers = async () => {
+    try {
+      const res = await request<{ accounts?: Array<{
+        id: string;
+        name: string;
+        email: string;
+        role: string;
+        created_at: number;
+      }> }>('/console/api/workspaces/current/members');
+
+      if (res?.accounts) {
+        setMembers(
+          res.accounts.map((acc) => ({
+            id: acc.id,
+            name: acc.name || acc.email?.split('@')[0] || 'Member',
+            email: acc.email,
+            role: acc.role,
+            joined_at: acc.created_at || Math.floor(Date.now() / 1000),
+          })),
+        );
+      }
+    } catch (err) {
+      console.error('Failed to load workspace members', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadMembers();
+  }, []);
 
   const handleInvite = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!inviteEmail.trim()) return;
 
     setSending(true);
-    await new Promise((r) => setTimeout(r, 600));
-    setMembers((prev) => [
-      ...prev,
-      {
-        id: `m-${Date.now()}`,
-        name: inviteEmail.split('@')[0] || 'New Member',
-        email: inviteEmail.trim(),
-        role: inviteRole,
-        joined_at: Date.now() / 1000,
-      },
-    ]);
-    setSending(false);
-    setInviteEmail('');
-    setInviteModalOpen(false);
+    try {
+      await request('/console/api/workspaces/current/members/invite-email', {
+        method: 'POST',
+        body: {
+          emails: [inviteEmail.trim()],
+          role: inviteRole,
+          language: 'en-US',
+        },
+      });
+      await loadMembers();
+      setInviteEmail('');
+      setInviteModalOpen(false);
+    } catch (err) {
+      alert(err instanceof Error ? err.message : 'Failed to send invitation');
+    } finally {
+      setSending(false);
+    }
   };
 
-  const getRoleBadge = (role: Member['role']) => {
+  const handleRemove = async (memberId: string) => {
+    if (!confirm('Are you sure you want to remove this member?')) return;
+    try {
+      await request(`/console/api/workspaces/current/members/${memberId}`, {
+        method: 'DELETE',
+      });
+      setMembers((prev) => prev.filter((x) => x.id !== memberId));
+    } catch (err) {
+      alert(err instanceof Error ? err.message : 'Failed to remove member');
+    }
+  };
+
+  const getRoleBadge = (role: string) => {
     switch (role) {
       case 'owner':
         return 'bg-purple-100 text-purple-800 border-purple-200';
@@ -118,90 +144,105 @@ export default function WorkspaceMembersPage() {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100 bg-white">
-            {members.map((m) => (
-              <tr key={m.id} className="hover:bg-gray-50/80 transition-colors">
-                <td className="px-6 py-4 font-semibold text-gray-900">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-700">
-                      {m.name.charAt(0)}
-                    </div>
-                    {m.name}
-                  </div>
-                </td>
-                <td className="px-6 py-4 text-gray-600 font-mono text-xs">
-                  {m.email}
-                </td>
-                <td className="px-6 py-4">
-                  <span className={`rounded-md border px-2.5 py-0.5 text-xs font-bold capitalize ${getRoleBadge(m.role)}`}>
-                    {m.role}
-                  </span>
-                </td>
-                <td className="px-6 py-4 text-xs text-gray-400">
-                  {new Date(m.joined_at * 1000).toLocaleDateString()}
-                </td>
-                <td className="px-6 py-4 text-right">
-                  {m.role !== 'owner' && (
-                    <button
-                      type="button"
-                      onClick={() => setMembers((prev) => prev.filter((x) => x.id !== m.id))}
-                      className="text-xs text-red-600 hover:text-red-500 cursor-pointer"
-                    >
-                      Remove
-                    </button>
-                  )}
+            {loading ? (
+              <tr>
+                <td colSpan={5} className="px-6 py-8 text-center text-sm text-gray-400">
+                  Loading workspace members...
                 </td>
               </tr>
-            ))}
+            ) : members.length === 0 ? (
+              <tr>
+                <td colSpan={5} className="px-6 py-8 text-center text-sm text-gray-400">
+                  No members found in this workspace.
+                </td>
+              </tr>
+            ) : (
+              members.map((m) => (
+                <tr key={m.id} className="hover:bg-gray-50/80 transition-colors">
+                  <td className="px-6 py-4 font-semibold text-gray-900">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-700">
+                        {m.name.charAt(0).toUpperCase()}
+                      </div>
+                      {m.name}
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 text-gray-600 font-mono text-xs">
+                    {m.email}
+                  </td>
+                  <td className="px-6 py-4">
+                    <span className={`rounded-md border px-2.5 py-0.5 text-xs font-bold capitalize ${getRoleBadge(m.role)}`}>
+                      {m.role}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 text-xs text-gray-400">
+                    {new Date(m.joined_at * 1000).toLocaleDateString()}
+                  </td>
+                  <td className="px-6 py-4 text-right">
+                    {m.role !== 'owner' && (
+                      <button
+                        type="button"
+                        onClick={() => handleRemove(m.id)}
+                        className="text-xs text-red-600 hover:text-red-500 cursor-pointer"
+                      >
+                        Remove
+                      </button>
+                    )}
+                  </td>
+                </tr>
+              ))
+            )}
           </tbody>
         </table>
       </div>
 
       {/* Invite Modal */}
       {inviteModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/50 p-4 backdrop-blur-xs">
-          <div className="w-full max-w-md rounded-2xl border border-gray-200 bg-white p-6 shadow-xl">
-            <h3 className="text-lg font-bold text-gray-900">Invite Team Member</h3>
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-xs p-4">
+          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
+            <h2 className="text-lg font-bold text-gray-900">Invite Team Member</h2>
             <p className="mt-1 text-xs text-gray-500">
-              Send an invitation to join this Dify workspace.
+              An invitation email will be sent with workspace join instructions.
             </p>
 
             <form onSubmit={handleInvite} className="mt-4 space-y-4">
               <div>
-                <label className="block text-xs font-medium text-gray-700">Email Address</label>
+                <label className="block text-sm font-medium text-gray-700">Email Address</label>
                 <input
                   type="email"
                   required
+                  autoFocus
+                  placeholder="colleague@example.com"
                   value={inviteEmail}
                   onChange={(e) => setInviteEmail(e.target.value)}
-                  placeholder="colleague@company.com"
-                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3.5 py-2 text-sm text-gray-900 focus:border-blue-500 focus:outline-none"
+                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3.5 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-gray-700">Role</label>
+                <label className="block text-sm font-medium text-gray-700">Role</label>
                 <select
                   value={inviteRole}
                   onChange={(e) => setInviteRole(e.target.value as 'admin' | 'member')}
-                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3.5 py-2 text-sm text-gray-900 focus:border-blue-500 focus:outline-none"
+                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3.5 py-2 text-sm text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                 >
-                  <option value="member">Normal Member (Can use and build apps)</option>
-                  <option value="admin">Administrator (Can manage settings and API keys)</option>
+                  <option value="member">Member - Can use apps, studio, and run workflows</option>
+                  <option value="admin">Admin - Full access to settings, members, and keys</option>
                 </select>
               </div>
 
-              <div className="mt-6 flex justify-end gap-3 pt-3 border-t border-gray-100">
+              <div className="mt-6 flex justify-end gap-3 pt-2 border-t border-gray-100">
                 <button
                   type="button"
                   onClick={() => setInviteModalOpen(false)}
-                  className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 cursor-pointer"
+                  className="cursor-pointer rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  disabled={sending || !inviteEmail.trim()}
-                  className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 disabled:opacity-50 cursor-pointer"
+                  disabled={sending}
+                  className="cursor-pointer rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 disabled:opacity-50"
                 >
                   {sending ? 'Sending...' : 'Send Invitation'}
                 </button>

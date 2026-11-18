@@ -36,12 +36,24 @@ export async function request<T>(
     }
   }
 
+  const csrfMatch =
+    typeof document !== 'undefined'
+      ? document.cookie.match(/(?:^|;\s*)csrf_token=([^;]+)/)
+      : null;
+  const csrfToken = csrfMatch ? decodeURIComponent(csrfMatch[1]!) : undefined;
+
+  const requestHeaders: Record<string, string> = {
+    'Content-Type': 'application/json',
+    ...headers,
+  };
+
+  if (csrfToken && !requestHeaders['X-CSRF-Token']) {
+    requestHeaders['X-CSRF-Token'] = csrfToken;
+  }
+
   const fetchOptions: RequestInit = {
     method,
-    headers: {
-      'Content-Type': 'application/json',
-      ...headers,
-    },
+    headers: requestHeaders,
     credentials: 'same-origin',
   };
 

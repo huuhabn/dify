@@ -7,7 +7,7 @@ import { useAuth } from '@/context/AuthContext';
 import { Link, usePathname } from '@/libs/I18nNavigation';
 
 export function DashboardShell({ children }: { children: ReactNode }) {
-  const { user, workspace, logout } = useAuth();
+  const { user, workspace, logout, isLoading } = useAuth();
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -202,10 +202,10 @@ export function DashboardShell({ children }: { children: ReactNode }) {
               </div>
               <div className="min-w-0">
                 <p className="truncate text-sm font-medium text-gray-900">
-                  {user?.name || 'Admin User'}
+                  {user?.name || (isLoading ? 'Loading...' : 'User')}
                 </p>
                 <p className="truncate text-xs text-gray-500">
-                  {user?.email || 'admin@dify.local'}
+                  {user?.email || (isLoading ? 'Loading...' : '')}
                 </p>
               </div>
             </div>

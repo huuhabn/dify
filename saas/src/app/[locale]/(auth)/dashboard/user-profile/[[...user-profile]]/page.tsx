@@ -1,18 +1,49 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from '@/libs/I18nNavigation';
 import { useAuth } from '@/context/AuthContext';
+import { request } from '@/services/api-client';
 
 export default function UserProfilePage() {
-  const { user, workspace } = useAuth();
+  const { user, workspace, isLoading, refreshAuth } = useAuth();
   const [activeTab, setActiveTab] = useState<'profile' | 'workspace' | 'api'>('profile');
+  const [name, setName] = useState('');
+  const [timezone, setTimezone] = useState('');
+  const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSave = (e: React.FormEvent) => {
+  useEffect(() => {
+    if (user) {
+      setName(user.name || '');
+      setTimezone(user.timezone || 'UTC');
+    }
+  }, [user]);
+
+  const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSaved(true);
-    setTimeout(() => setSaved(false), 3000);
+    setSaving(true);
+    setError(null);
+    setSaved(false);
+
+    try {
+      await request('/console/api/account/profile', {
+        method: 'PATCH',
+        body: {
+          name: name.trim(),
+          timezone: timezone.trim() || 'UTC',
+        },
+      });
+
+      await refreshAuth();
+      setSaved(true);
+      setTimeout(() => setSaved(false), 4000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to update profile');
+    } finally {
+      setSaving(false);
+    }
   };
 
   return (
@@ -62,12 +93,21 @@ export default function UserProfilePage() {
             </div>
           )}
 
+          {error && (
+            <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+              {error}
+            </div>
+          )}
+
           <form onSubmit={handleSave} className="mt-6 space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700">Full Name</label>
               <input
                 type="text"
-                defaultValue={user?.name || 'Administrator'}
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Your full name"
                 className="mt-1 block w-full rounded-lg border border-gray-300 px-3.5 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
@@ -77,7 +117,7 @@ export default function UserProfilePage() {
               <input
                 type="email"
                 disabled
-                defaultValue={user?.email || 'admin@dify.local'}
+                value={user?.email || (isLoading ? 'Loading...' : '')}
                 className="mt-1 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-2 text-sm text-gray-500"
               />
               <p className="mt-1 text-xs text-gray-400">
@@ -89,7 +129,9 @@ export default function UserProfilePage() {
               <label className="block text-sm font-medium text-gray-700">Timezone</label>
               <input
                 type="text"
-                defaultValue={user?.timezone || 'UTC'}
+                value={timezone}
+                onChange={(e) => setTimezone(e.target.value)}
+                placeholder="UTC"
                 className="mt-1 block w-full rounded-lg border border-gray-300 px-3.5 py-2 text-sm text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
@@ -97,9 +139,10 @@ export default function UserProfilePage() {
             <div className="pt-2">
               <button
                 type="submit"
-                className="cursor-pointer rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500"
+                disabled={saving || isLoading}
+                className="cursor-pointer rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 disabled:opacity-50"
               >
-                Save Changes
+                {saving ? 'Saving...' : 'Save Changes'}
               </button>
             </div>
           </form>
@@ -120,9 +163,11 @@ export default function UserProfilePage() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-semibold text-gray-900">
-                  {workspace?.name || 'Default Workspace'}
+                  {workspace?.name || (isLoading ? 'Loading...' : 'My Workspace')}
                 </p>
-                <p className="text-xs text-gray-500">Workspace ID: {workspace?.id || 'default'}</p>
+                {workspace?.id && (
+                  <p className="text-xs text-gray-500">Workspace ID: {workspace.id}</p>
+                )}
               </div>
               <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800">
                 Active Plan: {workspace?.plan || 'Community / Self-Hosted'}
@@ -163,12 +208,12 @@ export default function UserProfilePage() {
           </div>
 
           <div className="mt-6">
-            <button
-              type="button"
-              className="cursor-pointer rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500"
+            <Link
+              href="/dashboard/apps"
+              className="inline-block rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500"
             >
-              Generate New API Key
-            </button>
+              Go to Studio & Apps
+            </Link>
           </div>
         </div>
       )}
