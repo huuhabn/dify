@@ -1,0 +1,74 @@
+# Use with docker-compose.middleware.yaml and middleware.env.
+# The frontend runs from source using `pnpm dev` at the repository root.
+services:
+  saas_storage_init:
+    image: busybox:latest
+    user: "0:0"
+    command: ["sh", "-c", "chown -R 1001:1001 /app/api/storage"]
+    volumes:
+      - saas_api_storage:/app/api/storage
+    restart: "no"
+
+  saas_api:
+    image: langgenius/dify-api:1.19.0
+    env_file:
+      - ../api/.env
+    environment: &saas_api_environment
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      MODE: api
+      MIGRATION_ENABLED: "true"
+      DB_HOST: db_postgres
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      CELERY_BROKER_URL: redis://:${REDIS_PASSWORD:-difyai123456}@redis:6379/1
+      PLUGIN_DAEMON_URL: http://plugin_daemon:5002
+      WEAVIATE_ENDPOINT: http://weaviate:8080
+      WEAVIATE_GRPC_ENDPOINT: grpc://weaviate:50051
+      CODE_EXECUTION_ENDPOINT: http://sandbox:8194
+      SSRF_PROXY_HTTP_URL: http://ssrf_proxy:3128
+      SSRF_PROXY_HTTPS_URL: http://ssrf_proxy:3128
+      SERVER_WORKER_AMOUNT: "1"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+    ports:
+      - "127.0.0.1:5001:5001"
+    volumes:
+      - saas_api_storage:/app/api/storage
+    depends_on:
+      saas_storage_init:
+        condition: service_completed_successfully
+      db_postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - default
+      - ssrf_proxy_network
+    restart: unless-stopped
+
+  saas_worker:
+    image: langgenius/dify-api:1.19.0
+    env_file:
+      - ../api/.env
+    environment:
+      <<: *saas_api_environment
+      MODE: worker
+      MIGRATION_ENABLED: "false"
+      CELERY_WORKER_AMOUNT: "1"
+    volumes:
+      - saas_api_storage:/app/api/storage
+    depends_on:
+      saas_api:
+        condition: service_healthy
+    networks:
+      - default
+      - ssrf_proxy_network
+    restart: unless-stopped
+
+volumes:
+  saas_api_storage:

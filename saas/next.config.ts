@@ -1,9 +1,29 @@
+import { env } from './src/env';
 import './src/libs/Env';
 import { withSentryConfig } from '@sentry/nextjs';
 import type { NextConfig } from 'next';
 
 // Define the base Next.js configuration
+const openapiLoader = { loader: '@dify/openapi-content-mapper/loader' };
+
 const baseConfig: NextConfig = {
+  agentRules: false,
+  basePath: env.NEXT_PUBLIC_BASE_PATH,
+  turbopack: {
+    rules: {
+      '*.openapi': { loaders: [openapiLoader], as: '*.js' },
+      '*.openapi-source': { loaders: [openapiLoader], as: '*.js' },
+      '*openapi-namespace.js': { loaders: [openapiLoader], as: '*.js' },
+    },
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /(?:\.openapi|\.openapi-source|openapi-namespace\.js)$/,
+      type: 'javascript/auto',
+      use: [openapiLoader],
+    });
+    return config;
+  },
   devIndicators: {
     position: 'bottom-right',
   },

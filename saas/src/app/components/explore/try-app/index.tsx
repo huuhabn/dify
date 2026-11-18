@@ -252,8 +252,8 @@ function TryApp(props: Props) {
     >
       <DialogContent
         initialFocus={detailTabRef}
-        // oxlint-disable-next-line shadcn/no-restyle -- Full-page Try App surface keeps its 8px inset.
-        className="h-dvh max-h-[calc(100dvh-1rem)] w-full max-w-[calc(100vw-1rem)] overflow-hidden p-2"
+        // oxlint-disable-next-line shadcn/no-restyle -- Template previews need a wider, bounded dialog for the preview and app details.
+        className="h-[80dvh] max-h-180 w-5xl overflow-hidden p-2"
       >
         <TrialAppAccessBoundary key={props.appId} appId={props.appId} onClose={props.onClose}>
           <TryAppContent {...props} detailTabRef={detailTabRef} />

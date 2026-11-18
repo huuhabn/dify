@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import type { ComponentProps } from 'react'
 import { useEffect } from 'react'
 import AudioBtn from '.'
-import { ensureMockAudioManager } from '../../../../.storybook/utils/audio-player-manager.mock'
+import { ensureMockAudioManager } from '../../../../../.storybook/utils/audio-player-manager.mock'
 
 ensureMockAudioManager()
 

@@ -5,7 +5,7 @@
   "scripts": {
     "check": "vp run check:cached",
     "check:fix": "vp run lint:eslint:fix && vp check --fix",
-    "dev": "concurrently -k -n vinext,proxy \"vp run dify-web#dev\" \"vp run dify-web#dev:proxy\"",
+    "dev": "pnpm --filter ai-agents-saas dev",
     "knip": "knip --workspace web",
     "knip:production": "knip --workspace web --production --include files",
     "knip:production-unused-check": "node ./packages/tooling/scripts/check-web-production-unused-after-knip-fix.ts",
@@ -18,7 +18,9 @@
     "lint:eslint": "eslint --concurrency=auto",
     "lint:eslint:fix": "eslint --fix --concurrency=auto",
     "lint:eslint:quiet": "eslint --quiet --concurrency=auto",
-    "type-check": "tsrs --noEmit"
+    "type-check": "tsrs --noEmit",
+    "dev:web": "concurrently -k -n vinext,proxy \"vp run dify-web#dev\" \"vp run dify-web#dev:proxy\"",
+    "dev:api": "docker compose -f docker/docker-compose.middleware.yaml -f docker/docker-compose.saas-dev.yaml --env-file docker/middleware.env -p dify-middlewares-dev up -d db_postgres redis plugin_daemon weaviate sandbox ssrf_proxy saas_api saas_worker"
   },
   "devDependencies": {
     "@dify/tooling": "workspace:*",

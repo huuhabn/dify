@@ -4,7 +4,7 @@ import {
   parseDetailSidebarMode,
 } from '@/app/components/detail-sidebar/cookie'
 import { cookies, headers } from '@/next/headers'
-import MainNavLayoutClient from './layout'
+import MainNavLayoutClient from './nav-layout'
 import { getPlatformFromUserAgent } from './shortcut-platform'
 
 export default async function MainNavLayout({

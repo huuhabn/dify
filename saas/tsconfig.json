@@ -72,6 +72,12 @@
       }
     ] // Enable Next.js TypeScript plugin
   },
+  "contentMappers": [
+    {
+      "package": "@dify/openapi-content-mapper",
+      "extensions": [".openapi", ".openapi-source", ".openapi-types"]
+    }
+  ],
   // Files to include/exclude from the project
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx", "**/*.test.ts", "**/*.test.tsx", "**/__tests__/**"],
   "include": [
