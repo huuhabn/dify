@@ -1,8 +1,10 @@
 allowBuilds:
   '@parcel/watcher': false
+  '@sentry/cli': false
   # i18next-resources-for-ts uses the published SWC native binaries.
   '@swc/core': false
   esbuild: false
+  lefthook: false
   sharp: false
 autoDedupe: true
 autoInstallPeers: false
@@ -39,6 +41,7 @@ trustPolicyExclude:
 verifyDepsBeforeRun: install
 packages:
   - web
+  - saas
   - e2e
   - sdks/nodejs-client
   - packages/*

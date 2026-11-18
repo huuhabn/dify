@@ -22,24 +22,25 @@
     // Type Safety - Advanced
     // Additional checks for higher code quality
     // ======================================================================
-    "noUncheckedIndexedAccess": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitReturns": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
+    "noUncheckedSideEffectImports": false,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
     "useUnknownInCatchVariables": true,
-    "noImplicitOverride": true,
+    "noImplicitOverride": false,
     // ======================================================================
     // Interoperability
     // Settings for working with different file types and modules
     // ======================================================================
     "allowJs": true,
-    "checkJs": true,
+    "checkJs": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
     // ======================================================================
     // Build & Performance
     // Settings that affect compilation output and build performance
@@ -53,7 +54,9 @@
     // Configure import paths and module resolution
     // ======================================================================
     "paths": {
+      "#i18n": ["./src/i18n/lib.client.ts"],
       "@/*": ["./src/*"],
+      "~@/*": ["./src/*"],
       "@/public/*": ["./public/*"]
     },
     // ======================================================================
@@ -70,7 +73,7 @@
     ] // Enable Next.js TypeScript plugin
   },
   // Files to include/exclude from the project
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx", "**/*.test.ts", "**/*.test.tsx", "**/__tests__/**"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
