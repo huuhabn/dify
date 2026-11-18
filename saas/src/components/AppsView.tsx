@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState, type FormEvent } from 'react';
+import { AppsService } from '@/services/apps.service';
+import type { AppMode } from '@/types/dify/app';
 
 export type AppItem = {
   id: string;
@@ -29,46 +31,12 @@ export function AppsView() {
 
   const fetchApps = async () => {
     try {
-      const res = await fetch('/console/api/apps?page=1&limit=30', {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      if (res.ok) {
-        const json = await res.json();
-        setApps(json.data || []);
+      const res = await AppsService.list(1, 30);
+      if (res?.data) {
+        setApps(res.data as unknown as AppItem[]);
       }
-    } catch {
-      // In development if backend not running, provide sample mock apps
-      setApps([
-        {
-          id: 'demo-1',
-          name: 'AI Customer Assistant',
-          mode: 'chat',
-          icon: '💬',
-          icon_background: '#EBF5FF',
-          description: 'Intelligent chatbot handling incoming support requests and answering FAQs.',
-          updated_at: Date.now() / 1000 - 3600,
-        },
-        {
-          id: 'demo-2',
-          name: 'Document Analysis Pipeline',
-          mode: 'workflow',
-          icon: '⚡',
-          icon_background: '#FEF3C7',
-          description: 'Automated workflow that parses documents, extracts entities, and generates summaries.',
-          updated_at: Date.now() / 1000 - 86400,
-        },
-        {
-          id: 'demo-3',
-          name: 'Research Deep Dive Agent',
-          mode: 'agent-chat',
-          icon: '🔬',
-          icon_background: '#EDE9FE',
-          description: 'Autonomous research agent with web browsing and synthesis tools.',
-          updated_at: Date.now() / 1000 - 172800,
-        },
-      ]);
+    } catch (err) {
+      console.error('Failed to fetch apps', err);
     } finally {
       setLoading(false);
     }
@@ -86,26 +54,13 @@ export function AppsView() {
     setCreateError(null);
 
     try {
-      const res = await fetch('/console/api/apps', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: newAppName.trim(),
-          description: newAppDesc.trim(),
-          mode: newAppMode,
-          icon: newAppMode === 'workflow' ? '⚡' : newAppMode === 'agent-chat' ? '🔬' : '💬',
-          icon_background: '#EBF5FF',
-        }),
+      await AppsService.create({
+        name: newAppName.trim(),
+        description: newAppDesc.trim(),
+        mode: newAppMode as AppMode,
+        icon: newAppMode === 'workflow' ? '⚡' : newAppMode === 'agent-chat' ? '🔬' : '💬',
+        icon_background: '#EBF5FF',
       });
-
-      if (!res.ok) {
-        const errJson = await res.json().catch(() => ({}));
-        setCreateError(errJson.message || 'Failed to create application');
-        setCreating(false);
-        return;
-      }
 
       // Success
       setIsModalOpen(false);
@@ -113,21 +68,8 @@ export function AppsView() {
       setNewAppDesc('');
       setNewAppMode('chat');
       await fetchApps();
-    } catch {
-      // Fallback local addition if offline
-      const mockNew: AppItem = {
-        id: `app-${Date.now()}`,
-        name: newAppName.trim(),
-        description: newAppDesc.trim(),
-        mode: newAppMode,
-        icon: newAppMode === 'workflow' ? '⚡' : newAppMode === 'agent-chat' ? '🔬' : '💬',
-        icon_background: '#EBF5FF',
-        updated_at: Date.now() / 1000,
-      };
-      setApps((prev) => [mockNew, ...prev]);
-      setIsModalOpen(false);
-      setNewAppName('');
-      setNewAppDesc('');
+    } catch (err) {
+      setCreateError(err instanceof Error ? err.message : 'Failed to create application');
     } finally {
       setCreating(false);
     }

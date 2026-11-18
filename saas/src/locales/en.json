@@ -113,7 +113,19 @@
   },
   "DashboardLayout": {
     "meta_title": "Dashboard",
-    "meta_description": "Manage your account from the dashboard."
+    "meta_description": "Manage your account from the dashboard.",
+    "nav_apps": "Studio & Apps",
+    "nav_explore": "Explore & Templates",
+    "nav_knowledge": "Knowledge & Datasets",
+    "nav_tools": "Tools & Providers",
+    "nav_plugins": "Plugins & Extensions",
+    "nav_annotations": "Annotations & Cache",
+    "nav_snippets": "Code Snippets",
+    "nav_members": "Team Members",
+    "nav_profile": "Account & Settings",
+    "sign_out": "Sign out",
+    "loading": "Loading...",
+    "language": "Language"
   },
   "LocaleSwitcher": {
     "change_language": "Change language"

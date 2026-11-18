@@ -113,7 +113,19 @@
   },
   "DashboardLayout": {
     "meta_title": "Bảng điều khiển",
-    "meta_description": "Quản lý các ứng dụng AI và kho tri thức."
+    "meta_description": "Quản lý các ứng dụng AI và kho tri thức.",
+    "nav_apps": "Studio & Ứng dụng",
+    "nav_explore": "Khám phá & Mẫu",
+    "nav_knowledge": "Tri thức & Dữ liệu",
+    "nav_tools": "Công cụ & Nhà cung cấp",
+    "nav_plugins": "Plugin & Mở rộng",
+    "nav_annotations": "Chú thích & Bộ nhớ đệm",
+    "nav_snippets": "Đoạn mã mẫu",
+    "nav_members": "Thành viên nhóm",
+    "nav_profile": "Tài khoản & Cài đặt",
+    "sign_out": "Đăng xuất",
+    "loading": "Đang tải...",
+    "language": "Ngôn ngữ"
   },
   "LocaleSwitcher": {
     "change_language": "Đổi ngôn ngữ"

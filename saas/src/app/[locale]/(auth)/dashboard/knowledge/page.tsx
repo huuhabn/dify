@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from '@/libs/I18nNavigation';
+import { DatasetsService } from '@/services/datasets.service';
 
 type DatasetItem = {
   id: string;
@@ -20,33 +21,12 @@ export default function KnowledgePage() {
   useEffect(() => {
     async function loadDatasets() {
       try {
-        const res = await fetch('/console/api/datasets?page=1&limit=30');
-        if (res.ok) {
-          const json = await res.json();
-          setDatasets(json.data || []);
+        const res = await DatasetsService.list(1, 30);
+        if (res?.data) {
+          setDatasets(res.data as unknown as DatasetItem[]);
         }
-      } catch {
-        // Fallback sample data
-        setDatasets([
-          {
-            id: 'ds-1',
-            name: 'Company Product Documentation',
-            description: 'Comprehensive technical manuals and API reference guides for AI integration.',
-            document_count: 24,
-            word_count: 142000,
-            updated_at: Date.now() / 1000 - 3600 * 4,
-            permission: 'only_me',
-          },
-          {
-            id: 'ds-2',
-            name: 'Customer Support FAQ & Knowledge Base',
-            description: 'Customer inquiries, resolutions, refund policies, and troubleshooting procedures.',
-            document_count: 58,
-            word_count: 89000,
-            updated_at: Date.now() / 1000 - 86400 * 2,
-            permission: 'all_team_members',
-          },
-        ]);
+      } catch (err) {
+        console.error('Failed to load datasets', err);
       } finally {
         setLoading(false);
       }

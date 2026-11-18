@@ -113,7 +113,19 @@
   },
   "DashboardLayout": {
     "meta_title": "Tableau de bord",
-    "meta_description": "Gérez votre compte depuis le tableau de bord."
+    "meta_description": "Gérez votre compte depuis le tableau de bord.",
+    "nav_apps": "Studio & Applications",
+    "nav_explore": "Explorer & Modèles",
+    "nav_knowledge": "Connaissances & Données",
+    "nav_tools": "Outils & Fournisseurs",
+    "nav_plugins": "Plugins & Extensions",
+    "nav_annotations": "Annotations & Cache",
+    "nav_snippets": "Extraits de code",
+    "nav_members": "Membres de l'équipe",
+    "nav_profile": "Compte & Paramètres",
+    "sign_out": "Déconnexion",
+    "loading": "Chargement...",
+    "language": "Langue"
   },
   "LocaleSwitcher": {
     "change_language": "Changer de langue"

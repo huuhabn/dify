@@ -113,7 +113,19 @@
   },
   "DashboardLayout": {
     "meta_title": "لوحة التحكم",
-    "meta_description": "إدارة حسابك وتطبيقاتك من لوحة التحكم."
+    "meta_description": "إدارة حسابك وتطبيقاتك من لوحة التحكم.",
+    "nav_apps": "الاستوديو والتطبيقات",
+    "nav_explore": "استكشاف والقوالب",
+    "nav_knowledge": "المعرفة والبيانات",
+    "nav_tools": "الأدوات والمزودون",
+    "nav_plugins": "الإضافات والملحقات",
+    "nav_annotations": "التعليقات التوضيحية",
+    "nav_snippets": "مقتطفات التعليمات البرمجية",
+    "nav_members": "أعضاء الفريق",
+    "nav_profile": "الحساب والإعدادات",
+    "sign_out": "تسجيل الخروج",
+    "loading": "جارٍ التحميل...",
+    "language": "اللغة"
   },
   "LocaleSwitcher": {
     "change_language": "تغيير اللغة"

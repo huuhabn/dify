@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { ToolsService } from '@/services/tools.service';
 
 type ModelProviderModalProps = {
   isOpen: boolean;
@@ -22,21 +23,54 @@ export function ModelProviderModal({
   const [apiKey, setApiKey] = useState('');
   const [baseUrl, setBaseUrl] = useState('');
   const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
   if (!isOpen || !provider) return null;
 
   const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!apiKey.trim()) return;
+
     setSaving(true);
-    await new Promise((r) => setTimeout(r, 600));
-    setSaving(false);
-    setSuccess(true);
-    setTimeout(() => {
-      setSuccess(false);
-      onSuccess?.();
-      onClose();
-    }, 1200);
+    setError(null);
+
+    try {
+      const credentials: Record<string, string> = {
+        api_key: apiKey.trim(),
+      };
+      if (baseUrl.trim()) {
+        credentials.api_base = baseUrl.trim();
+        credentials.openai_api_base = baseUrl.trim();
+      }
+
+      await ToolsService.saveModelProviderCredentials(
+        provider.name,
+        credentials,
+        `${provider.name}-credential`,
+      );
+
+      setSaving(false);
+      setSuccess(true);
+      setTimeout(() => {
+        setSuccess(false);
+        setApiKey('');
+        setBaseUrl('');
+        onSuccess?.();
+        onClose();
+      }, 1000);
+    } catch (err: unknown) {
+      setSaving(false);
+      const message = err instanceof Error ? err.message : 'Validation failed. Please verify your credentials.';
+      setError(message);
+    }
+  };
+
+  const handleClose = () => {
+    if (saving) return;
+    setError(null);
+    setSuccess(false);
+    onClose();
   };
 
   return (
@@ -53,12 +87,18 @@ export function ModelProviderModal({
             </div>
           </div>
           <button
-            onClick={onClose}
+            onClick={handleClose}
             className="text-gray-400 hover:text-gray-600 rounded-lg p-1 text-sm cursor-pointer"
           >
             ✕
           </button>
         </div>
+
+        {error && (
+          <div className="mt-4 rounded-xl border border-red-200 bg-red-50 p-3 text-xs text-red-700">
+            {error}
+          </div>
+        )}
 
         {success ? (
           <div className="mt-6 rounded-xl border border-green-200 bg-green-50 p-4 text-center text-sm font-semibold text-green-800">
@@ -97,7 +137,7 @@ export function ModelProviderModal({
             <div className="flex justify-end gap-3 pt-4 border-t border-gray-100">
               <button
                 type="button"
-                onClick={onClose}
+                onClick={handleClose}
                 className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 cursor-pointer"
               >
                 Cancel
@@ -107,7 +147,7 @@ export function ModelProviderModal({
                 disabled={saving || !apiKey.trim()}
                 className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 disabled:opacity-50 cursor-pointer"
               >
-                {saving ? 'Testing Connection...' : 'Save & Validate'}
+                {saving ? 'Validating Connection...' : 'Save & Validate'}
               </button>
             </div>
           </form>
