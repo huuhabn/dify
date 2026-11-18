@@ -1,0 +1,89 @@
+{
+  "RootLayout": {
+    "home_link": "Trang chủ",
+    "about_link": "Giới thiệu",
+    "portfolio_link": "Hồ sơ năng lực",
+    "sign_in_link": "Đăng nhập",
+    "sign_up_link": "Đăng ký"
+  },
+  "BaseTemplate": {
+    "description": "Nền tảng Dify AI Agents SaaS xây dựng trên Next.js và Tailwind CSS v4",
+    "footer_text": "© {year} {name}. Phát triển với <author></author>.",
+    "main_navigation_label": "Thanh điều hướng chính"
+  },
+  "Index": {
+    "meta_title": "Dify AI Agents SaaS - Next.js & Tailwind CSS v4",
+    "meta_description": "Nền tảng xây dựng và vận hành ứng dụng AI, chatbot và workflow tự động hóa.",
+    "sponsors_title": "Nhà tài trợ & Đối tác",
+    "zap_emoji_label": "Tia sét"
+  },
+  "About": {
+    "meta_title": "Giới thiệu",
+    "meta_description": "Thông tin về dự án Dify SaaS Boilerplate",
+    "about_paragraph": "Chào mừng bạn đến với Dify SaaS. Nền tảng tích hợp trí tuệ nhân tạo hiện đại, tối ưu cho nhà phát triển.",
+    "translation_powered_by": "Bản dịch được cung cấp bởi"
+  },
+  "Portfolio": {
+    "meta_title": "Hồ sơ giải pháp",
+    "meta_description": "Khám phá các giải pháp AI đã triển khai",
+    "presentation": "Tổng hợp các dự án trợ lý ảo, RAG pipeline và workflow thông minh.",
+    "portfolio_name": "Dự án {name}",
+    "error_reporting_powered_by": "Giám sát lỗi bởi"
+  },
+  "PortfolioSlug": {
+    "meta_title": "Chi tiết dự án {slug}",
+    "meta_description": "Mô tả dự án {slug}",
+    "header": "Dự án {slug}",
+    "content": "Giải pháp ứng dụng mô hình ngôn ngữ lớn và đồ thị workflow DAG để tự động hóa quy trình nghiệp vụ.",
+    "code_review_powered_by": "Đánh giá mã nguồn bởi"
+  },
+  "SignIn": {
+    "meta_title": "Đăng nhập",
+    "meta_description": "Đăng nhập an toàn vào không gian làm việc Dify của bạn.",
+    "title": "Chào mừng trở lại",
+    "subtitle": "Đăng nhập để truy cập không gian làm việc AI",
+    "email_label": "Địa chỉ Email",
+    "email_placeholder": "ten@example.com",
+    "password_label": "Mật khẩu",
+    "password_placeholder": "Nhập mật khẩu của bạn",
+    "submit_button": "Đăng nhập",
+    "submitting_button": "Đang đăng nhập...",
+    "error_default": "Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin.",
+    "no_account": "Chưa có tài khoản?",
+    "sign_up_link": "Đăng ký",
+    "forgot_password_link": "Quên mật khẩu?"
+  },
+  "ForgotPassword": {
+    "meta_title": "Quên mật khẩu",
+    "meta_description": "Đặt lại mật khẩu để lấy lại quyền truy cập tài khoản.",
+    "title": "Đặt lại mật khẩu",
+    "subtitle": "Nhập email và chúng tôi sẽ gửi liên kết đặt lại mật khẩu cho bạn",
+    "email_label": "Địa chỉ Email",
+    "email_placeholder": "ten@example.com",
+    "submit_button": "Gửi liên kết",
+    "submitting_button": "Đang gửi...",
+    "error_default": "Không thể gửi email. Vui lòng kiểm tra lại địa chỉ email.",
+    "success_title": "Đã gửi email thành công",
+    "success_message": "Nếu tài khoản tồn tại cho {email}, bạn sẽ nhận được liên kết trong giây lát.",
+    "back_to_sign_in": "Quay lại đăng nhập"
+  },
+  "SignUp": {
+    "meta_title": "Đăng ký",
+    "meta_description": "Tạo tài khoản mới trong không gian làm việc Dify."
+  },
+  "Dashboard": {
+    "hello_message": "Xin chào {email}!",
+    "alternative_message": "Cần thêm tính năng cao cấp? Hãy thử phiên bản Pro.",
+    "max_message": "Hỗ trợ tự lưu trữ toàn diện với Dify SaaS."
+  },
+  "DashboardLayout": {
+    "meta_title": "Bảng điều khiển",
+    "meta_description": "Quản lý các ứng dụng AI và kho tri thức.",
+    "dashboard_link": "Ứng dụng & Studio",
+    "user_profile_link": "Cài đặt tài khoản",
+    "sign_out": "Đăng xuất"
+  },
+  "LocaleSwitcher": {
+    "change_language": "Đổi ngôn ngữ"
+  }
+}

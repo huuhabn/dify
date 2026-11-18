@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Link } from '@/libs/I18nNavigation';
 import { useAuth } from '@/context/AuthContext';
 
 export default function UserProfilePage() {
@@ -129,18 +130,17 @@ export default function UserProfilePage() {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900">Resource Limits</h3>
-            <div className="mt-3 grid grid-cols-2 gap-4 text-sm">
-              <div className="rounded-lg border border-gray-200 p-3">
-                <p className="text-xs text-gray-500 uppercase tracking-wider">Apps Created</p>
-                <p className="text-lg font-bold text-gray-900 mt-1">Unlimited</p>
-              </div>
-              <div className="rounded-lg border border-gray-200 p-3">
-                <p className="text-xs text-gray-500 uppercase tracking-wider">Vector Storage</p>
-                <p className="text-lg font-bold text-gray-900 mt-1">Self-Hosted</p>
-              </div>
+          <div className="pt-2 flex justify-between items-center border-t border-gray-100">
+            <div>
+              <p className="text-xs font-semibold text-gray-700">Team Collaboration</p>
+              <p className="text-2xs text-gray-400">Manage invitations, roles, and access control.</p>
             </div>
+            <Link
+              href="/dashboard/settings/members"
+              className="rounded-lg bg-blue-50 border border-blue-200 px-3.5 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-100"
+            >
+              Manage Members →
+            </Link>
           </div>
         </div>
       )}
