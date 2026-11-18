@@ -56,26 +56,8 @@ export default async function Index(props: IndexPageProps) {
         <li>🚀 Next.js with App Router support</li>
         <li>🔥 TypeScript for type checking</li>
         <li>💎 Tailwind CSS integration</li>
-        <li>
-          🔒 Authentication with{' '}
-          <a
-            className="font-bold text-blue-700 hover:border-b-2 hover:border-blue-700"
-            href="https://clerk.com?utm_source=github&amp;utm_medium=sponsorship&amp;utm_campaign=nextjs-boilerplate"
-          >
-            Clerk
-          </a>{' '}
-          (includes passwordless, social, and multi-factor auth)
-        </li>
-        <li>📦 ORM with DrizzleORM (PostgreSQL, SQLite, MySQL support)</li>
-        <li>
-          💽 Dev database with PGlite and production with{' '}
-          <a
-            className="font-bold text-blue-700 hover:border-b-2 hover:border-blue-700"
-            href="https://get.neon.com/BMFYNtx"
-          >
-            Neon
-          </a>
-        </li>
+        <li>🔒 Authentication with Dify Session & Reverse Proxy</li>
+        <li>🤖 Dify API Integration & Clean Architecture</li>
         <li>
           🌐 Multi-language support (i18n) with next-intl and{' '}
           <a

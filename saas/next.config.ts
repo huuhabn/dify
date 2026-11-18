@@ -20,8 +20,21 @@ const baseConfig: NextConfig = {
   logging: {
     browserToTerminal: process.env.BROWSER_TO_TERMINAL_DISABLED !== 'true',
   },
-  outputFileTracingIncludes: {
-    '/': ['./migrations/**/*'],
+  async rewrites() {
+    return [
+      {
+        source: '/console/api/:path*',
+        destination: 'http://127.0.0.1:5001/console/api/:path*',
+      },
+      {
+        source: '/api/:path*',
+        destination: 'http://127.0.0.1:5001/api/:path*',
+      },
+      {
+        source: '/files/:path*',
+        destination: 'http://127.0.0.1:5001/files/:path*',
+      },
+    ];
   },
 };
 

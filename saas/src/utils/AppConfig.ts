@@ -1,4 +1,3 @@
-import { enUS, frFR } from '@clerk/localizations';
 import type { LocalePrefixMode } from 'next-intl/routing';
 
 /** Locale prefix strategy for next-intl routing. */
@@ -13,14 +12,4 @@ export const AppConfig = {
     defaultLocale: 'en',
     localePrefix,
   },
-};
-
-const supportedLocales: Record<string, typeof enUS> = {
-  en: enUS,
-  fr: frFR,
-};
-
-export const ClerkLocalizations = {
-  defaultLocale: enUS,
-  supportedLocales,
 };
