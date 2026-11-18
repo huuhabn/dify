@@ -16,6 +16,7 @@ describe('Helpers', () => {
       const locale = 'fr';
 
       expect(getI18nPath(url, locale)).toBe(`/fr${url}`);
+      expect(getI18nPath(url, 'ar')).toBe(`/ar${url}`);
     });
   });
 });

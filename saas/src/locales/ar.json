@@ -1,0 +1,86 @@
+{
+  "RootLayout": {
+    "home_link": "الرئيسية",
+    "about_link": "حول",
+    "portfolio_link": "الأعمال",
+    "sign_in_link": "تسجيل الدخول",
+    "sign_up_link": "إنشاء حساب"
+  },
+  "BaseTemplate": {
+    "description": "قالب البداية لمشروع Next.js مع Tailwind CSS",
+    "footer_text": "© {year} {name}. تم التطوير بواسطة <author></author>.",
+    "main_navigation_label": "التنقل الرئيسي"
+  },
+  "Index": {
+    "meta_title": "عرض قالب Next.js",
+    "meta_description": "قالب Next.js هو الكود الأساسي المثالي لمشروعك. قم ببناء تطبيق React الخاص بك باستخدام إطار عمل Next.js.",
+    "sponsors_title": "الرعاة",
+    "zap_emoji_label": "برق"
+  },
+  "About": {
+    "meta_title": "حول",
+    "meta_description": "وصف صفحة حول",
+    "about_paragraph": "مرحبًا بكم في صفحتنا! نحن فريق من الأفراد المتحمسين المكرسين لإنشاء برمجيات مذهلة.",
+    "translation_powered_by": "الترجمة مدعومة بواسطة"
+  },
+  "Portfolio": {
+    "meta_title": "الأعمال",
+    "meta_description": "مرحبًا بكم في صفحة الأعمال!",
+    "presentation": "مرحبًا بكم في صفحة الأعمال الخاصة بي! ستجدون هنا مجموعة مختارة بعناية من أعمالي وإنجازاتي. من خلال هذا المعرض، أهدف إلى عرض خبرتي وإبداعي والقيمة التي يمكنني إضافتها لمشاريعكم.",
+    "portfolio_name": "معرض {name}",
+    "error_reporting_powered_by": "تقارير الأخطاء مدعومة بواسطة"
+  },
+  "PortfolioSlug": {
+    "meta_title": "معرض {slug}",
+    "meta_description": "وصف معرض {slug}",
+    "header": "معرض {slug}",
+    "content": "تم إنشاء مجموعة من المواد الترويجية وعناصر الهوية البصرية لحدث مؤسسي. تم تصميم مظهر موحد يشمل الشعار والملصقات واللافتات والأصول الرقمية مع دمج هوية العميل.",
+    "code_review_powered_by": "مراجعة الكود مدعومة بواسطة"
+  },
+  "SignIn": {
+    "meta_title": "تسجيل الدخول",
+    "meta_description": "سجل الدخول إلى حسابك بسلاسة من خلال عملية تسجيل الدخول سهلة الاستخدام.",
+    "title": "مرحبًا بعودتك",
+    "subtitle": "سجل الدخول للوصول إلى مساحة عمل الذكاء الاصطناعي",
+    "email_label": "البريد الإلكتروني",
+    "email_placeholder": "name@example.com",
+    "password_label": "كلمة المرور",
+    "password_placeholder": "أدخل كلمة المرور",
+    "submit_button": "تسجيل الدخول",
+    "submitting_button": "جاري تسجيل الدخول...",
+    "error_default": "فشل تسجيل الدخول. يرجى التحقق من بياناتك.",
+    "no_account": "ليس لديك حساب؟",
+    "sign_up_link": "إنشاء حساب",
+    "forgot_password_link": "نسيت كلمة المرور؟"
+  },
+  "ForgotPassword": {
+    "meta_title": "نسيت كلمة المرور",
+    "meta_description": "أعد ضبط كلمة المرور لاستعادة الوصول إلى حسابك.",
+    "title": "إعادة تعيين كلمة المرور",
+    "subtitle": "أدخل بريدك الإلكتروني وسنرسل لك رابط إعادة التعيين",
+    "email_label": "البريد الإلكتروني",
+    "email_placeholder": "name@example.com",
+    "submit_button": "إرسال رابط إعادة التعيين",
+    "submitting_button": "جاري الإرسال...",
+    "error_default": "فشل إرسال رابط إعادة التعيين. يرجى التحقق من بريدك الإلكتروني.",
+    "success_title": "تم إرسال البريد الإلكتروني",
+    "success_message": "إذا كان هناك حساب مسجل لـ {email}، فستتلقى رابط إعادة التعيين قريبًا.",
+    "back_to_sign_in": "العودة لتسجيل الدخول"
+  },
+  "SignUp": {
+    "meta_title": "إنشاء حساب",
+    "meta_description": "أنشئ حسابك بسهولة من خلال عملية التسجيل السلسة."
+  },
+  "Dashboard": {
+    "hello_message": "مرحبًا {email}!",
+    "alternative_message": "هل تحتاج إلى ميزات متقدمة؟ فرق متعددة المستأجرين، أدوار وصلاحيات، Shadcn UI، أمان الأنواع الكامل مع oRPC، دفع Stripe، والوضع الداكن/الفاتح. جرب <url></url>.",
+    "max_message": "أو هل تحتاج إلى حزمة مصادقة مستضافة ذاتيًا (Better Auth)؟ جرب <url></url>."
+  },
+  "DashboardLayout": {
+    "meta_title": "لوحة التحكم",
+    "meta_description": "إدارة حسابك وتطبيقاتك من لوحة التحكم."
+  },
+  "LocaleSwitcher": {
+    "change_language": "تغيير اللغة"
+  }
+}

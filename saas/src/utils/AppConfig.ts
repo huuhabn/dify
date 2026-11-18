@@ -8,7 +8,7 @@ const localePrefix: LocalePrefixMode = 'as-needed';
 export const AppConfig = {
   name: 'Nextjs Starter',
   i18n: {
-    locales: ['en', 'fr', 'vi'],
+    locales: ['en', 'fr', 'vi', 'ar'],
     defaultLocale: 'en',
     localePrefix,
   },
