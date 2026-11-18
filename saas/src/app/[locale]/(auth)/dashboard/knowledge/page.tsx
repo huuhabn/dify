@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Link } from '@/libs/I18nNavigation';
 
 type DatasetItem = {
   id: string;
@@ -136,12 +137,12 @@ export default function KnowledgePage() {
                       : 'N/A'}
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <button
-                      type="button"
-                      className="font-medium text-blue-600 hover:text-blue-500 cursor-pointer"
+                    <Link
+                      href={`/dashboard/knowledge/${item.id}`}
+                      className="font-medium text-blue-600 hover:text-blue-500"
                     >
                       View Details →
-                    </button>
+                    </Link>
                   </td>
                 </tr>
               ))
