@@ -39,7 +39,18 @@
   },
   "SignIn": {
     "meta_title": "Sign in",
-    "meta_description": "Seamlessly sign in to your account with our user-friendly login process."
+    "meta_description": "Seamlessly sign in to your account with our user-friendly login process.",
+    "title": "Welcome back",
+    "subtitle": "Sign in to access your AI workspace",
+    "email_label": "Email address",
+    "email_placeholder": "name@example.com",
+    "password_label": "Password",
+    "password_placeholder": "Enter your password",
+    "submit_button": "Sign in",
+    "submitting_button": "Signing in...",
+    "error_default": "Failed to sign in. Please check your credentials.",
+    "no_account": "Don't have an account?",
+    "sign_up_link": "Sign up"
   },
   "SignUp": {
     "meta_title": "Sign up",

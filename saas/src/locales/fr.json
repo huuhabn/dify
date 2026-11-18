@@ -39,7 +39,18 @@
   },
   "SignIn": {
     "meta_title": "Se connecter",
-    "meta_description": "Connectez-vous à votre compte avec facilité."
+    "meta_description": "Connectez-vous à votre compte avec facilité.",
+    "title": "Bienvenue",
+    "subtitle": "Connectez-vous pour accéder à votre espace IA",
+    "email_label": "Adresse e-mail",
+    "email_placeholder": "nom@example.com",
+    "password_label": "Mot de passe",
+    "password_placeholder": "Entrez votre mot de passe",
+    "submit_button": "Se connecter",
+    "submitting_button": "Connexion en cours...",
+    "error_default": "Échec de la connexion. Veuillez vérifier vos identifiants.",
+    "no_account": "Vous n'avez pas de compte ?",
+    "sign_up_link": "S'inscrire"
   },
   "SignUp": {
     "meta_title": "S'inscrire",
