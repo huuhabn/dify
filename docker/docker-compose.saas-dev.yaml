@@ -29,6 +29,12 @@ services:
       SSRF_PROXY_HTTP_URL: http://ssrf_proxy:3128
       SSRF_PROXY_HTTPS_URL: http://ssrf_proxy:3128
       SERVER_WORKER_AMOUNT: "1"
+      MAIL_TYPE: "smtp"
+      MAIL_DEFAULT_SEND_FROM: "no-reply@dify.ai"
+      SMTP_SERVER: "host.docker.internal"
+      SMTP_PORT: "1025"
+      SMTP_USE_TLS: "false"
+      SMTP_OPPORTUNISTIC_TLS: "false"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5001/health"]
       interval: 5s
