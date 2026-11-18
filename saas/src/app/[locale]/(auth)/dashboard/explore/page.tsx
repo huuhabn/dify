@@ -107,10 +107,16 @@ export default function ExplorePage() {
   }, [selectedCategory]);
 
   const filtered = templates.filter((tpl) => {
-    const matchCategory = selectedCategory === 'all' || tpl.category === selectedCategory;
+    const matchCategory =
+      selectedCategory === 'all' ||
+      tpl.category === selectedCategory ||
+      (Array.isArray((tpl as { categories?: string[] }).categories) &&
+        (tpl as { categories?: string[] }).categories?.includes(selectedCategory));
+    const query = searchQuery.trim().toLowerCase();
     const matchQuery =
-      tpl.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      tpl.description.toLowerCase().includes(searchQuery.toLowerCase());
+      !query ||
+      Boolean(tpl.name && tpl.name.toLowerCase().includes(query)) ||
+      Boolean(tpl.description && tpl.description.toLowerCase().includes(query));
     return matchCategory && matchQuery;
   });
 

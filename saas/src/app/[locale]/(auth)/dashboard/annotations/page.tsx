@@ -151,10 +151,12 @@ export default function AnnotationsPage() {
 
   const totalHits = annotations.reduce((sum, item) => sum + (item.hit_count || 0), 0);
 
+  const query = searchQuery.trim().toLowerCase();
   const filtered = annotations.filter(
     (item) =>
-      item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.answer.toLowerCase().includes(searchQuery.toLowerCase())
+      !query ||
+      (item.question?.toLowerCase() || '').includes(query) ||
+      (item.answer?.toLowerCase() || '').includes(query)
   );
 
   return (

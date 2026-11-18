@@ -172,14 +172,17 @@ export default function PluginsPage() {
 
   const filtered = plugins.filter((plugin) => {
     if (activeTab === 'installed' && !plugin.installed) return false;
-    if (categoryFilter !== 'all' && plugin.declaration.category !== categoryFilter) return false;
+    if (categoryFilter !== 'all' && plugin.declaration?.category !== categoryFilter) return false;
+    const name = plugin.declaration?.name || '';
     const desc =
-      typeof plugin.declaration.description === 'string'
+      typeof plugin.declaration?.description === 'string'
         ? plugin.declaration.description
-        : JSON.stringify(plugin.declaration.description);
+        : JSON.stringify(plugin.declaration?.description || '');
+    const query = searchQuery.trim().toLowerCase();
     const matchesSearch =
-      plugin.declaration.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      desc.toLowerCase().includes(searchQuery.toLowerCase());
+      !query ||
+      name.toLowerCase().includes(query) ||
+      desc.toLowerCase().includes(query);
     return matchesSearch;
   });
 

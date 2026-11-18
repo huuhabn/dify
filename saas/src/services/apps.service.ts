@@ -1,5 +1,5 @@
 import { request } from './api-client';
-import type { AppDetail, AppTemplate, CreateAppRequest, UpdateAppRequest } from '@/types/dify/app';
+import type { AppDetail, AppMode, AppTemplate, CreateAppRequest, UpdateAppRequest } from '@/types/dify/app';
 
 export type AppsListResponse = {
   data: AppDetail[];
@@ -58,9 +58,47 @@ export const AppsService = {
   },
 
   async listRecommendedApps(category?: string): Promise<{ categories: string[]; recommended_apps: AppTemplate[] }> {
-    return request('/console/api/explore/apps', {
+    const res = await request<{
+      categories?: string[];
+      recommended_apps?: Array<{
+        app?: {
+          id: string;
+          name?: string;
+          mode?: AppMode;
+          icon?: string;
+          icon_background?: string;
+        };
+        app_id?: string;
+        id?: string;
+        name?: string;
+        description?: string;
+        category?: string;
+        categories?: string[];
+        copyright?: string;
+        author?: string;
+        mode?: AppMode;
+        icon?: string;
+        icon_background?: string;
+      }>;
+    }>('/console/api/explore/apps', {
       params: category && category !== 'all' ? { category } : undefined,
     });
+
+    const normalizedApps: AppTemplate[] = (res?.recommended_apps || []).map((item) => ({
+      id: item.app?.id || item.app_id || item.id || '',
+      name: item.app?.name || item.name || 'Untitled App',
+      description: item.description || '',
+      mode: item.app?.mode || item.mode || 'chat',
+      icon: item.app?.icon || item.icon || '🤖',
+      icon_background: item.app?.icon_background || item.icon_background || '#EFF6FF',
+      category: item.categories?.[0] || item.category || 'all',
+      author: item.copyright || item.author || 'Dify Community',
+    }));
+
+    return {
+      categories: res?.categories || [],
+      recommended_apps: normalizedApps,
+    };
   },
 
   async installAppFromTemplate(app_id: string, name?: string): Promise<{ id: string; app: AppDetail }> {

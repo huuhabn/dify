@@ -107,9 +107,11 @@ export default function SnippetsPage() {
 
   const filtered = snippets.filter((s) => {
     const matchCat = selectedCategory === 'all' || s.category === selectedCategory;
+    const query = searchQuery.trim().toLowerCase();
     const matchSearch =
-      s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      s.content.toLowerCase().includes(searchQuery.toLowerCase());
+      !query ||
+      (s.title?.toLowerCase() || '').includes(query) ||
+      (s.content?.toLowerCase() || '').includes(query);
     return matchCat && matchSearch;
   });
 
