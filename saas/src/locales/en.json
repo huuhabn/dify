@@ -50,7 +50,22 @@
     "submitting_button": "Signing in...",
     "error_default": "Failed to sign in. Please check your credentials.",
     "no_account": "Don't have an account?",
-    "sign_up_link": "Sign up"
+    "sign_up_link": "Sign up",
+    "forgot_password_link": "Forgot password?"
+  },
+  "ForgotPassword": {
+    "meta_title": "Forgot Password",
+    "meta_description": "Reset your password to regain access to your account.",
+    "title": "Reset password",
+    "subtitle": "Enter your email and we'll send you a reset link",
+    "email_label": "Email address",
+    "email_placeholder": "name@example.com",
+    "submit_button": "Send reset link",
+    "submitting_button": "Sending...",
+    "error_default": "Failed to send reset link. Please check your email.",
+    "success_title": "Reset email sent",
+    "success_message": "If an account exists for {email}, you will receive a reset link shortly.",
+    "back_to_sign_in": "Back to sign in"
   },
   "SignUp": {
     "meta_title": "Sign up",

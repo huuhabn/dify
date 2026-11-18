@@ -50,7 +50,22 @@
     "submitting_button": "Connexion en cours...",
     "error_default": "Échec de la connexion. Veuillez vérifier vos identifiants.",
     "no_account": "Vous n'avez pas de compte ?",
-    "sign_up_link": "S'inscrire"
+    "sign_up_link": "S'inscrire",
+    "forgot_password_link": "Mot de passe oublié ?"
+  },
+  "ForgotPassword": {
+    "meta_title": "Mot de passe oublié",
+    "meta_description": "Réinitialisez votre mot de passe pour accéder à votre compte.",
+    "title": "Réinitialiser le mot de passe",
+    "subtitle": "Entrez votre e-mail et nous vous enverrons un lien de réinitialisation",
+    "email_label": "Adresse e-mail",
+    "email_placeholder": "nom@example.com",
+    "submit_button": "Envoyer le lien",
+    "submitting_button": "Envoi en cours...",
+    "error_default": "Échec de l'envoi du lien. Veuillez vérifier votre adresse e-mail.",
+    "success_title": "E-mail de réinitialisation envoyé",
+    "success_message": "Si un compte existe pour {email}, vous recevrez un lien sous peu.",
+    "back_to_sign_in": "Retour à la connexion"
   },
   "SignUp": {
     "meta_title": "S'inscrire",

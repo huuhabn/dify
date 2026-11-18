@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import React, { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import { Link, useRouter } from '@/libs/I18nNavigation';
 
 export function SignInForm() {
@@ -13,7 +13,7 @@ export function SignInForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
@@ -102,12 +102,20 @@ export function SignInForm() {
         </div>
 
         <div>
-          <label
-            htmlFor="password"
-            className="block text-sm font-medium text-gray-700"
-          >
-            {t('password_label')}
-          </label>
+          <div className="flex items-center justify-between">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700"
+            >
+              {t('password_label')}
+            </label>
+            <Link
+              href="/forgot-password"
+              className="text-xs font-medium text-blue-600 hover:text-blue-500"
+            >
+              {t('forgot_password_link')}
+            </Link>
+          </div>
           <input
             id="password"
             type="password"
