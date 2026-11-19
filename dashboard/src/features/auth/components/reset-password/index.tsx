@@ -37,7 +37,7 @@ export function ResetPassword() {
           <p className='mx-auto px-4 text-center text-xs text-muted-foreground'>
             Remember your password?{' '}
             <Link
-              href='/sign-in'
+              href='/signin'
               className='font-medium text-primary underline underline-offset-4 hover:opacity-85'
             >
               {t('login:signBtn', 'Sign in')}

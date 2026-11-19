@@ -43,14 +43,34 @@ const baseConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/sign-in',
+        destination: '/signin',
+        permanent: true
+      },
+      {
+        source: '/sign-up',
+        destination: '/signup',
+        permanent: true
+      },
+      {
         source: '/auth/sign-in',
-        destination: '/sign-in',
-        permanent: false
+        destination: '/signin',
+        permanent: true
+      },
+      {
+        source: '/auth/signin',
+        destination: '/signin',
+        permanent: true
       },
       {
         source: '/auth/sign-up',
-        destination: '/sign-up',
-        permanent: false
+        destination: '/signup',
+        permanent: true
+      },
+      {
+        source: '/auth/signup',
+        destination: '/signup',
+        permanent: true
       },
       {
         source: '/auth/forgot-password',
@@ -65,16 +85,6 @@ const baseConfig: NextConfig = {
       {
         source: '/auth/otp',
         destination: '/otp',
-        permanent: false
-      },
-      {
-        source: '/signin',
-        destination: '/sign-in',
-        permanent: false
-      },
-      {
-        source: '/signup',
-        destination: '/sign-up',
         permanent: false
       }
     ];

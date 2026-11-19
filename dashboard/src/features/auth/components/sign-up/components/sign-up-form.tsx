@@ -35,6 +35,16 @@ export function SignUpForm({
   const router = useRouter();
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
+  const getOAuthUrl = (provider: 'github' | 'google') => {
+    const params = new URLSearchParams();
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz) params.set('timezone', tz);
+    } catch {}
+    params.set('language', 'en-US');
+    return `/console/api/oauth/login/${provider}?${params.toString()}`;
+  };
+
   const setupMutation = useMutation({
     ...authMutations.setup,
     onSuccess: () => {
@@ -115,9 +125,8 @@ export function SignUpForm({
         <form.AppField
           name='password'
           children={(field) => (
-            <field.TextField
+            <field.PasswordField
               label={t('login:password', 'Password')}
-              type='password'
               placeholder='••••••••'
               autoComplete='new-password'
               disabled={isLoading}
@@ -128,9 +137,8 @@ export function SignUpForm({
         <form.AppField
           name='confirmPassword'
           children={(field) => (
-            <field.TextField
+            <field.PasswordField
               label={t('login:confirmPassword', 'Confirm Password')}
-              type='password'
               placeholder='••••••••'
               autoComplete='new-password'
               disabled={isLoading}
@@ -160,10 +168,24 @@ export function SignUpForm({
       </div>
 
       <div className='grid grid-cols-2 gap-2'>
-        <Button variant='outline' type='button' disabled={isLoading}>
+        <Button
+          variant='outline'
+          type='button'
+          disabled={isLoading}
+          onClick={() => {
+            window.location.href = getOAuthUrl('github');
+          }}
+        >
           <IconGithub className='size-4 me-2' /> GitHub
         </Button>
-        <Button variant='outline' type='button' disabled={isLoading}>
+        <Button
+          variant='outline'
+          type='button'
+          disabled={isLoading}
+          onClick={() => {
+            window.location.href = getOAuthUrl('google');
+          }}
+        >
           <IconGoogle className='size-4 me-2' /> Google
         </Button>
       </div>

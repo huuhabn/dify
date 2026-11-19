@@ -47,6 +47,7 @@ export async function consoleApiClient<T>(
 ): Promise<T> {
   const { skipAuth = false, params, headers, ...restOptions } = options;
   const token = typeof window !== 'undefined' ? Cookies.get('console_token') : undefined;
+  const csrfToken = typeof window !== 'undefined' ? Cookies.get('csrf_token') : undefined;
 
   const resolvedHeaders: Record<string, string> = {
     'Content-Type': 'application/json',
@@ -54,7 +55,12 @@ export async function consoleApiClient<T>(
     ...(headers as Record<string, string>)
   };
 
-  if (!skipAuth && token) {
+  if (csrfToken) {
+    resolvedHeaders['X-CSRF-Token'] = csrfToken;
+  }
+
+  // Only pass Authorization header if token is an actual JWT string (not placeholder '1' or 'logged_in')
+  if (!skipAuth && token && token !== '1' && token !== 'logged_in') {
     resolvedHeaders.Authorization = `Bearer ${token}`;
   }
 
@@ -64,7 +70,7 @@ export async function consoleApiClient<T>(
   try {
     res = await fetch(url, {
       headers: resolvedHeaders,
-      credentials: 'same-origin',
+      credentials: 'include',
       ...restOptions
     });
   } catch (netErr: any) {

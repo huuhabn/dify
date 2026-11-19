@@ -50,7 +50,7 @@ export function ResetPasswordForm({
       toast.success(
         t('login:resetPasswordSuccess', 'Password has been reset successfully!')
       );
-      router.push('/sign-in');
+      router.push('/signin');
     },
     onError: (err: any) => {
       const msg =

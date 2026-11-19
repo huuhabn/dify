@@ -3,13 +3,6 @@ import type { NextRequest } from 'next/server';
 
 const PUBLIC_PATHS = [
   '/signin',
-  '/sign-in',
-  '/signup',
-  '/sign-up',
-  '/reset-password',
-  '/forgot-password',
-  '/otp',
-  '/signin',
   '/signup',
   '/reset-password',
   '/forgot-password',
@@ -33,14 +26,20 @@ export default function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
+  const token =
+    request.cookies.get('access_token')?.value ||
+    request.cookies.get('csrf_token')?.value ||
+    request.cookies.get('console_token')?.value;
+
+  const isAuthPage = pathname === '/signin' || pathname === '/signup';
+  if (token && isAuthPage) {
+    return NextResponse.redirect(new URL('/dashboard/apps', request.url));
+  }
+
   const isPublic = PUBLIC_PATHS.some((p) => pathname.startsWith(p));
   if (isPublic) {
     return NextResponse.next();
   }
-
-  const token =
-    request.cookies.get('access_token')?.value ||
-    request.cookies.get('console_token')?.value;
 
   if (!token) {
     const signInUrl = new URL('/signin', request.url);

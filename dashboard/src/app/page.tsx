@@ -5,6 +5,7 @@ export default async function Page() {
   const cookieStore = await cookies();
   const token =
     cookieStore.get('access_token')?.value ||
+    cookieStore.get('csrf_token')?.value ||
     cookieStore.get('console_token')?.value;
 
   if (!token) {

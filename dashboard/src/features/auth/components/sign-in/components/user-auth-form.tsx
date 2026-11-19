@@ -38,14 +38,24 @@ export function UserAuthForm({
   const targetRedirect = redirectTo || searchParams.get('redirect') || '/dashboard/apps';
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
+  const getOAuthUrl = (provider: 'github' | 'google') => {
+    const params = new URLSearchParams();
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz) params.set('timezone', tz);
+    } catch {}
+    params.set('language', 'en-US');
+    return `/console/api/oauth/login/${provider}?${params.toString()}`;
+  };
+
   const loginMutation = useMutation({
     ...authMutations.login,
     onSuccess: (data) => {
       if (data?.result === 'success' || data?.data?.access_token) {
-        Cookies.set('console_token', data?.data?.access_token || 'logged_in', { expires: 7 });
+        Cookies.set('console_token', data?.data?.access_token || '1', { expires: 7 });
         toast.success(t('login:signBtn', 'Signed in successfully!'));
         queryClient.invalidateQueries({ queryKey: ['auth'] });
-        router.push(targetRedirect);
+        window.location.href = targetRedirect;
       } else {
         toast.error(t('login:error.invalidPassword', 'Login failed. Please check your credentials.'));
       }
@@ -108,9 +118,8 @@ export function UserAuthForm({
           <form.AppField
             name='password'
             children={(field) => (
-              <field.TextField
+              <field.PasswordField
                 label={t('login:password', 'Password')}
-                type='password'
                 placeholder='••••••••'
                 disabled={isLoading}
               />
@@ -118,7 +127,7 @@ export function UserAuthForm({
           />
           <Link
             href='/forgot-password'
-            className='absolute inset-e-0 top-1 text-xs font-medium text-muted-foreground hover:text-primary transition-colors text-end'
+            className='absolute inset-e-0 top-1 text-xs font-medium text-muted-foreground hover:text-primary transition-colors text-end z-10'
           >
             {t('login:forget', 'Forgot password?')}
           </Link>
@@ -146,10 +155,24 @@ export function UserAuthForm({
       </div>
 
       <div className='grid grid-cols-2 gap-2'>
-        <Button variant='outline' type='button' disabled={isLoading}>
+        <Button
+          variant='outline'
+          type='button'
+          disabled={isLoading}
+          onClick={() => {
+            window.location.href = getOAuthUrl('github');
+          }}
+        >
           <IconGithub className='size-4 me-2' /> GitHub
         </Button>
-        <Button variant='outline' type='button' disabled={isLoading}>
+        <Button
+          variant='outline'
+          type='button'
+          disabled={isLoading}
+          onClick={() => {
+            window.location.href = getOAuthUrl('google');
+          }}
+        >
           <IconGoogle className='size-4 me-2' /> Google
         </Button>
       </div>
