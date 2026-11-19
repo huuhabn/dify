@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
-import { ForgotPassword } from '@/features/auth/components/forgot-password';
+import { ResetPassword } from '@/features/auth/components/reset-password';
 
 export const metadata: Metadata = {
   title: 'Reset Password | Dify Console',
-  description: 'Reset your Dify account password.'
+  description: 'Set a new password for your Dify account.'
 };
 
 export default function Page() {
-  return <ForgotPassword />;
+  return <ResetPassword />;
 }

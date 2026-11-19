@@ -24,10 +24,10 @@ export function Otp() {
       <Card className='w-full max-w-sm gap-4 border-border bg-card'>
         <CardHeader>
           <CardTitle className='text-lg font-semibold tracking-tight'>
-            Two-factor Authentication
+            Verification Code
           </CardTitle>
           <CardDescription>
-            Please enter the 6-digit authentication code.{' '}
+            Please enter the 6-digit verification code.{' '}
             {email ? (
               <>We sent the code to <strong className='text-foreground'>{email}</strong>.</>
             ) : (
@@ -42,7 +42,7 @@ export function Otp() {
           <p className='mx-auto px-4 text-center text-xs text-muted-foreground'>
             Haven't received it?{' '}
             <Link
-              href='/signin'
+              href='/sign-in'
               className='font-medium text-primary underline underline-offset-4 hover:opacity-85'
             >
               Back to Sign in
