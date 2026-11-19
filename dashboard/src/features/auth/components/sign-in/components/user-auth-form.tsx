@@ -117,7 +117,7 @@ export function UserAuthForm({
             )}
           />
           <Link
-            href='/auth/forgot-password'
+            href='/forgot-password'
             className='absolute inset-e-0 top-1 text-xs font-medium text-muted-foreground hover:text-primary transition-colors text-end'
           >
             {t('login:forget', 'Forgot password?')}

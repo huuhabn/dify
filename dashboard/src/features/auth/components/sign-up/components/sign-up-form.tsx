@@ -39,7 +39,7 @@ export function SignUpForm({
     ...authMutations.setup,
     onSuccess: () => {
       toast.success(t('login:signup.signUpSuccess', 'Account created successfully! Please sign in.'));
-      router.push('/auth/sign-in');
+      router.push('/signin');
     },
     onError: (error: any) => {
       const msg = error.message || 'Registration failed. The system may have registration disabled.';

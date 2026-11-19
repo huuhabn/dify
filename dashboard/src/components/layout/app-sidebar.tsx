@@ -172,7 +172,7 @@ function NavUser() {
     onSettled: () => {
       Cookies.remove('console_token');
       queryClient.clear();
-      router.push('/auth/sign-in');
+      router.push('/signin');
     }
   });
 

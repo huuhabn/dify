@@ -20,10 +20,12 @@ export const metadata: Metadata = {
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
   const cookieStore = await cookies();
-  const token = cookieStore.get('console_token')?.value;
+  const token =
+    cookieStore.get('access_token')?.value ||
+    cookieStore.get('console_token')?.value;
 
   if (!token) {
-    redirect('/auth/sign-in');
+    redirect('/signin');
   }
 
   const defaultOpen = cookieStore.get('sidebar_state')?.value === 'true';

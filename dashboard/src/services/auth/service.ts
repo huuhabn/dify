@@ -60,5 +60,26 @@ export const authService = {
     consoleApiClient<{ result: 'success' }>('/workspaces/switch', {
       method: 'POST',
       body: JSON.stringify({ tenant_id: workspaceId })
+    }),
+
+  sendForgotPasswordEmail: (email: string, language: string = 'en-US') =>
+    consoleApiClient<{ result: 'success'; data: string }>('/forgot-password', {
+      method: 'POST',
+      body: JSON.stringify({ email, language }),
+      skipAuth: true
+    }),
+
+  checkForgotPasswordCode: (payload: { email: string; code: string; token: string }) =>
+    consoleApiClient<{ is_valid: boolean; email: string; token: string }>('/forgot-password/validity', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      skipAuth: true
+    }),
+
+  resetPassword: (payload: { token: string; new_password: string; password_confirm: string }) =>
+    consoleApiClient<{ result: 'success' }>('/forgot-password/resets', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      skipAuth: true
     })
 };

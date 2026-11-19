@@ -31,7 +31,7 @@ export function SignIn() {
             <br className='max-sm:hidden' />
             {t('login:signup.noAccount', "Don't have an account?")}{' '}
             <Link
-              href='/auth/sign-up'
+              href='/signup'
               className='text-nowrap font-medium text-primary underline underline-offset-4 hover:opacity-85'
             >
               {t('login:signup.signUp', 'Sign Up')}

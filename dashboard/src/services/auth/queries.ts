@@ -40,5 +40,20 @@ export const authMutations = {
 
   switchWorkspace: mutationOptions({
     mutationFn: (workspaceId: string) => authService.switchWorkspace(workspaceId)
+  }),
+
+  sendForgotPasswordEmail: mutationOptions({
+    mutationFn: ({ email, language }: { email: string; language?: string }) =>
+      authService.sendForgotPasswordEmail(email, language)
+  }),
+
+  checkForgotPasswordCode: mutationOptions({
+    mutationFn: (payload: { email: string; code: string; token: string }) =>
+      authService.checkForgotPasswordCode(payload)
+  }),
+
+  resetPassword: mutationOptions({
+    mutationFn: (payload: { token: string; new_password: string; password_confirm: string }) =>
+      authService.resetPassword(payload)
   })
 };

@@ -110,7 +110,6 @@ export const Icons = {
   ellipsis: IconDotsVertical,
   externalLink: IconExternalLink,
   eye: IconEye,
-  eyeOff: IconEyeOff,
   help: IconHelpCircle,
   info: IconInfoCircle,
   spinner: IconLoader2,

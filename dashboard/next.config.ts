@@ -40,6 +40,45 @@ const baseConfig: NextConfig = {
       }
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/auth/sign-in',
+        destination: '/sign-in',
+        permanent: false
+      },
+      {
+        source: '/auth/sign-up',
+        destination: '/sign-up',
+        permanent: false
+      },
+      {
+        source: '/auth/forgot-password',
+        destination: '/forgot-password',
+        permanent: false
+      },
+      {
+        source: '/auth/reset-password',
+        destination: '/reset-password',
+        permanent: false
+      },
+      {
+        source: '/auth/otp',
+        destination: '/otp',
+        permanent: false
+      },
+      {
+        source: '/signin',
+        destination: '/sign-in',
+        permanent: false
+      },
+      {
+        source: '/signup',
+        destination: '/sign-up',
+        permanent: false
+      }
+    ];
+  },
   transpilePackages: ['geist'],
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'

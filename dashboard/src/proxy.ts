@@ -2,7 +2,18 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 const PUBLIC_PATHS = [
-  '/auth',
+  '/signin',
+  '/sign-in',
+  '/signup',
+  '/sign-up',
+  '/reset-password',
+  '/forgot-password',
+  '/otp',
+  '/signin',
+  '/signup',
+  '/reset-password',
+  '/forgot-password',
+  '/otp',
   '/oauth-callback',
   '/share',
   '/human-input',
@@ -32,8 +43,8 @@ export default function proxy(request: NextRequest) {
     request.cookies.get('console_token')?.value;
 
   if (!token) {
-    const signInUrl = new URL('/auth/sign-in', request.url);
-    if (pathname !== '/' && !pathname.startsWith('/auth')) {
+    const signInUrl = new URL('/signin', request.url);
+    if (pathname !== '/') {
       signInUrl.searchParams.set('redirect', pathname + request.nextUrl.search);
     }
     return NextResponse.redirect(signInUrl);

@@ -42,7 +42,7 @@ export function Otp() {
           <p className='mx-auto px-4 text-center text-xs text-muted-foreground'>
             Haven't received it?{' '}
             <Link
-              href='/auth/sign-in'
+              href='/signin'
               className='font-medium text-primary underline underline-offset-4 hover:opacity-85'
             >
               Back to Sign in

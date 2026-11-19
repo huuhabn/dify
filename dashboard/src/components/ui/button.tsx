@@ -56,3 +56,4 @@ function Button({
 }
 
 export { Button, buttonVariants };
+export { LoadingButton } from '@/components/ui/loading-button';

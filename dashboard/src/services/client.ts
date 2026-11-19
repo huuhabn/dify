@@ -76,9 +76,14 @@ export async function consoleApiClient<T>(
   if (res.status === 401) {
     if (typeof window !== 'undefined' && !skipAuth) {
       Cookies.remove('console_token');
-      if (!window.location.pathname.startsWith('/auth/')) {
+      const isAuthPage =
+        window.location.pathname.startsWith('/signin') ||
+        window.location.pathname.startsWith('/sign-in') ||
+        window.location.pathname.startsWith('/signup') ||
+        window.location.pathname.startsWith('/sign-up');
+      if (!isAuthPage) {
         const redirect = encodeURIComponent(window.location.pathname + window.location.search);
-        window.location.href = `/auth/sign-in?redirect=${redirect}`;
+        window.location.href = `/signin?redirect=${redirect}`;
       }
     }
     const errorMsg =
