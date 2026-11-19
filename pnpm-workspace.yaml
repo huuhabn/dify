@@ -41,6 +41,7 @@ trustPolicyExclude:
 verifyDepsBeforeRun: install
 packages:
   - web
+  - dashboard
   - e2e
   - sdks/nodejs-client
   - packages/*

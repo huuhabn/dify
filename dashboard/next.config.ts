@@ -1,8 +1,13 @@
 import type { NextConfig } from 'next';
 import { withSentryConfig } from '@sentry/nextjs/config';
 
+// Port 8080 is the default Dify Nginx proxy port exposing backend endpoints
+const DIFY_BACKEND_URL = process.env.DIFY_BACKEND_URL ?? 'http://localhost:8080';
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 // Define the base Next.js configuration
 const baseConfig: NextConfig = {
+  basePath: BASE_PATH || undefined,
   output: process.env.BUILD_STANDALONE === 'true' ? 'standalone' : undefined,
   images: {
     remotePatterns: [
@@ -23,42 +28,44 @@ const baseConfig: NextConfig = {
       }
     ]
   },
+  async rewrites() {
+    return [
+      {
+        source: '/console/api/:path*',
+        destination: `${DIFY_BACKEND_URL}/console/api/:path*`
+      },
+      {
+        source: '/api/:path*',
+        destination: `${DIFY_BACKEND_URL}/api/:path*`
+      }
+    ];
+  },
   transpilePackages: ['geist'],
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
+  },
+  experimental: {
+    agentUpgrade: 'security'
   }
 };
 
 let configWithPlugins = baseConfig;
 
 // Conditionally enable Sentry configuration
-if (!process.env.NEXT_PUBLIC_SENTRY_DISABLED) {
+if (!process.env.NEXT_PUBLIC_SENTRY_DISABLED && (process.env.NEXT_PUBLIC_SENTRY_ORG || process.env.NEXT_PUBLIC_SENTRY_PROJECT)) {
   configWithPlugins = withSentryConfig(configWithPlugins, {
     org: process.env.NEXT_PUBLIC_SENTRY_ORG,
     project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
-    // Only print logs for uploading source maps in CI
     silent: !process.env.CI,
-
-    // Upload a larger set of source maps for prettier stack traces (increases build time)
     widenClientFileUpload: true,
-
-    // Route browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers.
     tunnelRoute: '/monitoring',
-
-    // Disable Sentry telemetry
     telemetry: false,
-
-    // Annotate React components for readable breadcrumbs and replays (webpack and Turbopack)
     reactComponentAnnotation: {
       enabled: true
     },
-
-    // Strip Sentry SDK debug logging from the bundle
     bundleSizeOptimizations: {
       excludeDebugStatements: true
     },
-
-    // Disable source map upload when org/project are not configured
     sourcemaps: {
       disable: !process.env.NEXT_PUBLIC_SENTRY_ORG || !process.env.NEXT_PUBLIC_SENTRY_PROJECT
     }

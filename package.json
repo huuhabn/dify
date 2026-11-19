@@ -3,6 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dashboard:dev": "bun run --cwd dashboard dev",
+    "dashboard:build": "bun run --cwd dashboard build",
+    "dashboard:start": "bun run --cwd dashboard start",
+    "dashboard:typecheck": "bun run --cwd dashboard typecheck",
     "check": "vp run check:cached",
     "check:fix": "vp run lint:eslint:fix && vp check --fix",
     "dev": "concurrently -k -n vinext,proxy \"vp run dify-web#dev\" \"vp run dify-web#dev:proxy\"",

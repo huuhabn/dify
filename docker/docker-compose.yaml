@@ -490,6 +490,19 @@ services:
       - ./envs/core-services/urls.defaults
       - ./envs/core-services/web.defaults
 
+  dashboard:
+    build:
+      context: ../dashboard
+      dockerfile: Dockerfile.bun
+    restart: always
+    ports:
+      - "${DASHBOARD_PORT:-3001}:3000"
+    environment:
+      DIFY_BACKEND_URL: http://api:5001
+      NEXT_PUBLIC_SENTRY_DISABLED: "true"
+    depends_on:
+      - api
+
   # The PostgreSQL database.
   db_postgres:
     env_file:

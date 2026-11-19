@@ -10,47 +10,56 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import { UserAvatarProfile } from '@/components/user-avatar-profile';
-import { SignOutButton, useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { authQueries, authMutations } from '@/services/auth/queries';
+import Cookies from 'js-cookie';
+
 export function UserNav() {
-  const { user } = useUser();
   const router = useRouter();
-  if (user) {
-    return (
-      <DropdownMenu>
-        <DropdownMenuTrigger
-          render={<Button variant='ghost' className='relative h-8 w-8 rounded-full' />}
-        >
-          <UserAvatarProfile user={user} />
-        </DropdownMenuTrigger>
-        <DropdownMenuContent className='w-56' align='end' sideOffset={10}>
-          <DropdownMenuGroup>
-            <DropdownMenuLabel className='font-normal'>
-              <div className='flex flex-col space-y-1'>
-                <p className='text-sm leading-none font-medium'>{user.fullName}</p>
-                <p className='text-muted-foreground text-xs leading-none'>
-                  {user.emailAddresses[0].emailAddress}
-                </p>
-              </div>
-            </DropdownMenuLabel>
-          </DropdownMenuGroup>
-          <DropdownMenuSeparator />
-          <DropdownMenuGroup>
-            <DropdownMenuItem onClick={() => router.push('/dashboard/profile')}>
-              Profile
-            </DropdownMenuItem>
-            <DropdownMenuItem>Billing</DropdownMenuItem>
-            <DropdownMenuItem>Settings</DropdownMenuItem>
-            <DropdownMenuItem>New Team</DropdownMenuItem>
-          </DropdownMenuGroup>
-          <DropdownMenuSeparator />
-          <DropdownMenuGroup>
-            <DropdownMenuItem>
-              <SignOutButton redirectUrl='/auth/sign-in' />
-            </DropdownMenuItem>
-          </DropdownMenuGroup>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    );
-  }
+  const queryClient = useQueryClient();
+  const { data: user } = useQuery(authQueries.currentUser());
+
+  const logoutMutation = useMutation({
+    ...authMutations.logout,
+    onSettled: () => {
+      Cookies.remove('console_token');
+      queryClient.clear();
+      router.push('/auth/sign-in');
+    }
+  });
+
+  if (!user) return null;
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger
+        render={<Button variant='ghost' className='relative h-8 w-8 rounded-full' />}
+      >
+        <UserAvatarProfile user={user} />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className='w-56' align='end' sideOffset={10}>
+        <DropdownMenuGroup>
+          <DropdownMenuLabel className='font-normal'>
+            <div className='flex flex-col space-y-1'>
+              <p className='text-sm leading-none font-medium'>{user.name}</p>
+              <p className='text-muted-foreground text-xs leading-none'>{user.email}</p>
+            </div>
+          </DropdownMenuLabel>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem onClick={() => router.push('/dashboard/account')}>
+            Account Settings
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem onClick={() => logoutMutation.mutate()}>
+            Sign out
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
 }

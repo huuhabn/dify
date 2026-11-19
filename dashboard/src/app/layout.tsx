@@ -3,6 +3,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { fontVariables } from '@/components/themes/font.config';
 import { DEFAULT_THEME, THEMES } from '@/components/themes/theme.config';
 import ThemeProvider from '@/components/themes/theme-provider';
+import { ThemeColorScript } from '@/components/themes/theme-color-script';
 import { cn } from '@/lib/utils';
 import type { Metadata, Viewport } from 'next';
 import { cookies } from 'next/headers';
@@ -20,33 +21,10 @@ export const metadata: Metadata = {
     ? { metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL) }
     : {}),
   title: {
-    default: 'Shadcn Dashboard - Next.js Admin Dashboard Template',
-    template: '%s | Shadcn Dashboard'
+    default: 'Dify Console',
+    template: '%s | Dify'
   },
-  description:
-    'Free, open source admin dashboard starter built with Next.js 16, shadcn/ui, Tailwind CSS, and TypeScript.',
-  openGraph: {
-    title: 'Shadcn Dashboard - Next.js Admin Dashboard Template',
-    description:
-      'Free, open source admin dashboard starter built with Next.js 16, shadcn/ui, Tailwind CSS, and TypeScript.',
-    siteName: 'Shadcn Dashboard',
-    type: 'website',
-    images: [
-      {
-        url: '/shadcn-dashboard.png',
-        width: 3200,
-        height: 1600,
-        alt: 'Shadcn Dashboard overview page'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Shadcn Dashboard - Next.js Admin Dashboard Template',
-    description:
-      'Free, open source admin dashboard starter built with Next.js 16, shadcn/ui, Tailwind CSS, and TypeScript.',
-    images: ['/shadcn-dashboard.png']
-  }
+  description: 'AI Application & Workflow Platform'
 };
 
 export const viewport: Viewport = {
@@ -62,18 +40,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang='en' suppressHydrationWarning data-theme={themeToApply}>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                // Set meta theme color
-                if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '${META_THEME_COLORS.dark}')
-                }
-              } catch (_) {}
-            `
-          }}
-        />
+        <ThemeColorScript />
       </head>
       <body
         className={cn(

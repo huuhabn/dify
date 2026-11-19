@@ -4,14 +4,14 @@ import Header from '@/components/layout/header';
 import { InfoSidebar } from '@/components/layout/info-sidebar';
 import { InfobarProvider } from '@/components/ui/infobar';
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
-import { auth } from '@clerk/nextjs/server';
 import type { Metadata } from 'next';
 import type { CSSProperties } from 'react';
 import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Next Shadcn Dashboard Starter',
-  description: 'Basic dashboard with Next.js and Shadcn',
+  title: 'Dify Console',
+  description: 'AI Application & Workflow Platform',
   robots: {
     index: false,
     follow: false
@@ -19,17 +19,17 @@ export const metadata: Metadata = {
 };
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
-  // Defense in depth: every /dashboard page also calls auth.protect() itself,
-  // because layouts don't always re-render when pages do (Clerk guidance).
-  await auth.protect();
-  // Persisting the sidebar state in the cookie.
   const cookieStore = await cookies();
+  const token = cookieStore.get('console_token')?.value;
+
+  if (!token) {
+    redirect('/auth/sign-in');
+  }
+
   const defaultOpen = cookieStore.get('sidebar_state')?.value === 'true';
+
   return (
     <KBar>
-      {/* Fixed-height shell: the sidebar sits on the --sidebar canvas and the page is an
-          inset panel with a single scroller, so nothing needs calc(100vh - header) maths.
-          The 2.375rem icon rail leaves 12px either side of the 32px icons. */}
       <SidebarProvider
         defaultOpen={defaultOpen}
         className='h-dvh'

@@ -2,52 +2,36 @@
 
 import PageContainer from '@/components/layout/page-container';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { useOrganization } from '@clerk/nextjs';
-import { PricingTable } from '@clerk/nextjs';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Icons } from '@/components/icons';
-import { billingInfoContent } from '@/config/infoconfig';
+import { useQuery } from '@tanstack/react-query';
+import { authQueries } from '@/services/auth/queries';
 
 export default function BillingView() {
-  const { organization, isLoaded } = useOrganization();
+  const { data } = useQuery(authQueries.workspaces());
+  const currentWorkspace = data?.workspaces.find((w) => w.current) || data?.workspaces[0];
 
   return (
     <PageContainer
-      isLoading={!isLoaded}
-      access={!!organization}
-      accessFallback={
-        <div className='flex min-h-[400px] items-center justify-center'>
-          <div className='space-y-2 text-center'>
-            <h2 className='text-2xl font-semibold'>No Organization Selected</h2>
-            <p className='text-muted-foreground'>
-              Please select or create an organization to view billing information.
-            </p>
-          </div>
-        </div>
-      }
-      infoContent={billingInfoContent}
       pageTitle='Billing & Plans'
-      pageDescription={`Manage your subscription and usage limits for ${organization?.name}`}
+      pageDescription={`Manage subscription and usage limits for ${currentWorkspace?.name || 'Workspace'}`}
     >
       <div className='space-y-6'>
-        {/* Info Alert */}
         <Alert>
           <Icons.info className='h-4 w-4' />
           <AlertDescription>
-            Plans and subscriptions are managed through Clerk Billing. Subscribe to a plan to unlock
-            features and higher limits.
+            You are currently on the <strong className='uppercase'>{currentWorkspace?.plan || 'Community / Standard'}</strong> plan.
           </AlertDescription>
         </Alert>
 
-        {/* Clerk Pricing Table */}
         <Card>
           <CardHeader>
-            <CardTitle>Available Plans</CardTitle>
-            <CardDescription>Choose a plan that fits your organization's needs</CardDescription>
+            <CardTitle>Plan Usage & Quotas</CardTitle>
+            <CardDescription>View credits, model quotas, and vector storage limits</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className='mx-auto max-w-4xl'>
-              <PricingTable for='organization' />
+            <div className='text-sm text-muted-foreground'>
+              Usage information is synchronized with your Dify self-hosted or cloud subscription.
             </div>
           </CardContent>
         </Card>
